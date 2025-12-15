@@ -2773,3 +2773,157 @@ a {
         font-size: 2.5rem;
     }
 }
+
+/* =========================================
+   Turkey Trade Monitor Section (CTA)
+   ========================================= */
+
+.monitor-cta {
+    background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
+    color: #ffffff;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.monitor-cta::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.monitor-cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.monitor-cta-content {
+    max-width: 600px;
+}
+
+.monitor-cta-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.monitor-cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.monitor-cta-text {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.monitor-cta-action {
+    flex-shrink: 0;
+}
+
+.btn-monitor {
+    background-color: #ffffff;
+    color: #1E3A8A;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-monitor:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #F8FAFC;
+}
+
+@media (max-width: 768px) {
+    .monitor-cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .monitor-cta-content {
+        margin-bottom: 24px;
+    }
+}
+
+/* =========================================
+   Turkey Trade Monitor Page
+   ========================================= */
+
+.monitor-page-header {
+    background: #1a2742;
+    padding: 140px 0 80px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.monitor-page-title {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.monitor-page-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.monitor-content-section {
+    padding: 80px 0;
+    background: #F9FAFB;
+    min-height: 600px;
+}
+
+.monitor-placeholder-box {
+    background: #ffffff;
+    border: 2px dashed #CBD5E1;
+    border-radius: 16px;
+    padding: 80px 20px;
+    text-align: center;
+    color: #64748B;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.monitor-placeholder-icon {
+    font-size: 4rem;
+    color: #94A3B8;
+    margin-bottom: 24px;
+}
+
+.monitor-placeholder-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.monitor-placeholder-sub {
+    font-size: 1rem;
+    color: #94A3B8;
+}

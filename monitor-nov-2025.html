@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkey Trade Monitor - Nov 2025</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts - Inter & Playfair Display (Güncellendi) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display artık kullanılmasa da Inter yüklü kalacak -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #2D4CC8;
+            --dark-blue: #1a2742;
+            --accent-teal: #00C4B4;
+            --white: #ffffff;
+            --off-white: #FAFBFC;
+            --light-gray: #F5F7FA;
+            --text-gray: #475467;
+            --text-dark: #101828;
+            --border-gray: #E4E7EC;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+            /* Font Awesome Variables included as requested */
+            --fa-style-family-classic: "Font Awesome 6 Free";
+            --fa-font-solid: normal 900 1em / 1 "Font Awesome 6 Free";
+            --fa-font-regular: normal 400 1em / 1 "Font Awesome 6 Free";
+            --fa-style-family-brands: "Font Awesome 6 Brands";
+            --fa-font-brands: normal 400 1em / 1 "Font Awesome 6 Brands";
+        }
+
+        body {
+            /* Tüm metinler için Inter yazı tipi yığını */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--text-gray);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(15px, 20px) rotate(2deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        /* Hero / Header Section */
+        header {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px 60px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--accent-teal);
+        }
+
+        /* Hero Overlay Effects as requested */
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, rgba(45, 76, 200, 0.1) 0%, rgba(0, 196, 180, 0.1) 100%);
+            border-radius: 50% 40% 60% 50%;
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(225deg, rgba(0, 196, 180, 0.12) 0%, rgba(45, 76, 200, 0.08) 100%);
+            border-radius: 60% 40% 50% 60%;
+            animation: float 6s ease-in-out infinite reverse;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            /* Playfair Display kaldırıldı, Inter devralındı */
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.5px;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-gray);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-blue);
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--accent-teal);
+        }
+
+        /* Typography */
+        h2 {
+            /* Playfair Display kaldırıldı, Inter devralındı */
+            color: var(--dark-blue);
+            margin-top: 0;
+            font-size: 1.75rem;
+            line-height: 1.3;
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag i {
+            font-size: 0.9em;
+        }
+
+        .tag.economic {
+            background-color: rgba(45, 76, 200, 0.1);
+            color: var(--primary-blue);
+        }
+
+        .tag.finance {
+            background-color: rgba(0, 196, 180, 0.1);
+            color: var(--accent-teal);
+        }
+
+        .tag.export {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .tag.privacy {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        /* Insight Box */
+        .ttl-insight {
+            background-color: var(--off-white);
+            border-left: 3px solid var(--accent-teal);
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+            border-radius: 0 8px 8px 0;
+            color: var(--text-dark);
+        }
+
+        .ttl-insight strong {
+            color: var(--dark-blue);
+            display: block;
+            margin-bottom: 8px;
+            /* Playfair Display kaldırıldı, Inter devralındı */
+            font-size: 1.1em;
+        }
+
+        /* Sidebar Widgets */
+        .widget {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-gray);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .widget h3 {
+            /* Playfair Display kaldırıldı, Inter devralındı */
+            color: var(--dark-blue);
+            border-bottom: 2px solid var(--accent-teal);
+            padding-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        /* Key Rates Table */
+        .rate-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+            transition: background-color 0.2s;
+        }
+
+        .rate-item:last-child {
+            border-bottom: none;
+        }
+
+        .rate-item:hover {
+            background-color: var(--off-white);
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 4px;
+        }
+
+        .rate-value {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark-blue);
+        }
+
+        .rate-trend {
+            display: block;
+            font-size: 0.75rem;
+            text-align: right;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        .trend-down {
+            color: var(--accent-teal);
+        }
+
+        /* Calendar Items */
+        .calendar-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: var(--off-white);
+            border-radius: 8px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .calendar-item:hover {
+            background: var(--white);
+            border-color: var(--accent-teal);
+            transform: translateX(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .date-box {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 8px 12px;
+            text-align: center;
+            border-radius: 6px;
+            margin-right: 15px;
+            min-width: 45px;
+            box-shadow: 0 2px 4px rgba(45, 76, 200, 0.3);
+        }
+
+        .date-box span {
+            display: block;
+            font-weight: 800;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .date-box small {
+            font-size: 0.7em;
+            opacity: 0.9;
+        }
+
+        .date-desc h4 {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .date-desc p {
+            margin: 2px 0 0 0;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: var(--white);
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 15px 5px 5px 5px;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #00a89a;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .social-link:hover {
+            color: var(--white);
+        }
+
+        /* Important Notice Card override */
+        .card.notice {
+            background-color: #FFFBEB;
+            border-left-color: #F59E0B;
+            border-color: #FEF3C7;
+        }
+
+        .card.notice h3 {
+            color: #B45309;
+            margin-top: 0;
+        }
+
+        /* Footer */
+        .disclaimer {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
+            color: rgba(255, 255, 255, 0.6);
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.85rem;
+        }
+
+        .disclaimer h3 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Utility */
+        .meta-info {
+            display: block;
+            margin-top: 15px;
+            color: var(--text-gray);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border-gray);
+            padding-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            header {
+                padding: 60px 20px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero-overlay">
+        <div class="header-content">
+            <h1>Turkey Trade Monitor</h1>
+            <div class="subtitle">Official Gazette Digest • November 2025</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Main Content Area -->
+        <main>
+            <!-- Inflation Card -->
+            <div class="card" id="inflation">
+                <span class="tag economic"><i class="fa-solid fa-chart-line"></i> Economic Data</span>
+                <span class="tag economic"><i class="fa-solid fa-chart-line"></i> Statistics</span>
+                <h2>TÜİK November 2025: Annual Inflation at 31.07%</h2>
+                <p>The Turkish Statistical Institute (TÜİK) announced November 2025 inflation figures. CPI (TÜFE)
+                    increased 0.87% month-on-month and 31.07% year-on-year. Producer prices (Yİ-ÜFE) rose 0.84% monthly
+                    and 27.23% annually. The 12-month average CPI stands at 35.91%.</p>
+
+                <div class="ttl-insight">
+                    <strong><i class="fa-solid fa-lightbulb"></i> TTL INSIGHT: Rent Cap</strong>
+                    The 12-month average (35.91%) is the legal cap for rent increases in December. For contracts and
+                    pricing, use official TÜİK rates for adjustments. Food prices fell 0.69% while transport (+1.78%)
+                    and housing (+1.70%) drove monthly inflation.
+                </div>
+                <small class="meta-info">Released: Dec 3, 2025 | Source: TÜİK</small>
+            </div>
+
+            <!-- Tax Card -->
+            <div class="card" id="tax">
+                <span class="tag finance"><i class="fa-solid fa-coins"></i> Finance & Tax</span>
+                <h2>Tax Deferral Interest Rate Reduced</h2>
+                <p>The annual interest rate for tax deferrals has been lowered significantly from <strong>48% to
+                        39%</strong>.</p>
+
+                <div class="ttl-insight">
+                    <strong><i class="fa-solid fa-triangle-exclamation"></i> TTL INSIGHT: Action Required</strong>
+                    If you are considering tax debt restructuring, now is the optimal time. The 9-point reduction lowers
+                    total costs significantly.
+                </div>
+                <small class="meta-info">Released: Dec 13, 2025 | Communiqué: C-9</small>
+            </div>
+
+            <!-- FX Card -->
+            <div class="card" id="fx">
+                <span class="tag export"><i class="fa-solid fa-globe"></i> FX / Export</span>
+                <h2>FX Conversion Support Extended</h2>
+                <p>The 3% enhanced support rate (normally 2%) for companies selling foreign-sourced FX to the Central
+                    Bank is extended to <strong>April 2026</strong>.</p>
+
+                <div class="ttl-insight">
+                    <strong><i class="fa-solid fa-hand-holding-dollar"></i> TTL INSIGHT: For Exporters</strong>
+                    Service providers earning foreign currency should take advantage of this extra 1% bonus before the
+                    new deadline.
+                </div>
+                <small class="meta-info">Effective: Nov 1, 2025</small>
+            </div>
+
+            <!-- Privacy Card -->
+            <div class="card" id="privacy">
+                <span class="tag privacy"><i class="fa-solid fa-user-shield"></i> Data Privacy (KVKK)</span>
+                <h2>Focus: Cross-Border Data Transfers</h2>
+                <p>Recent KVKK amendments introduce new rules. Companies must now use <strong>Standard Contractual
+                        Clauses (SCCs)</strong> or obtain explicit consent for transfers to countries without adequacy
+                    status.</p>
+                <ul style="color: var(--text-dark); padding-left: 20px;">
+                    <li style="margin-bottom: 5px;">EU adequacy not yet granted to Turkey.</li>
+                    <li>Binding Corporate Rules now recognized.</li>
+                </ul>
+            </div>
+
+            <!-- Important Notice -->
+            <div class="card notice">
+                <h3><i class="fa-solid fa-calendar-xmark"></i> Important Notice: New Year</h3>
+                <p><strong>January 1, 2026</strong> is an official public holiday. Monitor announcements for potential
+                    administrative leave on Dec 31.</p>
+            </div>
+        </main>
+
+        <!-- Sidebar Area -->
+        <aside>
+            <!-- Key Rates Widget -->
+            <div class="widget">
+                <h3>Key Rates (Nov 2025)</h3>
+                <div class="rate-item" onclick="copyToClipboard('31.07%')" style="cursor:pointer;"
+                    title="Click to Copy">
+                    <span>CPI (Annual)</span>
+                    <div class="rate-values-group">
+                        <div class="rate-value">31.07%</div>
+                        <div class="rate-trend trend-down"><i class="fa-solid fa-arrow-trend-down"></i> was 32.87%</div>
+                    </div>
+                </div>
+                <div class="rate-item">
+                    <span>PPI (Annual)</span>
+                    <div class="rate-values-group">
+                        <div class="rate-value">27.23%</div>
+                        <div class="rate-trend trend-down"><i class="fa-solid fa-arrow-trend-down"></i> was 27.00%</div>
+                    </div>
+                </div>
+                <div class="rate-item">
+                    <span>Rent Cap (Dec)</span>
+                    <div class="rate-value">35.91%</div>
+                </div>
+            </div>
+
+            <!-- Key Dates Widget -->
+            <div class="widget">
+                <h3>Key Dates: December</h3>
+
+                <div class="calendar-item">
+                    <div class="date-box">
+                        <span>25</span><small>DEC</small>
+                    </div>
+                    <div class="date-desc">
+                        <h4>VAT Return Deadline</h4>
+                        <p>Tax Filing</p>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="date-box">
+                        <span>26</span><small>DEC</small>
+                    </div>
+                    <div class="date-desc">
+                        <h4>Withholding Tax</h4>
+                        <p>Tax Filing</p>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="date-box">
+                        <span>31</span><small>DEC</small>
+                    </div>
+                    <div class="date-desc">
+                        <h4>Income Tax</h4>
+                        <p>2nd Installment Payment</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Widget -->
+            <div class="widget contact-box">
+                <h3 style="color:white; border-bottom: 1px solid rgba(255,255,255,0.2);">Contact Us</h3>
+                <p style="opacity: 0.9; margin-bottom: 20px;">Questions about these updates?</p>
+                <a href="mailto:hi@turkishtradelawyers.org" class="btn"><i class="fa-solid fa-envelope"></i> Email
+                    Us</a>
+                <div style="margin-top:20px;">
+                    <a href="#" class="social-link">Website</a> •
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="disclaimer">
+        <h3>Turkish Trade Lawyers · Your Legal Partner on the Ground in Turkey</h3>
+        <p>Disclaimer: This bulletin is prepared for informational purposes only and does not constitute legal advice.
+            The content is based on publicly available sources and may not reflect the most current legal developments.
+            For specific legal matters, please consult with a qualified attorney. Turkish Trade Lawyers assumes no
+            liability for actions taken based on this information.</p>
+    </footer>
+
+    <script>
+        // Basit bir kopyalama fonksiyonu (Original Script preserved)
+        function copyToClipboard(text) {
+            // Uyarı yerine özel bir mesaj kutusu kullanılması önerilir (iframe kısıtlamaları nedeniyle).
+            // Ancak, bu kod parçası orijinal haliyle bırakılmıştır.
+            navigator.clipboard.writeText(text).then(function () {
+                alert("Rate copied: " + text);
+            }, function (err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
