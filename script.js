@@ -201,3 +201,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// Footer Injection
+document.addEventListener('DOMContentLoaded', () => {
+    const footerContent = `
+        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <p>&copy; 2025 Turkish Trade Lawyers. All rights reserved. | <a href="cookie-policy.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Cookie Policy</a> | <a href="disclaimer.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Disclaimer</a></p>
+            <div class="ssl-badge" style="display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.3); padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.05);">
+                <i class="fas fa-lock"></i> SSL Secured
+            </div>
+        </div>
+    `;
+
+    const globalFooterPlaceholder = document.getElementById('global-footer');
+    if (globalFooterPlaceholder) {
+        const footerElement = document.createElement('footer');
+        footerElement.className = 'footer';
+        footerElement.innerHTML = footerContent;
+        globalFooterPlaceholder.parentNode.replaceChild(footerElement, globalFooterPlaceholder);
+    } else {
+        const existingFooter = document.querySelector('footer.footer');
+        if (existingFooter) {
+            existingFooter.innerHTML = footerContent;
+        }
+    }
+});
