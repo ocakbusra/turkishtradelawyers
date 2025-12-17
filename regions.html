@@ -41,6 +41,8 @@
             font-weight: 800;
             margin-bottom: 20px;
             letter-spacing: -0.02em;
+            color: #ffffff;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .regions-hero p {
@@ -169,7 +171,7 @@
         .popup-btn {
             display: inline-block;
             background: #2D4CC8;
-            color: #fff;
+            color: #fff !important;
             padding: 10px 20px;
             border-radius: 6px;
             font-size: 0.85rem;
@@ -324,7 +326,7 @@
     <!-- Country List Section -->
     <section class="country-list-section">
         <div class="country-list-header">
-            <h2>All European Countries</h2>
+            <h2>Global Reach</h2>
             <p>Select your country to discover how we can support your business expansion into Türkiye.</p>
         </div>
         <div class="country-grid" id="country-grid">
@@ -368,7 +370,7 @@
             { name: 'Bulgaria', flag: '🇧🇬', lat: 42.6977, lng: 23.3219, active: true, url: 'country-bulgaria.html' },
             { name: 'Ireland', flag: '🇮🇪', lat: 53.3498, lng: -6.2603, active: true, url: 'country-ireland.html' },
             { name: 'Croatia', flag: '🇭🇷', lat: 45.8150, lng: 15.9819, active: true, url: 'country-croatia.html' },
-            { name: 'Slovakia', flag: '🇸🇰', lat: 48.1486, lng: 17.1077, active: false },
+            { name: 'Slovakia', flag: '🇸🇰', lat: 48.1486, lng: 17.1077, active: true, url: 'country-slovakia.html' },
             { name: 'Slovenia', flag: '🇸🇮', lat: 46.1512, lng: 14.9955, active: true, url: 'country-slovenia.html' },
             { name: 'Lithuania', flag: '🇱🇹', lat: 54.6872, lng: 25.2797, active: true, url: 'country-lithuania.html' },
             { name: 'Latvia', flag: '🇱🇻', lat: 56.9496, lng: 24.1052, active: true, url: 'country-latvia.html' },
@@ -384,12 +386,19 @@
             { name: 'Montenegro', flag: '🇲🇪', lat: 42.4304, lng: 19.2594, active: true, url: 'country-montenegro.html' },
             { name: 'Kosovo', flag: '🇽🇰', lat: 42.6629, lng: 21.1655, active: true, url: 'country-kosovo.html' },
             { name: 'Moldova', flag: '🇲🇩', lat: 47.0105, lng: 28.8638, active: true, url: 'country-moldova.html' },
-            { name: 'Ukraine', flag: '🇺🇦', lat: 50.4501, lng: 30.5234, active: false },
-            { name: 'Belarus', flag: '🇧🇾', lat: 53.9006, lng: 27.5590, active: true, url: 'country-belarus.html' },
+            { name: 'Ukraine', flag: '🇺🇦', lat: 50.4501, lng: 30.5234, active: true, url: 'country-ukraine.html' },
+            { name: 'China (Mainland)', flag: '🇨🇳', lat: 39.9042, lng: 116.4074, active: true, url: 'country-china.html' },
+            { name: 'Hong Kong', flag: '🇭🇰', lat: 22.3193, lng: 114.1694, active: true, url: 'country-hong-kong.html' },
+            { name: 'Shanghai', flag: '🇨🇳', lat: 31.2304, lng: 121.4737, active: true, url: 'country-shanghai.html' },
+            { name: 'Guangzhou', flag: '🇨🇳', lat: 23.1291, lng: 113.2644, active: true, url: 'country-guangzhou.html' },
+            { name: 'United Arab Emirates', flag: '🇦🇪', lat: 25.2048, lng: 55.2708, active: true, url: 'country-uae.html' },
+            { name: 'Qatar', flag: '🇶🇦', lat: 25.2854, lng: 51.5310, active: true, url: 'country-qatar.html' },
+            { name: 'Saudi Arabia', flag: '🇸🇦', lat: 24.7136, lng: 46.6753, active: true, url: 'country-saudi-arabia.html' },
+
         ];
 
         // Initialize Map
-        const map = L.map('europe-map').setView([50.0, 10.0], 4);
+        const map = L.map('europe-map').setView([40.0, 40.0], 3);
 
         // Add Tile Layer (Using CartoDB Positron for a clean look)
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
