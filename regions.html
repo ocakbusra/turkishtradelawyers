@@ -28,34 +28,152 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
     <style>
-        /* Regions Page Styles */
+        /* Regions Page Styles - Enhanced Design */
+
+        /* Hero Section */
         .regions-hero {
-            background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
-            padding: 140px 20px 60px;
+            background: linear-gradient(135deg, #F0F4FF 0%, #FFFFFF 50%, #F8FAFC 100%);
+            padding: 160px 20px 100px;
             text-align: center;
-            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated Decorative Blobs */
+        .regions-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(45, 76, 200, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .regions-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 196, 180, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: float 6s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        .regions-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        /* Hero Badge */
+        .regions-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #E0E7FF 0%, #EEF2FF 100%);
+            color: #2D4CC8;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+            border: 1px solid rgba(45, 76, 200, 0.1);
+        }
+
+        .regions-badge i {
+            font-size: 1rem;
         }
 
         .regions-hero h1 {
-            font-size: 3rem;
+            font-size: 3.75rem;
             font-weight: 800;
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-            color: #ffffff;
-            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            margin-bottom: 28px;
+            letter-spacing: -0.03em;
+            color: #1a2742;
+            line-height: 1.1;
         }
 
-        .regions-hero p {
+        .regions-hero-text {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.85);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.7;
+            color: #475467;
+            line-height: 1.9;
+            font-weight: 400;
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
+        .regions-hero-cta {
+            background: #FFFFFF;
+            border: 1px solid #E4E7EC;
+            border-radius: 16px;
+            padding: 24px 36px;
+            display: inline-block;
+            box-shadow: 0 8px 24px -4px rgba(45, 76, 200, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .regions-hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px -4px rgba(45, 76, 200, 0.15);
+        }
+
+        .regions-hero-cta p {
+            font-size: 1.1rem;
+            color: #1E3A8A;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .regions-hero-cta i {
+            color: #00C4B4;
+            margin-right: 8px;
+        }
+
+        /* Map Section */
         .map-section {
-            padding: 60px 0 80px;
+            padding: 80px 0 100px;
             background: #FAFBFC;
+            position: relative;
+        }
+
+        .map-section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .map-section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a2742;
+            margin-bottom: 12px;
+        }
+
+        .map-section-header p {
+            color: #475467;
+            font-size: 1.05rem;
         }
 
         .map-container {
@@ -66,14 +184,14 @@
 
         .map-wrapper {
             background: #fff;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.1);
             border: 1px solid #E4E7EC;
         }
 
         #europe-map {
-            height: 600px;
+            height: 550px;
             width: 100%;
         }
 
@@ -81,143 +199,160 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            padding: 30px;
-            background: #F8FAFC;
+            gap: 30px;
+            padding: 24px 30px;
+            background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
             border-top: 1px solid #E4E7EC;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
+            gap: 10px;
+            font-size: 0.95rem;
             color: #475467;
+            font-weight: 500;
         }
 
         .legend-dot {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .legend-dot.active {
-            background: #2D4CC8;
+            background: linear-gradient(135deg, #2D4CC8 0%, #1E3A8A 100%);
         }
 
         .legend-dot.coming-soon {
-            background: #94A3B8;
+            background: linear-gradient(135deg, #94A3B8 0%, #64748B 100%);
         }
 
         /* Custom Leaflet Marker Styles */
         .custom-marker {
-            background: #2D4CC8;
+            background: linear-gradient(135deg, #2D4CC8 0%, #1E3A8A 100%);
             border: 3px solid #fff;
             border-radius: 50%;
-            box-shadow: 0 2px 8px rgba(45, 76, 200, 0.4);
+            box-shadow: 0 4px 12px rgba(45, 76, 200, 0.4);
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .custom-marker:hover {
-            transform: scale(1.2);
-            background: #00C4B4;
+            transform: scale(1.3);
+            background: linear-gradient(135deg, #00C4B4 0%, #00A89B 100%);
+            box-shadow: 0 6px 16px rgba(0, 196, 180, 0.5);
         }
 
         .custom-marker.coming-soon {
-            background: #94A3B8;
+            background: linear-gradient(135deg, #94A3B8 0%, #64748B 100%);
         }
 
         .custom-marker.coming-soon:hover {
-            background: #64748B;
+            background: linear-gradient(135deg, #64748B 0%, #475569 100%);
         }
 
         /* Popup Styles */
         .leaflet-popup-content-wrapper {
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 0;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
         }
 
         .leaflet-popup-content {
             margin: 0;
-            min-width: 200px;
+            min-width: 220px;
         }
 
         .country-popup {
-            padding: 20px;
+            padding: 24px;
             text-align: center;
         }
 
         .country-popup-flag {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 12px;
         }
 
         .country-popup h3 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #1a2742;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .country-popup p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #475467;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: 18px;
+            line-height: 1.6;
         }
 
         .popup-btn {
             display: inline-block;
-            background: #2D4CC8;
+            background: linear-gradient(135deg, #2D4CC8 0%, #1E3A8A 100%);
             color: #fff !important;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 0.85rem;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
             font-weight: 600;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: all 0.3s ease;
         }
 
         .popup-btn:hover {
-            background: #1E3A8A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 76, 200, 0.3);
             color: #fff;
         }
 
         .popup-btn.coming-soon {
-            background: #94A3B8;
+            background: linear-gradient(135deg, #94A3B8 0%, #64748B 100%);
             cursor: not-allowed;
         }
 
         /* Country List Section */
         .country-list-section {
-            padding: 60px 0;
-            background: #fff;
+            padding: 100px 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
         }
 
         .country-list-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .country-list-header h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #1a2742;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .country-list-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #2D4CC8, #00C4B4);
+            border-radius: 2px;
+            margin: 20px auto 0;
         }
 
         .country-list-header p {
             color: #475467;
             max-width: 600px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
         .country-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -226,44 +361,77 @@
         .country-card {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 16px;
-            background: #F8FAFC;
-            border-radius: 10px;
+            gap: 14px;
+            padding: 18px 20px;
+            background: #FFFFFF;
+            border-radius: 14px;
             border: 1px solid #E4E7EC;
-            transition: all 0.2s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             color: inherit;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .country-card:hover {
-            background: #EFF6FF;
+            background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%);
             border-color: #2D4CC8;
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(45, 76, 200, 0.15);
         }
 
         .country-card.coming-soon {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
         }
 
         .country-card-flag {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
         }
 
         .country-card-name {
             font-weight: 600;
             color: #1a2742;
-            font-size: 0.95rem;
+            font-size: 1rem;
         }
 
+        /* Footer fix */
+        .footer {
+            background: #1E3A8A;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
+            .regions-hero {
+                padding: 140px 20px 60px;
+            }
+
             .regions-hero h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
+            }
+
+            .regions-hero-text {
+                font-size: 1rem;
+            }
+
+            .regions-hero-cta {
+                padding: 18px 24px;
+            }
+
+            .regions-hero-cta p {
+                font-size: 0.95rem;
             }
 
             #europe-map {
-                height: 400px;
+                height: 350px;
+            }
+
+            .country-list-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .country-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 12px;
             }
         }
     </style>
@@ -299,9 +467,23 @@
 
     <!-- Hero Section -->
     <section class="regions-hero">
-        <h1>Regions We Serve</h1>
-        <p>Turkish Trade Lawyers provides dedicated legal and consultancy services to European companies seeking to
-            enter or expand in the Turkish market. Click on a country to learn more.</p>
+        <div class="regions-hero-content">
+            <div class="regions-badge">
+                <i class="fas fa-globe-americas"></i>
+                Global Legal Coverage
+            </div>
+            <h1>Regions We Serve</h1>
+            <p class="regions-hero-text">Providing expert legal counsel to international businesses globally for
+                seamless market entry and sustainable growth in Turkey. We assist companies across Europe, Asia, the
+                Middle East, and the Americas with corporate incorporation, regulatory compliance, and cross-border
+                commercial transactions.</p>
+
+            <div class="regions-hero-cta">
+                <p><i class="fas fa-hand-pointer"></i> Select your country to discover how our specialized legal
+                    services can support your business expansion and secure your operations in the Turkish jurisdiction.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Map Section -->
@@ -327,7 +509,8 @@
     <section class="country-list-section">
         <div class="country-list-header">
             <h2>Global Reach</h2>
-            <p>Select your country to discover how we can support your business expansion into Türkiye.</p>
+            <p>Select your country to explore tailored legal solutions for market entry, regulatory compliance, contract
+                negotiations, dispute resolution, and ongoing legal support in Turkey.</p>
         </div>
         <div class="country-grid" id="country-grid">
             <!-- Countries will be populated by JavaScript -->
@@ -348,54 +531,54 @@
     <script>
         // European Countries Data
         const europeanCountries = [
-            { name: 'France', flag: '🇫🇷', lat: 46.2276, lng: 2.2137, active: true, url: 'country-france.html' },
-            { name: 'Germany', flag: '🇩🇪', lat: 51.1657, lng: 10.4515, active: true, url: 'country-germany.html' },
-            { name: 'United Kingdom', flag: '🇬🇧', lat: 54.5591, lng: -2.0344, active: true, url: 'country-united-kingdom.html' },
-            { name: 'Italy', flag: '🇮🇹', lat: 42.5042, lng: 12.5732, active: true, url: 'country-italy.html' },
-            { name: 'Spain', flag: '🇪🇸', lat: 40.4637, lng: -3.7492, active: true, url: 'country-spain.html' },
-            { name: 'Netherlands', flag: '🇳🇱', lat: 52.1326, lng: 5.2913, active: true, url: 'country-netherlands.html' },
-            { name: 'Belgium', flag: '🇧🇪', lat: 50.5039, lng: 4.4699, active: true, url: 'country-belgium.html' },
-            { name: 'Switzerland', flag: '🇨🇭', lat: 46.8182, lng: 8.2275, active: true, url: 'country-switzerland.html' },
-            { name: 'Austria', flag: '🇦🇹', lat: 47.5162, lng: 14.5501, active: true, url: 'country-austria.html' },
-            { name: 'Sweden', flag: '🇸🇪', lat: 62.1282, lng: 17.6534, active: true, url: 'country-sweden.html' },
-            { name: 'Norway', flag: '🇳🇴', lat: 60.4720, lng: 8.4689, active: true, url: 'country-norway.html' },
-            { name: 'Denmark', flag: '🇩🇰', lat: 56.2639, lng: 9.5018, active: true, url: 'country-denmark.html' },
-            { name: 'Finland', flag: '🇫🇮', lat: 61.9241, lng: 25.7482, active: true, url: 'country-finland.html' },
-            { name: 'Poland', flag: '🇵🇱', lat: 51.9194, lng: 19.1451, active: true, url: 'country-poland.html' },
-            { name: 'Czech Republic', flag: '🇨🇿', lat: 49.8175, lng: 15.4730, active: true, url: 'country-czechia.html' },
-            { name: 'Portugal', flag: '🇵🇹', lat: 39.3999, lng: -8.2245, active: true, url: 'country-portugal.html' },
-            { name: 'Greece', flag: '🇬🇷', lat: 39.0742, lng: 21.8243, active: true, url: 'country-greece.html' },
-            { name: 'Hungary', flag: '🇭🇺', lat: 47.1625, lng: 19.5033, active: true, url: 'country-hungary.html' },
-            { name: 'Romania', flag: '🇷🇴', lat: 45.9432, lng: 24.9668, active: true, url: 'country-romania.html' },
-            { name: 'Bulgaria', flag: '🇧🇬', lat: 42.7339, lng: 25.4858, active: true, url: 'country-bulgaria.html' },
-            { name: 'Ireland', flag: '🇮🇪', lat: 53.1424, lng: -7.6921, active: true, url: 'country-ireland.html' },
-            { name: 'Croatia', flag: '🇭🇷', lat: 45.1000, lng: 15.2000, active: true, url: 'country-croatia.html' },
-            { name: 'Slovakia', flag: '🇸🇰', lat: 48.6690, lng: 19.6990, active: true, url: 'country-slovakia.html' },
-            { name: 'Andorra', flag: '🇦🇩', lat: 42.5063, lng: 1.5218, active: true, url: 'country-andorra.html' },
-            { name: 'Slovenia', flag: '🇸🇮', lat: 46.1512, lng: 14.9955, active: true, url: 'country-slovenia.html' },
-            { name: 'Lithuania', flag: '🇱🇹', lat: 55.1694, lng: 23.8813, active: true, url: 'country-lithuania.html' },
-            { name: 'Latvia', flag: '🇱🇻', lat: 56.8796, lng: 24.6032, active: true, url: 'country-latvia.html' },
-            { name: 'Estonia', flag: '🇪🇪', lat: 58.5953, lng: 25.0136, active: true, url: 'country-estonia.html' },
-            { name: 'Luxembourg', flag: '🇱🇺', lat: 49.6116, lng: 6.1319, active: true, url: 'country-luxembourg.html' },
-            { name: 'Malta', flag: '🇲🇹', lat: 35.8989, lng: 14.5146, active: true, url: 'country-malta.html' },
-            { name: 'Cyprus', flag: '🇨🇾', lat: 35.1264, lng: 33.4299, active: true, url: 'country-cyprus.html' },
-            { name: 'Iceland', flag: '🇮🇸', lat: 64.9631, lng: -19.0208, active: true, url: 'country-iceland.html' },
-            { name: 'Serbia', flag: '🇷🇸', lat: 44.0165, lng: 21.0059, active: true, url: 'country-serbia.html' },
-            { name: 'Bosnia & Herzegovina', flag: '🇧🇦', lat: 43.9159, lng: 17.6791, active: true, url: 'country-bosnia.html' },
-            { name: 'North Macedonia', flag: '🇲🇰', lat: 41.6086, lng: 21.7453, active: true, url: 'country-north-macedonia.html' },
-            { name: 'Albania', flag: '🇦🇱', lat: 41.1533, lng: 20.1683, active: true, url: 'country-albania.html' },
-            { name: 'Montenegro', flag: '🇲🇪', lat: 42.7087, lng: 19.3744, active: true, url: 'country-montenegro.html' },
-            { name: 'Kosovo', flag: '🇽🇰', lat: 42.6026, lng: 20.9030, active: true, url: 'country-kosovo.html' },
-            { name: 'Moldova', flag: '🇲🇩', lat: 47.4116, lng: 28.3699, active: true, url: 'country-moldova.html' },
-            { name: 'Ukraine', flag: '🇺🇦', lat: 48.3794, lng: 31.1656, active: true, url: 'country-ukraine.html' },
-            { name: 'China (Mainland)', flag: '🇨🇳', lat: 35.8617, lng: 104.1954, active: true, url: 'country-china.html' },
-            { name: 'Hong Kong', flag: '🇭🇰', lat: 22.3193, lng: 114.1694, active: true, url: 'country-hong-kong.html' },
-            { name: 'Shanghai', flag: '🇨🇳', lat: 31.2304, lng: 121.4737, active: true, url: 'country-shanghai.html' },
-            { name: 'Guangzhou', flag: '🇨🇳', lat: 23.1291, lng: 113.2644, active: true, url: 'country-guangzhou.html' },
-            { name: 'United Arab Emirates', flag: '🇦🇪', lat: 23.4241, lng: 53.8478, active: true, url: 'country-uae.html' },
-            { name: 'Qatar', flag: '🇶🇦', lat: 25.3548, lng: 51.1839, active: true, url: 'country-qatar.html' },
-            { name: 'Saudi Arabia', flag: '🇸🇦', lat: 23.8859, lng: 45.0792, active: true, url: 'country-saudi-arabia.html' },
-            { name: 'United States', flag: '🇺🇸', lat: 37.0902, lng: -95.7129, active: true, url: 'country-usa.html' },
+            { name: 'France', flag: '🇫🇷', lat: 46.2276, lng: 2.2137, active: true, url: 'countries/country-france.html' },
+            { name: 'Germany', flag: '🇩🇪', lat: 51.1657, lng: 10.4515, active: true, url: 'countries/country-germany.html' },
+            { name: 'United Kingdom', flag: '🇬🇧', lat: 54.5591, lng: -2.0344, active: true, url: 'countries/country-united-kingdom.html' },
+            { name: 'Italy', flag: '🇮🇹', lat: 42.5042, lng: 12.5732, active: true, url: 'countries/country-italy.html' },
+            { name: 'Spain', flag: '🇪🇸', lat: 40.4637, lng: -3.7492, active: true, url: 'countries/country-spain.html' },
+            { name: 'Netherlands', flag: '🇳🇱', lat: 52.1326, lng: 5.2913, active: true, url: 'countries/country-netherlands.html' },
+            { name: 'Belgium', flag: '🇧🇪', lat: 50.5039, lng: 4.4699, active: true, url: 'countries/country-belgium.html' },
+            { name: 'Switzerland', flag: '🇨🇭', lat: 46.8182, lng: 8.2275, active: true, url: 'countries/country-switzerland.html' },
+            { name: 'Austria', flag: '🇦🇹', lat: 47.5162, lng: 14.5501, active: true, url: 'countries/country-austria.html' },
+            { name: 'Sweden', flag: '🇸🇪', lat: 62.1282, lng: 17.6534, active: true, url: 'countries/country-sweden.html' },
+            { name: 'Norway', flag: '🇳🇴', lat: 60.4720, lng: 8.4689, active: true, url: 'countries/country-norway.html' },
+            { name: 'Denmark', flag: '🇩🇰', lat: 56.2639, lng: 9.5018, active: true, url: 'countries/country-denmark.html' },
+            { name: 'Finland', flag: '🇫🇮', lat: 61.9241, lng: 25.7482, active: true, url: 'countries/country-finland.html' },
+            { name: 'Poland', flag: '🇵🇱', lat: 51.9194, lng: 19.1451, active: true, url: 'countries/country-poland.html' },
+            { name: 'Czech Republic', flag: '🇨🇿', lat: 49.8175, lng: 15.4730, active: true, url: 'countries/country-czechia.html' },
+            { name: 'Portugal', flag: '🇵🇹', lat: 39.3999, lng: -8.2245, active: true, url: 'countries/country-portugal.html' },
+            { name: 'Greece', flag: '🇬🇷', lat: 39.0742, lng: 21.8243, active: true, url: 'countries/country-greece.html' },
+            { name: 'Hungary', flag: '🇭🇺', lat: 47.1625, lng: 19.5033, active: true, url: 'countries/country-hungary.html' },
+            { name: 'Romania', flag: '🇷🇴', lat: 45.9432, lng: 24.9668, active: true, url: 'countries/country-romania.html' },
+            { name: 'Bulgaria', flag: '🇧🇬', lat: 42.7339, lng: 25.4858, active: true, url: 'countries/country-bulgaria.html' },
+            { name: 'Ireland', flag: '🇮🇪', lat: 53.1424, lng: -7.6921, active: true, url: 'countries/country-ireland.html' },
+            { name: 'Croatia', flag: '🇭🇷', lat: 45.1000, lng: 15.2000, active: true, url: 'countries/country-croatia.html' },
+            { name: 'Slovakia', flag: '🇸🇰', lat: 48.6690, lng: 19.6990, active: true, url: 'countries/country-slovakia.html' },
+            { name: 'Andorra', flag: '🇦🇩', lat: 42.5063, lng: 1.5218, active: true, url: 'countries/country-andorra.html' },
+            { name: 'Slovenia', flag: '🇸🇮', lat: 46.1512, lng: 14.9955, active: true, url: 'countries/country-slovenia.html' },
+            { name: 'Lithuania', flag: '🇱🇹', lat: 55.1694, lng: 23.8813, active: true, url: 'countries/country-lithuania.html' },
+            { name: 'Latvia', flag: '🇱🇻', lat: 56.8796, lng: 24.6032, active: true, url: 'countries/country-latvia.html' },
+            { name: 'Estonia', flag: '🇪🇪', lat: 58.5953, lng: 25.0136, active: true, url: 'countries/country-estonia.html' },
+            { name: 'Luxembourg', flag: '🇱🇺', lat: 49.6116, lng: 6.1319, active: true, url: 'countries/country-luxembourg.html' },
+            { name: 'Malta', flag: '🇲🇹', lat: 35.8989, lng: 14.5146, active: true, url: 'countries/country-malta.html' },
+            { name: 'Cyprus', flag: '🇨🇾', lat: 35.1264, lng: 33.4299, active: true, url: 'countries/country-cyprus.html' },
+            { name: 'Iceland', flag: '🇮🇸', lat: 64.9631, lng: -19.0208, active: true, url: 'countries/country-iceland.html' },
+            { name: 'Serbia', flag: '🇷🇸', lat: 44.0165, lng: 21.0059, active: true, url: 'countries/country-serbia.html' },
+            { name: 'Bosnia & Herzegovina', flag: '🇧🇦', lat: 43.9159, lng: 17.6791, active: true, url: 'countries/country-bosnia.html' },
+            { name: 'North Macedonia', flag: '🇲🇰', lat: 41.6086, lng: 21.7453, active: true, url: 'countries/country-north-macedonia.html' },
+            { name: 'Albania', flag: '🇦🇱', lat: 41.1533, lng: 20.1683, active: true, url: 'countries/country-albania.html' },
+            { name: 'Montenegro', flag: '🇲🇪', lat: 42.7087, lng: 19.3744, active: true, url: 'countries/country-montenegro.html' },
+            { name: 'Kosovo', flag: '🇽🇰', lat: 42.6026, lng: 20.9030, active: true, url: 'countries/country-kosovo.html' },
+            { name: 'Moldova', flag: '🇲🇩', lat: 47.4116, lng: 28.3699, active: true, url: 'countries/country-moldova.html' },
+            { name: 'Ukraine', flag: '🇺🇦', lat: 48.3794, lng: 31.1656, active: true, url: 'countries/country-ukraine.html' },
+            { name: 'China (Mainland)', flag: '🇨🇳', lat: 35.8617, lng: 104.1954, active: true, url: 'countries/country-china.html' },
+            { name: 'Hong Kong', flag: '🇭🇰', lat: 22.3193, lng: 114.1694, active: true, url: 'countries/country-hong-kong.html' },
+            { name: 'Shanghai', flag: '🇨🇳', lat: 31.2304, lng: 121.4737, active: true, url: 'countries/country-shanghai.html' },
+            { name: 'Guangzhou', flag: '🇨🇳', lat: 23.1291, lng: 113.2644, active: true, url: 'countries/country-guangzhou.html' },
+            { name: 'United Arab Emirates', flag: '🇦🇪', lat: 23.4241, lng: 53.8478, active: true, url: 'countries/country-uae.html' },
+            { name: 'Qatar', flag: '🇶🇦', lat: 25.3548, lng: 51.1839, active: true, url: 'countries/country-qatar.html' },
+            { name: 'Saudi Arabia', flag: '🇸🇦', lat: 23.8859, lng: 45.0792, active: true, url: 'countries/country-saudi-arabia.html' },
+            { name: 'United States', flag: '🇺🇸', lat: 37.0902, lng: -95.7129, active: true, url: 'countries/country-usa.html' },
 
         ];
 
@@ -461,14 +644,14 @@
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/6943c0ff63447e19862c286a/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6943c0ff63447e19862c286a/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
     <!--End of Tawk.to Script-->
