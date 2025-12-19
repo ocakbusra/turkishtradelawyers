@@ -318,23 +318,23 @@ a {
 .btn-soft {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background-color: rgba(45, 76, 200, 0.08);
-    color: #2D4CC8;
-    padding: 12px 28px;
-    border-radius: 50px;
+    gap: 10px;
+    background-color: #FFFFFF;
+    color: var(--primary-blue);
+    padding: 14px 32px;
+    border-radius: 16px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    border: 1px solid rgba(45, 76, 200, 0.1);
+    border: 1px solid var(--border-gray);
     text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .btn-soft:hover {
-    background-color: rgba(45, 76, 200, 0.15);
-    transform: translateY(-2px);
-    border-color: rgba(45, 76, 200, 0.2);
-    box-shadow: 0 4px 12px rgba(45, 76, 200, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-blue);
 }
 
 /* Stats */
