@@ -2179,6 +2179,45 @@ a {
     color: var(--dark-blue);
 }
 
+.article-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.article-content ul {
+    margin-bottom: 18px;
+    padding-left: 24px;
+}
+
+.article-content li {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+}
+
+.article-content ol {
+    margin-bottom: 18px;
+    padding-left: 24px;
+}
+
+.article-content blockquote {
+    background: var(--light-gray);
+    border-left: 4px solid var(--primary-blue);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.article-content blockquote strong {
+    color: var(--primary-blue);
+    font-style: normal;
+}
+
 .bibliography-list {
     list-style-type: none;
     padding-left: 0;
