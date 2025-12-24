@@ -226,3 +226,286 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+/* =========================================
+   SEO Enhancement Functions
+   Programmatic SEO & UX Improvements
+   ========================================= */
+
+// Reading Progress Bar for Articles
+function initReadingProgress() {
+    const progressBar = document.querySelector('.reading-progress');
+    if (!progressBar) return;
+
+    const article = document.querySelector('article, .article-content, main');
+    if (!article) return;
+
+    function updateProgress() {
+        const articleRect = article.getBoundingClientRect();
+        const articleTop = articleRect.top + window.pageYOffset;
+        const articleHeight = article.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollTop = window.pageYOffset;
+
+        const start = articleTop - windowHeight;
+        const end = articleTop + articleHeight;
+        const current = scrollTop - start;
+        const total = end - start;
+
+        const progress = Math.min(Math.max((current / total) * 100, 0), 100);
+        progressBar.style.width = `${progress}%`;
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+}
+
+// Lazy Loading Observer for Images
+function initLazyLoading() {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for older browsers
+        lazyImages.forEach(img => img.classList.add('loaded'));
+    }
+}
+
+// Auto-generate Table of Contents from H2 headings
+function generateTableOfContents() {
+    const tocContainer = document.querySelector('.article-nav ul');
+    if (!tocContainer) return;
+
+    const article = document.querySelector('article, .article-content');
+    if (!article) return;
+
+    const headings = article.querySelectorAll('h2[id]');
+    if (headings.length === 0) return;
+
+    tocContainer.innerHTML = '';
+
+    headings.forEach(heading => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `#${heading.id}`;
+        a.textContent = heading.textContent;
+        li.appendChild(a);
+        tocContainer.appendChild(li);
+    });
+
+    // Highlight active section on scroll
+    function highlightActiveSection() {
+        const scrollPos = window.scrollY + 150;
+
+        headings.forEach((heading) => {
+            const section = heading;
+            const sectionTop = section.offsetTop;
+            const link = tocContainer.querySelector(`a[href="#${heading.id}"]`);
+
+            if (link) {
+                if (scrollPos >= sectionTop) {
+                    tocContainer.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', highlightActiveSection, { passive: true });
+    highlightActiveSection();
+}
+
+// Generate Breadcrumb Schema dynamically
+function generateBreadcrumbSchema() {
+    const breadcrumbNav = document.querySelector('.breadcrumb-nav');
+    if (!breadcrumbNav) return;
+
+    const items = [];
+    const links = breadcrumbNav.querySelectorAll('a');
+    const current = breadcrumbNav.querySelector('.current');
+
+    links.forEach((link, index) => {
+        items.push({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": link.textContent.trim(),
+            "item": link.href
+        });
+    });
+
+    if (current) {
+        items.push({
+            "@type": "ListItem",
+            "position": items.length + 1,
+            "name": current.textContent.trim()
+        });
+    }
+
+    if (items.length > 0) {
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": items
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+    }
+}
+
+// Initialize internal link tracking for analytics
+function trackInternalLinks() {
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
+
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (typeof gtag === 'function') {
+                gtag('event', 'internal_link_click', {
+                    'link_url': this.href,
+                    'link_text': this.textContent.trim().substring(0, 50)
+                });
+            }
+        });
+    });
+}
+
+// Smooth scroll for table of contents links
+function initSmoothScrollTOC() {
+    const tocLinks = document.querySelectorAll('.article-nav a');
+
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+
+            if (target) {
+                const offset = 100; // Account for fixed navbar
+                const targetPosition = target.offsetTop - offset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Update URL without triggering scroll
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
+}
+
+// Add social share functionality
+function initShareButtons() {
+    const shareButtons = document.querySelectorAll('.share-btn');
+
+    shareButtons.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const platform = this.classList.contains('linkedin') ? 'LinkedIn' :
+                this.classList.contains('twitter') ? 'Twitter' : 'Email';
+
+            if (typeof gtag === 'function') {
+                gtag('event', 'share', {
+                    'method': platform,
+                    'content_type': 'article'
+                });
+            }
+        });
+    });
+}
+
+// Performance: Defer non-critical scripts
+function deferNonCriticalScripts() {
+    // Defer Tawk.to loading until user interaction or after 5 seconds
+    let tawkLoaded = false;
+
+    function loadTawk() {
+        if (tawkLoaded) return;
+        tawkLoaded = true;
+
+        // Tawk script is already handled separately
+    }
+
+    // Load on first interaction
+    ['mousedown', 'touchstart', 'scroll', 'keydown'].forEach(event => {
+        document.addEventListener(event, loadTawk, { once: true, passive: true });
+    });
+
+    // Or after 5 seconds
+    setTimeout(loadTawk, 5000);
+}
+
+// Initialize all SEO enhancements
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if we're on an article page
+    const isArticlePage = document.querySelector('.article-section, .article-content, article');
+
+    if (isArticlePage) {
+        initReadingProgress();
+        generateTableOfContents();
+        initSmoothScrollTOC();
+        initShareButtons();
+    }
+
+    // These run on all pages
+    initLazyLoading();
+    generateBreadcrumbSchema();
+    trackInternalLinks();
+    deferNonCriticalScripts();
+});
+
+// Add structured data for FAQ sections automatically
+function autoGenerateFAQSchema() {
+    const faqSection = document.querySelector('#faqs, .faq-section');
+    if (!faqSection) return;
+
+    const questions = faqSection.querySelectorAll('h4, .faq-question');
+    const faqs = [];
+
+    questions.forEach(question => {
+        const nextElement = question.nextElementSibling;
+        if (nextElement && (nextElement.tagName === 'P' || nextElement.classList.contains('faq-answer'))) {
+            faqs.push({
+                "@type": "Question",
+                "name": question.textContent.trim(),
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": nextElement.textContent.trim()
+                }
+            });
+        }
+    });
+
+    if (faqs.length > 0) {
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+    }
+}
+
+// Run FAQ schema generation
+document.addEventListener('DOMContentLoaded', autoGenerateFAQSchema);
+

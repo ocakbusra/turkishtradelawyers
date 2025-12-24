@@ -1,0 +1,315 @@
+/* =========================================
+   Related Articles Component Styles
+   For programmatic SEO internal linking
+   ========================================= */
+
+.related-articles {
+    margin-top: 60px;
+    padding: 48px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #F0F4FF 100%);
+    border-radius: 20px;
+    border: 1px solid #E4E7EC;
+}
+
+.related-articles h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a2742;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.related-articles h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #2D4CC8, #00C4B4);
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.related-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid #E4E7EC;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.related-card:hover {
+    transform: translateY(-6px);
+    border-color: #2D4CC8;
+    box-shadow: 0 16px 32px rgba(45, 76, 200, 0.12);
+}
+
+.related-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2D4CC8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    background: #E0E7FF;
+    padding: 4px 12px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.related-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2742;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.related-card:hover h4 {
+    color: #2D4CC8;
+}
+
+.related-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475467;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Breadcrumb Styles */
+.breadcrumb {
+    padding: 120px 0 20px;
+    background: transparent;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-nav a {
+    color: #475467;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: #2D4CC8;
+}
+
+.breadcrumb-nav .separator {
+    color: #94A3B8;
+    font-size: 0.8rem;
+}
+
+.breadcrumb-nav .current {
+    color: #1a2742;
+    font-weight: 600;
+}
+
+/* Internal Navigation Links - Side Panel */
+.article-nav {
+    position: sticky;
+    top: 100px;
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E4E7EC;
+    margin-bottom: 20px;
+}
+
+.article-nav h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+}
+
+.article-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.article-nav li {
+    margin-bottom: 8px;
+}
+
+.article-nav a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    color: #475467;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.article-nav a:hover,
+.article-nav a.active {
+    background: #F0F4FF;
+    color: #2D4CC8;
+    border-left-color: #2D4CC8;
+}
+
+/* Call to Action Box in Articles */
+.article-cta {
+    margin-top: 48px;
+    padding: 40px;
+    background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.article-cta h3 {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.article-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-cta .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #00C4B4;
+    color: #FFFFFF;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.article-cta .cta-btn:hover {
+    background: #00a89a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 196, 180, 0.3);
+}
+
+/* Tags Section */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #E4E7EC;
+}
+
+.article-tags .tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #F0F4FF;
+    color: #2D4CC8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.article-tags .tag:hover {
+    background: #2D4CC8;
+    color: #FFFFFF;
+}
+
+/* Author Box */
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 28px;
+    background: #F8FAFC;
+    border-radius: 16px;
+    margin-top: 40px;
+    border: 1px solid #E4E7EC;
+}
+
+.author-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a2742;
+    margin-bottom: 8px;
+}
+
+.author-info p {
+    font-size: 0.95rem;
+    color: #475467;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #2D4CC8, #00C4B4);
+    z-index: 999;
+    transition: width 0.1s linear;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .related-articles {
+        padding: 32px 20px;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-nav {
+        display: none;
+    }
+
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .article-cta {
+        padding: 32px 24px;
+    }
+}

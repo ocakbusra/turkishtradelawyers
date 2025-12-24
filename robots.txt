@@ -1,12 +1,21 @@
 User-agent: *
 Allow: /
+Disallow: /components/
 
+# Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Googlebot-Image
 Allow: /
 
+# Bing
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# AI Crawlers
 User-agent: GPTBot
 Allow: /
 
@@ -16,7 +25,13 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-User-agent: bingbot
+User-agent: Anthropic-AI
 Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Speed up crawling by specifying clean URLs
+Host: www.turkishtradelawyers.com
 
 Sitemap: https://www.turkishtradelawyers.com/sitemap.xml
