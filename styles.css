@@ -3509,3 +3509,14 @@ img[loading="lazy"][src] {
         gap: 12px;
     }
 }
+/* Glossary Term Link */
+.glossary-term-link {
+    color: #1a2742;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.glossary-term-link:hover {
+    color: #2D4CC8;
+    text-decoration: underline;
+}
