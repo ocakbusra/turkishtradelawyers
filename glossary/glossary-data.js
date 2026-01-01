@@ -23,7 +23,7 @@ const glossaryData = [
         id: "agency-agreement",
         term: "Agency Agreement",
         question: "What are the legal requirements for agency agreements in Turkey?",
-        excerpt: "Agency agreements in Turkey are governed by the Turkish Commercial Code. Agents are entitled to termination compensation after lawful termination.",
+        excerpt: "Agency agreements in Turkey are governed by the Turkish Commercial Code. Agents may be entitled to portfolio compensation if specific statutory conditions are met.",
         tags: ["contract-law", "commercial-law"],
         relatedTerms: ["distribution-agreement", "commercial-representative", "franchise-agreement"]
     },
@@ -129,7 +129,7 @@ const glossaryData = [
         id: "corporate-governance",
         term: "Corporate Governance",
         question: "What corporate governance requirements apply to Turkish companies?",
-        excerpt: "Turkish Commercial Code mandates corporate governance standards including independent board members for public companies and internal audit requirements.",
+        excerpt: "Corporate governance in Turkey is primarily shaped by the Turkish Commercial Code No. 6102, while publicly held companies are also subject to Capital Markets Board (CMB) corporate governance rules.",
         tags: ["company-law"],
         relatedTerms: ["board-of-directors", "shareholders-agreement", "anonim-sirket"]
     },
@@ -137,7 +137,7 @@ const glossaryData = [
         id: "customs-procedures",
         term: "Customs Procedures",
         question: "What are the main customs procedures for importing goods to Turkey?",
-        excerpt: "Import procedures include customs declaration, valuation, classification under HS codes, and payment of duties. Turkey uses a unified customs system aligned with EU standards.",
+        excerpt: "Import procedures typically include an electronic customs declaration, tariff classification (HS/GTIP), customs valuation, origin determination, submission of supporting documents/permits, and payment of customs duties/VAT.",
         tags: ["international-trade", "tax-law"],
         relatedTerms: ["customs-valuation", "tariff-classification", "free-trade-zones"]
     },
@@ -145,7 +145,7 @@ const glossaryData = [
         id: "customs-valuation",
         term: "Customs Valuation",
         question: "How is customs value determined for imported goods in Turkey?",
-        excerpt: "Customs valuation follows WTO Agreement on Customs Valuation. Transaction value is the primary method, with alternative methods when transaction value cannot be determined.",
+        excerpt: "In Turkey, customs valuation is governed primarily by Turkish Customs Law No. 4458 and secondary legislation, applying WTO customs valuation principles. The default method is transaction value.",
         tags: ["international-trade", "tax-law"],
         relatedTerms: ["customs-procedures", "transfer-pricing", "tariff-classification"]
     },
@@ -154,7 +154,7 @@ const glossaryData = [
         id: "data-controller",
         term: "Data Controller",
         question: "What are the obligations of a data controller under KVKK?",
-        excerpt: "Data controllers must register with VERBIS, implement security measures, respond to data subject requests, and report breaches to the Data Protection Authority.",
+        excerpt: "Under KVKK, data controllers must fulfill information (privacy notice) duties, take appropriate security measures, respond to data subject requests, and handle breach notifications. VERBIS registration is conditional.",
         tags: ["data-protection"],
         relatedTerms: ["kvkk-compliance", "data-processor", "personal-data"]
     },
@@ -162,7 +162,7 @@ const glossaryData = [
         id: "data-processor",
         term: "Data Processor",
         question: "What is the difference between data controller and processor under Turkish law?",
-        excerpt: "Data processors process personal data on behalf of controllers. They must follow controller instructions and implement appropriate security measures under KVKK.",
+        excerpt: "Under KVKK, data processors process personal data on the controller’s behalf and instructions. They must implement appropriate technical and organisational security measures.",
         tags: ["data-protection"],
         relatedTerms: ["data-controller", "kvkk-compliance", "data-processing-agreement"]
     },
@@ -170,7 +170,7 @@ const glossaryData = [
         id: "data-processing-agreement",
         term: "Data Processing Agreement",
         question: "When is a data processing agreement required under KVKK?",
-        excerpt: "A data processing agreement is required when sharing personal data with third-party processors. It must define processing purposes, security measures, and data subject rights.",
+        excerpt: "A written data processing agreement (or clauses) allocating responsibilities and security measures is best practice under KVKK when engaging a processor, even if no single mandatory form exists.",
         tags: ["data-protection", "contract-law"],
         relatedTerms: ["data-controller", "data-processor", "kvkk-compliance"]
     },
@@ -178,7 +178,7 @@ const glossaryData = [
         id: "distribution-agreement",
         term: "Distribution Agreement",
         question: "What should be included in a distribution agreement for Turkey?",
-        excerpt: "Distribution agreements should cover territory, exclusivity, pricing, minimum purchase requirements, IP rights, termination conditions, and competition law compliance.",
+        excerpt: "Distribution agreements typically address territory, exclusivity, ordering and supply terms, recommended resale prices, IP/brand use, termination, and competition law compliance.",
         tags: ["contract-law", "commercial-law"],
         relatedTerms: ["agency-agreement", "franchise-agreement", "exclusive-dealing"]
     },
@@ -194,7 +194,7 @@ const glossaryData = [
         id: "dispute-resolution-clause",
         term: "Dispute Resolution Clause",
         question: "How should dispute resolution clauses be drafted for Turkish contracts?",
-        excerpt: "Effective clauses specify governing law, jurisdiction or arbitration, language, and procedural rules. Istanbul Arbitration Centre (ISTAC) is a popular choice for B2B disputes.",
+        excerpt: "Effective dispute resolution clauses clearly choose court jurisdiction or arbitration (e.g., ISTAC), governing law, seat of arbitration, language, and number of arbitrators.",
         tags: ["dispute-resolution", "contract-law"],
         relatedTerms: ["arbitration-turkey", "litigation-turkey", "mediation"]
     },
@@ -773,7 +773,7 @@ const glossaryData = [
         id: "corporate-tax",
         term: "Corporate Tax",
         question: "What is the corporate tax rate in Turkey?",
-        excerpt: "Standard corporate tax rate is currently 25% (for 2024). Reduced rates apply in certain zones and for specific activities. Advance tax payments are required quarterly.",
+        excerpt: "As of 2025, the standard corporate income tax rate is 25%. Certain sectors (e.g., banks and some financial institutions) may be taxed at 30%, and sector/incentive-based exemptions may apply.",
         tags: ["tax-law"],
         relatedTerms: ["tax-residency", "transfer-pricing", "withholding-tax"]
     },
