@@ -167,6 +167,14 @@ const glossaryData = [
         relatedTerms: ["data-controller", "kvkk-compliance", "data-processing-agreement"]
     },
     {
+        id: "debt-collection",
+        term: "Debt Collection",
+        question: "How does debt collection work in Turkey?",
+        excerpt: "Debt collection in Turkey can be pursued amicably or through enforcement offices (icra dairesi). 'Enforcement without judgment' is a streamlined method for monetary debts.",
+        tags: ["commercial-law", "dispute-resolution"],
+        relatedTerms: ["litigation-turkey", "enforcement-foreign-judgments", "commercial-lease"]
+    },
+    {
         id: "data-processing-agreement",
         term: "Data Processing Agreement",
         question: "When is a data processing agreement required under KVKK?",
