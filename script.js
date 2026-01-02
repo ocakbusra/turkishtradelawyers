@@ -205,11 +205,25 @@ document.addEventListener('DOMContentLoaded', () => {
 // Footer Injection
 document.addEventListener('DOMContentLoaded', () => {
     const footerContent = `
-        <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-            <p>&copy; 2025 Turkish Trade Lawyers. All rights reserved. | <a href="cookie-policy.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Cookie Policy</a> | <a href="disclaimer.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Disclaimer</a></p>
-            <div class="ssl-badge" style="display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.3); padding: 5px 12px; border-radius: 20px; background: rgba(255,255,255,0.05);">
-                <i class="fas fa-lock"></i> SSL Secured
+        <div class="container">
+            <div class="footer-social-links"
+                style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 24px;">
+                <a href="https://www.linkedin.com/company/turkish-trade-lawyers" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #ffffff; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.youtube.com/@TurkishTradeLawyers" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #ffffff; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease;">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
+            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved. | <a href="cookie-policy.html"
+                    style="color: rgba(255,255,255,0.7); text-decoration: none;">Cookie Policy</a> | <a
+                    href="disclaimer.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Disclaimer</a> |
+                <a href="privacy-notice.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Privacy</a>
+            </p>
         </div>
     `;
 
