@@ -5,79 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Turkish Trade Monitor - Monthly insights into Turkish trade law, official gazette highlights, and critical dates.">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Turkish Trade Lawyers">
-    <meta name="keywords"
-        content="Turkish trade law, official gazette Turkey, legal updates Turkey, trade regulations, monthly legal briefing">
+        content="Turkish Trade Monitor - Monthly digests of official gazette updates, legal changes, and economic indicators in Turkey.">
     <title>Turkish Trade Monitor | Turkish Trade Lawyers</title>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Turkish Trade Monitor - Monthly Legal Briefings">
+    <meta property="og:title" content="Turkish Trade Monitor | Turkish Trade Lawyers">
     <meta property="og:description"
-        content="Monthly insights into Turkish trade law, official gazette highlights, and critical legal dates.">
+        content="Monthly digests of Turkish official gazette updates, legal changes, and economic indicators. Stay informed with our expert summaries.">
     <meta property="og:url" content="https://www.turkishtradelawyers.com/monitor.html">
     <meta property="og:site_name" content="Turkish Trade Lawyers">
     <meta property="og:image" content="https://www.turkishtradelawyers.com/logo-square.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Turkish Trade Monitor">
-    <meta name="twitter:description" content="Monthly legal briefings on Turkish trade law and regulations.">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FX7T07VPM"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-9FX7T07VPM');
-    </script>
-
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://embed.tawk.to">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo-square.png" type="image/png">
-    <link rel="apple-touch-icon" href="logo-square.png">
-    <link rel="canonical" href="https://www.turkishtradelawyers.com/monitor.html">
 
-    <!-- CollectionPage Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "Turkish Trade Monitor",
-        "description": "Monthly briefing on Turkish trade law regulations, official gazette updates, and key legal dates.",
-        "publisher": {"@type": "Organization", "name": "Turkish Trade Lawyers"}
-    }
-    </script>
+    <style>
+        /* Specific Styles for Monitor Page */
+        .monitor-hero {
+            padding: 160px 0 100px;
+            /* Aligned with main hero */
+            text-align: center;
+            background: linear-gradient(135deg, #F0F4FF 0%, #FFFFFF 100%);
+        }
 
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.turkishtradelawyers.com"},
-            {"@type": "ListItem", "position": 2, "name": "Turkish Trade Monitor"}
-        ]
-    }
-    </script>
+        .monitor-hero h1 {
+            font-size: 3.5rem;
+            color: #1a2742;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .monitor-hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #475467;
+            font-size: 1.25rem;
+        }
+
+        .monitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 32px;
+            padding-bottom: 100px;
+        }
+
+        .monitor-card {
+            background: #ffffff;
+            border: 1px solid #E4E7EC;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .monitor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-color: #2D4CC8;
+        }
+
+        .monitor-badge {
+            display: inline-block;
+            background: #EEF2FF;
+            color: #2D4CC8;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: fit-content;
+        }
+
+        .monitor-title {
+            font-size: 1.5rem;
+            color: #1a2742;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .monitor-excerpt {
+            color: #475467;
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .monitor-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #F2F4F7;
+            margin-top: auto;
+        }
+
+        .monitor-date {
+            font-size: 0.875rem;
+            color: #667085;
+        }
+
+        .monitor-link {
+            color: #2D4CC8;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.2s;
+        }
+
+        .monitor-link:hover {
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .monitor-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .monitor-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
+    <!-- Navigation (Copied from index.html) -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html#home" class="nav-logo">
-                <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="logo-icon" loading="lazy">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="logo-icon">
                 <span class="logo-text">
                     <span class="logo-main">Turkish Trade Lawyers</span>
                     <span class="logo-tagline">Legal Excellence in Turkey</span>
@@ -99,61 +169,59 @@
         </div>
     </nav>
 
-    <!-- Main Content: Monitor Listing Section -->
-    <main class="guides-section">
+    <!-- Monitor Page Hero -->
+    <section class="monitor-hero">
         <div class="container">
-            <div class="guides-header">
-                <h1>Turkish Trade Monitor</h1>
-                <p>Your monthly briefing on Turkish trade law regulations, official gazette updates, and key legal
-                    dates.</p>
-            </div>
+            <h1>Turkish Trade Monitor</h1>
+            <p>Your monthly briefing on Turkish trade law regulations, official gazette updates, and key legal dates.
+            </p>
+        </div>
+    </section>
 
-            <div class="guides-grid">
-                <!-- Monitor Card: November 2025 -->
-                <a href="monitor-nov-2025.html" class="guide-card">
-                    <div>
-                        <span class="guide-card-category"
-                            style="background-color: #E0E7FF; color: #2D4CC8;">Bulletin</span>
-                        <h2 class="guide-card-title">Turkish Trade Monitor: November 2025 Issue</h2>
-                        <p class="guide-card-description">Includes: Annual Inflation at 31.07%, tax deferral interest
-                            rates reduced to 39%, FX conversion support extended, and key privacy (KVKK) updates.</p>
+    <!-- Monitor Grid -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="monitor-grid">
+
+                <!-- NEW Dec 2025 Card -->
+                <article class="monitor-card">
+                    <span class="monitor-badge">Bulletin</span>
+                    <h2 class="monitor-title">Turkish Trade Monitor: December 2025 Issue</h2>
+                    <p class="monitor-excerpt">
+                        Includes: New 2026 Minimum Wage (+27%), Central Bank Rate Cut to 38%, Law 7566 Tax Overhaul, and
+                        new Investment/Tax Treaties with Hong Kong.
+                    </p>
+                    <div class="monitor-footer">
+                        <span class="monitor-date">January 15, 2026</span>
+                        <a href="monitor-dec-2025.html" class="monitor-link">Read Issue <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="guide-card-footer">
-                        <span class="guide-card-date">December 15, 2025</span>
-                        <span class="guide-card-readmore">
-                            Read Issue
-                            <i class="fas fa-arrow-right"></i>
-                        </span>
+                </article>
+
+                <!-- Nov 2025 Card -->
+                <article class="monitor-card">
+                    <span class="monitor-badge">Bulletin</span>
+                    <h2 class="monitor-title">Turkish Trade Monitor: November 2025 Issue</h2>
+                    <p class="monitor-excerpt">
+                        Includes: Annual Inflation at 31.07%, tax deferral interest rates reduced to 39%, FX conversion
+                        support extended, and key privacy (KVKK) updates.
+                    </p>
+                    <div class="monitor-footer">
+                        <span class="monitor-date">December 15, 2025</span>
+                        <a href="monitor-nov-2025.html" class="monitor-link">Read Issue <i
+                                class="fas fa-arrow-right"></i></a>
                     </div>
-                </a>
+                </article>
 
             </div>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Turkish Trade Lawyers. All rights reserved. | <a href="cookie-policy.html"
-                    style="color: rgba(255,255,255,0.7); text-decoration: none;">Cookie Policy</a></p>
-        </div>
-    </footer>
+    <!-- Footer Injection Target -->
+    <div id="global-footer"></div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
-
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6943c0ff63447e19862c286a/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
 </body>
 
 </html>
