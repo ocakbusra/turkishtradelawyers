@@ -3509,6 +3509,7 @@ img[loading="lazy"][src] {
         gap: 12px;
     }
 }
+
 /* Glossary Term Link */
 .glossary-term-link {
     color: #1a2742;
@@ -3519,4 +3520,127 @@ img[loading="lazy"][src] {
 .glossary-term-link:hover {
     color: #2D4CC8;
     text-decoration: underline;
+}
+
+/* Audio Player Styles */
+.audio-player-container {
+    background: #F8FAFC;
+    border: 1px solid #E4E7EC;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.audio-control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2D4CC8;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.audio-control-btn:hover {
+    background: #1E3A8A;
+    transform: scale(1.05);
+}
+
+.audio-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.audio-label {
+    font-size: 0.75rem;
+    color: #64748B;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.audio-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a2742;
+}
+
+.audio-progress-container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 400px;
+}
+
+.audio-time {
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+    color: #475467;
+    min-width: 45px;
+}
+
+.progress-bar-wrapper {
+    flex-grow: 1;
+    height: 4px;
+    background: #E2E8F0;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #2D4CC8;
+    border-radius: 2px;
+    width: 0%;
+    position: relative;
+    transition: width 0.1s linear;
+}
+
+.progress-bar-fill::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #2D4CC8;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.progress-bar-wrapper:hover .progress-bar-fill::after {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .audio-player-container {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .audio-info {
+        width: calc(100% - 60px);
+    }
+
+    .audio-progress-container {
+        width: 100%;
+        max-width: none;
+        order: 3;
+        margin-top: 8px;
+    }
 }
