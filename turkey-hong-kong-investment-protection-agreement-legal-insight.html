@@ -186,29 +186,6 @@
                     </div>
                 </header>
 
-                <!-- Audio Player -->
-                <div class="audio-player-container">
-                    <button id="playPauseBtn" class="audio-control-btn" aria-label="Play audio">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <div class="audio-info">
-                        <span class="audio-label">Listen to Article</span>
-                        <span class="audio-title">Expert Audio Summary</span>
-                    </div>
-                    <div class="audio-progress-container">
-                        <span id="currentTime" class="audio-time">0:00</span>
-                        <div class="progress-bar-wrapper" id="progressBar">
-                            <div class="progress-bar-fill" id="progressFill"></div>
-                        </div>
-                        <span id="duration" class="audio-time">--:--</span>
-                    </div>
-                    <audio id="articleAudio" preload="metadata">
-                        <source src="assets/audio/turkey-hong-kong-investment-protection-agreement-legal-insight.mp3"
-                            type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-
                 <section id="introduction" class="article-content">
                     <p>The <strong>Agreement between the Republic of Türkiye and the Hong Kong Special Administrative
                             Region of the People’s Republic of China for the Reciprocal Promotion and Protection of
@@ -412,65 +389,6 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const audio = document.getElementById('articleAudio');
-            const playBtn = document.getElementById('playPauseBtn');
-            const icon = playBtn.querySelector('i');
-            const progressBar = document.getElementById('progressBar');
-            const progressFill = document.getElementById('progressFill');
-            const currentTimeEl = document.getElementById('currentTime');
-            const durationEl = document.getElementById('duration');
-
-            // Format time helper
-            function formatTime(seconds) {
-                const minutes = Math.floor(seconds / 60);
-                const secs = Math.floor(seconds % 60);
-                return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-            }
-
-            // Toggle Play/Pause
-            playBtn.addEventListener('click', () => {
-                if (audio.paused) {
-                    audio.play();
-                    icon.classList.remove('fa-play');
-                    icon.classList.add('fa-pause');
-                } else {
-                    audio.pause();
-                    icon.classList.remove('fa-pause');
-                    icon.classList.add('fa-play');
-                }
-            });
-
-            // Update progress
-            audio.addEventListener('timeupdate', () => {
-                const percent = (audio.currentTime / audio.duration) * 100;
-                progressFill.style.width = `${percent}%`;
-                currentTimeEl.textContent = formatTime(audio.currentTime);
-            });
-
-            // Load duration
-            audio.addEventListener('loadedmetadata', () => {
-                durationEl.textContent = formatTime(audio.duration);
-            });
-
-            // Click to seek
-            progressBar.addEventListener('click', (e) => {
-                const width = progressBar.clientWidth;
-                const clickX = e.offsetX;
-                const duration = audio.duration;
-                audio.currentTime = (clickX / width) * duration;
-            });
-
-            // Reset when ended
-            audio.addEventListener('ended', () => {
-                icon.classList.remove('fa-pause');
-                icon.classList.add('fa-play');
-                progressFill.style.width = '0%';
-                currentTimeEl.textContent = '0:00';
-            });
-        });
-    </script>
 </body>
 
 </html>
