@@ -590,6 +590,15 @@ const glossaryData = [
     },
     // T
     {
+        id: "turkish-investment-lawyer",
+        term: "Turkish Investment Lawyer",
+        customUrl: "turkish-investment-lawyer.html",
+        question: "What legal support do foreign investors need in Turkey?",
+        excerpt: "A structured legal roadmap for foreign investors covering entry strategies, due diligence, contracts, tax alignment, and dispute prevention.",
+        tags: ["commercial-law", "international-trade"],
+        relatedTerms: ["foreign-investment", "due-diligence", "company-formation"]
+    },
+    {
         id: "tariff-classification",
         term: "Tariff Classification",
         question: "How are goods classified for customs purposes in Turkey?",

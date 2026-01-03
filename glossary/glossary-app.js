@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="glossary-item" data-tags="${item.tags.join(',')}" data-id="${item.id}">
                 <div class="glossary-term-header">
                     <h3 class="glossary-term">
-                        <a href="glossary/${item.id}.html" class="glossary-term-link">${item.term}</a>
+                        <a href="${item.customUrl || 'glossary/' + item.id + '.html'}" class="glossary-term-link">${item.term}</a>
                     </h3>
                     <span class="glossary-term-tag">
                         ${getTagLabel(item.tags[0])}
