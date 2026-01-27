@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.turkishtradelawyers.com/cookie-policy.html</loc>
@@ -396,8 +396,33 @@
     <lastmod>2025-11-07</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.turkishtradelawyers.com/compliance-framework-ecommerce-retail-turkey.html</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.turkishtradelawyers.com/drafting-valid-power-of-attorney-turkey.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.turkishtradelawyers.com/employment-law-hiring-terminating-turkey.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.turkishtradelawyers.com/enforcing-foreign-arbitral-awards-turkey.html</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.turkishtradelawyers.com/liaison-office-vs-branch-office-turkey.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Glossary Main Page -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/glossary.html</loc>
     <lastmod>2025-12-26</lastmod>
@@ -989,7 +1014,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Glossary Main Page -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/glossary.html</loc>
     <lastmod>2025-12-26</lastmod>
@@ -1581,7 +1606,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Glossary Main Page -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/glossary.html</loc>
     <lastmod>2025-12-26</lastmod>
@@ -2173,7 +2198,7 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Industries Main Page -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/industries.html</loc>
     <lastmod>2025-12-26</lastmod>
@@ -2806,7 +2831,7 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Recently Added Pages -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/company-formation-turkey-uk.html</loc>
     <lastmod>2026-01-26</lastmod>
@@ -2833,7 +2858,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Missing Glossary Pages -->
+  
   <url>
     <loc>https://www.turkishtradelawyers.com/glossary/business-permits-licenses.html</loc>
     <lastmod>2026-01-26</lastmod>
@@ -2854,6 +2879,4 @@
     <lastmod>2026-01-26</lastmod>
     <priority>0.8</priority>
   </url>
-</urlset>
-
-
+<url><loc>https://www.turkishtradelawyers.com/components/shared-head.html</loc><lastmod>2026-01-26</lastmod><priority>0.7</priority></url></urlset>
