@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+   <url>
+     <loc>https://www.turkishtradelawyers.com/how-to-enter-turkish-market.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/zwGMRMIYlk0/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>How to Enter the Turkish Market - Video Guide</video:title>
+       <video:description>Complete legal guide for foreign companies entering the Turkish market. Expert analysis of market entry models, company formation, regulatory compliance, and tax structuring under Turkish law.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/zwGMRMIYlk0</video:player_loc>
+       <video:publication_date>2026-01-26</video:publication_date>
+     </video:video>
+   </url>
+   <url>
+     <loc>https://www.turkishtradelawyers.com/how-to-spot-fake-clinics-medical-tourism-turkey.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/Sc7oCfYmlbA/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>How to Spot Fake Clinics in Turkey - Medical Tourism Legal Guide</video:title>
+       <video:description>Learn how to verify legitimate clinics in Turkey and avoid scams. A practical legal guide for medical tourists on checking licenses, spotting red flags, and ensuring safety.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/Sc7oCfYmlbA</video:player_loc>
+       <video:publication_date>2026-01-23</video:publication_date>
+     </video:video>
+   </url>
+</urlset>
