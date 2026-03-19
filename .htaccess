@@ -15,3 +15,16 @@ RewriteRule ^(.*)/$ /$1 [R=301,L]
 # 3. Force HTTPS (Optional but recommended for consistency)
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 4. Security headers (E-E-A-T trust + baseline hardening)
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # NOTE: This site uses third-party analytics/chat scripts and inline scripts/styles.
+  # Keep CSP conservative to avoid breaking functionality.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https:; frame-ancestors 'none'; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://embed.tawk.to; connect-src 'self' https: wss:; frame-src 'self' https://www.google.com https://embed.tawk.to; upgrade-insecure-requests; block-all-mixed-content"
+</IfModule>

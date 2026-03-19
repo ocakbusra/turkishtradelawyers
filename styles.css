@@ -1942,14 +1942,70 @@ a {
 .footer {
     background: #1E3A8A;
     color: var(--white);
-    padding: 40px 0;
-    text-align: center;
+    padding: 56px 0 44px;
+    text-align: left;
     border-top: none;
 }
 
 .footer p {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.875rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.footer-col h4 {
+    margin: 0 0 12px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.footer-col a {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.footer-col a:hover {
+    color: rgba(255, 255, 255, 0.98);
+    text-decoration: underline;
+}
+
+.footer-legal {
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 }
 
 /* Animations */
@@ -3094,6 +3150,98 @@ a {
    Related Articles, Breadcrumbs, Internal Linking
    ========================================= */
 
+/* Homepage Internal Links Section */
+.internal-links {
+    padding: 88px 0;
+    background: linear-gradient(135deg, #F9FAFB 0%, #F0F4FF 100%);
+    border-top: 1px solid #E4E7EC;
+    border-bottom: 1px solid #E4E7EC;
+}
+
+.internal-link-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.internal-link-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 22px 24px;
+    background: #FFFFFF;
+    border: 1px solid #E4E7EC;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.internal-link-card:hover {
+    transform: translateY(-4px);
+    border-color: #2D4CC8;
+    box-shadow: 0 14px 30px rgba(45, 76, 200, 0.12);
+}
+
+.internal-link-kicker {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #2D4CC8;
+    background: #E0E7FF;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.internal-link-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 800;
+    color: #1a2742;
+}
+
+.internal-link-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #475467;
+}
+
+.internal-link-quick {
+    margin-top: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #475467;
+}
+
+.internal-link-quick-label {
+    font-weight: 700;
+    color: #1a2742;
+}
+
+.internal-link-quick a {
+    color: #2D4CC8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.internal-link-quick a:hover {
+    text-decoration: underline;
+}
+
+.internal-link-dot {
+    color: #98A2B3;
+}
+
 /* Related Articles Section */
 .related-articles {
     margin-top: 60px;
@@ -3178,6 +3326,166 @@ a {
     color: #475467;
     margin: 0;
     flex-grow: 1;
+}
+
+/* Legal Disclaimer (articles) */
+.legal-disclaimer {
+    margin-top: 40px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: 1px solid #E4E7EC;
+    background: #FFFFFF;
+    color: #475467;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.legal-disclaimer a {
+    color: #2D4CC8;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.legal-disclaimer a:hover {
+    text-decoration: underline;
+}
+
+/* Sources & Authorities */
+.sources-box {
+    margin-top: 44px;
+    padding: 36px;
+    border-radius: 18px;
+    border: 1px solid #E4E7EC;
+    background: #FFFFFF;
+}
+
+.sources-box h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a2742;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sources-note {
+    margin: 0 auto 18px;
+    max-width: 760px;
+    text-align: center;
+    color: #475467;
+    line-height: 1.7;
+}
+
+.sources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px 18px;
+}
+
+.sources-list li {
+    margin: 0;
+}
+
+.sources-list a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #E4E7EC;
+    background: #F8FAFC;
+    color: #2D4CC8;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sources-list a:hover {
+    transform: translateY(-2px);
+    border-color: #2D4CC8;
+    box-shadow: 0 10px 22px rgba(45, 76, 200, 0.12);
+}
+
+/* Expert Contributors */
+.expert-contributors {
+    margin-top: 44px;
+    padding: 40px;
+    background: linear-gradient(135deg, #F8FAFC 0%, #F0F4FF 100%);
+    border-radius: 20px;
+    border: 1px solid #E4E7EC;
+}
+
+.expert-contributors h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a2742;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.expert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 18px;
+}
+
+.expert-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #E4E7EC;
+    background: #FFFFFF;
+}
+
+.expert-photo {
+    width: 86px;
+    height: 86px;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #E4E7EC;
+}
+
+.expert-info h4 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #1a2742;
+}
+
+.expert-title {
+    margin: 0 0 10px;
+    font-weight: 800;
+    color: #2D4CC8;
+    font-size: 0.9rem;
+}
+
+.expert-desc {
+    margin: 0 0 10px;
+    color: #475467;
+    line-height: 1.65;
+    font-size: 0.94rem;
+}
+
+.expert-cred {
+    margin: 0 0 10px;
+    color: #64748B;
+    line-height: 1.55;
+    font-size: 0.88rem;
+}
+
+.expert-link {
+    display: inline-block;
+    color: #2D4CC8;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.expert-link:hover {
+    text-decoration: underline;
 }
 
 /* Breadcrumb Navigation */
