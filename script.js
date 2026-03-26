@@ -204,60 +204,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Footer Injection
 document.addEventListener('DOMContentLoaded', () => {
+    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
     const footerContent = `
         <div class="container footer-container">
-            <div class="footer-social-links"
-                style="display: flex; justify-content: center; align-items: center; gap: 24px; margin-bottom: 24px;">
-                <a href="https://www.linkedin.com/company/turkish-trade-lawyers" target="_blank"
-                    rel="noopener noreferrer" aria-label="LinkedIn"
-                    style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #ffffff; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease;">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.youtube.com/@TurkishTradeLawyers" target="_blank" rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #ffffff; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease;">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.facebook.com/turkishtradelawyers/" target="_blank" rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 50%; color: #ffffff; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease;">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="${basePath}index.html#home" class="footer-logo">
+                        <img src="${basePath}logo.webp" alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-main">Turkish Trade Lawyers</span>
+                            <span class="footer-logo-tagline">Legal Excellence in Turkey</span>
+                        </span>
+                    </a>
+                    <p class="footer-description">Business-focused legal counsel for international trade, corporate structuring, compliance, and dispute resolution in Türkiye.</p>
+                    <div class="footer-badges">
+                        <span class="footer-badge"><i class="fas fa-scale-balanced"></i> Turkish Commercial Law</span>
+                        <span class="footer-badge"><i class="fas fa-globe"></i> Cross-Border Advisory</span>
+                        <span class="footer-badge"><i class="fas fa-shield-halved"></i> Compliance & Risk</span>
+                    </div>
+                </div>
+
+                <div class="footer-contact-card">
+                    <span class="footer-eyebrow">Contact</span>
+                    <a href="tel:+902127065916" class="footer-contact-link">+90 212 706 59 16</a>
+                    <a href="mailto:hi@turkishtradelawyers.com" class="footer-contact-link">hi@turkishtradelawyers.com</a>
+                    <p class="footer-contact-copy">Maslak Mah. Buyukdere Cad. No:255, Sariyer, Istanbul</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.linkedin.com/company/turkish-trade-lawyers" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TurkishTradeLawyers" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/turkishtradelawyers/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <div class="footer-grid" role="navigation" aria-label="Footer">
                 <div class="footer-col">
                     <h4>Services</h4>
-                    <a href="/services.html">Legal services in Turkey</a>
-                    <a href="/establishing-limited-liability-company-turkey.html">Company formation in Turkey</a>
-                    <a href="/most-important-contracts-for-the-business-have.html">Commercial contracts in Turkey</a>
-                    <a href="/kvkk-compliance-checklist.html">KVKK compliance consulting</a>
-                    <a href="/mergers-acquisitions-legal-due-diligence-turkey.html">M&A due diligence support</a>
-                    <a href="/enforcing-foreign-arbitral-awards-turkey.html">Dispute resolution & enforcement</a>
+                    <a href="${basePath}corporate-investment-services-turkey.html">Corporate and Investment Services in Turkey</a>
+                    <a href="${basePath}international-trade-customs-services-turkey.html">International Trade and Customs Services in Turkey</a>
+                    <a href="${basePath}commercial-contract-services-turkey.html">Commercial Contract Services in Turkey</a>
+                    <a href="${basePath}compliance-data-protection-services-turkey.html">Compliance and Data Protection Services in Turkey</a>
+                    <a href="${basePath}dispute-resolution-services-turkey.html">Dispute Resolution Services in Turkey</a>
+                    <a href="${basePath}employment-mobility-services-turkey.html">Employment and Mobility Services in Turkey</a>
                 </div>
 
                 <div class="footer-col">
                     <h4>Resources</h4>
-                    <a href="/guides.html">Guides hub</a>
-                    <a href="/glossary.html">Legal glossary</a>
-                    <a href="/monitor.html">Turkey legal monitor</a>
-                    <a href="/regions.html">Country pages</a>
-                    <a href="/industries.html">Industries</a>
+                    <a href="${basePath}guides.html">Guides Hub</a>
+                    <a href="${basePath}glossary.html">Legal Glossary</a>
+                    <a href="${basePath}monitor.html">Turkey Legal Monitor</a>
+                    <a href="${basePath}regions.html">Countries</a>
+                    <a href="${basePath}industries.html">Industries</a>
                 </div>
 
                 <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="/about.html">About Turkish Trade Lawyers</a>
-                    <a href="/ourexperts.html">Our experts</a>
-                    <a href="/#why-us">Why choose us</a>
-                    <a href="/contact.html">Contact</a>
+                    <a href="${basePath}about.html">About Turkish Trade Lawyers</a>
+                    <a href="${basePath}ourexperts.html">Our Experts</a>
+                    <a href="${basePath}index.html#why-us">Why Choose Us</a>
+                    <a href="${basePath}contact.html">Contact</a>
                 </div>
 
                 <div class="footer-col">
                     <h4>Legal</h4>
-                    <a href="/privacy-notice.html">Privacy notice</a>
-                    <a href="/cookie-policy.html">Cookie policy</a>
-                    <a href="/disclaimer.html">Disclaimer</a>
+                    <a href="${basePath}privacy-notice.html">Privacy Notice</a>
+                    <a href="${basePath}cookie-policy.html">Cookie Policy</a>
+                    <a href="${basePath}disclaimer.html">Disclaimer</a>
                 </div>
             </div>
 

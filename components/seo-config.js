@@ -12,7 +12,7 @@ const SiteConfig = {
     url: 'https://www.turkishtradelawyers.com',
     logo: 'https://www.turkishtradelawyers.com/logo-square.png',
     phone: '+90 212 706 59 16',
-    email: 'hi@turkishtradelawyers.org',
+    email: 'hi@turkishtradelawyers.com',
     address: {
         street: 'Maslak Mah. Buyukdere Cad. No:255',
         city: 'Sarıyer',
