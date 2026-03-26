@@ -486,7 +486,7 @@ function generatePage(item) {
             </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../index.html#about" class="nav-link">About</a></li>
+                <li><a href="../ourexperts.html" class="nav-link">About</a></li>
 
                 <li><a href="../index.html#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="../ourexperts.html" class="nav-link">Our Experts</a></li>

@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="${basePath}about.html">About Turkish Trade Lawyers</a>
+                    <a href="${basePath}ourexperts.html">About Turkish Trade Lawyers</a>
                     <a href="${basePath}ourexperts.html">Our Experts</a>
                     <a href="${basePath}index.html#why-us">Why Choose Us</a>
                     <a href="${basePath}contact.html">Contact</a>
@@ -340,8 +340,6 @@ document.addEventListener('DOMContentLoaded', () => {
         crumbs.push({ name: 'Guides' });
     } else if (fileName === 'services.html') {
         crumbs.push({ name: 'Services' });
-    } else if (fileName === 'about.html') {
-        crumbs.push({ name: 'About' });
     } else if (fileName === 'contact.html') {
         crumbs.push({ name: 'Contact' });
     } else if (fileName === 'ourexperts.html') {
