@@ -233,6 +233,73 @@
             color: #1a2742;
         }
 
+        .glossary-video-feature {
+            margin: 0 0 40px;
+            padding: 28px;
+            border: 1px solid #dbe4ff;
+            border-radius: 20px;
+            background:
+                radial-gradient(circle at top right, rgba(0, 196, 180, 0.10), transparent 32%),
+                linear-gradient(135deg, #f7faff 0%, #eef4ff 100%);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .glossary-video-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(45, 76, 200, 0.09);
+            color: #2D4CC8;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .glossary-video-feature h3 {
+            margin: 16px 0 10px;
+            font-size: 1.6rem;
+            color: #10213d;
+        }
+
+        .glossary-video-feature p {
+            margin-bottom: 22px;
+            color: #52607a;
+            line-height: 1.75;
+        }
+
+        .glossary-video-shell {
+            max-width: 360px;
+            margin: 0 auto;
+            padding: 10px;
+            border-radius: 28px;
+            background: linear-gradient(180deg, #11213e 0%, #1E3A8A 100%);
+            box-shadow: 0 24px 50px rgba(30, 58, 138, 0.28);
+        }
+
+        .glossary-video-frame {
+            position: relative;
+            overflow: hidden;
+            border-radius: 22px;
+            background: #0f172a;
+            aspect-ratio: 9 / 16;
+        }
+
+        .glossary-video-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .glossary-video-note {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 0.92rem;
+            color: #5d6b85;
+        }
+
         /* Key Points Box */
         .key-points-box {
             background: #F8FAFC;
@@ -499,6 +566,25 @@
                         tax regime.</p>
 
                 </div>
+
+                <section class="glossary-video-feature" aria-labelledby="corporate-tax-video-title">
+                    <span class="glossary-video-label"><i class="fab fa-youtube"></i> Video Brief</span>
+                    <h3 id="corporate-tax-video-title">Corporate tax in Turkey in a quick visual format</h3>
+                    <p>This short video adds a fast visual summary for companies reviewing Turkish corporate tax rates,
+                        sector-specific rules, and practical planning points before entering the market.</p>
+                    <div class="glossary-video-shell">
+                        <div class="glossary-video-frame">
+                            <iframe
+                                src="https://www.youtube.com/embed/eyHhtEqq0r4?rel=0"
+                                title="Corporate tax in Turkey video brief"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p class="glossary-video-note">Prefer watching on YouTube? <a href="https://youtube.com/shorts/eyHhtEqq0r4?feature=share">Open the original Short</a>.</p>
+                </section>
 
                 <!-- Related Terms -->
 
