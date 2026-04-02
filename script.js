@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h4>Resources</h4>
                     <a href="${basePath}guides.html">Guides Hub</a>
                     <a href="${basePath}glossary.html">Legal Glossary</a>
-                    <a href="${basePath}monitor.html">Turkey Legal Monitor</a>
+                    <a href="${basePath}monitor.html">Turkish Trade Monitor</a>
                     <a href="${basePath}regions.html">Countries</a>
                     <a href="${basePath}industries.html">Industries</a>
                 </div>
