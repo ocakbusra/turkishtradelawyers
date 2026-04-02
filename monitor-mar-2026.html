@@ -332,6 +332,40 @@
             color: var(--accent-teal);
         }
 
+        .trend-up {
+            color: #ef6c00;
+        }
+
+        /* Snapshot Layout */
+        .snapshot-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+        .snapshot-item:last-child {
+            border-bottom: none;
+        }
+        .snapshot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+        .snapshot-title {
+            font-weight: 500;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        .snapshot-value {
+            font-weight: 700;
+            color: var(--dark-blue);
+            font-size: 1.1rem;
+        }
+        .snapshot-desc {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-gray);
+        }
+
         /* Calendar Items */
         .calendar-item {
             display: flex;
@@ -640,26 +674,26 @@
         <aside>
             <div class="widget">
                 <h3>Economic Snapshot</h3>
-                <div class="rate-item">
-                    <span>Foreign Trade</span>
-                    <div class="rate-values-group">
-                        <div class="rate-value">Deficit</div>
-                        <div class="rate-trend trend-up">Anti-dumping, customs, and safeguard measures persist.</div>
+                <div class="snapshot-item">
+                    <div class="snapshot-header">
+                        <span class="snapshot-title">Foreign Trade</span>
+                        <span class="snapshot-value">Deficit</span>
                     </div>
+                    <div class="snapshot-desc"><span class="trend-up"><i class="fa-solid fa-arrow-trend-up" style="margin-right: 4px;"></i></span>Anti-dumping, customs, and safeguard measures persist.</div>
                 </div>
-                <div class="rate-item">
-                    <span>Foreign Investment</span>
-                    <div class="rate-values-group">
-                        <div class="rate-value">Low FDI</div>
-                        <div class="rate-trend trend-down">M&amp;A opportunities remain active.</div>
+                <div class="snapshot-item">
+                    <div class="snapshot-header">
+                        <span class="snapshot-title">Foreign Investment</span>
+                        <span class="snapshot-value">Low FDI</span>
                     </div>
+                    <div class="snapshot-desc"><span class="trend-down"><i class="fa-solid fa-arrow-trend-down" style="margin-right: 4px;"></i>M&amp;A opportunities remain active.</span></div>
                 </div>
-                <div class="rate-item">
-                    <span>Compliance</span>
-                    <div class="rate-values-group">
-                        <div class="rate-value">Higher</div>
-                        <div class="rate-trend trend-up">Stricter oversight is expected in labor and M&amp;A processes.</div>
+                <div class="snapshot-item">
+                    <div class="snapshot-header">
+                        <span class="snapshot-title">Compliance</span>
+                        <span class="snapshot-value">Higher</span>
                     </div>
+                    <div class="snapshot-desc"><span class="trend-up"><i class="fa-solid fa-arrow-trend-up" style="margin-right: 4px;"></i></span>Stricter oversight is expected in labor and M&amp;A processes.</div>
                 </div>
             </div>
 
