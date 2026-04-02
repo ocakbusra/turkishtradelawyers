@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const path = (window.location && window.location.pathname) ? window.location.pathname : '';
     const slug = (path.split('/').filter(Boolean).pop() || '').replace(/\.html$/i, '');
-    if (!slug || slug === 'index' || slug === 'guides' || slug === 'services') return;
+    if (!slug || slug === 'index' || slug === 'guides' || slug === 'services' || slug === 'monitor') return;
 
     injectEEATSignals(articleEl, slug);
 
