@@ -3402,7 +3402,7 @@ a {
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.35;
-    font-weight: 800;
+    font-weight: 700;
     color: #1a2742;
 }
 
@@ -3560,11 +3560,21 @@ a {
 }
 
 .sources-box h3 {
-    font-size: 1.35rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #1a2742;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
     text-align: center;
+}
+
+.sources-box h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #2D4CC8, #00C4B4);
+    border-radius: 2px;
+    margin: 12px auto 0;
 }
 
 .sources-note {
@@ -3617,11 +3627,21 @@ a {
 }
 
 .expert-contributors h3 {
-    font-size: 1.35rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: #1a2742;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
     text-align: center;
+}
+
+.expert-contributors h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #2D4CC8, #00C4B4);
+    border-radius: 2px;
+    margin: 12px auto 0;
 }
 
 .expert-grid {

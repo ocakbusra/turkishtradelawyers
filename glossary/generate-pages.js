@@ -465,6 +465,15 @@ function generatePage(item) {
                 grid-template-columns: 1fr;
             }
         }
+
+        .page-title,
+        .glossary-answer-box h2,
+        .glossary-details h3,
+        .key-points-box h4,
+        .glossary-related h3,
+        .related-card h4 {
+            text-transform: capitalize;
+        }
     </style>
 </head>
 

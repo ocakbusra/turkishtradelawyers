@@ -270,7 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="footer-col">
                     <h4>Company</h4>
                     <a href="${basePath}ourexperts.html">About Turkish Trade Lawyers</a>
-                    <a href="${basePath}ourexperts.html">Our Experts</a>
                     <a href="${basePath}index.html#why-us">Why Choose Us</a>
                     <a href="${basePath}contact.html">Contact</a>
                 </div>
@@ -303,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Breadcrumb Injection (site-wide)
 document.addEventListener('DOMContentLoaded', () => {
-    const existingBreadcrumb = document.querySelector('nav.breadcrumb, .breadcrumb-nav');
+    const existingBreadcrumb = document.querySelector('nav.breadcrumb, .breadcrumb-nav, .breadcrumb-inline');
     const path = (window.location && window.location.pathname) ? window.location.pathname : '';
     const fileName = path.split('/').filter(Boolean).pop() || '';
 
@@ -426,15 +425,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const related = pickRelatedArticles(slug, 4);
     if (related.length === 0) return;
 
+    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
+
     const section = document.createElement('section');
     section.className = 'related-articles';
     section.innerHTML = `
         <h3>Related Articles</h3>
         <div class="related-grid">
             ${related.map(item => `
-                <a href="/${item.slug}.html" class="related-card">
+                <a href="${basePath}${item.slug}.html" class="related-card">
                     <span class="related-category">${item.category}</span>
-                    <h4>${item.title}</h4>
+                    <h4 style="text-transform: capitalize;">${String(item.title).replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())}</h4>
                     <p>${item.description}</p>
                 </a>
             `).join('')}
@@ -460,13 +462,16 @@ function injectEEATSignals(articleEl, slug) {
 
     const insertBeforeEl = articleEl.querySelector('.related-articles') || null;
 
+    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
+
     if (!hasDisclaimer) {
         const disclaimer = document.createElement('div');
         disclaimer.className = 'legal-disclaimer';
         disclaimer.innerHTML = `
             <strong>Disclaimer:</strong> This content is for informational purposes only and does not constitute legal advice.
-            For advice on your specific situation, please <a href="/contact.html">contact us</a> or review our
-            <a href="/disclaimer.html">full disclaimer</a>.
+            For advice on your specific situation, please <a href="${basePath}contact.html">contact us</a> or review our
+            <a href="${basePath}disclaimer.html">full disclaimer</a>.
         `;
 
         if (insertBeforeEl) articleEl.insertBefore(disclaimer, insertBeforeEl);
@@ -479,7 +484,7 @@ function injectEEATSignals(articleEl, slug) {
             const sourcesSection = document.createElement('section');
             sourcesSection.className = 'sources-box';
             sourcesSection.innerHTML = `
-                <h3>Sources & authorities</h3>
+                <h3>Sources & Authorities</h3>
                 <p class="sources-note">Primary sources and official institutions referenced for accuracy and transparency.</p>
                 <ul class="sources-list">
                     ${sources.map(s => `
@@ -499,28 +504,28 @@ function injectEEATSignals(articleEl, slug) {
         const contributors = document.createElement('section');
         contributors.className = 'expert-contributors';
         contributors.innerHTML = `
-            <h3>Expert contributors</h3>
+            <h3>Expert Contributors</h3>
             <div class="expert-grid">
                 <div class="expert-card" itemscope itemtype="https://schema.org/Person">
-                    <img src="/busraocak.png" alt="Büşra Ocak" class="expert-photo" itemprop="image">
+                    <img src="${basePath}busraocak.png" alt="Büşra Ocak" class="expert-photo" itemprop="image">
                     <div class="expert-info">
                         <h4 itemprop="name">Büşra Ocak</h4>
                         <p class="expert-title" itemprop="jobTitle">Co-Founder & Managing Partner</p>
                         <p class="expert-desc" itemprop="description">Focus areas include contract law, KVKK/GDPR compliance,
                             employment disputes, and commercial litigation.</p>
                         <p class="expert-cred">LL.B. Ankara University Faculty of Law · Union of Turkish Bar Associations · Istanbul Bar Association</p>
-                        <a class="expert-link" href="/ourexperts.html">Full bio</a>
+                        <a class="expert-link" href="${basePath}ourexperts.html">Full bio</a>
                     </div>
                 </div>
                 <div class="expert-card" itemscope itemtype="https://schema.org/Person">
-                    <img src="/basakcavusogullari.png" alt="Başak Çavuşoğulları" class="expert-photo" itemprop="image">
+                    <img src="${basePath}basakcavusogullari.png" alt="Başak Çavuşoğulları" class="expert-photo" itemprop="image">
                     <div class="expert-info">
                         <h4 itemprop="name">Başak Çavuşoğulları</h4>
                         <p class="expert-title" itemprop="jobTitle">Co-Founder & Senior Partner</p>
                         <p class="expert-desc" itemprop="description">Advises on commercial law, regulatory compliance,
                             and cross-border transactions; leads corporate and immigration-related services.</p>
                         <p class="expert-cred">LL.B. Istanbul University Faculty of Law · Union of Turkish Bar Associations · Bursa Bar Association</p>
-                        <a class="expert-link" href="/ourexperts.html">Full bio</a>
+                        <a class="expert-link" href="${basePath}ourexperts.html">Full bio</a>
                     </div>
                 </div>
             </div>
