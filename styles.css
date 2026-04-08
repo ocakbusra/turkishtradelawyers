@@ -4297,3 +4297,194 @@ img[loading="lazy"][src] {
     color: #2D4CC8;
     text-decoration: underline;
 }
+
+/* Practice Areas Grid */
+        .practice-areas {
+            padding: 100px 0;
+            background: #F8FAFC;
+        }
+
+        .practice-areas-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .practice-areas-title {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #1a2742;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .practice-areas-subtitle {
+            font-size: 1.125rem;
+            color: #475467;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .pa-card {
+            background: #FFFFFF;
+            border: 1px solid #E4E7EC;
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pa-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: linear-gradient(180deg, #2D4CC8, #00C4B4);
+            transition: height 0.5s ease;
+        }
+
+        .pa-card:hover::before {
+            height: 100%;
+        }
+
+        .pa-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            border-color: #2D4CC8;
+        }
+
+        .pa-card-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pa-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(45, 76, 200, 0.1) 0%, rgba(0, 196, 180, 0.1) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pa-icon i {
+            font-size: 1.5rem;
+            color: #2D4CC8;
+        }
+
+        .pa-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1a2742;
+            margin-bottom: 4px;
+        }
+
+        .pa-what {
+            font-size: 0.95rem;
+            color: #475467;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .pa-matters {
+            margin-bottom: 20px;
+        }
+
+        .pa-matters h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2D4CC8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .pa-matters ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pa-matters li {
+            font-size: 0.9rem;
+            color: #475467;
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .pa-matters li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #00C4B4, #2D4CC8);
+            border-radius: 50%;
+        }
+
+        .pa-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 16px;
+            border-top: 1px solid #E4E7EC;
+        }
+
+        .pa-service-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            color: #2D4CC8;
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 700;
+            line-height: 1.4;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .pa-service-cta i {
+            font-size: 0.8rem;
+            transition: transform 0.25s ease;
+        }
+
+        .pa-service-cta:hover {
+            color: #1E3A8A;
+        }
+
+        .pa-service-cta:hover i {
+            transform: translateX(4px);
+        }
+
+        .pa-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.8rem;
+            color: #2D4CC8;
+            text-decoration: none;
+            padding: 6px 12px;
+            background: #F0F4FF;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .pa-link:hover {
+            background: #2D4CC8;
+            color: #FFFFFF;
+        }
