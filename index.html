@@ -222,6 +222,9 @@
                 <div class="hero-cta-group">
                     <a href="#contact" class="btn btn-primary-new">Schedule a Meeting</a>
                     <a href="ourexperts.html" class="btn btn-outline-new">Learn More</a>
+                    <a href="https://api.whatsapp.com/send/?phone=905319336316&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-hero" aria-label="Contact us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
                 <div class="hero-stats-row">
                     <div class="hero-stat">
@@ -526,6 +529,119 @@
                         <a href="glossary/property-transfer.html" class="pa-link">Transfer</a>
                         <a href="glossary/property-rights.html" class="pa-link">Rights</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Inline) -->
+    <section id="contact" class="contact-inline section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Left Side - Contact Info -->
+                <div class="contact-left">
+                    <span class="contact-badge">Get In Touch</span>
+                    <h2 class="contact-heading">Schedule Your Consultation Today</h2>
+                    <p class="contact-description">Contact us for a confidential consultation. Our experienced attorneys
+                        are ready to discuss your legal needs and provide expert guidance.</p>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+902127065916">+90 212 706 59 16</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:hi@turkishtradelawyers.com">hi@turkishtradelawyers.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
+                                rel="noopener noreferrer" style="text-decoration: none;">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                            </a>
+                            <div class="contact-info-content">
+                                <h4>Address</h4>
+                                <p><a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
+                                        rel="noopener noreferrer">Maslak Mah. Büyükdere Cad.255, Sarıyer/İSTANBUL</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Contact Form -->
+                <div class="contact-right">
+                    <form class="contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                        id="consultation-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" id="email-address" name="email" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" id="phone-number" name="phone" placeholder="+90 XXX XXX XXXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service-needed">Service Needed</label>
+                            <select id="service-needed" name="service" required>
+                                <option value="International Trade Law">International Trade Law</option>
+                                <option value="Market Entry & Business Setup">Market Entry & Business Setup</option>
+                                <option value="Contracts & Commercial Transactions">Contracts & Commercial Transactions
+                                </option>
+                                <option value="Regulatory Compliance">Regulatory Compliance</option>
+                                <option value="Dispute Resolution">Dispute Resolution</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Briefly describe your legal needs..."
+                                rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="security-answer">Security Question: What is 3 + 4?</label>
+                            <input type="text" id="security-answer" name="security-answer" placeholder="Your answer"
+                                required>
+                        </div>
+
+                        <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 12px;">
+                            <input type="checkbox" id="terms-checkbox" name="terms_consent" required
+                                style="width: 20px; height: 20px; padding: 0; margin-top: 2px; flex-shrink: 0; accent-color: #1E3A8A; cursor: pointer;">
+                            <label for="terms-checkbox"
+                                style="font-size: 0.9rem; margin-bottom: 0; cursor: pointer; line-height: 1.5; color: #344054;">
+                                I have read, understood, and accept the <a href="privacy-notice.html" target="_blank"
+                                    style="color: #2D4CC8; text-decoration: underline;">terms</a>.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">
+                            Submit Request
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1005,118 +1121,7 @@
     </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-        <div class="container">
-            <div class="contact-wrapper">
-                <!-- Left Side - Contact Info -->
-                <div class="contact-left">
-                    <span class="contact-badge">Get In Touch</span>
-                    <h2 class="contact-heading">Schedule Your Consultation Today</h2>
-                    <p class="contact-description">Contact us for a confidential consultation. Our experienced attorneys
-                        are ready to discuss your legal needs and provide expert guidance.</p>
 
-                    <div class="contact-info-list">
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="contact-info-content">
-                                <h4>Phone</h4>
-                                <p><a href="tel:+902127065916">+90 212 706 59 16</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <div class="contact-info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-info-content">
-                                <h4>Email</h4>
-                                <p><a href="mailto:hi@turkishtradelawyers.com">hi@turkishtradelawyers.com</a></p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-item">
-                            <a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
-                                rel="noopener noreferrer" style="text-decoration: none;">
-                                <div class="contact-info-icon">
-                                    <i class="fas fa-location-dot"></i>
-                                </div>
-                            </a>
-                            <div class="contact-info-content">
-                                <h4>Address</h4>
-                                <p><a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
-                                        rel="noopener noreferrer">Maslak Mah. Büyükdere Cad.255, Sarıyer/İSTANBUL</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side - Contact Form -->
-                <div class="contact-right">
-                    <form class="contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
-                        id="consultation-form">
-                        <div class="form-group">
-                            <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email-address">Email Address</label>
-                            <input type="email" id="email-address" name="email" placeholder="john@example.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone-number">Phone Number</label>
-                            <input type="tel" id="phone-number" name="phone" placeholder="+90 XXX XXX XXXX">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service-needed">Service Needed</label>
-                            <select id="service-needed" name="service" required>
-                                <option value="International Trade Law">International Trade Law</option>
-                                <option value="Market Entry & Business Setup">Market Entry & Business Setup</option>
-                                <option value="Contracts & Commercial Transactions">Contracts & Commercial Transactions
-                                </option>
-                                <option value="Regulatory Compliance">Regulatory Compliance</option>
-                                <option value="Dispute Resolution">Dispute Resolution</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Briefly describe your legal needs..."
-                                rows="4" required></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="security-answer">Security Question: What is 3 + 4?</label>
-                            <input type="text" id="security-answer" name="security-answer" placeholder="Your answer"
-                                required>
-                        </div>
-
-                        <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 12px;">
-                            <input type="checkbox" id="terms-checkbox" name="terms_consent" required
-                                style="width: 20px; height: 20px; padding: 0; margin-top: 2px; flex-shrink: 0; accent-color: #1E3A8A; cursor: pointer;">
-                            <label for="terms-checkbox"
-                                style="font-size: 0.9rem; margin-bottom: 0; cursor: pointer; line-height: 1.5; color: #344054;">
-                                I have read, understood, and accept the <a href="privacy-notice.html" target="_blank"
-                                    style="color: #2D4CC8; text-decoration: underline;">terms</a>.
-                            </label>
-                        </div>
-
-                        <button type="submit" class="form-submit-btn">
-                            Submit Request
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
