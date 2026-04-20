@@ -1004,6 +1004,11 @@ function autoGenerateFAQSchema() {
     const faqSection = document.querySelector('#faqs, .faq-section');
     if (!faqSection) return;
 
+    // Prevent duplicate schema if one already exists
+    const hasFAQSchema = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+        .some(s => (s.textContent || '').includes('"FAQPage"'));
+    if (hasFAQSchema) return;
+
     const questions = faqSection.querySelectorAll('h4, .faq-question');
     const faqs = [];
 
