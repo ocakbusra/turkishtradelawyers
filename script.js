@@ -1,4 +1,150 @@
 // Mobile Navigation Toggle
+const COOKIE_CONSENT_KEY = 'ttl_cookie_consent_v1';
+const ANALYTICS_MEASUREMENT_ID = window.TTL_ANALYTICS_ID || 'G-9FX7T07VPM';
+const CLARITY_PROJECT_ID = window.TTL_CLARITY_ID || 'vv2a5uwdk0';
+let analyticsInitialized = false;
+let clarityInitialized = false;
+
+function getCookieConsent() {
+    try {
+        return localStorage.getItem(COOKIE_CONSENT_KEY);
+    } catch {
+        return null;
+    }
+}
+
+function setCookieConsent(value) {
+    try {
+        localStorage.setItem(COOKIE_CONSENT_KEY, value);
+    } catch {
+        // Ignore storage errors and continue with in-session behavior.
+    }
+}
+
+function clearCookieConsent() {
+    try {
+        localStorage.removeItem(COOKIE_CONSENT_KEY);
+    } catch {
+        // Ignore storage errors and continue.
+    }
+}
+
+function loadScriptOnce(src, attributeName) {
+    if (document.querySelector(`script[${attributeName}="true"]`)) {
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = src;
+    script.setAttribute(attributeName, 'true');
+    document.head.appendChild(script);
+}
+
+function enableAnalytics() {
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+        window.gtag = function () {
+            window.dataLayer.push(arguments);
+        };
+    }
+
+    if (typeof window.clarity !== 'function') {
+        window.clarity = function () {
+            (window.clarity.q = window.clarity.q || []).push(arguments);
+        };
+    }
+
+    if (!analyticsInitialized && ANALYTICS_MEASUREMENT_ID) {
+        loadScriptOnce(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ANALYTICS_MEASUREMENT_ID)}`, 'data-ttl-analytics');
+        if (typeof window.gtag === 'function') {
+            window.gtag('js', new Date());
+            window.gtag('config', ANALYTICS_MEASUREMENT_ID);
+        }
+        analyticsInitialized = true;
+    }
+
+    if (!clarityInitialized && CLARITY_PROJECT_ID) {
+        loadScriptOnce(`https://www.clarity.ms/tag/${encodeURIComponent(CLARITY_PROJECT_ID)}`, 'data-ttl-clarity');
+        clarityInitialized = true;
+    }
+}
+
+function applyCookieConsent(consent) {
+    if (consent === 'accepted') {
+        enableAnalytics();
+    }
+}
+
+function removeCookieBanner() {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (banner) {
+        banner.remove();
+    }
+}
+
+function buildCookieBanner() {
+    if (document.getElementById('cookie-consent-banner')) {
+        return;
+    }
+
+    const banner = document.createElement('div');
+    banner.id = 'cookie-consent-banner';
+    banner.className = 'cookie-consent-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-live', 'polite');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.innerHTML = `
+        <div class="cookie-consent-content">
+            <p class="cookie-consent-text">
+                We use analytics cookies, including Google Analytics and Microsoft Clarity, to understand site usage and improve performance.
+                You can accept or reject these non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a>.
+            </p>
+            <div class="cookie-consent-actions">
+                <button type="button" class="cookie-consent-btn cookie-consent-btn-secondary" data-cookie-action="reject">Reject</button>
+                <button type="button" class="cookie-consent-btn cookie-consent-btn-primary" data-cookie-action="accept">Accept</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(banner);
+
+    banner.addEventListener('click', (event) => {
+        const action = event.target?.getAttribute('data-cookie-action');
+        if (!action) return;
+
+        if (action === 'accept') {
+            setCookieConsent('accepted');
+            applyCookieConsent('accepted');
+        } else if (action === 'reject') {
+            setCookieConsent('rejected');
+        }
+
+        removeCookieBanner();
+    });
+}
+
+function initCookieConsent() {
+    const consent = getCookieConsent();
+
+    if (consent === 'accepted') {
+        applyCookieConsent(consent);
+        return;
+    }
+
+    if (consent === 'rejected') {
+        return;
+    }
+
+    buildCookieBanner();
+}
+
+window.TTL_resetCookieConsent = function () {
+    clearCookieConsent();
+    removeCookieBanner();
+    buildCookieBanner();
+};
+
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -982,6 +1128,8 @@ function deferNonCriticalScripts() {
 
 // Initialize all SEO enhancements
 document.addEventListener('DOMContentLoaded', () => {
+    initCookieConsent();
+
     // Check if we're on an article page
     const isArticlePage = document.querySelector('.article-section, .article-content, article');
 

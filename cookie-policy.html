@@ -22,22 +22,15 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Cookie Policy - Turkish Trade Lawyers">
     <meta name="twitter:image" content="https://www.turkishtradelawyers.com/logo-square.png">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FX7T07VPM"></script>
+    <!-- Analytics scripts are loaded after cookie consent via script.js -->
     <script>
+        window.TTL_ANALYTICS_ID = "G-9FX7T07VPM";
+        window.TTL_CLARITY_ID = "vv2a5uwdk0";
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-9FX7T07VPM');
-    </script>
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "vv2a5uwdk0");
+        window.clarity = window.clarity || function () {
+            (window.clarity.q = window.clarity.q || []).push(arguments);
+        };
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,8 +194,13 @@
                 <h3>Performance and Analytics Cookies</h3>
                 <p>These cookies allow us to count visits and traffic sources so we can measure and improve the
                     performance of our site. They help us to know which pages are the most and least popular and see how
-                    visitors move around the site. We use third-party services like Google Analytics for this purpose.
-                    The data collected is aggregated and therefore anonymous.</p>
+                    visitors move around the site. We use third-party services like Google Analytics and Microsoft
+                    Clarity for this purpose. The data collected is used to analyze traffic, understand how visitors
+                    interact with our pages, and improve website usability and performance.</p>
+                <p>Microsoft Clarity helps us better understand user behavior through features such as session
+                    recordings, heatmaps, and engagement analytics. Clarity may collect technical and usage data such
+                    as page views, clicks, scrolling behavior, device information, and approximate location data in
+                    accordance with its own privacy and cookie practices.</p>
 
                 <h2>4. Legal Grounds and Purposes</h2>
                 <p><strong>Strictly necessary cookies</strong> are processed based on the legal ground that "processing
@@ -210,7 +208,8 @@
                     does not violate the fundamental rights and freedoms of the data subject" (Article 5/2-f of the Law)
                     or "it is necessary for the performance of a contract" (Article 5/2-c of the Law).</p>
                 <p><strong>Performance and analytics cookies</strong> are processed based on your explicit consent where
-                    applicable, or our legitimate interest in understanding website usage to improve our services.</p>
+                    applicable, or our legitimate interest in understanding website usage to improve our services. This
+                    includes analytics technologies provided by Google Analytics and Microsoft Clarity.</p>
 
                 <h2>5. Your Rights</h2>
                 <p>Data subjects whose personal data is processed through cookies can submit their requests regarding
@@ -221,6 +220,8 @@
                 <h2>6. Managing Cookie Settings</h2>
                 <p>You can change your preferences for cookies at any time through your browser settings. You can find
                     information on the management of cookies in frequently used browsers via the following links:</p>
+                <p>You may also review your non-essential cookie preference on this website by clicking <a href="#"
+                        onclick="window.TTL_resetCookieConsent && window.TTL_resetCookieConsent(); return false;">here to reopen the cookie banner</a>.</p>
                 <ul>
                     <li><a href="https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en"
                             target="_blank" rel="noopener noreferrer">Google Chrome</a></li>
