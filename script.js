@@ -96,13 +96,30 @@ function buildCookieBanner() {
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML = `
         <div class="cookie-consent-content">
-            <p class="cookie-consent-text">
-                We use analytics cookies, including Google Analytics and Microsoft Clarity, to understand site usage and improve performance.
-                You can accept or reject these non-essential cookies. See our <a href="/cookie-policy.html">Cookie Policy</a>.
-            </p>
+            <div class="cookie-consent-header">
+                <div class="cookie-consent-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+                        <path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/>
+                        <path d="M11 17v.01"/><path d="M7 14v.01"/>
+                    </svg>
+                </div>
+                <span class="cookie-consent-title">Cookie Preferences</span>
+            </div>
+            <div class="cookie-consent-body">
+                <p class="cookie-consent-text">
+                    We use cookies to improve your experience. Essential cookies keep the site functional.
+                    Analytics cookies (Google Analytics &amp; Microsoft Clarity) help us understand usage and improve performance.
+                    <a href="/cookie-policy.html">Learn more</a>
+                </p>
+                <div class="cookie-consent-details">
+                    <span class="cookie-detail-chip"><span class="chip-dot chip-dot--essential"></span>Essential — Always active</span>
+                    <span class="cookie-detail-chip"><span class="chip-dot chip-dot--analytics"></span>Analytics — Optional</span>
+                </div>
+            </div>
             <div class="cookie-consent-actions">
-                <button type="button" class="cookie-consent-btn cookie-consent-btn-secondary" data-cookie-action="reject">Reject</button>
-                <button type="button" class="cookie-consent-btn cookie-consent-btn-primary" data-cookie-action="accept">Accept</button>
+                <button type="button" class="cookie-consent-btn cookie-consent-btn-secondary" data-cookie-action="reject">Reject All</button>
+                <button type="button" class="cookie-consent-btn cookie-consent-btn-primary" data-cookie-action="accept">Accept All</button>
             </div>
         </div>
     `;
