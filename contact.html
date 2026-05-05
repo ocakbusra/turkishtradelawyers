@@ -94,48 +94,133 @@
         </div>
     </nav>
 
-    <main class="monitor-content-section" style="padding-top: 120px;">
+    <main class="monitor-content-section" style="padding: 0;">
+        <!-- Contact Section (Inline) -->
+        <section id="contact" class="contact-inline section" style="padding-top: 140px;">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Left Side - Contact Info -->
+                    <div class="contact-left">
+                        <span class="contact-badge">Get In Touch</span>
+                        <h2 class="contact-heading">Schedule Your Consultation Today</h2>
+                        <p class="contact-description">Contact us for a confidential consultation. Our experienced attorneys
+                            are ready to discuss your legal needs and provide expert guidance.</p>
+    
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h4>Phone</h4>
+                                    <p><a href="tel:+902127065916">+90 212 706 59 16</a></p>
+                                </div>
+                            </div>
+    
+                            <div class="contact-info-item">
+                                <a href="https://wa.me/message/QBSUZJNCQOQEM1" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                                    <div class="contact-info-icon">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </a>
+                                <div class="contact-info-content">
+                                    <h4>WhatsApp <span style="font-size: 0.7rem; background: #E0E7FF; color: #2D4CC8; padding: 2px 8px; border-radius: 12px; font-weight: 700; margin-left: 4px;">24/7</span></h4>
+                                    <p><a href="https://wa.me/message/QBSUZJNCQOQEM1" target="_blank" rel="noopener noreferrer">Message Us</a></p>
+                                </div>
+                            </div>
+    
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-info-content">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:hi@turkishtradelawyers.com">hi@turkishtradelawyers.com</a></p>
+                                </div>
+                            </div>
+    
+                            <div class="contact-info-item">
+                                <a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
+                                    rel="noopener noreferrer" style="text-decoration: none;">
+                                    <div class="contact-info-icon">
+                                        <i class="fas fa-location-dot"></i>
+                                    </div>
+                                </a>
+                                <div class="contact-info-content">
+                                    <h4>Address</h4>
+                                    <p><a href="https://maps.app.goo.gl/t9FHsDu36DkDC4dc7" target="_blank"
+                                            rel="noopener noreferrer">Maslak Mah. Büyükdere Cad.255, Sarıyer/İSTANBUL</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Right Side - Contact Form -->
+                    <div class="contact-right">
+                        <form class="contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                            id="consultation-form">
+                            <div class="form-group">
+                                <label for="full-name">Full Name</label>
+                                <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="email-address">Email Address</label>
+                                <input type="email" id="email-address" name="email" placeholder="john@example.com" required>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number</label>
+                                <input type="tel" id="phone-number" name="phone" placeholder="+90 XXX XXX XXXX">
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="service-needed">Service Needed</label>
+                                <select id="service-needed" name="service" required>
+                                    <option value="International Trade Law">International Trade Law</option>
+                                    <option value="Market Entry & Business Setup">Market Entry & Business Setup</option>
+                                    <option value="Contracts & Commercial Transactions">Contracts & Commercial Transactions
+                                    </option>
+                                    <option value="Regulatory Compliance">Regulatory Compliance</option>
+                                    <option value="Dispute Resolution">Dispute Resolution</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Briefly describe your legal needs..."
+                                    rows="4" required></textarea>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="security-answer">Security Question: What is 3 + 4?</label>
+                                <input type="text" id="security-answer" name="security-answer" placeholder="Your answer"
+                                    required>
+                            </div>
+    
+                            <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 12px;">
+                                <input type="checkbox" id="terms-checkbox" name="terms_consent" required
+                                    style="width: 20px; height: 20px; padding: 0; margin-top: 2px; flex-shrink: 0; accent-color: #1E3A8A; cursor: pointer;">
+                                <label for="terms-checkbox"
+                                    style="font-size: 0.9rem; margin-bottom: 0; cursor: pointer; line-height: 1.5; color: #344054;">
+                                    I have read, understood, and accept the <a href="privacy-notice.html" target="_blank"
+                                        style="color: #2D4CC8; text-decoration: underline;">terms</a>.
+                                </label>
+                            </div>
+    
+                            <button type="submit" class="form-submit-btn">
+                                Submit Request
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="container" style="max-width: 980px;">
-            <header style="text-align: center; margin-bottom: 36px;">
-                <h1 class="section-title" style="margin-bottom: 10px;">Contact</h1>
-                <p class="section-subtitle" style="max-width: 820px; margin-left: auto; margin-right: auto;">
-                    For a fast response, share your company, industry, and the countries involved (and any deadlines).
-                </p>
-            </header>
-
-            <section class="related-articles" style="margin-top: 0;">
-                <h3>Business details</h3>
-                <div class="related-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-                    <div class="related-card" style="cursor: default;">
-                        <span class="related-category">Phone</span>
-                        <h4>Call</h4>
-                        <p><a href="tel:+902127065916"
-                                style="color: #2D4CC8; text-decoration: none; font-weight: 700;">+90 212 706 59 16</a></p>
-                        <p style="margin-top: 10px; color: #475467;">Business hours: Mon–Fri, 09:00–18:00 (Türkiye time)</p>
-                    </div>
-                    <div class="related-card" style="cursor: default;">
-                        <span class="related-category">Email</span>
-                        <h4>Write</h4>
-                        <p><a href="mailto:hi@turkishtradelawyers.com"
-                                style="color: #2D4CC8; text-decoration: none; font-weight: 700;">hi@turkishtradelawyers.com</a></p>
-                        <p style="margin-top: 10px; color: #475467;">Typical response: within 1 business day</p>
-                    </div>
-                    <div class="related-card" style="cursor: default;">
-                        <span class="related-category">Office</span>
-                        <h4>Istanbul</h4>
-                        <p>Maslak Mah. Buyukdere Cad. No:255, Sarıyer, Istanbul, Türkiye</p>
-                    </div>
-                </div>
-
-                <div class="article-cta" style="margin-top: 22px;">
-                    <h3>Need urgent help?</h3>
-                    <p>For time-sensitive matters, call us and follow up by email with the key documents and deadlines.</p>
-                    <a class="cta-btn" href="mailto:hi@turkishtradelawyers.com?subject=Urgent%20consultation%20request">
-                        Email us now <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </section>
-
             <section style="margin-top: 40px;">
                 <h2 style="font-size: 1.6rem; color: #1a2742; margin-bottom: 12px;">Office location</h2>
                 <div style="border-radius: 16px; overflow: hidden; border: 1px solid #E4E7EC; background: #fff;">
@@ -146,7 +231,7 @@
                 </div>
             </section>
 
-            <section style="margin-top: 40px;">
+            <section style="margin-top: 40px; margin-bottom: 80px;">
                 <h2 style="font-size: 1.6rem; color: #1a2742; margin-bottom: 10px;">Transparency</h2>
                 <p style="color: #475467; line-height: 1.8;">
                     This site is provided for informational purposes only and does not constitute legal advice. Please
@@ -161,8 +246,84 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved.</p>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="footer-logo">
+                        <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
+                        <span class="footer-logo-text">
+                            <span class="footer-logo-main">Turkish Trade Lawyers</span>
+                            <span class="footer-logo-tagline">Legal Excellence in Turkey</span>
+                        </span>
+                    </a>
+                    <p class="footer-description">Business-focused legal counsel for international trade, corporate
+                        structuring, compliance, and dispute resolution in Türkiye.</p>
+                    <div class="footer-badges">
+                        <span class="footer-badge"><i class="fas fa-scale-balanced"></i> Turkish Commercial Law</span>
+                        <span class="footer-badge"><i class="fas fa-globe"></i> Cross-Border Advisory</span>
+                        <span class="footer-badge"><i class="fas fa-shield-halved"></i> Compliance & Risk</span>
+                    </div>
+                </div>
+
+                <div class="footer-contact-card">
+                    <span class="footer-eyebrow">Contact</span>
+                    <a href="tel:+902127065916" class="footer-contact-link">+90 212 706 59 16</a>
+                    <a href="mailto:hi@turkishtradelawyers.com"
+                        class="footer-contact-link">hi@turkishtradelawyers.com</a>
+                    <p class="footer-contact-copy">Maslak Mah. Buyukdere Cad. No:255, Sariyer, Istanbul</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.linkedin.com/company/turkish-trade-lawyers" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@TurkishTradeLawyers" target="_blank"
+                            rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.facebook.com/turkishtradelawyers/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-grid" role="navigation" aria-label="Footer">
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="corporate-investment-services-turkey.html">Corporate and Investment Services in Turkey</a>
+                    <a href="international-trade-customs-services-turkey.html">International Trade and Customs Services in Turkey</a>
+                    <a href="commercial-contract-services-turkey.html">Commercial Contract Services in Turkey</a>
+                    <a href="compliance-data-protection-services-turkey.html">Compliance and Data Protection Services in Turkey</a>
+                    <a href="dispute-resolution-services-turkey.html">Dispute Resolution Services in Turkey</a>
+                    <a href="employment-mobility-services-turkey.html">Employment and Mobility Services in Turkey</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="guides.html">Guides Hub</a>
+                    <a href="glossary.html">Legal Glossary</a>
+                    <a href="monitor.html">Turkish Trade Monitor</a>
+                    <a href="regions.html">Countries</a>
+                    <a href="industries.html">Industries</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="ourexperts.html">About Turkish Trade Lawyers</a>
+                    <a href="index.html#why-us">Why Choose Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacy-notice.html">Privacy Notice</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+
+            <p class="footer-legal">&copy; 2026 Turkish Trade Lawyers. All rights reserved.</p>
         </div>
     </footer>
 
