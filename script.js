@@ -377,6 +377,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="mailto:hi@turkishtradelawyers.com" class="footer-contact-link">hi@turkishtradelawyers.com</a>
                     <p class="footer-contact-copy">Maslak Mah. Buyukdere Cad. No:255, Sariyer, Istanbul</p>
                     <div class="footer-social-links">
+                        <a href="https://wa.me/message/QBSUZJNCQOQEM1" target="_blank"
+                            rel="noopener noreferrer" aria-label="WhatsApp" class="footer-social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                         <a href="https://www.linkedin.com/company/turkish-trade-lawyers" target="_blank"
                             rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link">
                             <i class="fab fa-linkedin-in"></i>
