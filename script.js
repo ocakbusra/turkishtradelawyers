@@ -1,9 +1,7 @@
 // Mobile Navigation Toggle
 const COOKIE_CONSENT_KEY = 'ttl_cookie_consent_v1';
 const ANALYTICS_MEASUREMENT_ID = window.TTL_ANALYTICS_ID || 'G-9FX7T07VPM';
-const CLARITY_PROJECT_ID = window.TTL_CLARITY_ID || 'vv2a5uwdk0';
 let analyticsInitialized = false;
-let clarityInitialized = false;
 
 function getCookieConsent() {
     try {
@@ -49,11 +47,6 @@ function enableAnalytics() {
         };
     }
 
-    if (typeof window.clarity !== 'function') {
-        window.clarity = function () {
-            (window.clarity.q = window.clarity.q || []).push(arguments);
-        };
-    }
 
     if (!analyticsInitialized && ANALYTICS_MEASUREMENT_ID) {
         loadScriptOnce(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ANALYTICS_MEASUREMENT_ID)}`, 'data-ttl-analytics');
@@ -64,10 +57,6 @@ function enableAnalytics() {
         analyticsInitialized = true;
     }
 
-    if (!clarityInitialized && CLARITY_PROJECT_ID) {
-        loadScriptOnce(`https://www.clarity.ms/tag/${encodeURIComponent(CLARITY_PROJECT_ID)}`, 'data-ttl-clarity');
-        clarityInitialized = true;
-    }
 }
 
 function applyCookieConsent(consent) {
@@ -136,7 +125,7 @@ function initCookieConsent() {
         return;
     }
 
-    buildCookieBanner();
+    enableAnalytics();
 }
 
 window.TTL_resetCookieConsent = function () {
