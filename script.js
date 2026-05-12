@@ -1,7 +1,9 @@
 // Mobile Navigation Toggle
 const COOKIE_CONSENT_KEY = 'ttl_cookie_consent_v1';
 const ANALYTICS_MEASUREMENT_ID = window.TTL_ANALYTICS_ID || 'G-9FX7T07VPM';
+const CLARITY_PROJECT_ID = window.TTL_CLARITY_ID || 'vv2a5uwdk0';
 let analyticsInitialized = false;
+let clarityInitialized = false;
 
 function getCookieConsent() {
     try {
@@ -47,7 +49,6 @@ function enableAnalytics() {
         };
     }
 
-
     if (!analyticsInitialized && ANALYTICS_MEASUREMENT_ID) {
         loadScriptOnce(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ANALYTICS_MEASUREMENT_ID)}`, 'data-ttl-analytics');
         if (typeof window.gtag === 'function') {
@@ -56,82 +57,22 @@ function enableAnalytics() {
         }
         analyticsInitialized = true;
     }
-
 }
 
-function applyCookieConsent(consent) {
-    if (consent === 'accepted') {
-        enableAnalytics();
-    }
-}
-
-function removeCookieBanner() {
-    const banner = document.getElementById('cookie-consent-banner');
-    if (banner) {
-        banner.remove();
-    }
-}
-
-function buildCookieBanner() {
-    if (document.getElementById('cookie-consent-banner')) {
-        return;
-    }
-
-    const banner = document.createElement('div');
-    banner.id = 'cookie-consent-banner';
-    banner.className = 'cookie-consent-banner';
-    banner.setAttribute('role', 'dialog');
-    banner.setAttribute('aria-live', 'polite');
-    banner.setAttribute('aria-label', 'Cookie consent');
-    banner.innerHTML = `
-        <div class="cookie-consent-content">
-            <p class="cookie-consent-text">
-                We use cookies to improve your experience and analyze site performance.
-                <a href="/cookie-policy.html">Cookie Policy</a>
-            </p>
-            <div class="cookie-consent-actions">
-                <button type="button" class="cookie-consent-btn cookie-consent-btn-secondary" data-cookie-action="reject">Reject All</button>
-                <button type="button" class="cookie-consent-btn cookie-consent-btn-primary" data-cookie-action="accept">Accept All</button>
-            </div>
-        </div>
-    `;
-
-    document.body.appendChild(banner);
-
-    banner.addEventListener('click', (event) => {
-        const action = event.target?.getAttribute('data-cookie-action');
-        if (!action) return;
-
-        if (action === 'accept') {
-            setCookieConsent('accepted');
-            applyCookieConsent('accepted');
-        } else if (action === 'reject') {
-            setCookieConsent('rejected');
-        }
-
-        removeCookieBanner();
-    });
+function enableClarity() {
+    if (clarityInitialized || !CLARITY_PROJECT_ID) return;
+    loadScriptOnce(`https://www.clarity.ms/tag/${encodeURIComponent(CLARITY_PROJECT_ID)}`, 'data-ttl-clarity');
+    clarityInitialized = true;
 }
 
 function initCookieConsent() {
-    const consent = getCookieConsent();
-
-    if (consent === 'accepted') {
-        applyCookieConsent(consent);
-        return;
-    }
-
-    if (consent === 'rejected') {
-        return;
-    }
-
+    // Analytics and session recording load unconditionally.
     enableAnalytics();
+    enableClarity();
 }
 
 window.TTL_resetCookieConsent = function () {
-    clearCookieConsent();
-    removeCookieBanner();
-    buildCookieBanner();
+    // No-op: banner is disabled.
 };
 
 const navToggle = document.getElementById('navToggle');
