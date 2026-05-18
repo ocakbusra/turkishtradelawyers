@@ -92,7 +92,7 @@ glossary/commercial-representative.html
 glossary/company-formation.html
 glossary/competition-law.html
 glossary/compliance-program.html
-glossary/confidentiality-agreement.html
+glossary/non-disclosure-agreement.html
 glossary/consumer-protection.html
 glossary/contract-termination.html
 glossary/copyright.html

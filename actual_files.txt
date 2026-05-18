@@ -230,7 +230,7 @@
 ./glossary/debt-collection.html
 ./glossary/istac.html
 ./glossary/data-controller.html
-./glossary/confidentiality-agreement.html
+./glossary/non-disclosure-agreement.html
 ./glossary/employment-contract.html
 ./glossary/internal-audit.html
 ./glossary/compliance-program.html
