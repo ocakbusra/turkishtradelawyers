@@ -245,7 +245,6 @@
 ./glossary/litigation-turkey.html
 ./glossary/commercial-representative.html
 ./glossary/lease-termination.html
-./glossary/penalties-clauses.html
 ./glossary/corporate-tax.html
 ./glossary/share-purchase.html
 ./glossary/new-york-convention.html
