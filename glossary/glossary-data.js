@@ -1094,13 +1094,7 @@ const glossaryData = [
         excerpt: "Utility models protect inventions for 10 years with less stringent requirements than patents. Ideal for incremental innovations. Registration is faster.",
         tags: ["intellectual-property"],
         relatedTerms: ["patent-protection", "intellectual-property-rights", "trademark-registration"]
-    }
-];
-
-// Export for module systems
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = glossaryData;
-},
+    },
     {
         id: "bankruptcy",
         term: "Bankruptcy",
@@ -2128,3 +2122,8 @@ if (typeof module !== 'undefined' && module.exports) {
         relatedTerms: []
     }
 ];
+
+// Export for module systems
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = glossaryData;
+}
