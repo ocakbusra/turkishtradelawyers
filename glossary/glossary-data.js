@@ -2000,4 +2000,130 @@ if (typeof module !== 'undefined' && module.exports) {
         excerpt: "The severe legal status of a contract that is entirely void from its inception because it violates mandatory laws, public morality, or lacks essential form requirements.",
         tags: ["contract-law"],
         relatedTerms: []
+    },
+    {
+        id: "construction-in-return-for-land-share",
+        term: "Construction in Return for Land Share Agreement",
+        trTerm: "Arsa Payı Karşılığı İnşaat Sözleşmesi",
+        question: "Is this agreement legally binding if not notarized?",
+        excerpt: "A construction agreement where the landowner transfers a certain share of the land to the contractor, and the contractor undertakes to construct a building and deliver independent units in return. It is the most common construction model in Turkey.",
+        tags: ["real-estate"],
+        relatedTerms: []
+    },
+    {
+        id: "revenue-sharing-construction-agreement",
+        term: "Revenue Sharing Construction Agreement",
+        trTerm: "Hasılat (Gelir) Paylaşımlı İnşaat Sözleşmesi",
+        question: "What is the main advantage of revenue sharing models?",
+        excerpt: "A contract model where the contractor develops and sells a project on the land with their own financing, and a certain percentage of the total revenue obtained is paid to the landowner.",
+        tags: ["real-estate"],
+        relatedTerms: []
+    },
+    {
+        id: "subcontractor-agreement",
+        term: "Subcontractor Agreement",
+        trTerm: "Taşeron (Alt Yüklenici) Sözleşmesi",
+        question: "Is the main contractor still liable to the client for the subcontractor's work?",
+        excerpt: "An agreement where the main contractor delegates a specific part of a project (such as electrical, mechanical, or excavation work) to another specialized company.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "financial-leasing-agreement",
+        term: "Financial Leasing Agreement",
+        trTerm: "Finansal Kiralama (Leasing) Sözleşmesi",
+        question: "What assets can be subject to financial leasing in Turkey?",
+        excerpt: "A financing agreement where the leasing company purchases an asset upon the lessee's request and leases it to them, granting the lessee the right to acquire ownership at the end of the term.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "brokerage-agreement",
+        term: "Brokerage Agreement",
+        trTerm: "Simsarlık (Tellallık) Sözleşmesi",
+        question: "When is the broker entitled to their fee?",
+        excerpt: "A contract where the broker undertakes to provide an opportunity or mediate for the establishment of a contract between parties, earning a fee if the contract is successfully formed (e.g., real estate agent agreements).",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "commission-agreement",
+        term: "Commission Agreement",
+        trTerm: "Komisyon Sözleşmesi",
+        question: "What is the difference between a broker and a commission agent?",
+        excerpt: "An agreement where a commission agent undertakes to buy or sell negotiable instruments or movable goods in their own name but on the account of the principal, in exchange for a fee.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "carriage-agreement",
+        term: "Carriage Agreement",
+        trTerm: "Taşıma (Navlun/Lojistik) Sözleşmesi",
+        question: "What is the liability of the carrier for damaged goods?",
+        excerpt: "An agreement where the carrier undertakes to safely transport goods or passengers from one place to another, and the sender agrees to pay the freight (carriage fee) in return.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "consignment-sale-agreement",
+        term: "Consignment Sale Agreement",
+        trTerm: "Konsinye Satış Sözleşmesi",
+        question: "Who bears the risk of loss in a consignment agreement?",
+        excerpt: "An agreement where a manufacturer or wholesaler leaves goods with a retailer for sale without transferring ownership. The retailer only pays for the goods that are successfully sold.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "barter-agreement",
+        term: "Barter Agreement",
+        trTerm: "Barter (Trampa/Mal Değişim) Sözleşmesi",
+        question: "Does a barter agreement involve tax obligations in Turkey?",
+        excerpt: "An agreement where a good or service is directly exchanged for another good or service without using cash money.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "know-how-agreement",
+        term: "Know-How Agreement",
+        trTerm: "Know-How (Bilgi Birikimi) Sözleşmesi",
+        question: "How is know-how protected under Turkish law?",
+        excerpt: "A contract where a business grants another enterprise the right to use its confidential, commercially valuable technical or administrative knowledge and experience in exchange for a fee.",
+        tags: ["intellectual-property"],
+        relatedTerms: []
+    },
+    {
+        id: "software-development-agreement",
+        term: "Software Development Agreement",
+        trTerm: "Yazılım Geliştirme Sözleşmesi",
+        question: "Who owns the intellectual property of the custom software?",
+        excerpt: "A specific type of contract where a software developer commits to designing and coding a custom computer program or application tailored to the client's needs.",
+        tags: ["intellectual-property"],
+        relatedTerms: []
+    },
+    {
+        id: "escrow-agreement",
+        term: "Escrow Agreement",
+        trTerm: "Escrow (Emanet) Sözleşmesi",
+        question: "Are escrow agreements recognized in Turkish Law?",
+        excerpt: "An agreement ensuring that assets, such as source codes or M&A down payments, are securely held by an independent third party until specific contractual conditions are met.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "loan-for-use-agreement",
+        term: "Loan for Use Agreement",
+        trTerm: "Ariyet (Kullanım Ödüncü) Sözleşmesi",
+        question: "What is the difference between loan for use and rental agreements?",
+        excerpt: "An agreement where a person allows another to temporarily use their movable or immovable property free of charge, with the condition that the exact same property is returned at the end.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "deposit-agreement",
+        term: "Deposit Agreement",
+        trTerm: "Vedia (Saklama) Sözleşmesi",
+        question: "Can the depositee use the entrusted property?",
+        excerpt: "A contract where the depositee agrees to keep a movable property entrusted to them by the depositor in a safe place and return it upon request.",
+        tags: ["contract-law"],
+        relatedTerms: []
     }
