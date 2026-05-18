@@ -1100,4 +1100,904 @@ const glossaryData = [
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = glossaryData;
-}
+},
+    {
+        id: "bankruptcy",
+        term: "Bankruptcy",
+        trTerm: "İflas",
+        question: "Who can be subject to bankruptcy in Turkey?",
+        excerpt: "Bankruptcy is a legal proceeding involving a person or business that is unable to repay outstanding debts. Under Turkish Execution and Bankruptcy Law, it results in the liquidation of all attachable assets of the debtor to satisfy creditors.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "concordat",
+        term: "Concordat",
+        trTerm: "Konkordato",
+        question: "What is the main advantage of concordat?",
+        excerpt: "Concordat is a restructuring mechanism under Turkish Law allowing debtors in poor financial health to restructure their debts and avoid bankruptcy by reaching an agreement with their creditors, subject to court approval.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "mutual-rescission",
+        term: "Mutual Rescission",
+        trTerm: "İkale",
+        question: "Does ikale grant severance pay?",
+        excerpt: "Mutual rescission (İkale) is an agreement between an employer and an employee to terminate the employment contract by mutual consent, rather than through unilateral termination.",
+        tags: ["employment"],
+        relatedTerms: []
+    },
+    {
+        id: "release-agreement",
+        term: "Release Agreement",
+        trTerm: "İbra",
+        question: "Can an employee release the employer before termination?",
+        excerpt: "A release agreement (İbra) is a contract where the creditor releases the debtor from their obligation, extinguishing the debt completely under the Turkish Code of Obligations.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "joint-and-several-liability",
+        term: "Joint and Several Liability",
+        trTerm: "Müteselsil Sorumluluk",
+        question: "What happens if one debtor pays the full amount?",
+        excerpt: "Joint and several liability means multiple parties are independently liable for the full amount of an obligation. The creditor may demand the entire performance from any one of the debtors.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "right-of-recourse",
+        term: "Right of Recourse",
+        trTerm: "Rücu",
+        question: "When does the right of recourse typically arise?",
+        excerpt: "The right of recourse allows a party who has discharged an obligation on behalf of another to seek reimbursement from the party who was primarily liable.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "unjust-enrichment",
+        term: "Unjust Enrichment",
+        trTerm: "Sebepsiz Zenginleşme",
+        question: "What is the statute of limitations for unjust enrichment?",
+        excerpt: "Unjust enrichment occurs when a person retains money or benefits that in justice and equity belong to another, without a valid legal ground. The enriched party must return the benefit.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "default",
+        term: "Default",
+        trTerm: "Temerrüt",
+        question: "What are the consequences of default?",
+        excerpt: "Default occurs when a debtor fails to fulfill a legal obligation, such as paying a debt when it becomes due, often requiring a formal notice of default to be legally established.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "exigibility",
+        term: "Acceleration / Exigibility",
+        trTerm: "Muacceliyet",
+        question: "What is an acceleration clause?",
+        excerpt: "Exigibility (Muacceliyet) refers to the state where a debt becomes due and payable, meaning the creditor has the legal right to demand its immediate performance.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "collusion-simulation",
+        term: "Collusion / Simulation",
+        trTerm: "Muvazaa",
+        question: "Is a simulated contract valid?",
+        excerpt: "Simulation (Muvazaa) occurs when parties agree to create a false appearance of a legal transaction to deceive third parties, while secretly agreeing it will have no legal effect between them.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "preliminary-attachment",
+        term: "Preliminary Attachment",
+        trTerm: "İhtiyati Haciz",
+        question: "Do you need a court order for preliminary attachment?",
+        excerpt: "Preliminary attachment is a provisional legal measure to seize a debtor's assets before or during a lawsuit to secure the collection of an unsecured monetary claim.",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "preliminary-injunction",
+        term: "Preliminary Injunction",
+        trTerm: "İhtiyati Tedbir",
+        question: "What is the difference between attachment and injunction?",
+        excerpt: "Preliminary injunction is a court order prohibiting or compelling a specific action to prevent irreparable harm or preserve the status quo pending final resolution of a dispute.",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "merchant",
+        term: "Merchant",
+        trTerm: "Tacir",
+        question: "Are all companies considered merchants?",
+        excerpt: "A merchant under the Turkish Commercial Code is a real or legal person who operates a commercial enterprise. Merchants are subject to stricter standards of care and specific commercial rules.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "transfer-of-commercial-enterprise",
+        term: "Transfer of Commercial Enterprise",
+        trTerm: "Ticari İşletme Devri",
+        question: "Does the transferor remain liable for past debts?",
+        excerpt: "This involves transferring a business as a going concern, including its assets, liabilities, and goodwill. It requires a written agreement registered with the Trade Registry.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "articles-of-association",
+        term: "Articles of Association",
+        trTerm: "Esas Sözleşme",
+        question: "Can the Articles of Association be amended?",
+        excerpt: "Articles of Association is the foundational constitutional document of a company, defining its name, purpose, headquarters, capital structure, and internal governance rules.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "change-of-company-type",
+        term: "Change of Company Type",
+        trTerm: "Tür Değiştirme",
+        question: "Does changing the company type affect existing contracts?",
+        excerpt: "A legal process where a company changes its corporate form (e.g., from a Limited Company to a Joint-Stock Company) without undergoing liquidation, preserving its legal continuity.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "spin-off",
+        term: "Spin-off / Demerger",
+        trTerm: "Bölünme",
+        question: "What is the difference between full and partial demerger?",
+        excerpt: "Demerger is a corporate restructuring process where a company divides its assets and liabilities into two or more existing or newly formed companies.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "liquidation",
+        term: "Liquidation",
+        trTerm: "Tasfiye",
+        question: "How long does liquidation take in Turkey?",
+        excerpt: "Liquidation is the process of winding up a company's affairs, selling its assets, settling its debts, and distributing any remaining balance to shareholders before dissolving the legal entity.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "trade-registry",
+        term: "Trade Registry",
+        trTerm: "Ticaret Sicili",
+        question: "Are Trade Registry records public?",
+        excerpt: "The Trade Registry is an official public record system in Turkey where merchants and companies must register their fundamental corporate information, ensuring transparency and legal certainty.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "signature-circular",
+        term: "Signature Circular",
+        trTerm: "İmza Sirküleri",
+        question: "Is a signature circular always required?",
+        excerpt: "A signature circular is a notarized document displaying the specimen signatures of a company's authorized representatives, proving their authority to bind the company.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "registration",
+        term: "Registration",
+        trTerm: "Tescil",
+        question: "What is the legal effect of registration?",
+        excerpt: "Registration refers to the formal recording of specific legal facts or corporate actions (like company formation or board elections) into official registries, such as the Trade Registry.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "announcement",
+        term: "Announcement / Publication",
+        trTerm: "İlan",
+        question: "What actions must be announced?",
+        excerpt: "Publication refers to the legal requirement to announce specific corporate actions in the Turkish Trade Registry Gazette to inform third parties and creditors.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "board-of-partners",
+        term: "Board of Partners",
+        trTerm: "Ortaklar Kurulu",
+        question: "What decisions does the Board of Partners make?",
+        excerpt: "The Board of Partners is the supreme decision-making body in a Limited Liability Company (Limited Şirket), equivalent to the General Assembly in a Joint-Stock Company.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "circumvention-of-law",
+        term: "Circumvention of Law",
+        trTerm: "Peçeleme",
+        question: "Is circumvention of law illegal?",
+        excerpt: "Circumvention of law (Peçeleme) occurs when parties use a legally valid transaction to bypass a mandatory legal prohibition, effectively achieving a forbidden outcome.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "piercing-the-corporate-veil",
+        term: "Piercing the Corporate Veil",
+        trTerm: "Tüzel Kişilik Perdesinin Aralanması",
+        question: "When do courts pierce the corporate veil?",
+        excerpt: "An exceptional legal doctrine allowing courts to ignore limited corporate liability and hold shareholders personally liable if the corporate form is abused to defraud creditors.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "capital-commitment",
+        term: "Capital Commitment",
+        trTerm: "Sermaye Taahhüdü",
+        question: "When must capital commitments be paid?",
+        excerpt: "Capital commitment is the legally binding promise made by shareholders to contribute a specific amount of capital to a company during incorporation or a capital increase.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "pre-emption-right",
+        term: "Pre-emption Right",
+        trTerm: "Rüçhan Hakkı",
+        question: "Can pre-emption rights be restricted?",
+        excerpt: "Pre-emption right allows existing shareholders to maintain their proportional ownership by having the first right to purchase newly issued shares during a capital increase.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "registered-shares",
+        term: "Registered Shares",
+        trTerm: "Nama Yazılı Pay",
+        question: "Can transfer of registered shares be restricted?",
+        excerpt: "Registered shares are corporate shares issued in the name of a specific person and recorded in the company's share ledger. Their transfer requires endorsement and ledger registration.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "bearer-shares",
+        term: "Bearer Shares",
+        trTerm: "Hamiline Yazılı Pay",
+        question: "Are there new tracking rules for bearer shares?",
+        excerpt: "Bearer shares do not contain the owner's name; whoever physically holds the share certificate is deemed the owner. Their transfer simply requires handing over possession.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "dividend-right-certificate",
+        term: "Dividend Right Certificate",
+        trTerm: "İntifa Senedi",
+        question: "Who typically receives dividend right certificates?",
+        excerpt: "These are certificates that do not represent share capital or grant voting rights, but provide the holder with financial rights, such as a share of the company's net profit.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "squeeze-out-right",
+        term: "Squeeze-out Right",
+        trTerm: "Çıkarma Hakkı",
+        question: "Why is the squeeze-out right used?",
+        excerpt: "A mechanism in M&A law allowing a controlling shareholder (usually holding over 98%) to force minority shareholders to sell their shares at a fair price, taking the company private.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "sell-out-right",
+        term: "Sell-out Right",
+        trTerm: "Satma Hakkı",
+        question: "When can minority shareholders use this right?",
+        excerpt: "The counterpart to the squeeze-out, this gives minority shareholders the right to demand that the controlling shareholder purchase their shares at a fair price.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "tag-along-right",
+        term: "Tag-Along Right",
+        trTerm: "Birlikte Satma Hakkı",
+        question: "Where are tag-along rights defined?",
+        excerpt: "A contractual right protecting minority shareholders. If the majority shareholder sells their stake, minority shareholders can join the transaction and sell their shares under the same terms.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "drag-along-right",
+        term: "Drag-Along Right",
+        trTerm: "Birlikte Satışa Zorlama Hakkı",
+        question: "What is the benefit of a drag-along right?",
+        excerpt: "A contractual right allowing a majority shareholder to force minority shareholders to join in the sale of the company to a third party on the same terms.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "right-of-first-refusal",
+        term: "Right of First Refusal",
+        trTerm: "Ön Alım Hakkı",
+        question: "Is right of first refusal recognized for real estate?",
+        excerpt: "A contractual right requiring a shareholder who wishes to sell their shares to a third party to first offer those shares to existing shareholders on the exact same terms.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "right-of-first-offer",
+        term: "Right of First Offer",
+        trTerm: "İlk Teklif Hakkı",
+        question: "How does it differ from Right of First Refusal?",
+        excerpt: "A contractual obligation where a shareholder looking to sell must first ask existing shareholders to make an offer for the shares before negotiating with outside parties.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "option",
+        term: "Option",
+        trTerm: "Opsiyon",
+        question: "Are options commonly used in Turkish M&A?",
+        excerpt: "A financial derivative or contractual right (but not obligation) to buy or sell an asset at a predetermined price within a specific timeframe.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "call-option",
+        term: "Call Option",
+        trTerm: "Alım Opsiyonu",
+        question: "How are call options used in joint ventures?",
+        excerpt: "A contractual right granting the holder the option to purchase shares or assets at an agreed-upon price within a specific period.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "put-option",
+        term: "Put Option",
+        trTerm: "Satım Opsiyonu",
+        question: "Why would an investor demand a put option?",
+        excerpt: "A contractual right granting the holder the option to force another party to buy their shares or assets at a predetermined price.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "loan-agreement",
+        term: "Loan Agreement",
+        trTerm: "Kredi Sözleşmesi",
+        question: "What governs commercial loans in Turkey?",
+        excerpt: "A formal contract between a lender and borrower detailing the principal loan amount, interest rates, repayment schedule, and covenants.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "syndicated-loan",
+        term: "Syndicated Loan",
+        trTerm: "Sendikasyon Kredisi",
+        question: "Who uses syndicated loans?",
+        excerpt: "A large loan provided by a group of lenders (a syndicate) to a single borrower, distributing the credit risk among the participating banks.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "project-finance",
+        term: "Project Finance",
+        trTerm: "Proje Finansmanı",
+        question: "What secures project finance?",
+        excerpt: "The long-term financing of infrastructure or industrial projects based upon the projected cash flows of the project rather than the balance sheets of its sponsors.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "assignment",
+        term: "Assignment",
+        trTerm: "Temlik",
+        question: "Does assignment require the debtor's consent?",
+        excerpt: "The legal transfer of a right, property, or claim from one party (assignor) to another (assignee), frequently used for transferring receivables.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "assignment-of-receivables",
+        term: "Assignment of Receivables",
+        trTerm: "Alacağın Devri",
+        question: "Can future receivables be assigned?",
+        excerpt: "A specific form of assignment where a creditor transfers their right to collect a debt to a third party. It must be executed in writing under Turkish Law.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "assumption-of-debt",
+        term: "Assumption of Debt",
+        trTerm: "Borcun Üstlenilmesi",
+        question: "Does assumption of debt require the creditor's consent?",
+        excerpt: "A legal process where a third party takes over a debtor's obligation, relieving the original debtor of their liability.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "surety",
+        term: "Surety",
+        trTerm: "Kefalet",
+        question: "What are the formal requirements for a surety agreement?",
+        excerpt: "A personal guarantee where a third party (the surety) undertakes to pay the creditor if the primary debtor fails to fulfill their obligation.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "aval",
+        term: "Aval",
+        trTerm: "Aval",
+        question: "How is an aval given?",
+        excerpt: "Aval is a specialized form of guarantee used exclusively for negotiable instruments (like bills of exchange), where a third party guarantees payment on behalf of one of the signatories.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "endorsement",
+        term: "Endorsement",
+        trTerm: "Ciro",
+        question: "What is a blank endorsement?",
+        excerpt: "The act of signing the back of a negotiable instrument (like a cheque or promissory note) to transfer the rights inherent in the instrument to another party.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "bill-of-exchange",
+        term: "Bill of Exchange",
+        trTerm: "Poliçe",
+        question: "Are bills of exchange common in Turkey?",
+        excerpt: "A written, unconditional order by one party (drawer) directing another party (drawee) to pay a specific sum of money to a third party (payee) at a set future date.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "cheque",
+        term: "Cheque",
+        trTerm: "Çek",
+        question: "What happens if a cheque bounces in Turkey?",
+        excerpt: "A commercial negotiable instrument ordering a bank to pay a specific amount of money from a person's account to the bearer or named payee.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "promissory-note",
+        term: "Promissory Note",
+        trTerm: "Bono",
+        question: "Are promissory notes widely used in Turkey?",
+        excerpt: "A promissory note (Bono) is a written promise by one party (the maker) to pay a specific sum of money to another (the payee) at a determined future date.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "negotiable-instruments",
+        term: "Negotiable Instruments",
+        trTerm: "Kambiyo Senedi",
+        question: "What is the advantage of a negotiable instrument?",
+        excerpt: "Negotiable instruments are specialized documents guaranteeing the payment of a specific amount of money, primarily encompassing cheques, bills of exchange, and promissory notes under Turkish law.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "presentation",
+        term: "Presentation",
+        trTerm: "İbraz",
+        question: "What is the presentation period for cheques in Turkey?",
+        excerpt: "Presentation is the formal act of physically or electronically presenting a negotiable instrument (like a cheque) to the bank or drawee for payment within legally mandated timeframes.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "protest",
+        term: "Protest",
+        trTerm: "Protesto",
+        question: "Is a protest always required?",
+        excerpt: "A formal, notarized declaration attesting that a negotiable instrument was presented for payment or acceptance and was dishonored.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "in-kind-capital",
+        term: "In-Kind Capital",
+        trTerm: "Ayni Sermaye",
+        question: "Can any asset be contributed as in-kind capital?",
+        excerpt: "Capital contributed to a company in forms other than cash, such as real estate, machinery, intellectual property, or existing businesses, subject to court-appointed valuation.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "mortgage",
+        term: "Mortgage",
+        trTerm: "İpotek",
+        question: "How is a mortgage enforced?",
+        excerpt: "A mortgage (İpotek) is a real right established on immovable property (real estate) to secure the payment of a debt, requiring official registration at the Land Registry.",
+        tags: ["real-estate"],
+        relatedTerms: []
+    },
+    {
+        id: "pledge",
+        term: "Pledge",
+        trTerm: "Rehin",
+        question: "Can a pledge be established without physical delivery?",
+        excerpt: "A pledge is a security interest created over movable property or rights to secure a debt. Traditionally, the pledged asset must be physically delivered to the creditor.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "commercial-enterprise-pledge",
+        term: "Commercial Enterprise Pledge",
+        trTerm: "Ticari İşletme Rehni",
+        question: "Where is a commercial enterprise pledge registered?",
+        excerpt: "A specialized pledge allowing a merchant to use their entire commercial enterprise (including machinery, inventory, and trade name) as collateral without handing over physical possession.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "notice-warning",
+        term: "Notice / Warning",
+        trTerm: "İhtarname",
+        question: "Why use a Notary for an Ihtarname?",
+        excerpt: "A formal legal notice, typically sent via a Notary Public, to formally demand the performance of an obligation, declare default, or terminate a contract.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "negative-declaratory-action",
+        term: "Negative Declaratory Action",
+        trTerm: "Menfi Tespit",
+        question: "Does a negative declaratory action stop debt execution?",
+        excerpt: "A lawsuit filed by a debtor seeking a binding court declaration that they do not actually owe a specific debt claimed by the creditor.",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "action-for-restitution",
+        term: "Action for Restitution",
+        trTerm: "İstirdat",
+        question: "When must an action for restitution be filed?",
+        excerpt: "A lawsuit to recover money that a debtor was forced to pay during execution proceedings for a debt that they legally did not owe.",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "annulment-of-objection",
+        term: "Annulment of Objection",
+        trTerm: "İtirazın İptali",
+        question: "Is there a penalty for unjust objections?",
+        excerpt: "A lawsuit filed by a creditor after a debtor formally objects to and halts an execution proceeding without judgment, seeking to annul the objection and resume execution.",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "lifting-of-objection",
+        term: "Lifting of Objection",
+        trTerm: "İtirazın Kaldırılması",
+        question: "Can any debt be proven in this procedure?",
+        excerpt: "A faster, narrower alternative to Annulment of Objection, applied directly to the Execution Court, but only permissible if the creditor possesses strict statutory proof of the debt (like a notarized document).",
+        tags: ["dispute-resolution"],
+        relatedTerms: []
+    },
+    {
+        id: "table-of-ranks",
+        term: "Table of Ranks",
+        trTerm: "Sıra Cetveli",
+        question: "Who gets paid first in the Table of Ranks?",
+        excerpt: "A ranked list prepared by the execution or bankruptcy office determining the priority order in which competing creditors will be paid from the liquidation of a debtor's assets.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "actio-pauliana",
+        term: "Actio Pauliana / Cancellation of Disposition",
+        trTerm: "Tasarrufun İptali",
+        question: "What transfers can be canceled?",
+        excerpt: "A lawsuit allowing creditors to annul fraudulent asset transfers made by a debtor aiming to hide assets and evade debt collection.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "trustee-receiver",
+        term: "Trustee / Receiver",
+        trTerm: "Kayyım",
+        question: "When is a trustee appointed to a company?",
+        excerpt: "A court-appointed official tasked with temporarily managing a company, an estate, or property when the regular management is incapacitated, deadlocked, or legally suspended.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "concordat-commissioner",
+        term: "Concordat Commissioner",
+        trTerm: "Konkordato Komiseri",
+        question: "Does the Commissioner run the company?",
+        excerpt: "An independent expert appointed by the commercial court to supervise a debtor's business operations and protect creditors' interests during the concordat restructuring period.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "bankruptcy-administration",
+        term: "Bankruptcy Administration",
+        trTerm: "İflas İdaresi",
+        question: "Who elects the Bankruptcy Administration?",
+        excerpt: "The official body formed after a bankruptcy declaration, responsible for representing the bankrupt estate, collecting assets, assessing claims, and distributing proceeds to creditors.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "registration-to-the-bankruptcy-estate",
+        term: "Registration to the Bankruptcy Estate",
+        trTerm: "Masaya Kayıt",
+        question: "Is there a deadline for registering claims?",
+        excerpt: "The formal process where creditors submit their claims and supporting evidence to the bankruptcy administration to be included in the liquidation distributions.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "doubtful-receivable",
+        term: "Doubtful Receivable",
+        trTerm: "Şüpheli Alacak",
+        question: "Can any unpaid invoice be deemed a doubtful receivable?",
+        excerpt: "A commercial receivable that is in the litigation or execution phase and whose collection has become uncertain, allowing businesses to set aside a tax-deductible provision.",
+        tags: ["tax-law"],
+        relatedTerms: []
+    },
+    {
+        id: "netting",
+        term: "Netting",
+        trTerm: "Mahsuplaşma",
+        question: "How does netting differ from set-off?",
+        excerpt: "The accounting and legal process of consolidating multiple mutual obligations or financial positions between two parties to arrive at a single net payable amount.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "set-off",
+        term: "Set-Off",
+        trTerm: "Takas",
+        question: "Can set-off be executed automatically?",
+        excerpt: "The legal right to extinguish mutual, due, and homogenous debts between two parties up to the amount of the smaller debt, simply by unilateral declaration.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "reconciliation",
+        term: "Reconciliation",
+        trTerm: "Mutabakat",
+        question: "What happens if a reconciliation statement is ignored?",
+        excerpt: "The process where two commercial parties review and formally agree upon their mutual account balances, preventing future disputes over amounts owed.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "invoice",
+        term: "Invoice",
+        trTerm: "Fatura",
+        question: "What is the legal deadline to object to an invoice?",
+        excerpt: "A commercial document issued by a seller to a buyer detailing the goods or services provided, prices, and taxes, serving as primary evidence of a commercial transaction.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "waybill",
+        term: "Waybill",
+        trTerm: "İrsaliye",
+        question: "Is an e-Waybill mandatory in Turkey?",
+        excerpt: "A dispatch note or delivery document that strictly tracks the physical movement and delivery of goods from a supplier to a buyer, separate from the financial invoice.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "current-account",
+        term: "Current Account",
+        trTerm: "Cari Hesap",
+        question: "How often is a current account settled?",
+        excerpt: "A commercial arrangement where two parties agree that their mutual receivables arising from continuous transactions will not be claimed individually but netted out periodically.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "advance-payment",
+        term: "Advance Payment",
+        trTerm: "Avans",
+        question: "Must an advance payment be returned if the contract fails?",
+        excerpt: "A partial payment made by a buyer to a seller before the goods are delivered or services are fully rendered, acting as financing or security for the contract.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "down-payment",
+        term: "Down Payment",
+        trTerm: "Peşinat",
+        question: "Is a down payment refundable?",
+        excerpt: "An initial, upfront payment made at the time of finalizing a contract, establishing commitment. In Turkish law, it is often treated as earnest money or a penalty depending on drafting.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "progress-payment",
+        term: "Progress Payment",
+        trTerm: "Hakediş",
+        question: "Who approves a progress payment?",
+        excerpt: "Periodic payments made to contractors in construction or long-term service agreements based on the certified completion of specific milestones or work percentages.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "universal-succession",
+        term: "Universal Succession",
+        trTerm: "Külli Halefiyet",
+        question: "When does universal succession occur in corporate law?",
+        excerpt: "A legal principle where an entity (or heir) inherits the entirety of another's rights, assets, and liabilities automatically and completely, without needing individual transfers.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "loan-of-consumption",
+        term: "Loan of Consumption",
+        trTerm: "Karz",
+        question: "Is interest mandatory in a Karz agreement?",
+        excerpt: "A specific type of loan agreement where the lender transfers ownership of money or fungible goods to the borrower, who is obligated to return the same quantity and quality.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "source-code",
+        term: "Source Code",
+        trTerm: "Kaynak Kod",
+        question: "Who owns the source code created by an employee?",
+        excerpt: "The human-readable version of computer software. Under Turkish copyright law, source code is strictly protected as a literary work.",
+        tags: ["intellectual-property"],
+        relatedTerms: []
+    },
+    {
+        id: "service-level-agreement",
+        term: "Service Level Agreement (SLA)",
+        trTerm: "Hizmet Seviyesi Sözleşmesi",
+        question: "What happens if SLA metrics are not met?",
+        excerpt: "A contract specifying the exact standards of performance, uptime, and quality metrics a service provider must deliver, commonly used in IT and outsourcing.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "outsourcing",
+        term: "Outsourcing",
+        trTerm: "Dış Kaynak",
+        question: "Does outsourcing trigger employee transfer rules?",
+        excerpt: "The business practice of contracting external specialized providers to handle specific business functions (like IT, payroll, or customer service) previously done in-house.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "declaration",
+        term: "Declaration",
+        trTerm: "Beyanname",
+        question: "What are the common corporate tax declarations?",
+        excerpt: "A formal, legally binding statement or document submitted to governmental authorities, most commonly referring to tax or customs declarations.",
+        tags: ["tax-law"],
+        relatedTerms: []
+    },
+    {
+        id: "accrual",
+        term: "Accrual",
+        trTerm: "Tahakkuk",
+        question: "What is an accrual slip (Tahakkuk Fişi)?",
+        excerpt: "The formal assessment and establishment of a tax liability by the tax authority, making the calculated tax officially due and payable.",
+        tags: ["tax-law"],
+        relatedTerms: []
+    },
+    {
+        id: "tax-loss",
+        term: "Tax Loss",
+        trTerm: "Vergi Ziyaı",
+        question: "What is the penalty for tax loss?",
+        excerpt: "A tax penalty mechanism triggered when a taxpayer's failure to comply with obligations causes the State to lose tax revenue or receive it late.",
+        tags: ["tax-law"],
+        relatedTerms: []
+    },
+    {
+        id: "special-irregularity",
+        term: "Special Irregularity",
+        trTerm: "Özel Usulsüzlük",
+        question: "Is special irregularity separate from tax loss?",
+        excerpt: "Administrative tax penalties levied for violating strict procedural and documentation rules, such as failing to issue an invoice, regardless of whether tax revenue was lost.",
+        tags: ["tax-law"],
+        relatedTerms: []
+    },
+    {
+        id: "independent-audit",
+        term: "Independent Audit",
+        trTerm: "Bağımsız Denetim",
+        question: "Are all Turkish companies subject to independent audit?",
+        excerpt: "An objective examination of a company's financial statements by licensed external auditors to ensure compliance with Turkish Financial Reporting Standards (TFRS).",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "parent-company",
+        term: "Parent Company",
+        trTerm: "Hakim Şirket",
+        question: "Can a parent company be held liable for a subsidiary's debts?",
+        excerpt: "A company that exerts direct or indirect control over another entity (the subsidiary), usually by holding the majority of voting rights or the right to appoint the board.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "share-ledger",
+        term: "Share Ledger",
+        trTerm: "Pay Defteri",
+        question: "Is registration in the share ledger mandatory?",
+        excerpt: "The official statutory book maintained by a company recording the names, addresses, and shareholdings of its registered shareholders.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "board-of-directors-resolution-book",
+        term: "Board of Directors Resolution Book",
+        trTerm: "Yönetim Kurulu Karar Defteri",
+        question: "Must every decision be recorded here?",
+        excerpt: "A mandatory, notarized corporate book where all official decisions and resolutions taken by the company's Board of Directors are recorded and signed.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "inventory",
+        term: "Inventory",
+        trTerm: "Envanter",
+        question: "Is the inventory legally binding?",
+        excerpt: "A detailed, itemized record of a company's commercial assets, liabilities, goods, and raw materials, required to be prepared at the establishment and end of each fiscal year.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "balance-sheet",
+        term: "Balance Sheet",
+        trTerm: "Bilanço",
+        question: "Who approves the balance sheet?",
+        excerpt: "A core financial statement summarizing a company's assets, liabilities, and shareholders' equity at a specific point in time, reflecting its financial health.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "consortium",
+        term: "Consortium",
+        trTerm: "Konsorsiyum",
+        question: "How does a consortium differ from a joint venture?",
+        excerpt: "A collaborative association of two or more entities pooling their resources to execute a specific, large-scale project while remaining independent and separately liable for their distinct portions of work.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "ordinary-partnership",
+        term: "Ordinary Partnership",
+        trTerm: "Adi Ortaklık",
+        question: "Does an ordinary partnership have a trade name?",
+        excerpt: "The simplest form of business partnership under the Turkish Code of Obligations, lacking a separate legal personality, where partners are jointly and unlimitedly liable for partnership debts.",
+        tags: ["company-law"],
+        relatedTerms: []
+    },
+    {
+        id: "factoring",
+        term: "Factoring",
+        trTerm: "Faktoring",
+        question: "Is factoring highly regulated in Turkey?",
+        excerpt: "A financial transaction where a business sells its accounts receivable (invoices) to a third-party financial institution (factor) at a discount to secure immediate cash flow.",
+        tags: ["commercial-law"],
+        relatedTerms: []
+    },
+    {
+        id: "singular-succession",
+        term: "Singular Succession",
+        trTerm: "Cüzi Halefiyet",
+        question: "What is an example of singular succession?",
+        excerpt: "A legal transfer mechanism where only a specific, individual asset, right, or debt is transferred from one party to another, as opposed to an entire estate.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "letter-of-intent",
+        term: "Letter of Intent (LOI)",
+        trTerm: "Niyet Mektubu",
+        question: "Is an LOI legally binding in Turkey?",
+        excerpt: "A preliminary document outlining the basic terms and understandings of an anticipated contract or M&A transaction before a binding final agreement is drafted.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    },
+    {
+        id: "absolute-nullity",
+        term: "Absolute Nullity",
+        trTerm: "Mutlak Butlan",
+        question: "Can a contract with absolute nullity be fixed later?",
+        excerpt: "The severe legal status of a contract that is entirely void from its inception because it violates mandatory laws, public morality, or lacks essential form requirements.",
+        tags: ["contract-law"],
+        relatedTerms: []
+    }
