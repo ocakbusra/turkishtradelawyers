@@ -572,20 +572,53 @@
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const email = document.getElementById('lmEmail').value;
+                    const submitBtn = form.querySelector('.lm-submit-btn');
                     
                     if(email) {
-                        console.log('Lead captured:', email);
-                        
-                        modal.style.display = 'none';
-                        
-                        const link = document.createElement('a');
-                        link.href = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
-                        link.download = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                        
-                        form.reset();
+                        const originalText = submitBtn.innerText;
+                        submitBtn.innerText = 'Processing...';
+                        submitBtn.disabled = true;
+
+                        fetch('https://formspree.io/f/mnneobaw', {
+                            method: 'POST',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                email: email,
+                                source: '2026 Investment Guide Lead Magnet'
+                            })
+                        })
+                        .then(response => {
+                            modal.style.display = 'none';
+                            submitBtn.innerText = originalText;
+                            submitBtn.disabled = false;
+                            
+                            const link = document.createElement('a');
+                            link.href = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
+                            link.download = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            
+                            form.reset();
+                        })
+                        .catch(error => {
+                            console.error('Error sending email:', error);
+                            modal.style.display = 'none';
+                            submitBtn.innerText = originalText;
+                            submitBtn.disabled = false;
+                            
+                            const link = document.createElement('a');
+                            link.href = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
+                            link.download = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                            
+                            form.reset();
+                        });
                     }
                 });
             }
