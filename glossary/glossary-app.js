@@ -116,9 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
         return `
             <div class="glossary-item" data-tags="${item.tags.join(',')}" data-id="${item.id}">
                 <div class="glossary-term-header">
-                    <h3 class="glossary-term">
-                        <a href="${item.customUrl || 'glossary/' + item.id + '.html'}" class="glossary-term-link">${item.term}</a>
-                    </h3>
+                    <div style="display: flex; flex-direction: column;">
+                        <h3 class="glossary-term">
+                            <a href="${item.customUrl || 'glossary/' + item.id + '.html'}" class="glossary-term-link">${item.term}</a>
+                        </h3>
+                        ${item.trTerm ? `<span style="font-size: 0.85rem; color: #64748b; font-weight: 500; margin-top: 2px;">${item.trTerm}</span>` : ''}
+                    </div>
                     <span class="glossary-term-tag">
                         ${getTagLabel(item.tags[0])}
                     </span>
