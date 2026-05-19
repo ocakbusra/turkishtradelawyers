@@ -799,6 +799,10 @@ function generateExtendedContent(item) {
 console.log('Generating glossary pages...');
 
 glossaryData.forEach((item, index) => {
+    if (item.id === 'bank-guarantee' || item.id === 'financial-leasing-agreement') {
+        console.log(`[${index + 1}/${glossaryData.length}] Skipping custom page: ${item.id}.html`);
+        return;
+    }
     const html = generatePage(item);
     const filePath = path.join(__dirname, `${item.id}.html`);
     fs.writeFileSync(filePath, html);
