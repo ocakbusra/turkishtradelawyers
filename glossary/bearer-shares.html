@@ -55,14 +55,56 @@
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "Are there new tracking rules for bearer shares?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Bearer shares do not contain the owner's name; whoever physically holds the share certificate is deemed the owner. Their transfer simply requires handing over possession."
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What are bearer shares (hamiline yazılı pay) under Turkish law?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bearer shares (hamiline yazılı pay) are corporate shares in a Turkish Joint-Stock Company (Anonim Şirket) where the share ownership is tied to the physical possession of the certificate. The owner's name is not printed on the certificate, which historically provided shareholder anonymity. However, since the 2021 legislative reforms, bearer shares must be registered in the central system (MKK / HPKS)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the HPKS (Hamiline Pay Kayıt Sistemi) in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HPKS (Hamiline Pay Kayıt Sistemi) is the central Bearer Share Registry System managed by the Central Securities Depository of Turkey (MKK - Merkezi Kayıt Kuruluşu). Introduced by Law No. 7262 in April 2021, it is a mandatory registry where all physical bearer shares of non-public joint-stock companies must be registered to track share ownership and prevent illicit financial flows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How are bearer shares transferred under Turkish law after the 2021 amendment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The transfer of bearer shares requires two components: (1) the transfer of physical possession of the share certificate (tasarruf işlemi) based on a valid underlying agreement, and (2) a mandatory notification and registration of the transfer in the MKK's HPKS system. Crucially, the transfer is legally ineffective against the company and third parties until registered in the HPKS."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can bearer shares be issued before the share capital is fully paid up in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Under Article 484/2 of the Turkish Commercial Code (TTK), it is strictly prohibited to issue bearer share certificates before the nominal value of the shares has been fully paid up. Any bearer share certificates issued in violation of this rule are legally null and void, though the underlying shareholding (naked share / çıplak pay) remains valid."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between a bearer share and a registered share in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The main differences lie in their transfer mechanisms, registration, and restrictions. Registered shares (nama yazılı pay) are recorded in the company's share ledger, require endorsement and registration to transfer, and their transfer can be restricted by the articles of association (bağlam). Bearer shares are transferred by possession transfer + MKK registration, and their transfer cannot be restricted by the company's articles of association."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can usufruct or pledge rights be established on bearer shares under Turkish law?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Usufruct (intifa hakkı) and pledge (rehin) rights can be established on bearer shares. For certificated bearer shares, this requires a written agreement, the transfer of the physical certificate's possession to the pledgee/usufructuary, and registration in the MKK's HPKS database to be effective against the company and third parties."
+                }
             }
-        }]
+        ]
     }
     </script>
 
@@ -464,39 +506,175 @@
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>Bearer shares do not contain the owner's name; whoever physically holds the share certificate is deemed the owner. Their transfer simply requires handing over possession.</p>
+                    <p>A bearer share (<strong>hamiline yazılı pay</strong>) in Turkish joint-stock companies is a type of share where ownership is legally tied to the physical possession of the certificate. Under the Turkish Commercial Code (TTK No. 6102), they are categorized as bearer instruments (hamiline yazılı kıymetli evrak). Historically, bearer shares offered complete shareholder anonymity since no share registry was kept. However, following <strong>Law No. 7262 (effective April 2021)</strong>, all bearer shares in non-public companies must be registered with the Central Securities Depository of Turkey (<strong>MKK - Merkezi Kayıt Kuruluşu</strong>) via the <strong>HPKS (Hamiline Pay Kayıt Sistemi)</strong> registry. A transfer of bearer shares now requires both the physical transfer of the certificate and mandatory registration in the HPKS to be legally effective against the company or third parties.</p>
+                </div>
+
+                <!-- Academic Header & Context -->
+                <div class="academic-context-box" style="background: #f8fafc; border-left: 4px solid #1E3A8A; padding: 20px; margin: 30px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; color: #334155;">
+                    <div style="font-weight: 700; color: #1E3A8A; margin-bottom: 8px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em;">Academic Legal Reference</div>
+                    This analysis incorporates the structured legal doctrines and framework established under Turkish corporate law, drawing upon the academic authority of the Dokuz Eylül University thesis, <em>"Hamiline Yazılı Pay Kavramı ve Hamiline Yazılı Paylar Üzerindeki Hukuki İşlemler"</em> (Izmir, 2020), updated with the landmark 2021 MKK registration reforms.
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
+                    <h3>1. Conceptual Nature of Bearer Shares</h3>
+                    <p>In Turkish corporate law, a share (<strong>pay</strong>) in a Joint-Stock Company (<strong>Anonim Şirket - A.Ş.</strong>) represents three dimensions: a fraction of the share capital, a bundle of shareholder rights and duties (the status of being a partner), and the physical security (<strong>pay senedi</strong>) representing these rights. Under Article 484 of the Turkish Commercial Code (TTK), a company's articles of association may authorize the issuance of either registered shares (nama yazılı pay) or bearer shares (hamiline yazılı pay).</p>
+                    <p>Bearer shares represent the ultimate commercial instrument for swift transferability. The key characteristics include:</p>
+                    <ul>
+                        <li><strong>Anonymity (Historically):</strong> Unlike registered shares, bearer shares do not record the owner's name. Historically, this allowed shareholders to remain entirely anonymous to the company, the state, and the public.</li>
+                        <li><strong>Fungibility & Ease of Circulation:</strong> Being structured as bearer instruments, the rights are incorporated directly into the certificate. Whoever holds the certificate is legally presumed to be the rightful owner.</li>
+                        <li><strong>Public vs. Closed Companies:</strong> Under the Capital Market Law (SerPK), public joint-stock companies in Turkey issue bearer shares only in <strong>dematerialized form (kaydi pay)</strong>. Closed (private) joint-stock companies issue them as physical paper certificates, which are now strictly regulated.</li>
+                    </ul>
+
+                    <h3>2. Registered Shares (Nama) vs. Bearer Shares (Hamiline)</h3>
+                    <p>Understanding the distinctions between these two share types is crucial for corporate structuring and transaction design in Turkey:</p>
+                    <table class="legal-comparison-table" style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.95rem; text-align: left;">
+                        <thead>
+                            <tr style="background-color: #f1f5f9; border-bottom: 2px solid #cbd5e1;">
+                                <th style="padding: 12px; font-weight: 600; color: #0f172a;">Feature</th>
+                                <th style="padding: 12px; font-weight: 600; color: #0f172a;">Bearer Shares (Hamiline Yazılı)</th>
+                                <th style="padding: 12px; font-weight: 600; color: #0f172a;">Registered Shares (Nama Yazılı)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px; font-weight: 600;">Transfer Mechanism</td>
+                                <td style="padding: 12px;">Delivery of physical possession (zilyetliğin devri) + <strong>Mandatory MKK (HPKS) Registration</strong>.</td>
+                                <td style="padding: 12px;">Endorsement (ciro) or written assignment + delivery + <strong>Share Ledger Registration</strong>.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px; font-weight: 600;">Transfer Restrictions (Bağlam)</td>
+                                <td style="padding: 12px;"><strong>Cannot be restricted</strong> by the company's articles of association.</td>
+                                <td style="padding: 12px;">Can be restricted (e.g., subject to board approval) under TTK m. 492.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px; font-weight: 600;">Anonymity</td>
+                                <td style="padding: 12px;">Modified by the 2021 Law: Anonymous to third parties, but registered with the state database (MKK).</td>
+                                <td style="padding: 12px;">No anonymity; shareholder details are recorded in the company's share ledger.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e2e8f0;">
+                                <td style="padding: 12px; font-weight: 600;">Prerequisite for Issuance</td>
+                                <td style="padding: 12px;">Strictly prohibited to issue until the nominal value is <strong>fully paid up</strong>.</td>
+                                <td style="padding: 12px;">Can be issued even if partially paid, subject to capital call rules.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>3. Types of Bearer Shares</h3>
+                    <p>Turkish law distinguishes between different legal states of bearer shares:</p>
+                    <ol>
+                        <li><strong>Uncertificated (Naked) Bearer Shares (Senede Bağlanmamış / Çıplak Pay):</strong> Before the physical certificate is printed, the share exists as a corporate right. Legally, a shareholder cannot transfer a naked bearer share simply as a "bearer" right because there is no certificate. Its transfer is governed by the rules of assignment of claims (alacağın temliki) under the Code of Obligations (TBK).</li>
+                        <li><strong>Certificated Bearer Shares (Senede Bağlanmış Pay):</strong> The physical certificates represent the classic bearer instruments. The company is legally obligated to print and distribute these certificates within three months after the full payment of the share value (TTK 486/2).</li>
+                        <li><strong>Interim Certificates (İlmühaber):</strong> Temporary certificates issued to represent bearer shares before the final certificates are printed. Under Turkish practice, interim certificates for bearer shares are legally treated as registered instruments and follow the rules of registered shares.</li>
+                        <li><strong>Dematerialized Bearer Shares (Kaydi Pay):</strong> For public companies, physical printing is replaced by digital entries at the Central Securities Depository (MKK).</li>
+                    </ol>
+
+                    <div class="key-points-box" style="background: #FFFBEB; border-left: 4px solid #D97706; border-radius: 0 12px 12px 0; padding: 24px; margin: 32px 0;">
+                        <h4 style="color: #92400E; margin-top: 0; margin-bottom: 12px; font-weight: 700; display: flex; align-items: center; gap: 8px;"><i class="fas fa-exclamation-triangle"></i> Crucial Prepayment Rule (TTK 484/2)</h4>
+                        <p style="color: #78350F; margin: 0; font-size: 0.95rem; line-height: 1.6;">Under Article 484/2 of the TTK, bearer share certificates cannot be issued unless the nominal value of the shares is fully paid up. If a company issues bearer certificates before full payment, those certificates are <strong>legally null and void (geçersiz)</strong>. Any transfers of such invalid certificates do not transfer share ownership, exposing both buyers and corporate directors to severe civil liability and damages claims.</p>
+                    </div>
+
+                    <h3>4. The 2021 MKK / HPKS Registration Reform</h3>
+                    <p>To comply with international standards on combating tax evasion and money laundering, Turkey enacted <strong>Law No. 7262 on Preventing Financing of Proliferation of Weapons of Mass Destruction</strong> (published in the Official Gazette on December 31, 2020, and effective as of April 1, 2021). This law abolished the absolute anonymity of bearer shares in closed joint-stock companies:</p>
+                    <ul>
+                        <li><strong>Centralized Database:</strong> Companies must notify the MKK of the identity of bearer shareholders and their holdings prior to distributing the certificates.</li>
+                        <li><strong>Mandatory Transfer Notification:</strong> When a bearer share is sold, the transferee (buyer) must notify and register the transfer in the MKK's <strong>Hamiline Pay Kayıt Sistemi (HPKS)</strong>.</li>
+                        <li><strong>Sanction for Non-Registration:</strong> If a transfer is not registered with the HPKS, the buyer <strong>cannot exercise any shareholder rights</strong> against the company. This includes the right to attend general assemblies, vote, receive dividends, or challenge corporate resolutions. The company will legally ignore any shareholder who presents a physical certificate if their ownership is not registered in the HPKS.</li>
+                    </ul>
+
+                    <h3>5. Possession Transfer Mechanisms (Tasarruf İşlemi)</h3>
+                    <p>For a valid transfer of physical bearer share certificates, Turkish property law requires the transfer of possession (<strong>zilyetliğin devri</strong>). This can take several forms:</p>
+                    <ul>
+                        <li><strong>Physical Handover (Teslim):</strong> The physical delivery of the paper certificate from the seller to the buyer.</li>
+                        <li><strong>Short-Hand Delivery (Traditio Brevi Manu / Kısa Elden Teslim):</strong> If the buyer already holds the certificate (e.g., as a pledgee or lessee), the parties simply agree that the buyer now holds it as the owner.</li>
+                        <li><strong>Constitutum Possessorium (Hükmen Teslim):</strong> The seller transfers ownership but retains physical possession under a different legal relationship (e.g., keeping it safe as a custodian).</li>
+                        <li><strong>Assignment of Possession (Zilyetliğin Havalesi):</strong> If a third party (like a bank or custodian) holds the certificate, the seller instructs the custodian to hold it for the buyer.</li>
+                    </ul>
+
+                    <h3>6. Restrictions on Transfer: Articles of Association vs. Shareholders' Agreement</h3>
+                    <p>While the TTK states that bearer shares cannot be restricted by the company's articles of association (unlike registered shares which can have <em>bağlam</em> restrictions), shareholders can still restrict transfers contractually:</p>
+                    <ul>
+                        <li><strong>Shareholders' Agreement (SHA / Pay Sahipleri Sözleşmesi):</strong> Shareholders can enter into private contracts containing right of first refusal (önalım hakkı), right of first offer (öncelik hakkı), tag-along (satışa katılma hakkı), or drag-along (birlikte satmaya zorlama hakkı) clauses.</li>
+                        <li><strong>Legal Status of SHA Restrictions:</strong> These contractual restrictions are governed by the law of obligations. They are <strong>not binding on the company</strong> as corporate law and do not affect the corporate validity of a share transfer. If a shareholder transfers bearer shares in violation of an SHA, the transfer is corporately valid, and the buyer becomes the shareholder (provided MKK registration is complete), but the seller is liable for breach of contract and contractual penalties (cezai şart).</li>
+                    </ul>
+
+                    <h3>7. Establishing Usufruct (İntifa Hakkı) on Bearer Shares</h3>
+                    <p>An owner of bearer shares can establish a usufruct right (<strong>intifa hakkı</strong>) allowing another person to benefit from the financial yields of the shares (such as dividends) and, unless agreed otherwise, exercise voting rights at general meetings.</p>
+                    <ul>
+                        <li><strong>For Certificated Bearer Shares:</strong> Tesis requires a written agreement between the shareholder and the usufructuary, the physical transfer of the certificate's possession, and <strong>mandatory registration of the usufruct right in the MKK database (HPKS)</strong>.</li>
+                        <li><strong>For Naked Bearer Shares:</strong> Established by a written assignment of claims (alacağın temliki) and notification to the company.</li>
+                    </ul>
+
+                    <h3>8. Pledging Bearer Shares (Rehin)</h3>
+                    <p>Pledging bearer shares is a common commercial method to secure loans in Turkish B2B transactions. The establishment depends on the share state:</p>
+                    <ul>
+                        <li><strong>Standard Pledge:</strong> Under the Turkish Civil Code (TMK), pledging a physical bearer certificate requires a written pledge agreement, the physical delivery of the certificate to the pledgee (the bank or creditor), and registration in the MKK (HPKS). The pledgee must retain possession; if the certificate is returned to the owner, the pledge is legally extinguished.</li>
+                        <li><strong>Pledge under the Law on Movable Pledges (TİTRK No. 6750):</strong> The Law on Pledges in Movable Properties in Commercial Transactions allows a non-possessory pledge. However, academic doctrine and recent practices confirm that for physical bearer shares, physical delivery or registration in the HPKS registry remains the safest and most effective method to ensure priority over other creditors.</li>
+                    </ul>
+                </div>
+
+                <!-- Frequently Asked Questions (FAQ) Section -->
+                <div class="faq-section" id="faqs" style="margin-top: 50px; border-top: 1px solid #e2e8f0; padding-top: 40px;">
+                    <h3 style="color: #0f172a; margin-bottom: 30px; font-size: 1.8rem; text-transform: none;"><i class="fas fa-question-circle" style="color: #1E3A8A;"></i> Frequently Asked Questions</h3>
                     
-            <h3>Key Aspects Under Turkish Law</h3>
-            <p>Understanding bearer shares is crucial for businesses operating in Turkey. The Turkish Commercial Code provides the legal framework governing this area, with specific provisions that differ from other jurisdictions.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Turkish Commercial Code No. 6102 provides the primary legal framework</li>
-                    <li>Trade Registry registration is typically required for enforcement</li>
-                    <li>Foreign investors have equal rights with domestic entities</li>
-                    <li>Proper documentation and corporate formalities are essential</li>
-                </ul>
-            </div>
-            
-            <h3>Practical Considerations for Businesses</h3>
-            <p>When dealing with bearer shares in Turkey, businesses should consider engaging qualified legal counsel familiar with both Turkish law and international business practices. This ensures compliance with local requirements while meeting global standards.</p>
-            
-            <p>Documentation requirements, timeline considerations, and regulatory approvals vary depending on the specific circumstances of each case. Early planning and proper structuring can help avoid common pitfalls.</p>
-        
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">What are bearer shares (hamiline yazılı pay) under Turkish law?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">Under Turkish law, bearer shares (hamiline yazılı pay) are corporate shares in a Joint-Stock Company (Anonim Şirket) where ownership is represented by physical certificates that do not state the owner's name. The holder of the certificate is presumed to be the owner. However, they must be registered in the central database (MKK / HPKS) to exercise corporate rights.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">What is the HPKS (Hamiline Pay Kayıt Sistemi) in Turkey?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">HPKS is a central database managed by the Central Securities Depository of Turkey (MKK - Merkezi Kayıt Kuruluşu) introduced by Law No. 7262 in April 2021. It is a mandatory state registry where all physical bearer shares of closed (non-public) joint-stock companies, along with their owner identities, must be registered to track share ownership and prevent illegal transactions.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">How are bearer shares transferred under Turkish law after the 2021 amendment?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">To transfer physical bearer shares, two steps are required: (1) the physical handover of the certificate (possession transfer) to the buyer, and (2) mandatory registration of the transfer in the MKK's HPKS database. Without HPKS registration, the transfer is legally ineffective, and the buyer cannot exercise any shareholder rights, such as voting or receiving dividends, against the company.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">Can bearer shares be issued before the share capital is fully paid up?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">No. Under Article 484/2 of the Turkish Commercial Code (TTK), it is strictly forbidden to issue bearer share certificates before their nominal value is fully paid up. Bearer certificates issued prior to full payment are legally null and void, though the shareholder's naked share ownership remains valid under general principles.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">What is the main difference between bearer shares and registered shares in Turkey?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">Registered shares (nama yazılı) require endorsement and registration in the company's internal share ledger to transfer, and their transfer can be restricted by the company's articles of association (bağlam). Bearer shares (hamiline yazılı) are transferred by handing over the certificate + registration in the state MKK (HPKS) database, and their transfer cannot be restricted by the articles of association.</p>
+                    </div>
+                    
+                    <div class="faq-item" style="margin-bottom: 25px; background: #f8fafc; padding: 20px; border-radius: 8px; border-left: 4px solid #1E3A8A;">
+                        <h4 style="color: #0f172a; margin-top: 0; margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; text-transform: none;">Can usufruct or pledge rights be established on bearer shares?</h4>
+                        <p class="faq-answer" style="color: #475569; line-height: 1.6; margin: 0;">Yes. Usufruct (intifa hakkı) and pledge (rehin) rights can be established on bearer shares. For certificated shares, this requires a written contract, transfer of the physical certificate to the usufructuary or pledgee, and registration of the right in the MKK's HPKS database to make the right effective against the company and third parties.</p>
+                    </div>
                 </div>
 
                 <!-- Related Terms -->
-                
+                <section class="glossary-related" style="margin-top: 50px;">
+                    <h3><i class="fas fa-link"></i> Related Terms</h3>
+                    <div class="related-grid">
+                        <a href="registered-shares.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-building"></i>
+                                Company Law
+                            </span>
+                            <h4>Registered Shares</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="shareholders-agreement.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-file-contract"></i>
+                                Contract Law
+                            </span>
+                            <h4>Shareholders' Agreement</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
                     <h3>Need Expert Legal Guidance?</h3>
-                    <p>Our experienced attorneys can help you navigate bearer shares under Turkish law.</p>
+                    <p>Our experienced corporate law attorneys can help you manage bearer share transactions, MKK (HPKS) registrations, and company compliance under Turkish law.</p>
                     <a href="../index.html#contact" class="btn">
                         Schedule a Consultation <i class="fas fa-arrow-right"></i>
                     </a>
