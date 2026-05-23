@@ -21,4 +21,14 @@
        <video:publication_date>2026-01-23</video:publication_date>
      </video:video>
    </url>
+   <url>
+     <loc>https://www.turkishtradelawyers.com/can-international-businesses-store-turkish-customer-data-abroad-under-kvkk.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/PDEwmiungdA/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>Can International Businesses Store Turkish Customer Data Abroad under KVKK? - Video Guide</video:title>
+       <video:description>Learn about the legal regulations under Turkish KVKK concerning cross-border data transfer, standard contractual clauses (SCCs), and data localization rules for international companies.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/PDEwmiungdA</video:player_loc>
+       <video:publication_date>2026-05-23</video:publication_date>
+     </video:video>
+   </url>
 </urlset>

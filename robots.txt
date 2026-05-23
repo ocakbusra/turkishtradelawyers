@@ -35,3 +35,4 @@ Allow: /
 Host: www.turkishtradelawyers.com
 
 Sitemap: https://www.turkishtradelawyers.com/sitemap.xml
+Sitemap: https://www.turkishtradelawyers.com/sitemap-video.xml
