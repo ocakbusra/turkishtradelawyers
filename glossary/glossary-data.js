@@ -2120,6 +2120,24 @@ const glossaryData = [
         excerpt: "A contract where the depositee agrees to keep a movable property entrusted to them by the depositor in a safe place and return it upon request.",
         tags: ["contract-law"],
         relatedTerms: []
+    },
+    {
+        id: "enforcement-proceedings",
+        term: "Enforcement Proceedings",
+        trTerm: "İcra Takibi",
+        question: "How are commercial debts collected through enforcement proceedings in Turkey?",
+        excerpt: "Enforcement proceedings (İcra takibi) under the Turkish Execution and Bankruptcy Law allow creditors to collect outstanding monetary and non-monetary claims through official enforcement offices, either with or without a court judgment.",
+        tags: ["dispute-resolution", "commercial-law"],
+        relatedTerms: ["debt-collection", "preliminary-attachment", "bankruptcy"]
+    },
+    {
+        id: "insolvency",
+        term: "Insolvency",
+        trTerm: "Borca Batıklık",
+        question: "What constitutes corporate insolvency under Turkish commercial law?",
+        excerpt: "Insolvency (Borca batıklık) is a state where a company's liabilities exceed the total value of its assets. Under the Turkish Commercial Code, insolvency triggers legal duties for directors, including notifying the court and initiating bankruptcy or concordat proceedings.",
+        tags: ["company-law", "commercial-law"],
+        relatedTerms: ["bankruptcy", "concordat", "liquidation"]
     }
 ];
 

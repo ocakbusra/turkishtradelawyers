@@ -357,3 +357,4 @@
 ./enforcing-foreign-arbitral-awards-turkey.html
 ./minority-shareholder-rights-turkey.html
 ./data-controller-representative-kvkk-turkey.html
+./kvkk-prohibits-biometric-data-employee-attendance-tracking.html
