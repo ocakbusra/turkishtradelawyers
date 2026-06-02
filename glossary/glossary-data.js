@@ -423,7 +423,7 @@ const glossaryData = [
         term: "Letter of Credit",
         trTerm: "Akreditif",
         question: "How do letters of credit work in Turkish international trade?",
-        excerpt: "Letters of credit provide payment security in international trade. Turkish banks issue and handle LCs under UCP 600 rules, ensuring payment upon document compliance.",
+        excerpt: "A Letter of Credit (Akreditif) is an independent guarantee contract under Turkish law. Operating under UCP 600 rules, it acts as a performance for the sake of payment (ifa uğruna edim) securing B2B transactions.",
         tags: ["international-trade", "commercial-law"],
         relatedTerms: ["bill-of-lading", "trade-finance", "bank-guarantee"]
     },
