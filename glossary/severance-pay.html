@@ -55,14 +55,32 @@
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "When are employees entitled to severance pay in Turkey?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Employees with 1+ year tenure receive 30 days gross salary per year upon qualifying termination. Cap is set semiannually (Jan/July). Resignation generally disqualifies entitlement."
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "When are employees entitled to severance pay in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Employees must have at least one full year of service and the employment contract must be terminated for specific qualifying reasons, such as unfair dismissal, retirement, compulsory military service, or a female employee's marriage."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is severance pay calculated in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It is calculated as 30 days of the employee's last gross wage (including regular bonuses, food, and transport allowances) for each full year of service, up to a government-determined maximum ceiling."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can an employee who resigns get severance pay?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generally, an employee who resigns voluntarily without a 'just cause' (haklı neden) is not entitled to severance pay. Exceptions include resigning for retirement, military service, or female employees resigning within one year of marriage."
+                }
             }
-        }]
+        ]
     }
     </script>
 
@@ -399,6 +417,84 @@
         .related-card h4 {
             text-transform: capitalize;
         }
+
+        /* Custom Content Boxes */
+        .callout-box {
+            background: #F0F4FF;
+            border-left: 4px solid #2D4CC8;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .callout-box h4 {
+            color: #2D4CC8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warning-box {
+            background: #FFF5F5;
+            border-left: 4px solid #E53E3E;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .warning-box h4 {
+            color: #E53E3E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .compliance-table th {
+            background: #1a2742;
+            color: #ffffff;
+            text-align: left;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .compliance-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E4E7EC;
+            color: #475467;
+        }
+        .compliance-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compliance-table tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+        .faq-container {
+            margin-top: 30px;
+        }
+        .faq-item {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-item h4 {
+            color: #1a2742;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #475467;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -464,73 +560,133 @@
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>Employees with 1+ year tenure receive 30 days gross salary per year upon qualifying termination. Cap is set semiannually (Jan/July). Resignation generally disqualifies entitlement.</p>
+                    <p>Severance pay (<strong>Kıdem Tazminatı</strong>) is a statutory compensation paid to employees in Turkey upon termination of their employment under specific qualifying conditions. The employee must have worked for at least one full year. The calculation is based on 30 days of the last gross salary per year of service, subject to a statutory ceiling.</p>
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
                     
-            <h3>Turkish Labor Law Framework</h3>
-            <p>Severance Pay under Turkish law is primarily regulated by Labor Law No. 4857. This legislation provides comprehensive protections for employees while establishing clear obligations for employers.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Labor Law No. 4857 applies to most employment relationships</li>
-                    <li>Employment contracts can be for definite or indefinite terms</li>
-                    <li>Employees enjoy significant statutory protections</li>
-                    <li>Social security contributions are mandatory for both parties</li>
-                </ul>
-            </div>
-            
-            <h3>Compliance Requirements</h3>
-            <p>Employers operating in Turkey must ensure compliance with both written employment law requirements and practical HR management standards. This includes proper documentation, timely salary payments, and adherence to workplace safety regulations.</p>
-            
-            <p>Foreign companies should be particularly aware of work permit requirements and the specific obligations when employing both Turkish nationals and foreign workers.</p>
-        
+                    <h3>Legal Foundation and Purpose</h3>
+                    <p>In Turkish Labor Law, severance pay serves as a reward for the employee's loyalty and wear-and-tear during their tenure. While the current Labor Law No. 4857 is in effect, the rules governing severance pay are still dictated by Article 14 of the former Labor Law No. 1475, which remains exclusively in force for this purpose.</p>
+                    
+                    <div class="key-points-box">
+                        <h4><i class="fas fa-list-ol"></i> Core Conditions for Entitlement</h4>
+                        <p>To qualify for severance pay, three main conditions must be met cumulatively:</p>
+                        <ul>
+                            <li><strong>Labor Law Subject:</strong> The employee must be working under an employment contract subject to the Labor Law (or Maritime/Press Labor Laws).</li>
+                            <li><strong>Minimum Tenure (Asgari Kıdem):</strong> The employee must have worked at the same workplace or under the same employer for at least <strong>one full year</strong>.</li>
+                            <li><strong>Qualifying Termination:</strong> The contract must end in a manner that legally triggers severance pay.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Qualifying Termination Scenarios</h3>
+                    <p>Not every termination results in severance pay. The law clearly outlines the specific scenarios where the right to severance pay arises, depending on whether the termination is initiated by the employer or the employee.</p>
+
+                    <table class="compliance-table">
+                        <thead>
+                            <tr>
+                                <th>Termination by Employer</th>
+                                <th>Termination by Employee (Just Cause)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Termination without "just cause" (haklı neden).</td>
+                                <td>Resignation due to health reasons (Sağlık nedenleri).</td>
+                            </tr>
+                            <tr>
+                                <td>Termination due to economic, organizational, or performance reasons (Geçerli fesih).</td>
+                                <td>Employer's immoral, dishonorable, or malicious conduct (Ahlak ve iyi niyet kurallarına uymayan haller).</td>
+                            </tr>
+                            <tr>
+                                <td><em>Note:</em> If the employer fires the employee for severe misconduct (e.g., theft, assault), severance pay is <strong>not</strong> paid.</td>
+                                <td>Force majeure preventing work for more than one week (Zorlayıcı sebepler).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout-box">
+                        <h4><i class="fas fa-info-circle"></i> Special Resignation Exceptions</h4>
+                        <p>While a standard voluntary resignation disqualifies an employee from severance pay, the law grants exceptions in the following specific cases:</p>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>Marriage (Women Only):</strong> A female employee who resigns within one year of getting married is entitled to severance pay.</li>
+                            <li><strong>Military Service:</strong> Male employees leaving work for compulsory military service (Muvazzaf Askerlik).</li>
+                            <li><strong>Retirement:</strong> Employees terminating their contract to receive an old-age pension or retirement lump-sum from the Social Security Institution (SGK).</li>
+                            <li><strong>Death:</strong> If the employee dies, the severance pay is paid directly to their legal heirs.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Calculation and Statutory Limits</h3>
+                    <p>Severance pay is calculated by granting <strong>30 days' wage</strong> for each full year of service. Periods shorter than a year are calculated on a pro-rata basis.</p>
+
+                    <ul>
+                        <li><strong>Base Salary (Giydirilmiş Ücret):</strong> The calculation is not just based on the naked salary. It includes the last gross wage <em>plus</em> any continuous monetary benefits and benefits measurable in money provided by the employer (e.g., food allowance, transportation allowance, regular bonuses).</li>
+                        <li><strong>Deductions:</strong> Severance pay is highly protected. It is exempt from Income Tax and Social Security (SGK) premiums. <strong>Only Stamp Tax (Damga Vergisi)</strong> is deducted from the gross amount.</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Severance Pay Ceiling (Kıdem Tazminatı Tavanı)</h4>
+                        <p>There is a maximum limit (ceiling) to the amount of severance pay an employee can receive per year of service, regardless of how high their actual salary is. This ceiling is tied to the maximum retirement bonus of the highest-ranking civil servant and is updated semiannually (January and July) by the Ministry of Treasury and Finance.</p>
+                    </div>
+                    
+                    <h3>Delay Interest and Statute of Limitations</h3>
+                    <p>If the employer fails to pay the severance pay at the time of termination, a judge will rule for the payment of the <strong>highest deposit interest rate (en yüksek mevduat faizi)</strong> applied by banks for the period of delay. Furthermore, claims for severance pay are subject to a <strong>5-year statute of limitations (zamanaşımı)</strong> starting from the date of termination.</p>
+                    
+                    <h3>Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h4>When are employees entitled to severance pay in Turkey?</h4>
+                            <p>Employees must have at least one full year of service and the employment contract must be terminated for specific qualifying reasons, such as unfair dismissal, retirement, compulsory military service, or a female employee's marriage.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>How is severance pay calculated in Turkey?</h4>
+                            <p>It is calculated as 30 days of the employee's last gross wage (including regular bonuses, food, and transport allowances) for each full year of service, up to a government-determined maximum ceiling.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>Can an employee who resigns get severance pay?</h4>
+                            <p>Generally, an employee who resigns voluntarily without a "just cause" (haklı neden) is not entitled to severance pay. Exceptions include resigning for retirement, military service, or female employees resigning within one year of marriage.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Related Terms -->
-                
-        <section class="glossary-related">
-            <h3><i class="fas fa-link"></i> Related Terms</h3>
-            <div class="related-grid">
-                
-                    <a href="termination-employment.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Employment Termination</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="labor-law.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Turkish Labor Law</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="employment-contract.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Employment Contract</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-            </div>
-        </section>
-    
+                <section class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Terms</h3>
+                    <div class="related-grid">
+                        <a href="termination-employment.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Employment Termination</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="labor-law.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Turkish Labor Law</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="employment-contract.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Employment Contract</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
                     <h3>Need Expert Legal Guidance?</h3>
-                    <p>Our experienced attorneys can help you navigate severance pay under Turkish law.</p>
+                    <p>Our experienced employment attorneys can help you navigate severance pay disputes, termination procedures, and labor compliance in Turkey.</p>
                     <a href="../index.html#contact" class="btn">
                         Schedule a Consultation <i class="fas fa-arrow-right"></i>
                     </a>
