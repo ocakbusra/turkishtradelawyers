@@ -55,14 +55,32 @@
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "How do foreign nationals obtain work permits in Turkey?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Work permits are obtained through the Ministry of Labor. Applications can be made before entry or within Turkey. Permit categories include definite, indefinite, and independent."
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do foreign nationals obtain work permits in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Work permits are evaluated and issued by the Ministry of Family, Labor, and Social Services. Applications can be made domestically (if holding a valid residence permit) or from abroad via Turkish Consulates/Embassies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does a work permit replace a residence permit in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Under Turkish law, a valid work permit or work permit exemption explicitly substitutes for a residence permit (İkamet İzni), allowing the foreigner to reside in Turkey legally for the duration of the permit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the penalties for working without a permit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Working without a valid permit results in substantial administrative fines for both the employer and the foreign employee, and typically leads to the deportation of the foreign worker."
+                }
             }
-        }]
+        ]
     }
     </script>
 
@@ -399,6 +417,84 @@
         .related-card h4 {
             text-transform: capitalize;
         }
+
+        /* Custom Content Boxes */
+        .callout-box {
+            background: #F0F4FF;
+            border-left: 4px solid #2D4CC8;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .callout-box h4 {
+            color: #2D4CC8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warning-box {
+            background: #FFF5F5;
+            border-left: 4px solid #E53E3E;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .warning-box h4 {
+            color: #E53E3E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .compliance-table th {
+            background: #1a2742;
+            color: #ffffff;
+            text-align: left;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .compliance-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E4E7EC;
+            color: #475467;
+        }
+        .compliance-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compliance-table tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+        .faq-container {
+            margin-top: 30px;
+        }
+        .faq-item {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-item h4 {
+            color: #1a2742;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        .faq-item p {
+            margin: 0;
+            color: #475467;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -468,73 +564,131 @@
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>Work permits are obtained through the Ministry of Labor. Applications can be made before entry or within Turkey. Permit categories include definite, indefinite, and independent.</p>
+                    <p>A <strong>Work Permit (Çalışma İzni)</strong> in Turkey is a legal authorization granted to foreign nationals allowing them to work legally within the country. It is governed by the International Labor Force Law No. 6735 and evaluated by the Ministry of Family, Labor and Social Services. Crucially, a valid work permit also serves as a residence permit.</p>
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
                     
-            <h3>Turkish Labor Law Framework</h3>
-            <p>Work Permit under Turkish law is primarily regulated by Labor Law No. 4857. This legislation provides comprehensive protections for employees while establishing clear obligations for employers.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Labor Law No. 4857 applies to most employment relationships</li>
-                    <li>Employment contracts can be for definite or indefinite terms</li>
-                    <li>Employees enjoy significant statutory protections</li>
-                    <li>Social security contributions are mandatory for both parties</li>
-                </ul>
-            </div>
-            
-            <h3>Compliance Requirements</h3>
-            <p>Employers operating in Turkey must ensure compliance with both written employment law requirements and practical HR management standards. This includes proper documentation, timely salary payments, and adherence to workplace safety regulations.</p>
-            
-            <p>Foreign companies should be particularly aware of work permit requirements and the specific obligations when employing both Turkish nationals and foreign workers.</p>
-        
+                    <h3>Legal Framework and the International Labor Force Law</h3>
+                    <p>The employment of foreign nationals in Turkey was radically restructured with the introduction of the <strong>International Labor Force Law No. 6735 (Uluslararası İşgücü Kanunu - UİK)</strong>, which replaced the older Law No. 4817. The new legislation aims to attract qualified foreign workforce, simplify bureaucratic procedures, and effectively manage migration in line with Turkey's economic and sectoral needs.</p>
+                    
+                    <div class="key-points-box">
+                        <h4><i class="fas fa-key"></i> Key Concepts & Rights</h4>
+                        <ul>
+                            <li><strong>Obligation to Obtain a Permit:</strong> Unless exempted by international treaties or specific statutory provisions, foreigners must obtain a work permit <em>before</em> starting to work dependently or independently in Turkey.</li>
+                            <li><strong>Residence Permit Substitution:</strong> According to the law, an approved work permit or a "Work Permit Exemption" document serves directly as a residence permit. Thus, the foreigner does not need to apply for a separate residence permit.</li>
+                            <li><strong>Evaluation Criteria:</strong> Applications are evaluated based on the general economic conjuncture, developments in the labor market, sectoral changes, and the specific qualifications of the foreigner.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Types of Work Permits</h3>
+                    <p>Turkish law categorizes work permits into several distinct types, addressing different employment modalities and foreigner statuses:</p>
+
+                    <table class="compliance-table">
+                        <thead>
+                            <tr>
+                                <th>Permit Type</th>
+                                <th>Description & Conditions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Definite (Süreli) Work Permit</strong></td>
+                                <td>Granted for a maximum of <strong>one year</strong> initially, tied to a specific workplace, employer, and profession. It can be extended up to two years, and subsequently up to three years with the same employer.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Indefinite (Süresiz) Work Permit</strong></td>
+                                <td>Granted to foreigners who hold a long-term residence permit or have legally resided/worked in Turkey uninterruptedly for at least <strong>eight years</strong>. It does not tie the employee to a specific employer.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Independent (Bağımsız) Work Permit</strong></td>
+                                <td>Granted to foreigners working on their own behalf (e.g., self-employed professionals, business owners) who meet specific criteria regarding their contribution to the Turkish economy.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Exceptional (İstisnai) Work Permit</strong></td>
+                                <td>Issued under more flexible conditions for specific groups (e.g., highly qualified professionals, key personnel, EU citizens, individuals of Turkish descent, or refugees).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Turquoise Card (Turkuaz Kart)</strong></td>
+                                <td>A special status granting indefinite work rights and residence to highly qualified investors, scientists, artists, or athletes. It is subject to a 3-year transition period.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout-box">
+                        <h4><i class="fas fa-info-circle"></i> Application Procedures</h4>
+                        <p>Work permit applications can be made through two primary channels:</p>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>Domestic Application (Yurt İçinden):</strong> If the foreigner holds a valid residence permit in Turkey with a duration of at least 6 months, the employer can apply directly through the Ministry's online system.</li>
+                            <li><strong>Application from Abroad (Yurt Dışından):</strong> If the foreigner is outside Turkey, they must apply to the Turkish Embassy or Consulate in their country of residence. They will receive a reference number, which the Turkish employer then uses to complete the application online.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Prohibited Professions and Contract Validity</h3>
+                    <p>Under Turkish law, certain professions are strictly reserved for Turkish citizens and are prohibited for foreigners (e.g., dentistry, pharmacy, veterinary medicine, legal practice/lawyer, notary, customs brokerage). Employment contracts drawn up for foreigners to work in these prohibited professions are legally <strong>null and void (hükümsüz)</strong>.</p>
+                    <p>Furthermore, if a foreigner is employed in a permitted profession but <em>without</em> obtaining the mandatory work permit, the employment contract is generally deemed invalid, although the employer remains liable for wages and social security premiums for the period worked under the principle of protecting the employee.</p>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Penalties for Illegal Employment</h4>
+                        <p>Employing foreign workers without a valid work permit (kaçak yabancı istihdamı) triggers severe administrative and penal consequences. Labor Inspectors and Social Security Auditors regularly conduct inspections. Violations result in hefty <strong>administrative fines (İdari Para Cezaları)</strong> imposed both on the employer and the illegal foreign worker. In most cases, the unauthorized foreign worker is also subject to immediate deportation (sınır dışı).</p>
+                    </div>
+
+                    <h3>Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <h4>How do foreign nationals obtain work permits in Turkey?</h4>
+                            <p>Work permits are evaluated and issued by the Ministry of Family, Labor, and Social Services. Applications can be made domestically (if holding a valid residence permit) or from abroad via Turkish Consulates/Embassies.</p>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <h4>Does a work permit replace a residence permit in Turkey?</h4>
+                            <p>Yes. Under Turkish law, a valid work permit or work permit exemption explicitly substitutes for a residence permit (İkamet İzni), allowing the foreigner to reside in Turkey legally for the duration of the permit.</p>
+                        </div>
+
+                        <div class="faq-item">
+                            <h4>What are the penalties for working without a permit?</h4>
+                            <p>Working without a valid permit results in substantial administrative fines for both the employer and the foreign employee, and typically leads to the deportation of the foreign worker.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Related Terms -->
-                
-        <section class="glossary-related">
-            <h3><i class="fas fa-link"></i> Related Terms</h3>
-            <div class="related-grid">
-                
-                    <a href="residency-permit.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Residency Permit</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="turquoise-card.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Turquoise Card</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="foreign-workers.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-users"></i>
-                            Employment
-                        </span>
-                        <h4>Employment of Foreign Workers</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-            </div>
-        </section>
-    
+                <section class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Terms</h3>
+                    <div class="related-grid">
+                        <a href="residency-permit.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Residency Permit</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="turquoise-card.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Turquoise Card</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="foreign-workers.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Employment
+                            </span>
+                            <h4>Employment of Foreign Workers</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
                     <h3>Need Expert Legal Guidance?</h3>
-                    <p>Our experienced attorneys can help you navigate work permit under Turkish law.</p>
+                    <p>Our experienced corporate immigration attorneys can assist you in navigating the complexities of Turkish work permits, from initial applications to Turquoise Card processes.</p>
                     <a href="../index.html#contact" class="btn">
                         Schedule a Consultation <i class="fas fa-arrow-right"></i>
                     </a>
