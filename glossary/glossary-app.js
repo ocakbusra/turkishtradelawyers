@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span class="glossary-letter-count">${grouped[letter].length} term${grouped[letter].length > 1 ? 's' : ''}</span>
                 </div>
                 <div class="glossary-list">
-                    ${grouped[letter].map(item => renderItem(item)).join('')}
+                    ${grouped[letter].sort((a, b) => a.term.localeCompare(b.term)).map(item => renderItem(item)).join('')}
                 </div>
             </section>
         `).join('');
