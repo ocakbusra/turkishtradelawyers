@@ -55,14 +55,32 @@
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What decisions require general assembly approval in Turkish companies?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "General assembly approves financial statements, dividends, board elections, capital changes, mergers, and amendments to articles of association."
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What decisions require general assembly approval in Turkish companies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The General Assembly approves financial statements, dividend distributions, election/dismissal of board members, capital changes, mergers, and amendments to the articles of association."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When must an Ordinary General Assembly be held in Turkey?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "According to the Turkish Commercial Code (TCC No. 6102), the Ordinary General Assembly must be held within three months following the end of the financial year."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who can request the cancellation of a General Assembly resolution?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Shareholders who attended the meeting and recorded their opposition, shareholders unjustly excluded from the meeting, the Board of Directors, and individual board members can file an annulment lawsuit if the resolution violates the law, articles of association, or good faith."
+                }
             }
-        }]
+        ]
     }
     </script>
 
@@ -399,6 +417,92 @@
         .related-card h4 {
             text-transform: capitalize;
         }
+
+        /* Custom Content Boxes */
+        .callout-box {
+            background: #F0F4FF;
+            border-left: 4px solid #2D4CC8;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .callout-box h4 {
+            color: #2D4CC8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warning-box {
+            background: #FFF5F5;
+            border-left: 4px solid #E53E3E;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .warning-box h4 {
+            color: #E53E3E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .compliance-table th {
+            background: #1a2742;
+            color: #ffffff;
+            text-align: left;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .compliance-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E4E7EC;
+            color: #475467;
+        }
+        .compliance-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compliance-table tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+        .sources-box {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .sources-box h4 {
+            color: #1a2742;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sources-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sources-box li {
+            margin-bottom: 12px;
+        }
+        .sources-box a {
+            color: #2D4CC8;
+            text-decoration: none;
+        }
+        .sources-box a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -464,73 +568,137 @@
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>General assembly approves financial statements, dividends, board elections, capital changes, mergers, and amendments to articles of association.</p>
+                    <p>The General Assembly (Genel Kurul) in Joint Stock Companies (Anonim Şirketler) is the supreme decision-making organ where shareholders exercise their rights regarding the company's vital affairs, such as approving financial statements, electing board members, and amending the articles of association.</p>
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
                     
-            <h3>Key Aspects Under Turkish Law</h3>
-            <p>Understanding general assembly is crucial for businesses operating in Turkey. The Turkish Commercial Code provides the legal framework governing this area, with specific provisions that differ from other jurisdictions.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Turkish Commercial Code No. 6102 provides the primary legal framework</li>
-                    <li>Trade Registry registration is typically required for enforcement</li>
-                    <li>Foreign investors have equal rights with domestic entities</li>
-                    <li>Proper documentation and corporate formalities are essential</li>
-                </ul>
-            </div>
-            
-            <h3>Practical Considerations for Businesses</h3>
-            <p>When dealing with general assembly in Turkey, businesses should consider engaging qualified legal counsel familiar with both Turkish law and international business practices. This ensures compliance with local requirements while meeting global standards.</p>
-            
-            <p>Documentation requirements, timeline considerations, and regulatory approvals vary depending on the specific circumstances of each case. Early planning and proper structuring can help avoid common pitfalls.</p>
-        
+                    <h3>Structure of Joint Stock Companies in Turkey</h3>
+                    <p>Under the Turkish Commercial Code (TCC) No. 6102, a Joint Stock Company (A.Ş.) is defined as a company whose capital is definite and divided into shares, and which is responsible for its debts only with its assets. Shareholders' liability is strictly limited to the capital shares they have committed.</p>
+                    
+                    <div class="callout-box">
+                        <h4><i class="fas fa-info-circle"></i> Mandatory Organs of a Joint Stock Company</h4>
+                        <p>A Joint Stock Company has two primary and mandatory organs: the <strong>Board of Directors (Yönetim Kurulu)</strong>, which manages and represents the company, and the <strong>General Assembly (Genel Kurul)</strong>, which acts as the supreme request and decision-making body for shareholders.</p>
+                    </div>
+
+                    <h3>The General Assembly: Types of Meetings</h3>
+                    <p>The General Assembly cannot manage the day-to-day operations of the company; its authority is strictly defined by law and the articles of association. Meetings are categorized into several types:</p>
+
+                    <div class="key-points-box">
+                        <h4><i class="fas fa-calendar-alt"></i> General Assembly Meeting Types</h4>
+                        <ul>
+                            <li><strong>Ordinary General Assembly:</strong> Must be held within three months following the end of each financial year to discuss financial statements, annual reports, profit distribution, and the discharge of board members.</li>
+                            <li><strong>Extraordinary General Assembly:</strong> Convened whenever required by the company's interests (e.g., urgent capital increases, mergers, or addressing sudden financial distress).</li>
+                            <li><strong>Special Assembly of Privileged Shareholders:</strong> Held when decisions made by the General Assembly affect the special rights of privileged shareholders.</li>
+                            <li><strong>Electronic General Assembly:</strong> TCC allows companies to hold general assembly meetings electronically, enabling shareholders to participate and vote online via the Electronic General Assembly System (EGKS).</li>
+                        </ul>
+                    </div>
+
+                    <h3>Who Can Call the General Assembly?</h3>
+                    <p>The authority to call the General Assembly primarily rests with the <strong>Board of Directors</strong>. However, under specific conditions, other parties may also issue a call:</p>
+                    <ul>
+                        <li><strong>Single Shareholder:</strong> In single-shareholder companies, the shareholder has full authority to convene and make decisions.</li>
+                        <li><strong>Minority Shareholders:</strong> Shareholders representing at least 10% of the capital (5% in public companies) can request the Board of Directors to convene an extraordinary meeting. If the board refuses, they can apply to the commercial court.</li>
+                        <li><strong>Liquidators:</strong> If the company is in liquidation, liquidators can call the assembly for liquidation-related matters.</li>
+                    </ul>
+
+                    <h3>Cancellation of General Assembly Resolutions (İptal Davası)</h3>
+                    <p>Because decisions in the General Assembly are typically made by majority vote, minority rights can sometimes be jeopardized. The TCC provides a mechanism to challenge and cancel these resolutions to protect shareholders.</p>
+
+                    <table class="compliance-table">
+                        <thead>
+                            <tr>
+                                <th>Reasons for Cancellation</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Contrary to the Law</strong></td>
+                                <td>Resolutions that violate mandatory provisions of the Turkish Commercial Code or other applicable laws.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contrary to the Articles of Association</strong></td>
+                                <td>Resolutions that breach the specific rules set forth in the company's own articles of association.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contrary to Good Faith</strong></td>
+                                <td>Resolutions taken with the intention to harm minority shareholders or that abuse the majority voting power (Objective Good Faith Rule - TMK Art. 2).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-gavel"></i> Who Can File an Annulment Lawsuit?</h4>
+                        <p>Not everyone can challenge a resolution. According to the law, the following parties have the right to file an annulment lawsuit:</p>
+                        <ul style="margin-top: 10px;">
+                            <li><strong>Shareholders:</strong> Provided they attended the meeting, opposed the resolution, and had their opposition recorded in the meeting minutes.</li>
+                            <li><strong>Unjustly Excluded Shareholders:</strong> Shareholders who were not properly invited, not allowed to attend, or whose voting rights were unlawfully restricted.</li>
+                            <li><strong>Board of Directors:</strong> Can file a lawsuit if enforcing the resolution would result in civil or criminal liability.</li>
+                            <li><strong>Board Members:</strong> Individual board members may file if the resolution imposes personal liability on them.</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="faq-container" style="margin-top: 30px;">
+                        <div style="background: #F8FAFC; border: 1px solid #E4E7EC; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+                            <h4 style="color: #1a2742; margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;">Can a Joint Stock Company be established with a single shareholder in Turkey?</h4>
+                            <p style="margin: 0; color: #475467; line-height: 1.6;">Yes. Under the new Turkish Commercial Code (TCC 6102), a joint-stock company (A.Ş.) can be formed with just one real or legal person, abandoning the old requirement of at least five shareholders.</p>
+                        </div>
+                        
+                        <div style="background: #F8FAFC; border: 1px solid #E4E7EC; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+                            <h4 style="color: #1a2742; margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;">What is the time limit to file an annulment lawsuit against a General Assembly resolution?</h4>
+                            <p style="margin: 0; color: #475467; line-height: 1.6;">An annulment lawsuit must be filed within <strong>three months</strong> from the date the General Assembly resolution was made.</p>
+                        </div>
+                    </div>
+
+                    <div class="sources-box">
+                        <h4><i class="fas fa-book"></i> Sources and References</h4>
+                        <ul>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i>Turkish Commercial Code No. 6102 (TTK)</li>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i>Turkish Civil Code (TMK)</li>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i>Sürücü Karakaş, R. (2020). <em>Anonim Şirketlerde Genel Kurulun Yapısı ve İşleyişi</em>. Master's Thesis, Karabük University.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Related Terms -->
-                
-        <section class="glossary-related">
-            <h3><i class="fas fa-link"></i> Related Terms</h3>
-            <div class="related-grid">
-                
-                    <a href="anonim-sirket.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>Anonim Şirket (A.Ş.)</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="shareholders-agreement.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>Shareholders Agreement</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="voting-rights.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>Shareholder Voting Rights</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-            </div>
-        </section>
-    
+                <section class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Terms</h3>
+                    <div class="related-grid">
+                        <a href="anonim-sirket.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-building"></i>
+                                Company Law
+                            </span>
+                            <h4>Anonim Şirket (A.Ş.)</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="shareholders-agreement.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-building"></i>
+                                Company Law
+                            </span>
+                            <h4>Shareholders Agreement</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="voting-rights.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-building"></i>
+                                Company Law
+                            </span>
+                            <h4>Shareholder Voting Rights</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
                     <h3>Need Expert Legal Guidance?</h3>
-                    <p>Our experienced attorneys can help you navigate general assembly under Turkish law.</p>
+                    <p>Our experienced attorneys can help you navigate general assembly and corporate governance under Turkish law.</p>
                     <a href="../index.html#contact" class="btn">
                         Schedule a Consultation <i class="fas fa-arrow-right"></i>
                     </a>

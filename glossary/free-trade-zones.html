@@ -55,14 +55,32 @@
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What advantages do Turkish Free Trade Zones offer to businesses?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Free Trade Zones offer customs duty exemption, VAT exemption on sales to Turkey, income tax exemption for manufacturing, and simplified procedures."
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What advantages do Turkish Free Trade Zones offer to businesses?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Free Trade Zones offer tax exemptions (income, corporate, customs duties, VAT), profit transfer freedom, and reduced bureaucratic procedures."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long are the activity licenses in Free Trade Zones?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Activity licenses range from 15 to 45 years depending on the activity type (tenant vs. investor, production vs. other activities)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can a foreign company operate in a Turkish Free Trade Zone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, foreign real and legal persons can operate in Free Trade Zones by establishing a new company or a branch within the zone."
+                }
             }
-        }]
+        ]
     }
     </script>
 
@@ -399,6 +417,92 @@
         .related-card h4 {
             text-transform: capitalize;
         }
+
+        /* Custom Content Boxes */
+        .callout-box {
+            background: #F0F4FF;
+            border-left: 4px solid #2D4CC8;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .callout-box h4 {
+            color: #2D4CC8;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warning-box {
+            background: #FFF5F5;
+            border-left: 4px solid #E53E3E;
+            padding: 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 32px 0;
+        }
+        .warning-box h4 {
+            color: #E53E3E;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .compliance-table th {
+            background: #1a2742;
+            color: #ffffff;
+            text-align: left;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .compliance-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E4E7EC;
+            color: #475467;
+        }
+        .compliance-table tr:last-child td {
+            border-bottom: none;
+        }
+        .compliance-table tr:nth-child(even) {
+            background: #F8FAFC;
+        }
+        .sources-box {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            padding: 24px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .sources-box h4 {
+            color: #1a2742;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sources-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sources-box li {
+            margin-bottom: 12px;
+        }
+        .sources-box a {
+            color: #2D4CC8;
+            text-decoration: none;
+        }
+        .sources-box a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -468,68 +572,149 @@
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>Free Trade Zones offer customs duty exemption, VAT exemption on sales to Turkey, income tax exemption for manufacturing, and simplified procedures.</p>
+                    <p>Free Trade Zones (FTZ) in Turkey offer significant tax advantages (Corporate Tax, Income Tax, VAT, Customs Duties), freedom of profit transfer, and strategic access to EU and Middle Eastern markets to promote export-driven investment and production.</p>
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
                     
-            <h3>International Trade Framework</h3>
-            <p>Free Trade Zones is essential for businesses engaged in cross-border commerce with Turkey. The country's position as a bridge between Europe and Asia makes understanding trade regulations particularly important.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Turkey is party to numerous free trade agreements</li>
-                    <li>EU Customs Union provides preferential access for many goods</li>
-                    <li>Foreign investment protection through bilateral treaties</li>
-                    <li>Export incentives and free trade zones available</li>
-                </ul>
-            </div>
-            
-            <h3>Practical Applications</h3>
-            <p>Businesses engaging in international trade must navigate customs procedures, import/export regulations, and trade compliance requirements. Proper classification, valuation, and origin documentation are essential.</p>
-            
-            <p>Working with experienced trade lawyers and customs brokers helps ensure smooth cross-border transactions and compliance with Turkish trade regulations.</p>
-        
+                    <h3>Definition and Objectives</h3>
+                    <p>The Free Trade Zone model in Turkey is designed to encourage export-oriented investment and production, accelerate foreign direct investments (FDI) and technology entry, direct businesses towards exporting, and develop international trade. These zones operate outside the Turkish Customs Territory in terms of customs regimes, but within it concerning origin rules.</p>
+
+                    <div class="callout-box">
+                        <h4><i class="fas fa-info-circle"></i> Legal Framework</h4>
+                        <p>Free Trade Zones are regulated under the <a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3218.pdf" target="_blank">Free Zones Law No. 3218</a> and the <a href="https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=34473&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5" target="_blank">Free Zones Implementation Regulation</a>, in coordination with the <a href="https://ticaret.gov.tr/" target="_blank">Ministry of Trade</a>.</p>
+                    </div>
+
+                    <h3>Key Advantages of Turkish Free Trade Zones</h3>
+                    <p>Free Trade Zones offer comprehensive benefits to both domestic and international investors:</p>
+
+                    <div class="key-points-box">
+                        <h4><i class="fas fa-chart-line"></i> 15 Primary Advantages</h4>
+                        <ol>
+                            <li><strong>Tax Exemptions for Manufacturer Users:</strong> Profits from manufacturing activities are exempt from Income or Corporate Tax until Turkey's full EU membership. Wages paid by manufacturers exporting at least 85% of their FOB value are exempt from income tax. Transactions related to manufacturing are exempt from stamp duty and fees.</li>
+                            <li><strong>Medium and Long-Term Planning:</strong> Activity licenses are granted for 15 years (tenant-users), 20 years (manufacturer-tenant-users), 30 years (investor-users), and up to 45 years (manufacturer-investor-users).</li>
+                            <li><strong>Profit Transfer Opportunity:</strong> Revenues and profits can be freely transferred to Turkey or abroad without any permission.</li>
+                            <li><strong>Trade Facilitation:</strong> Goods sold from Turkey to FTZs are subject to the export regime, meaning users can purchase goods without VAT from Turkey.</li>
+                            <li><strong>Tariff-Free Trade:</strong> Goods with Turkish or EU origin, and third-country goods passing through the FTZ to third countries, are exempt from customs duties.</li>
+                            <li><strong>A.TR Movement Certificate:</strong> FTZs are part of the Turkey-EU Customs Union; A.TR certificates can be issued for goods sent to the EU.</li>
+                            <li><strong>Equality Principle:</strong> Domestic and foreign firms benefit equally from all incentives.</li>
+                            <li><strong>No Time Limitation:</strong> Goods can remain in the zone without time restrictions.</li>
+                            <li><strong>Market Pricing:</strong> Prices are determined freely according to market conditions without public institution interference.</li>
+                            <li><strong>Inflation Accounting:</strong> Payments related to FTZ activities are made in foreign currency.</li>
+                            <li><strong>Access to All Markets:</strong> No restrictions on sales to the domestic market (except consumer/risky goods) and free trade with other countries.</li>
+                            <li><strong>Reduced Bureaucracy:</strong> Minimal bureaucratic procedures and dynamic private sector zone management.</li>
+                            <li><strong>Strategic Location:</strong> Close to EU and Middle Eastern markets, major ports, airports, and highway networks.</li>
+                            <li><strong>Competitive Infrastructure:</strong> Infrastructure on par with developed countries.</li>
+                            <li><strong>Supply Chain Opportunities:</strong> Uninterrupted supply of raw materials and intermediate goods at world prices.</li>
+                        </ol>
+                    </div>
+
+                    <h3>Users and Activity Rules</h3>
+                    <p>Domestic or foreign real or legal persons can operate in Free Trade Zones upon receiving an Operating License from the Ministry of Trade. Users can engage in production, buying-selling, warehousing, assembly-disassembly, simple processing, workplace leasing, maintenance-repair, and banking.</p>
+
+                    <div class="warning-box">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Company Establishment Requirement</h4>
+                        <p>To operate in a Free Trade Zone, businesses must establish a zone-centered company or open a branch in the zone. Zone-centered firms cannot open branches or conduct commercial activities elsewhere in Turkey under the same trade name.</p>
+                    </div>
+
+                    <h3>Movement of Goods and Special Account Fee</h3>
+                    <p>Trade is four-directional: from zone to abroad, abroad to zone, zone to Turkey, and Turkey to zone. A Special Account fee is collected from production-licensed users: 0.1% on the CIF value of goods entering from abroad, and 0.9% on the FOB value of goods leaving the zone for Turkey.</p>
+
+                    <h3>List of Free Trade Zones in Turkey</h3>
+                    <p>Turkey has strategically established numerous Free Trade Zones across the country since 1985:</p>
+                    
+                    <table class="compliance-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Free Trade Zone Name</th>
+                                <th>Establishment Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Mersin Free Zone</td><td>1985</td></tr>
+                            <tr><td>2</td><td>Antalya Free Zone</td><td>1985</td></tr>
+                            <tr><td>3</td><td>Aegean Free Zone</td><td>1987</td></tr>
+                            <tr><td>4</td><td>Istanbul Specialized Free Zone</td><td>1990</td></tr>
+                            <tr><td>5</td><td>Trabzon Free Zone</td><td>1990</td></tr>
+                            <tr><td>6</td><td>Istanbul Thrace Free Zone</td><td>1990</td></tr>
+                            <tr><td>7</td><td>Adana Yumurtalık Free Zone</td><td>1992</td></tr>
+                            <tr><td>8</td><td>Istanbul Industry and Trade Free Zone</td><td>1992</td></tr>
+                            <tr><td>9</td><td>Samsun Free Zone</td><td>1995</td></tr>
+                            <tr><td>10</td><td>European Free Zone</td><td>1996</td></tr>
+                            <tr><td>11</td><td>Rize Free Zone</td><td>1997</td></tr>
+                            <tr><td>12</td><td>Kayseri Free Zone</td><td>1997</td></tr>
+                            <tr><td>13</td><td>Izmir Free Zone</td><td>1997</td></tr>
+                            <tr><td>14</td><td>Gaziantep Free Zone</td><td>1998</td></tr>
+                            <tr><td>15</td><td>TÜBİTAK-MAM Free Zone</td><td>1999</td></tr>
+                            <tr><td>16</td><td>Denizli Free Zone</td><td>2000</td></tr>
+                            <tr><td>17</td><td>Bursa Free Zone</td><td>2000</td></tr>
+                            <tr><td>18</td><td>Kocaeli Free Zone</td><td>2000</td></tr>
+                            <tr><td>19</td><td>Western Anatolia Free Zone</td><td>2021</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="callout-box">
+                        <h4><i class="fas fa-lightbulb"></i> Specialized Free Zones (İhtisas Serbest Bölgeleri)</h4>
+                        <p>To support high value-added, R&D intensive, and high-tech production, additional support is provided in Specialized Free Zones, including employment support (up to 50% for qualified personnel, max $15,000/year) and rent support (up to 50%, max $75,000/year).</p>
+                    </div>
+                    
+                    <h3>Frequently Asked Questions (FAQ)</h3>
+                    
+                    <div class="faq-container" style="margin-top: 30px;">
+                        <div style="background: #F8FAFC; border: 1px solid #E4E7EC; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+                            <h4 style="color: #1a2742; margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;">Can I bring any goods into the Free Trade Zone?</h4>
+                            <p style="margin: 0; color: #475467; line-height: 1.6;">No. Firearms, their ammunition (except for production/R&D), radioactive materials, and hazardous/toxic wastes are prohibited. Flammable or explosive materials require special setups.</p>
+                        </div>
+                        
+                        <div style="background: #F8FAFC; border: 1px solid #E4E7EC; border-radius: 12px; padding: 24px; margin-bottom: 16px;">
+                            <h4 style="color: #1a2742; margin-top: 0; margin-bottom: 12px; font-size: 1.1rem;">What happens to facilities built on Treasury land when the license expires?</h4>
+                            <p style="margin: 0; color: #475467; line-height: 1.6;">Superstructures built by investors on Treasury land are transferred to the Treasury at the end of the usage right period, although the right of use can be transferred to another eligible entity during the term.</p>
+                        </div>
+                    </div>
+
+                    <div class="sources-box">
+                        <h4><i class="fas fa-book"></i> Sources and References</h4>
+                        <ul>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i><a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.3218.pdf" target="_blank">Law on Free Trade Zones (No. 3218)</a></li>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i><a href="https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=34473&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5" target="_blank">Free Zones Implementation Regulation</a></li>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i><a href="https://ticaret.gov.tr/" target="_blank">Republic of Turkey Ministry of Trade</a></li>
+                            <li><i class="fas fa-external-link-alt" style="margin-right: 8px; color: #2D4CC8;"></i>General Directorate of Free Zones Publications (2023-2026)</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Related Terms -->
-                
-        <section class="glossary-related">
-            <h3><i class="fas fa-link"></i> Related Terms</h3>
-            <div class="related-grid">
-                
-                    <a href="customs-procedures.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-globe"></i>
-                            International Trade
-                        </span>
-                        <h4>Customs Procedures</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="foreign-investment.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-globe"></i>
-                            International Trade
-                        </span>
-                        <h4>Foreign Direct Investment</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="investment-incentives.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-globe"></i>
-                            International Trade
-                        </span>
-                        <h4>Investment Incentives</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-            </div>
-        </section>
-    
+                <section class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Terms</h3>
+                    <div class="related-grid">
+                        <a href="customs-procedures.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-globe"></i>
+                                International Trade
+                            </span>
+                            <h4>Customs Procedures</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="foreign-investment.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-globe"></i>
+                                International Trade
+                            </span>
+                            <h4>Foreign Direct Investment</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="investment-incentives.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-globe"></i>
+                                International Trade
+                            </span>
+                            <h4>Investment Incentives</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
