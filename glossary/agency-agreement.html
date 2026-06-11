@@ -32,6 +32,24 @@
         content="Explore the legal framework of agency agreements in Turkey, including agent rights, equalization claims, and termination under the new TCC.">
     <meta name="twitter:image" content="https://www.turkishtradelawyers.com/logo-square.png">
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9FX7T07VPM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9FX7T07VPM');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vv2a5uwdk0");
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://embed.tawk.to">
@@ -109,15 +127,185 @@
     </script>
 
     <style>
-        .callout-box {
-            background: #EFF6FF;
-            border-left: 4px solid #2D4CC8;
-            padding: 16px 20px;
-            margin: 24px 0;
-            color: #1E3A8A;
-            border-radius: 0 10px 10px 0;
+        .glossary-page-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1E3A8A 100%);
+            padding: 140px 0 60px;
+            position: relative;
+        }
+        
+        .glossary-page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .glossary-page-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        
+        .page-breadcrumb a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+        }
+        
+        .page-breadcrumb a:hover {
+            color: #00C4B4;
+        }
+        
+        .page-breadcrumb .separator {
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .page-breadcrumb .current {
+            color: #ffffff;
+        }
+        
+        .page-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 196, 180, 0.15);
+            color: #00C4B4;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            text-decoration: none;
+            border: 1px solid rgba(0, 196, 180, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .page-tag:hover {
+            background: rgba(0, 196, 180, 0.25);
+        }
+        
+        .page-title {
+            color: #ffffff;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin: 16px 0;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+        
+        .page-question {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+        
+        /* Main Content */
+        .glossary-page-main {
+            padding: 60px 0 80px;
+            background: #ffffff;
+        }
+        
+        .glossary-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .glossary-answer-box {
+            background: linear-gradient(135deg, #F0F4FF 0%, #ffffff 100%);
+            border: 1px solid #E0E7FF;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .glossary-answer-box h2 {
+            font-size: 1.1rem;
+            color: #2D4CC8;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .glossary-answer-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #1a2742;
+        }
+        
+        .glossary-details h3 {
+            font-size: 1.5rem;
+            color: #1a2742;
+            margin: 40px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #E4E7EC;
+        }
+        
+        .glossary-details h3:first-child {
+            margin-top: 0;
         }
 
+        .glossary-details h4 {
+            font-size: 1.25rem;
+            color: #1a2742;
+            margin: 30px 0 15px;
+        }
+        
+        .glossary-details p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475467;
+            margin-bottom: 20px;
+        }
+        
+        .glossary-details ul, .glossary-details ol {
+            margin: 20px 0;
+            padding-left: 24px;
+        }
+        
+        .glossary-details li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475467;
+            margin-bottom: 12px;
+        }
+        
+        .glossary-details li strong {
+            color: #1a2742;
+        }
+        
+        /* Key Points Box */
+        .key-points-box {
+            background: #F8FAFC;
+            border-left: 4px solid #2D4CC8;
+            border-radius: 0 12px 12px 0;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .key-points-box h4 {
+            color: #1a2742;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .key-points-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        /* Custom elements from original page */
         .warning-box {
             background: #FFF7ED;
             border-left: 4px solid #EA580C;
@@ -175,6 +363,153 @@
             margin-bottom: 10px;
             color: #475467;
         }
+        
+        /* Related Section */
+        .glossary-related {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #E4E7EC;
+        }
+        
+        .glossary-related h3 {
+            font-size: 1.5rem;
+            color: #1a2742;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        
+        .related-card {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .related-card:hover {
+            transform: translateY(-4px);
+            border-color: #2D4CC8;
+            box-shadow: 0 12px 24px rgba(45, 76, 200, 0.1);
+        }
+        
+        .related-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #2D4CC8;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .related-card h4 {
+            font-size: 1rem;
+            color: #1a2742;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .related-link {
+            font-size: 0.85rem;
+            color: #2D4CC8;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .related-link i {
+            transition: transform 0.3s ease;
+        }
+        
+        .related-card:hover .related-link i {
+            transform: translateX(4px);
+        }
+        
+        /* CTA Box */
+        .glossary-cta {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2D4CC8 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .glossary-cta h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .glossary-cta p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 24px;
+        }
+        
+        .glossary-cta .btn {
+            background: #ffffff;
+            color: #1E3A8A;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .glossary-cta .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Back to Glossary */
+        .back-to-glossary {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .back-to-glossary a {
+            color: #2D4CC8;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .back-to-glossary a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .page-title,
+        .glossary-answer-box h2,
+        .glossary-details h3,
+        .glossary-related h3,
+        .related-card h4 {
+            text-transform: capitalize;
+        }
     </style>
 </head>
 
@@ -207,47 +542,55 @@
         </div>
     </nav>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="breadcrumb-nav">
-            <a href="../index.html">Home</a>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <a href="../glossary.html">Glossary</a>
-            <span class="separator"><i class="fas fa-chevron-right"></i></span>
-            <span class="current">Agency Agreement</span>
+    <!-- Hero -->
+    <section class="glossary-page-hero">
+        <div class="container">
+            <div class="glossary-page-content">
+                <nav class="page-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <a href="../glossary.html">Glossary</a>
+                    <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="current">Agency Agreement</span>
+                </nav>
+                
+                <div class="page-tags">
+                    <a href="../glossary.html?tag=commercial-law" class="page-tag">
+                        <i class="fas fa-gavel"></i> Commercial Law
+                    </a>
+                </div>
+                
+                <h1 class="page-title">Agency Agreement in Türkiye</h1>
+                <p class="page-question">"A Comprehensive Guide under the Turkish Commercial Code"</p>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <main class="article-section section">
-        <div class="container article-container">
-            <article>
-                <header class="article-header">
-                    <span class="related-category">Commercial Law &amp; Contracts</span>
-                    <h1>Agency Agreement in Türkiye: A Comprehensive Guide under the Turkish Commercial Code</h1>
-                    <div class="article-meta">
-                        <span class="article-meta-item"><i class="fas fa-calendar-alt"></i> June 3, 2026</span>
-                        <span class="article-meta-item"><i class="fas fa-clock"></i> 12 min read</span>
-                        <span class="article-meta-item"><i class="fas fa-user"></i> Turkish Trade Lawyers</span>
-                    </div>
-                </header>
+    <!-- Main Content -->
+    <main class="glossary-page-main">
+        <div class="container">
+            <article class="glossary-article">
+                <!-- Quick Answer -->
+                <div class="glossary-answer-box">
+                    <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
+                    <p>Under TCC Article 102, an agent is defined as an independent person who makes it their profession to continuously mediate in contracts concerning a commercial enterprise, or to conclude them on behalf of that merchant within a specific place or region, based on an agreement.</p>
+                </div>
 
-                <section class="article-content">
-                    <p><em>Expanding into new regional markets requires a strategic approach. Agency agreements offer a cost-effective, independent alternative to setting up physical branch offices, regulated thoroughly under the Turkish Commercial Code (TCC).</em></p>
+                <!-- Detailed Content -->
+                <div class="glossary-details">
+                    <p>Expanding into new regional markets requires a strategic approach. Agency agreements offer a cost-effective, independent alternative to setting up physical branch offices, regulated thoroughly under the Turkish Commercial Code (TCC).</p>
 
-                    <h2>Introduction: The Strategic Need for Agents</h2>
+                    <h3>Introduction: The Strategic Need for Agents</h3>
                     <p>As business enterprises strive to reach broader economic markets beyond their central location, they face the capital-intensive options of opening branch offices or hiring dependent assistant merchants such as marketing experts, sales officers, or commercial representatives. In both scenarios, the financial and administrative burdens are substantial. Instead, commercial enterprises often seek cost-effective, independent merchant assistants to fulfill these needs. This is precisely where the <strong>agency</strong> comes into play, serving as a vital legal and commercial instrument to expand a business footprint without incurring the heavy costs of establishing a new physical branch.</p>
 
                     <p>Foreign investors and international brands frequently employ agency agreements to penetrate the Turkish market or to manage specific regions within Türkiye. Understanding the intricate framework of the Turkish Commercial Code (TCC) No. 6102 regarding agency agreements is crucial for maintaining compliant and profitable commercial operations.</p>
 
-                    <h2>Defining the Agent and the Agency Agreement</h2>
+                    <h3>Defining the Agent and the Agency Agreement</h3>
                     <p>Interestingly, the Turkish Commercial Code does not strictly define the "agency agreement" itself as a standalone contract type in a single sentence. However, it explicitly defines the <strong>"agent" (acente)</strong> and comprehensively regulates the rights, obligations, and consequences of the relationship.</p>
-
-                    <div class="callout-box">
-                        <strong>Statutory Definition:</strong> Under TCC Article 102, an agent is defined as a person who, without having a legally dependent position (such as a commercial representative, commercial agent, sales officer, or employee), makes it their profession to mediate in contracts concerning a commercial enterprise, or to conclude them on behalf of that merchant, continuously within a specific place or region, based on an agreement.
-                    </div>
 
                     <p>Unlike the previous TCC No. 6762, the new TCC No. 6102 has brought significant modernizations. Most notably, concepts that were previously developed solely through Supreme Court jurisprudence and legal doctrine—such as the <strong>"equalization claim" (denkleştirme istemi)</strong> and <strong>"restraint of trade" (rekabet yasağı)</strong>—have now been codified directly into the law.</p>
 
-                    <h2>Key Elements of an Agency Relationship</h2>
+                    <h3>Key Elements of an Agency Relationship</h3>
                     <p>To determine whether a commercial relationship is truly an agency agreement under Turkish law, courts look for several fundamental elements:</p>
 
                     <ul>
@@ -258,8 +601,9 @@
                         <li><strong>Professional Conduct (Meslek Edinme):</strong> The agent performs these mediating or contracting activities professionally, seeking continuous profit.</li>
                     </ul>
 
-                    <h2>Types of Agencies</h2>
+                    <h3>Types of Agencies</h3>
                     <p>Depending on the scope of authority granted by the principal, agencies generally fall into two categories:</p>
+                    
                     <table class="compliance-table">
                         <thead>
                             <tr>
@@ -282,9 +626,9 @@
                         </tbody>
                     </table>
 
-                    <h2>Rights and Obligations of the Parties</h2>
+                    <h3>Rights and Obligations of the Parties</h3>
                     
-                    <h3>The Agent's Obligations</h3>
+                    <h4>The Agent's Obligations</h4>
                     <p>The agent bears several critical duties towards the principal, aimed at protecting the principal's commercial interests:</p>
                     <ul>
                         <li><strong>Duty of Care and Loyalty:</strong> The agent must safeguard the principal's interests with the diligence of a prudent merchant.</li>
@@ -293,7 +637,7 @@
                         <li><strong>Precautionary Measures:</strong> The agent must take necessary legal and practical steps to preserve the principal's rights, especially concerning defective goods or shipping disputes.</li>
                     </ul>
 
-                    <h3>The Agent's Rights</h3>
+                    <h4>The Agent's Rights</h4>
                     <ul>
                         <li><strong>Right to Remuneration (Commission):</strong> The agent is entitled to a commission for all transactions concluded through their mediation or within their exclusive territory during the contract term.</li>
                         <li><strong>Exclusivity (İnhisar Hakkı):</strong> Unless agreed otherwise, the principal cannot appoint another agent for the same region and the same branch of trade. The agent maintains a monopoly in their designated territory.</li>
@@ -305,13 +649,13 @@
                         <strong>Important Note on Remuneration:</strong> Under Turkish law, an agent may also be entitled to commission for transactions concluded after the termination of the agreement, provided the transaction was primarily prepared by the agent's efforts before termination and concluded shortly thereafter.
                     </div>
 
-                    <h2>Termination of the Agency Agreement</h2>
+                    <h3>Termination of the Agency Agreement</h3>
                     <p>An agency agreement can terminate for various reasons, including mutual agreement, expiration of a fixed term, death, bankruptcy, or loss of legal capacity of either party. Furthermore, if the agreement is for an indefinite period, either party may terminate it by giving a three-month notice.</p>
                     <p>However, termination for "just cause" (haklı sebep) allows immediate termination without adhering to notice periods. Just cause involves situations where expecting the continuation of the commercial relationship becomes objectively unreasonable (e.g., severe breach of trust, fraud, repeated failure to pay commissions).</p>
 
-                    <h2>Post-Termination Consequences (The New TCC Era)</h2>
+                    <h3>Post-Termination Consequences (The New TCC Era)</h3>
                     
-                    <h3>1. The Equalization Claim (Denkleştirme İstemi / Portfolio Compensation)</h3>
+                    <h4>1. The Equalization Claim (Denkleştirme İstemi / Portfolio Compensation)</h4>
                     <p>One of the most litigated and critical aspects of agency law in Türkiye is the <strong>Equalization Claim</strong> (Article 122 of TCC No. 6102), commonly referred to as portfolio compensation or goodwill indemnity.</p>
                     <p>When the agency agreement ends, the principal often continues to reap substantial benefits from the customer portfolio built by the agent's hard work. To prevent unjust enrichment, the law grants the agent the right to demand fair compensation. To qualify for this claim:</p>
                     <ol>
@@ -322,7 +666,7 @@
                     <p><em>Calculation Limit:</em> The equalization claim cannot exceed the average annual commission or other remuneration earned by the agent over the last five years of their activity (or the entire duration if less than five years).</p>
                     <p><strong>Crucial Exception:</strong> If the agreement is terminated by the principal for a justified cause attributable to the agent's fault, or if the agent terminates the agreement without justified cause, the equalization claim is forfeited.</p>
 
-                    <h3>2. Restraint of Trade (Rekabet Yasağı)</h3>
+                    <h4>2. Restraint of Trade (Rekabet Yasağı)</h4>
                     <p>The new TCC explicitly regulates post-termination non-compete clauses. A restraint of trade agreement limits the agent's commercial activities after the agency ends. To be valid under Turkish law:</p>
                     <ul>
                         <li>It must be in <strong>writing</strong>.</li>
@@ -331,39 +675,11 @@
                         <li>The principal must pay the agent an <strong>appropriate compensation</strong> for the duration of the non-compete restriction.</li>
                     </ul>
 
-                    <h2>Conclusion</h2>
+                    <h3>Conclusion</h3>
                     <p>The agency agreement serves as a powerful tool for commercial expansion in Türkiye, bridging the gap between a business and its broader market without the overhead of physical branches. However, the legal nuances—particularly the independence criterion, the robust framework of the equalization claim, and strict rules around non-compete clauses—require careful contract drafting and proactive legal management.</p>
                     <p>For international businesses and foreign investors, treating Turkish agency agreements as simple service contracts is a common yet costly mistake. Ensuring your contracts are properly localized and compliant with the Turkish Commercial Code will protect your business from unexpected post-termination liabilities.</p>
-                </section>
 
-                <div class="article-tags">
-                    <span class="tag">Agency Agreement</span>
-                    <span class="tag">Commercial Law</span>
-                    <span class="tag">Equalization Claim</span>
-                    <span class="tag">Restraint of Trade</span>
-                    <span class="tag">B2B Legal</span>
-                    <span class="tag">Türkiye</span>
-                </div>
-
-                <div class="author-box">
-                    <img src="../logo-square.png" alt="Turkish Trade Lawyers" class="author-logo" loading="lazy">
-                    <div class="author-info">
-                        <h4>Turkish Trade Lawyers</h4>
-                        <p>We advise foreign companies on market entry, commercial contracts, agency disputes, and operational legal risk in Türkiye, delivering pragmatic and effective legal solutions.</p>
-                    </div>
-                </div>
-
-                <div class="article-cta">
-                    <h3>Drafting or Terminating an Agency Agreement in Türkiye?</h3>
-                    <p>Ensure your commercial interests are fully protected under Turkish law. We can assist in negotiating, drafting, and managing commercial agency and distribution contracts.</p>
-                    <a href="../contact.html" class="cta-btn">
-                        <i class="fas fa-envelope"></i>
-                        Contact Our Legal Team
-                    </a>
-                </div>
-
-                <section class="article-content">
-                    <h2>Frequently Asked Questions</h2>
+                    <h3>Frequently Asked Questions</h3>
                     <h4>What is the difference between a commercial representative and an agent?</h4>
                     <p>A commercial representative is a dependent assistant (usually an employee) who has extensive authority to manage the commercial enterprise internally and externally. An agent is an independent commercial entity that mediates or concludes contracts for the principal without being part of the principal's internal organizational hierarchy.</p>
 
@@ -372,7 +688,7 @@
 
                     <h4>Can we waive the equalization claim (portfolio compensation) in advance?</h4>
                     <p>No. Under the Turkish Commercial Code, the equalization claim is mandatory law. Any contractual clause waiving this right before the termination of the agency agreement is absolutely null and void.</p>
-                </section>
+                </div>
 
                 <div class="sources-box">
                     <h3>Sources &amp; Authorities</h3>
@@ -384,40 +700,60 @@
                     </ul>
                 </div>
 
-                <section class="related-articles">
-                    <h3>Related Legal Guides</h3>
+                <!-- CTA -->
+                <div class="glossary-cta">
+                    <h3>Drafting or Terminating an Agency Agreement in Türkiye?</h3>
+                    <p>Ensure your commercial interests are fully protected under Turkish law. We can assist in negotiating, drafting, and managing commercial agency and distribution contracts.</p>
+                    <a href="../contact.html" class="btn">
+                        Schedule a Consultation <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Back to Glossary -->
+                <div class="back-to-glossary">
+                    <a href="../glossary.html">
+                        <i class="fas fa-arrow-left"></i> Back to Legal Glossary
+                    </a>
+                </div>
+
+                <!-- Related Section -->
+                <div class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Legal Guides</h3>
                     <div class="related-grid">
                         <a href="distribution-agreement.html" class="related-card">
-                            <span class="related-category">Commercial Contracts</span>
+                            <span class="related-tag"><i class="fas fa-file-contract"></i> Commercial Contracts</span>
                             <h4>Distribution Agreements in Türkiye</h4>
-                            <p>Understand the differences between agency and distribution frameworks and how to protect your supply chain.</p>
+                            <span class="related-link">Read Guide <i class="fas fa-arrow-right"></i></span>
                         </a>
                         <a href="../how-to-enter-turkish-market.html" class="related-card">
-                            <span class="related-category">Market Entry</span>
+                            <span class="related-tag"><i class="fas fa-globe"></i> Market Entry</span>
                             <h4>How to Enter the Turkish Market</h4>
-                            <p>A comprehensive guide for foreign investors on legal structures, from liaison offices to full subsidiaries.</p>
+                            <span class="related-link">Read Guide <i class="fas fa-arrow-right"></i></span>
                         </a>
                         <a href="franchise-agreement.html" class="related-card">
-                            <span class="related-category">Commercial Law</span>
+                            <span class="related-tag"><i class="fas fa-handshake"></i> Commercial Law</span>
                             <h4>Franchise Agreements</h4>
-                            <p>Key legal considerations when franchising your brand and business model in the Turkish market.</p>
+                            <span class="related-link">Read Guide <i class="fas fa-arrow-right"></i></span>
                         </a>
                     </div>
-                </section>
+                </div>
             </article>
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved. | <a href="../cookie-policy.html"
-                    style="color: rgba(255,255,255,0.7); text-decoration: none;">Cookie Policy</a> | <a
-                    href="../disclaimer.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Disclaimer</a> | <a
-                    href="../privacy-notice.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Privacy Notice</a></p>
+            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved. |
+                <a href="../cookie-policy.html" style="color: rgba(255,255,255,0.7);">Cookie Policy</a> |
+                <a href="../disclaimer.html" style="color: rgba(255,255,255,0.7);">Disclaimer</a> |
+                <a href="../privacy-notice.html" style="color: rgba(255,255,255,0.7);">Privacy Notice</a>
+            </p>
         </div>
     </footer>
 
     <script src="../script.js"></script>
+
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {

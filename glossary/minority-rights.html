@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,6 +76,7 @@
     }
     </script>
 
+    
     <style>
         .glossary-page-hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1E3A8A 100%);
@@ -195,6 +193,12 @@
             color: #1a2742;
         }
         
+        .glossary-details h2 {
+            font-size: 1.75rem;
+            color: #1a2742;
+            margin: 50px 0 24px;
+        }
+        
         .glossary-details h3 {
             font-size: 1.5rem;
             color: #1a2742;
@@ -230,26 +234,118 @@
             color: #1a2742;
         }
         
-        /* Key Points Box */
-        .key-points-box {
-            background: #F8FAFC;
+        /* Additional Styles from minority-rights */
+        .callout-box {
+            background: #EFF6FF;
             border-left: 4px solid #2D4CC8;
-            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin: 24px 0;
+            color: #1E3A8A;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .warning-box {
+            background: #FFF7ED;
+            border-left: 4px solid #EA580C;
+            padding: 16px 20px;
+            margin: 24px 0;
+            color: #9A3412;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.96rem;
+        }
+
+        .compliance-table th,
+        .compliance-table td {
+            border: 1px solid #E4E7EC;
+            padding: 14px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .compliance-table th {
+            background: #F8FAFC;
+            color: #1a2742;
+            font-weight: 700;
+        }
+
+        .sources-box {
+            background: #F8FAFC;
+            border: 1px solid #E4E7EC;
+            border-radius: 16px;
             padding: 24px;
             margin: 32px 0;
         }
-        
-        .key-points-box h4 {
+
+        .sources-box h3 {
+            margin-bottom: 10px;
             color: #1a2742;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
-        
-        .key-points-box ul {
+
+        .sources-note {
+            color: #475467;
+            margin-bottom: 14px;
+        }
+
+        .sources-list {
             margin: 0;
             padding-left: 20px;
+        }
+
+        .sources-list li {
+            margin-bottom: 10px;
+            color: #475467;
+        }
+        
+        /* FAQ Styles */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .faq-item {
+            border: 1px solid #E4E7EC;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+        }
+        .faq-item details {
+            width: 100%;
+        }
+        .faq-item summary {
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #1a2742;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-item summary:after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #2D4CC8;
+            transition: transform 0.3s ease;
+        }
+        .faq-item details[open] summary:after {
+            transform: rotate(180deg);
+        }
+        .faq-item .faq-content {
+            padding: 0 20px 20px;
+            color: #475467;
+            line-height: 1.6;
         }
         
         /* Related Section */
@@ -390,15 +486,6 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        .page-title,
-        .glossary-answer-box h2,
-        .glossary-details h3,
-        .key-points-box h4,
-        .glossary-related h3,
-        .related-card h4 {
-            text-transform: capitalize;
-        }
     </style>
 </head>
 
@@ -421,11 +508,9 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="../ourexperts.html" class="nav-link">About</a></li>
-
                 <li><a href="../index.html#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="../ourexperts.html" class="nav-link">Our Experts</a></li>
                 <li><a href="../guides.html" class="nav-link">Guides</a></li>
-                <!-- Glossary link removed -->
                 <li><a href="../contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
@@ -444,15 +529,13 @@
                 </nav>
                 
                 <div class="page-tags">
-                    
-        <a href="../glossary.html?tag=company-law" class="page-tag">
-            <i class="fas fa-building"></i> Company Law
-        </a>
-    
+                    <a href="../glossary.html?tag=corporate-law" class="page-tag">
+                        <i class="fas fa-balance-scale"></i> Corporate Law
+                    </a>
                 </div>
                 
                 <h1 class="page-title">Minority Shareholder Rights</h1>
-                <p class="page-question">"What protections exist for minority shareholders in Turkey?"</p>
+                <p class="page-question">A comprehensive 18-minute legal guide to positive and negative minority rights.</p>
             </div>
         </div>
     </section>
@@ -461,78 +544,195 @@
     <main class="glossary-page-main">
         <div class="container">
             <article class="glossary-article">
+                
                 <!-- Quick Answer -->
                 <div class="glossary-answer-box">
                     <h2><i class="fas fa-check-circle"></i> Quick Answer</h2>
-                    <p>Minority shareholders (10% for A.Ş., 10% for Ltd.) can request audits, call general meetings, and challenge resolutions. Courts can dissolve companies for oppression.</p>
+                    <p>Under Turkish Commercial Code (TCC) No. 6102, minority rights are designed to protect shareholders holding at least 10% of the share capital in non-public joint-stock companies (and 5% in public ones) against the absolute power of the majority. These rights are categorized into positive rights (e.g., calling general assembly, appointing special auditors, requesting dissolution for just cause) and negative rights (e.g., blocking the release of founders from liability).</p>
                 </div>
 
                 <!-- Detailed Content -->
                 <div class="glossary-details">
+
+                    <h2>1. The Delicate Balance: Majority Principle vs. Minority Rights</h2>
+                    <p>In joint-stock companies, the fundamental operational mechanism is the <strong>majority principle</strong>. This principle dictates that the will of the majority of shareholders forms the corporate will. However, this absolute power often leads to a scenario reminiscent of Thomas Hobbes's <em>"homo homini lupus"</em> (man is wolf to man), where the majority can manage the company purely for their own benefit, potentially oppressing the minority.</p>
                     
-            <h3>Key Aspects Under Turkish Law</h3>
-            <p>Understanding minority shareholder rights is crucial for businesses operating in Turkey. The Turkish Commercial Code provides the legal framework governing this area, with specific provisions that differ from other jurisdictions.</p>
-            
-            <div class="key-points-box">
-                <h4><i class="fas fa-key"></i> Key Points to Remember</h4>
-                <ul>
-                    <li>Turkish Commercial Code No. 6102 provides the primary legal framework</li>
-                    <li>Trade Registry registration is typically required for enforcement</li>
-                    <li>Foreign investors have equal rights with domestic entities</li>
-                    <li>Proper documentation and corporate formalities are essential</li>
-                </ul>
+                    <p>To prevent the suppression of minority shareholders and to ensure their voices are heard in corporate governance, the Turkish Commercial Code (TCC) No. 6102 introduces a robust framework of minority rights. This framework aims to establish a delicate balance: protecting the minority from oppression while ensuring the company's continuous operation and preventing the abuse of minority rights to stall corporate functions.</p>
+
+                    <div class="callout-box">
+                        <strong>The Legal Threshold for Minority Status:</strong>
+                        <ul>
+                            <li><strong>Non-Public Joint-Stock Companies:</strong> Shareholders representing at least <strong>10%</strong> of the share capital.</li>
+                            <li><strong>Public Joint-Stock Companies:</strong> Shareholders representing at least <strong>5%</strong> of the share capital.</li>
+                        </ul>
+                    </div>
+
+                    <h2>2. Understanding Minority Shareholder Concept</h2>
+                    <p>Under Turkish corporate law, minority rights are not individual rights (like voting or dividend rights) but are collective rights granted to a specific capital threshold. Legal scholars categorize minorities into three distinct types:</p>
+                    
+                    <ul>
+                        <li><strong>Proportional (Oransal) Minority:</strong> The standard legal minority holding 10% (or 5% in public companies) required by the TCC to exercise statutory minority rights.</li>
+                        <li><strong>Nominal (Nominal) Minority:</strong> Shareholders whose capital contribution falls below the statutory 10% threshold. They generally cannot exercise minority rights unless the Articles of Association lower the threshold.</li>
+                        <li><strong>De Facto (Fiili) Minority:</strong> A shareholder or group that technically holds a majority of the capital but is outvoted at a general assembly due to low attendance or strategic voting blocks.</li>
+                    </ul>
+
+                    <h2>3. Negative Minority Rights</h2>
+                    <p>Negative minority rights empower minority shareholders to block, delay, or veto certain corporate actions proposed by the majority.</p>
+
+                    <h3>A. Blocking the Release of Founders and Board Members</h3>
+                    <p>During the establishment phase or capital increases, the minority has the power to block the general assembly's decision to release (ibra) the founders, board members, and auditors from liability. This prevents the majority from unilaterally forgiving managerial misconduct that harms the company.</p>
+
+                    <h3>B. Aggravated Quorum Requirements</h3>
+                    <p>For critical structural changes, the TCC requires aggravated meeting and decision quorums. While not a direct minority right, these high thresholds effectively grant the minority a veto power. If the minority block is large enough, the majority cannot reach the required quorum to pass fundamental changes (such as changing the company's core business purpose).</p>
+
+                    <h2>4. Positive Minority Rights</h2>
+                    <p>Positive minority rights enable the minority to take proactive steps, force the company's organs to act, or seek judicial intervention to protect the company's and their own interests.</p>
+
+                    <h3>A. Right to be Represented on the Board of Directors</h3>
+                    <p>One of the most significant innovations of the TCC is the explicit right of specific share groups or minorities to be represented on the Board of Directors (Article 360). If stipulated in the Articles of Association, the minority can have guaranteed seats on the board, allowing them to monitor corporate affairs from the inside.</p>
+
+                    <h3>B. Right to Call the General Assembly</h3>
+                    <p>Minority shareholders holding the requisite capital threshold have the right to request the Board of Directors to convene an extraordinary General Assembly or to add specific items to the agenda of an already scheduled meeting. If the Board refuses or ignores this request within 7 days, the minority can apply to the Commercial Court to obtain authorization to call the meeting themselves.</p>
+
+                    <div class="warning-box">
+                        <strong>Strategic Importance:</strong> The right to call the general assembly is crucial. It forces the management to address critical issues publicly and formally in front of all shareholders, effectively bringing hidden disputes to light.
+                    </div>
+
+                    <h3>C. Postponement of Financial Statement Discussions</h3>
+                    <p>To ensure transparency, the minority can request the postponement of the discussion of financial statements (and related issues like the release of board members) for exactly one month. This request must be accepted by the assembly chair without the need for a general assembly vote. This gives the minority time to properly analyze the financials and uncover any discrepancies.</p>
+
+                    <h3>D. Right to Request a Special Auditor (Özel Denetçi)</h3>
+                    <p>If a shareholder suspects mismanagement, fraud, or obscure transactions, they can request the appointment of a Special Auditor to clarify specific events. The procedure involves two steps:</p>
+                    <ol>
+                        <li><strong>General Assembly Request:</strong> The minority must first request the appointment at the general assembly (provided the right to obtain information has been exhausted).</li>
+                        <li><strong>Court Intervention:</strong> If the general assembly rejects the request, the minority can apply to the commercial court within 3 months. The court will appoint an independent expert if the minority can present convincing evidence of potential misconduct.</li>
+                    </ol>
+
+                    <table class="compliance-table">
+                        <thead>
+                            <tr>
+                                <th>Right Type</th>
+                                <th>Statutory Basis (TCC)</th>
+                                <th>Primary Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Postponement of Financials</td>
+                                <td>Article 420</td>
+                                <td>Provides time to investigate company accounts.</td>
+                            </tr>
+                            <tr>
+                                <td>Special Auditor Request</td>
+                                <td>Article 438-439</td>
+                                <td>Independent investigation of specific suspicious transactions.</td>
+                            </tr>
+                            <tr>
+                                <td>Board Representation</td>
+                                <td>Article 360</td>
+                                <td>Ensures minority voice in executive management.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>E. Right to Request Printing of Registered Share Certificates</h3>
+                    <p>In non-public joint-stock companies, the minority has the absolute right to demand that registered share certificates (nama yazılı pay senetleri) be printed and distributed. Once requested, the Board of Directors is legally obligated to print and deliver these certificates. This secures the physical proof of ownership and facilitates the transfer of shares.</p>
+
+                    <h3>F. Dissolution with Just Cause (Haklı Sebeple Fesih)</h3>
+                    <p>Considered the "ultimate weapon" (<em>ultima ratio</em>) of the minority, TCC Article 531 allows minority shareholders to file a lawsuit requesting the dissolution of the company for just cause. "Just cause" typically involves continuous oppression, systematic violation of minority rights, or deadlock in management.</p>
+                    <p>However, courts prioritize the survival of the enterprise. Instead of dissolving the company, the judge possesses wide discretionary power to order alternative solutions, such as:</p>
+                    <ul>
+                        <li>Ordering the company or majority shareholders to buy out the minority's shares at their real value.</li>
+                        <li>Removing abusive board members.</li>
+                        <li>Ordering dividend distributions.</li>
+                    </ul>
+
+                    <h2>5. Pre-Emptive Rights (Rüçhan Hakkı) in Capital Increases</h2>
+                    <p>During a capital increase, all shareholders have the right to acquire new shares in proportion to their existing holdings. This prevents the dilution of the minority's voting power and financial stake. The majority can only restrict this right for "just causes" (e.g., merging with another company, taking over an enterprise) via an aggravated general assembly resolution, and such restrictions must never be used to intentionally oppress the minority.</p>
+
+                    <div class="sources-box">
+                        <h3><i class="fas fa-book"></i> Key Legal Concepts</h3>
+                        <p class="sources-note">The framework of minority rights is built upon these fundamental principles:</p>
+                        <ul class="sources-list">
+                            <li><strong>Equal Treatment Principle (Eşit İşlem İlkesi):</strong> The company must treat shareholders in equal circumstances equally.</li>
+                            <li><strong>Protection of Capital:</strong> Ensures that the company's financial core remains intact against abusive extractions by the majority.</li>
+                            <li><strong>Kamuyu Aydınlatma (Public Disclosure):</strong> Specially prominent in public companies to ensure minorities have access to material information.</li>
+                        </ul>
+                    </div>
+
+<h3 style="margin-top: 60px; border-bottom: none; margin-bottom: 30px;">Frequently Asked Questions</h3>
+<div class="faq-container">
+
+                <div class="faq-item">
+                    <details>
+                        <summary>What is the legal threshold to be considered a minority shareholder in Turkey?</summary>
+                        <div class="faq-content">Under the Turkish Commercial Code, you must hold at least 10% of the capital in a non-public joint-stock company, or 5% in a public joint-stock company, to exercise statutory minority rights.</div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can the minority force the dissolution of a profitable company?</summary>
+                        <div class="faq-content">Yes, under Article 531, if there is a "just cause" (such as systemic oppression or fraud by the majority), the minority can file for dissolution. However, courts usually prefer a "buy-out" of the minority's shares rather than liquidating a profitable, going concern.</div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>How can a minority shareholder prevent the majority from hiding financial fraud?</summary>
+                        <div class="faq-content">The minority has two powerful tools: First, they can unilaterally postpone the discussion of financial statements for one month. Second, they can request the appointment of a Special Auditor to independently investigate the company's books and specific transactions.</div>
+                    </details>
+                </div>
+                <div class="faq-item">
+                    <details>
+                        <summary>Can the majority dilute my shares during a capital increase?</summary>
+                        <div class="faq-content">No, you have a statutory pre-emptive right (rüçhan hakkı) to purchase new shares proportional to your current stake. The majority can only restrict this right under very specific, legally justified conditions, and never with the intent of oppressive dilution.</div>
+                    </details>
+                </div>
+
             </div>
-            
-            <h3>Practical Considerations for Businesses</h3>
-            <p>When dealing with minority shareholder rights in Turkey, businesses should consider engaging qualified legal counsel familiar with both Turkish law and international business practices. This ensures compliance with local requirements while meeting global standards.</p>
-            
-            <p>Documentation requirements, timeline considerations, and regulatory approvals vary depending on the specific circumstances of each case. Early planning and proper structuring can help avoid common pitfalls.</p>
-        
+                </div>
+                
+                <!-- Video Section -->
+                <div style="margin-top: 40px;">
+
                 </div>
 
                 <!-- Related Terms -->
-                
-        <section class="glossary-related">
-            <h3><i class="fas fa-link"></i> Related Terms</h3>
-            <div class="related-grid">
-                
-                    <a href="shareholders-agreement.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>Shareholders Agreement</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="voting-rights.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>Shareholder Voting Rights</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-                    <a href="general-assembly.html" class="related-card">
-                        <span class="related-tag">
-                            <i class="fas fa-building"></i>
-                            Company Law
-                        </span>
-                        <h4>General Assembly</h4>
-                        <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
-                    </a>
-                
-            </div>
-        </section>
-    
+                <section class="glossary-related">
+                    <h3><i class="fas fa-link"></i> Related Guides</h3>
+                    <div class="related-grid">
+                        <a href="shareholders-agreement.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-balance-scale"></i>
+                                Corporate Law
+                            </span>
+                            <h4>Shareholders Agreements</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="general-assembly.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-users"></i>
+                                Company Governance
+                            </span>
+                            <h4>General Assembly Operations</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="voting-rights.html" class="related-card">
+                            <span class="related-tag">
+                                <i class="fas fa-balance-scale"></i>
+                                Corporate Law
+                            </span>
+                            <h4>Shareholder Voting Rights</h4>
+                            <span class="related-link">Learn More <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </section>
 
                 <!-- CTA -->
                 <div class="glossary-cta">
-                    <h3>Need Expert Legal Guidance?</h3>
-                    <p>Our experienced attorneys can help you navigate minority shareholder rights under Turkish law.</p>
-                    <a href="../index.html#contact" class="btn">
-                        Schedule a Consultation <i class="fas fa-arrow-right"></i>
+                    <h3>Is Your Minority Shareholder Position Being Oppressed?</h3>
+                    <p>Don't let the majority dictate unfair terms. Discover your legal options for special audits, board representation, or fair buyouts.</p>
+                    <a href="../contact.html" class="btn">
+                        <i class="fas fa-gavel"></i> Secure Your Rights Today
                     </a>
                 </div>
 
@@ -549,7 +749,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Turkish Trade Lawyers. All rights reserved. |
+            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved. |
                 <a href="../cookie-policy.html" style="color: rgba(255,255,255,0.7);">Cookie Policy</a> |
                 <a href="../disclaimer.html" style="color: rgba(255,255,255,0.7);">Disclaimer</a> |
                 <a href="../privacy-notice.html" style="color: rgba(255,255,255,0.7);">Privacy</a>
@@ -572,5 +772,4 @@
         })();
     </script>
 </body>
-
 </html>
