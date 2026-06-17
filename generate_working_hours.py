@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+import os
+
+def generate_html():
+    part_header = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -593,7 +596,9 @@
                 </div>
 
                 <div class="glossary-details">
+"""
 
+    part_content1 = """
                     <h3>Introduction: Working Time and Labor Law Regulations</h3>
                     <p>In Turkish labor jurisprudence, establishing and regulating working time boundaries is fundamentally linked to the physical and psychological health of employees. Historically, the industrial revolution produced working environments fraught with occupational health and safety hazards. Extended hours directly threatened the health of workers, rendering time restrictions not merely a matter of economic negotiation but a fundamental human right aimed at preventing exhaustion, increasing productivity, and preserving work-life balance.</p>
                     
@@ -652,7 +657,9 @@
                     </table>
                     <p>These breaks must be granted uninterruptedly, although they can be split by mutual agreement depending on the nature of the work. During a rest break, the employee is entirely free from the employer's authority and can leave the premises.</p>
 
+"""
 
+    part_content2 = """
                     <h3>Legal Working Hour Limits</h3>
                     
                     <h4>The Weekly Limit</h4>
@@ -698,7 +705,9 @@
                         <li><strong>Olağanüstü Durumlarda Fazla Çalışma (Emergency Overtime):</strong> Mandated during periods of national mobilization, war, or severe economic crises, subject exclusively to the decree of the President of the Republic.</li>
                     </ul>
 
+"""
 
+    part_content3 = """
                     <h3>Remuneration for Overtime Work</h3>
                     <p>The financial compensation for extended labor is heavily guarded by law to prevent wage theft and ensure equitable reward for additional physical exertion.</p>
                     
@@ -756,7 +765,9 @@
                         <li>Because it is merely "making up" for previously paid but unworked hours, compensatory work is compensated at the normal wage rate, not the overtime premium rate.</li>
                     </ul>
 
+"""
 
+    part_content4 = """
                     <h3>Short-Time Working (Kısa Çalışma)</h3>
                     <p>Short-Time Working is a critical crisis-management tool designed to protect employment during severe economic downturns or force majeure events. Rather than laying off workers when business plummets, the employer reduces working hours or temporarily halts operations, and the state's Unemployment Insurance Fund steps in to cover a portion of the employees' lost income.</p>
 
@@ -907,3 +918,16 @@
 </body>
 
 </html>
+"""
+
+    html = part_header + part_content1 + part_content2 + part_content3 + part_content4
+
+    with open('/Users/busraocak/Desktop/turkish trade/glossary/working-hours.html', 'w', encoding='utf-8') as f:
+        f.write(html)
+        
+    print(f"File generated with {len(html)} characters.")
+    words = len(html.split())
+    print(f"Approximate word count (including HTML tags): {words}")
+
+if __name__ == '__main__':
+    generate_html()
