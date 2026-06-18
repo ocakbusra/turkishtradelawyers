@@ -1,0 +1,26 @@
+name: Submit to IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    # Wait for other jobs (like deploy) if there are any. If not, it just runs.
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run IndexNow Submission Script
+        run: |
+          # Add a small delay to ensure the site is deployed before pinging, 
+          # just in case the deploy job runs in parallel and takes a few seconds.
+          sleep 15 
+          python3 submit_indexnow.py
