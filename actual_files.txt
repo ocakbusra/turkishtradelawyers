@@ -156,7 +156,7 @@
 ./corporate-investment-services-turkey.html
 ./tax-trade-finance-services-turkey.html
 ./ethical-principles-ai-public-officials-turkey.html
-./debt-collection-services-turkey.html
+./debt-collection-in-turkey.html
 ./guides.html
 ./strategic-asset-protection-in-turkiye-securing-your-claims-before-international-arbitration.html
 ./monitor-feb-2026.html

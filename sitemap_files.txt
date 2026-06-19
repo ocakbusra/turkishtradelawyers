@@ -63,7 +63,7 @@ countries/country-ukraine.html
 countries/country-united-kingdom.html
 countries/country-usa.html
 data-controller-representative-kvkk-turkey.html
-debt-collection-services-turkey.html
+debt-collection-in-turkey.html
 disclaimer.html
 double-tax-treaties-turkiye-foreign-investors.html
 drafting-valid-power-of-attorney-turkey.html

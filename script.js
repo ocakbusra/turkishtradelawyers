@@ -1124,3 +1124,113 @@ function autoGenerateFAQSchema() {
 
 // Run FAQ schema generation
 document.addEventListener('DOMContentLoaded', autoGenerateFAQSchema);
+
+/* ==========================================================================
+   Debt Collection Interactive UI Elements Logic
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Legal Tabs Logic
+    const tabButtons = document.querySelectorAll('.legal-tab-btn');
+    const tabContents = document.querySelectorAll('.legal-tab-content');
+
+    if (tabButtons.length > 0) {
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked
+                button.classList.add('active');
+                const targetId = button.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // 2. Vertical Timeline Logic
+    const timelineHeaders = document.querySelectorAll('.timeline-header');
+    
+    if (timelineHeaders.length > 0) {
+        timelineHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const parentItem = header.closest('.timeline-item');
+                // Toggle active class
+                if (parentItem.classList.contains('active')) {
+                    parentItem.classList.remove('active');
+                } else {
+                    // Optional: Close others
+                    document.querySelectorAll('.timeline-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    parentItem.classList.add('active');
+                }
+            });
+        });
+        // Optional: Open the first one by default
+        const firstTimelineItem = document.querySelector('.timeline-item');
+        if (firstTimelineItem) firstTimelineItem.classList.add('active');
+    }
+
+    // 3. Modal Logic
+    const modalTriggers = document.querySelectorAll('[data-modal-target]');
+    const modalCloses = document.querySelectorAll('.legal-modal-close');
+    const overlays = document.querySelectorAll('.legal-modal-overlay');
+
+    if (modalTriggers.length > 0) {
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = trigger.getAttribute('data-modal-target');
+                const modal = document.getElementById(targetId);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                }
+            });
+        });
+
+        modalCloses.forEach(closeBtn => {
+            closeBtn.addEventListener('click', () => {
+                const modal = closeBtn.closest('.legal-modal-overlay');
+                if (modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        overlays.forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    }
+
+    // 4. Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    if (accordionHeaders.length > 0) {
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const parentItem = header.closest('.accordion-item');
+                if (parentItem.classList.contains('active')) {
+                    parentItem.classList.remove('active');
+                } else {
+                    // Close others
+                    document.querySelectorAll('.accordion-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    parentItem.classList.add('active');
+                }
+            });
+        });
+    }
+});
