@@ -220,6 +220,16 @@
                     </div>
                     <p>As an international commercial law practice based in Türkiye, this analysis evaluates the systemic impacts of this landmark agreement article by article, assessing its intersections with Turkish domestic legislation alongside regional regulatory realities.</p>
 
+                    <!-- Email-gated PDF download CTA -->
+                    <div class="article-cta" style="margin-top: 28px; margin-bottom: 8px;">
+                        <h3><i class="fas fa-file-pdf"></i> Download the Full Agreement in English</h3>
+                        <p>Get the complete English text of the OTS Digital Economy Partnership Agreement as a PDF. Click below, enter your email, and the download will begin instantly.</p>
+                        <button type="button" class="cta-btn" id="ttl-dl-open">
+                            <i class="fas fa-download"></i>
+                            Click to download the full agreement (English PDF)
+                        </button>
+                    </div>
+
                     <hr>
 
                     <h2 id="general-provisions">Section I: General Provisions, Jurisdictional Scope, and Strategic Objectives</h2>
@@ -669,6 +679,89 @@
             </p>
         </div>
     </footer>
+
+    <!-- Email-gated PDF download modal -->
+    <style>
+        .ttl-dl-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; }
+        .ttl-dl-overlay[hidden] { display: none; }
+        .ttl-dl-box { background: #fff; border-radius: 16px; max-width: 460px; width: 100%; padding: 32px; position: relative; box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25); font-family: 'Inter', sans-serif; }
+        .ttl-dl-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 1.6rem; line-height: 1; color: #94a3b8; cursor: pointer; }
+        .ttl-dl-close:hover { color: #1e293b; }
+        .ttl-dl-box h3 { margin: 0 0 8px; color: #1e293b; font-size: 1.25rem; }
+        .ttl-dl-box input[type="email"] { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1rem; font-family: inherit; box-sizing: border-box; margin-top: 6px; }
+        .ttl-dl-box input[type="email"]:focus { outline: none; border-color: #2D4CC8; box-shadow: 0 0 0 3px rgba(45, 76, 200, 0.12); }
+        .ttl-dl-error { display: none; color: #dc2626; font-size: 0.85rem; margin: 8px 0 0; }
+        .ttl-dl-note { font-size: 0.78rem; color: #94a3b8; margin: 14px 0 0; }
+        #ttl-dl-form .cta-btn { width: 100%; justify-content: center; margin-top: 16px; cursor: pointer; }
+        .ttl-dl-success { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; border-radius: 10px; padding: 16px; font-size: 0.92rem; }
+        .ttl-dl-success a { color: #2D4CC8; font-weight: 600; }
+    </style>
+    <div id="ttl-dl-modal" class="ttl-dl-overlay" role="dialog" aria-modal="true" aria-labelledby="ttl-dl-title" hidden>
+        <div class="ttl-dl-box">
+            <button type="button" class="ttl-dl-close" id="ttl-dl-close" aria-label="Close">&times;</button>
+            <h3 id="ttl-dl-title"><i class="fas fa-file-pdf" style="color:#2D4CC8;"></i> Download the Agreement (English)</h3>
+            <p style="color:#475467; font-size:0.95rem; margin: 0 0 6px;">Enter your email address to download the full English text of the Digital Economy Partnership Agreement (PDF).</p>
+            <form id="ttl-dl-form" novalidate>
+                <label for="ttl-dl-email" style="font-size:0.85rem; font-weight:600; color:#334155;">Email address</label>
+                <input type="email" id="ttl-dl-email" name="email" placeholder="name@company.com" required autocomplete="email">
+                <p class="ttl-dl-error" id="ttl-dl-error">Please enter a valid email address.</p>
+                <button type="submit" class="cta-btn"><i class="fas fa-download"></i> Get the PDF</button>
+            </form>
+            <p class="ttl-dl-note">We respect your privacy. Your email may be used to send relevant Turkish trade-law updates. You can unsubscribe at any time.</p>
+            <div class="ttl-dl-success" id="ttl-dl-success" hidden>
+                <i class="fas fa-circle-check"></i> Thank you — your download has started. If it doesn't begin automatically,
+                <a href="turkic-states-digital-economy-partnership-agreement-EN.pdf" download>click here to download the PDF</a>.
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            var PDF = "turkic-states-digital-economy-partnership-agreement-EN.pdf";
+            var overlay = document.getElementById('ttl-dl-modal');
+            var openBtn = document.getElementById('ttl-dl-open');
+            var closeBtn = document.getElementById('ttl-dl-close');
+            var form = document.getElementById('ttl-dl-form');
+            var emailInput = document.getElementById('ttl-dl-email');
+            var errEl = document.getElementById('ttl-dl-error');
+            var successEl = document.getElementById('ttl-dl-success');
+            function openModal() { overlay.hidden = false; document.body.style.overflow = 'hidden'; setTimeout(function () { emailInput.focus(); }, 50); }
+            function closeModal() { overlay.hidden = true; document.body.style.overflow = ''; }
+            function triggerDownload() {
+                var a = document.createElement('a');
+                a.href = PDF; a.download = PDF; a.rel = 'noopener';
+                document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            }
+            if (openBtn) openBtn.addEventListener('click', openModal);
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !overlay.hidden) closeModal(); });
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var email = (emailInput.value || '').trim();
+                var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                if (!valid) { errEl.style.display = 'block'; emailInput.focus(); return; }
+                errEl.style.display = 'none';
+                // Best-effort lead capture via Formspree (does not block the download)
+                try {
+                    fetch('https://formspree.io/f/mnneobaw', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            _subject: 'PDF Download Lead — OTS Digital Economy Partnership Agreement (EN)',
+                            message: 'PDF download lead from the Turkic States Digital Economy Partnership Agreement guide.',
+                            source: 'turkic-states-digital-economy-partnership-agreement.html'
+                        })
+                    }).catch(function () { });
+                } catch (_) { }
+                // Analytics event (fires only after consent loads gtag)
+                try { if (window.gtag) gtag('event', 'pdf_download', { event_category: 'lead', event_label: 'OTS DEPA EN' }); } catch (_) { }
+                form.style.display = 'none';
+                successEl.hidden = false;
+                triggerDownload();
+            });
+        })();
+    </script>
 
     <script src="script.js"></script>
 
