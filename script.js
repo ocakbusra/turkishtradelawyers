@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="footer-contact-card">
                     <span class="footer-eyebrow">Contact</span>
-                    <a href="tel:+902127065916" class="footer-contact-link">+90 212 706 59 16</a>
+                    <a href="tel:+905016359465" class="footer-contact-link">+90 501 635 94 65</a>
                     <a href="mailto:hi@turkishtradelawyers.com" class="footer-contact-link">hi@turkishtradelawyers.com</a>
                     <p class="footer-contact-copy">Maslak Mah. Buyukdere Cad. No:255, Sariyer, Istanbul</p>
                     <div class="footer-social-links">
