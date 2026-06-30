@@ -31,4 +31,34 @@
        <video:publication_date>2026-05-23</video:publication_date>
      </video:video>
    </url>
+   <url>
+     <loc>https://www.turkishtradelawyers.com/countries/country-united-kingdom.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/Kj0adYCCz-o/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>Legal Insights for UK Companies in Turkey</video:title>
+       <video:description>Essential legal insights and procedures for United Kingdom businesses operating, investing, or trading in the Turkish market.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/Kj0adYCCz-o</video:player_loc>
+       <video:publication_date>2026-06-30</video:publication_date>
+     </video:video>
+   </url>
+   <url>
+     <loc>https://www.turkishtradelawyers.com/countries/country-germany.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/zOTGkuLR_T8/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>Legal Insights for German Companies in Turkey</video:title>
+       <video:description>Essential legal insights and procedures for German businesses operating, investing, or trading in the Turkish market.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/zOTGkuLR_T8</video:player_loc>
+       <video:publication_date>2026-06-30</video:publication_date>
+     </video:video>
+   </url>
+   <url>
+     <loc>https://www.turkishtradelawyers.com/countries/country-spain.html</loc>
+     <video:video>
+       <video:thumbnail_loc>https://img.youtube.com/vi/WwEgF4gRQl0/maxresdefault.jpg</video:thumbnail_loc>
+       <video:title>Legal Insights for Spanish Companies in Turkey</video:title>
+       <video:description>Essential legal insights and procedures for Spanish businesses operating, investing, or trading in the Turkish market.</video:description>
+       <video:player_loc>https://www.youtube.com/embed/WwEgF4gRQl0</video:player_loc>
+       <video:publication_date>2026-06-30</video:publication_date>
+     </video:video>
+   </url>
 </urlset>

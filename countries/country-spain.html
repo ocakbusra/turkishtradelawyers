@@ -869,6 +869,61 @@
         .faq-item.active .faq-answer {
             max-height: 500px; 
         }
+
+        /* Scroll Reveal Advanced System */
+        .reveal {
+            opacity: 0;
+            will-change: transform, opacity, filter;
+        }
+
+        .reveal.active {
+            opacity: 1 !important;
+            transform: translate(0, 0) scale(1) !important;
+            filter: blur(0) !important;
+        }
+
+        /* Slide Up (default) */
+        .reveal-up {
+            transform: translateY(60px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Slide from Left */
+        .reveal-left {
+            transform: translateX(-80px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Slide from Right */
+        .reveal-right {
+            transform: translateX(80px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Scale Up with Fade */
+        .reveal-scale {
+            transform: scale(0.9);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Blur Fade In */
+        .reveal-blur {
+            transform: translateY(30px);
+            filter: blur(8px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Stagger delays via CSS custom property */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
     </style>
 
     <!-- Breadcrumbs & Schema ... -->
@@ -1250,6 +1305,40 @@
                 </div>
             </div>
 
+            <!-- Video Section -->
+            <div class="video-section-wrapper" style="margin-top: 80px;">
+                <div class="section-header center">
+                    <h2 class="section-title">Insights for Spanish Companies</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 0;">Essential legal insights for Spanish investors and businesses operating in Türkiye.</p>
+                </div>
+                
+                <div style="display: flex; justify-content: center; margin-top: 40px;">
+                    <div style="width: 100%; max-width: 315px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 32px rgba(30, 58, 138, 0.08); border: 1px solid #E5E7EB; background: var(--bg-white);">
+                        <iframe width="315" height="560" src="https://www.youtube.com/embed/WwEgF4gRQl0" title="Legal Insights for Spanish Companies in Turkey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display: block; width: 100%;"></iframe>
+                    </div>
+                </div>
+
+                <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "VideoObject",
+                  "name": "Legal Insights for Spanish Companies in Turkey",
+                  "description": "Essential legal insights and procedures for Spanish businesses operating, investing, or trading in the Turkish market.",
+                  "thumbnailUrl": "https://i.ytimg.com/vi/WwEgF4gRQl0/maxresdefault.jpg",
+                  "uploadDate": "2026-06-30T08:00:00+03:00",
+                  "embedUrl": "https://www.youtube.com/embed/WwEgF4gRQl0",
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Turkish Trade Lawyers",
+                    "logo": {
+                      "@type": "ImageObject",
+                      "url": "https://www.turkishtradelawyers.com/logo-square.png"
+                    }
+                  }
+                }
+                </script>
+            </div>
+
             <!-- Bottom Contact Form -->
             <div class="bottom-contact-wrapper" style="margin-top: 80px; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; display: block;">
                 <div class="section-header" style="margin-bottom: 30px; text-align: center;">
@@ -1298,35 +1387,44 @@
                 });
             });
 
-            // Scroll Animation Logic
-            const scrollElements = document.querySelectorAll('.bottom-contact-wrapper, .hero-text-content, .hero-side-image, .services-sticky-left, .hub-card, .scenario-card, .supply-chain-content, .supply-chain-visual, .safeguard-item, .pricing-card, .mission-item, .modern-table-wrapper, .section-header, .faq-item');
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const pageObserver = new IntersectionObserver((entries, observer) => {
+            // === Enhanced Scroll Reveal Animation System ===
+            const revealMap = [
+                { selector: '.hero-text-content',       anim: 'reveal-left' },
+                { selector: '.hero-side-image',          anim: 'reveal-right' },
+                { selector: '.section-header',           anim: 'reveal-blur' },
+                { selector: '.services-sticky-left',     anim: 'reveal-left' },
+                { selector: '.hub-card',                 anim: 'reveal-scale',  stagger: true },
+                { selector: '.scenario-card',            anim: 'reveal-up',     stagger: true },
+                { selector: '.supply-chain-content',     anim: 'reveal-left' },
+                { selector: '.supply-chain-visual',      anim: 'reveal-right' },
+                { selector: '.safeguard-item',           anim: 'reveal-up',     stagger: true },
+                { selector: '.pricing-card',             anim: 'reveal-scale',  stagger: true },
+                { selector: '.mission-item',             anim: 'reveal-up',     stagger: true },
+                { selector: '.modern-table-wrapper',     anim: 'reveal-blur' },
+                { selector: '.faq-item',                 anim: 'reveal-up',     stagger: true },
+                { selector: '.video-section-wrapper',    anim: 'reveal-up' },
+                { selector: '.bottom-contact-wrapper',   anim: 'reveal-scale' }
+            ];
+
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        observer.unobserve(entry.target);
+                        entry.target.classList.add('active');
+                        obs.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-            scrollElements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(40px)';
-                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)';
-                
-                // Add staggered delay based on DOM order for grid items
-                if (el.classList.contains('hub-card') || el.classList.contains('scenario-card') || el.classList.contains('pricing-card') || el.classList.contains('mission-item') || el.classList.contains('faq-item')) {
-                     el.style.transitionDelay = `${(index % 4) * 0.1}s`;
-                }
-                
-                pageObserver.observe(el);
+            revealMap.forEach(({ selector, anim, stagger }) => {
+                const els = document.querySelectorAll(selector);
+                els.forEach((el, i) => {
+                    el.classList.add('reveal', anim);
+                    if (stagger) {
+                        const delayClass = 'reveal-delay-' + ((i % 4) + 1);
+                        el.classList.add(delayClass);
+                    }
+                    observer.observe(el);
+                });
             });
         });
     </script>
