@@ -649,6 +649,15 @@ const glossaryData = [
         relatedTerms: ["branch-office", "company-formation", "limited-sirket"]
     },
     {
+        id: "stamp-duty",
+        term: "Stamp Duty",
+        trTerm: "Damga Vergisi",
+        question: "What is Stamp Duty (Damga Vergisi) and how are the 2026 rates applied in Turkey?",
+        excerpt: "Stamp Duty (Damga Vergisi) is levied on documents evidencing legal transactions. In 2026, commercial contracts are taxed at 9.48 per mille, lease agreements at 1.89 per mille, and salary payments at 7.59 per mille. All signatories are jointly and severally liable.",
+        tags: ["tax-law", "contract-law"],
+        relatedTerms: ["corporate-tax", "withholding-tax", "vat-turkey", "double-tax-treaty"]
+    },
+    {
         id: "supply-agreement",
         term: "Supply Agreement",
         trTerm: "Tedarik Sözleşmesi",
