@@ -283,9 +283,39 @@
                         </div>
 
                         <div class="service-sidebar-card glass-card" style="padding: 24px;">
-                            <h3 style="margin-top:0;">Ready to Setup a Business?</h3>
-                            <p style="font-size: 0.9rem; line-height: 1.6;">Our corporate lawyers handle the entire company formation process from A to Z.</p>
-                            <a href="contact.html" class="btn btn-primary-new" style="display: block; text-align: center; margin-top: 1rem;">Schedule Consultation</a>
+                            <h3 style="margin-top:0;">Typical Needs</h3>
+                            <ul class="service-checklist">
+                                <li>Establishing a JSC or LLC from scratch</li>
+                                <li>Branch or liaison office registration</li>
+                                <li>Free zone company setup</li>
+                                <li>Sector-specific licensing (mining, EV, defense)</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-sidebar-card glass-card sidebar-form-card" style="padding: 24px;">
+                            <h3 style="margin-top:0;">Discuss Your Setup</h3>
+                            <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.25rem;">Provide preliminary details for a confidential consultation with our corporate team.</p>
+                            <form class="sidebar-lead-form" action="https://formsubmit.co/info@turkishtradelawyers.com" method="POST">
+                                <input type="hidden" name="_subject" value="Business Setup Inquiry">
+                                <input type="hidden" name="_captcha" value="false">
+                                <div class="form-group">
+                                    <label for="sb-name">Name</label>
+                                    <input type="text" id="sb-name" name="name" placeholder="Full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sb-email">Corporate Email</label>
+                                    <input type="email" id="sb-email" name="email" placeholder="name@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sb-entity">Preferred Entity Type</label>
+                                    <input type="text" id="sb-entity" name="entity_type" placeholder="e.g. LLC, JSC, Branch">
+                                </div>
+                                <div class="form-group sidebar-form-details">
+                                    <label for="sb-details">Brief Project Details (Optional)</label>
+                                    <textarea id="sb-details" name="project_details"></textarea>
+                                </div>
+                                <button type="submit" class="sidebar-form-submit">Request Consultation</button>
+                            </form>
                         </div>
                     </div>
                 </aside>
