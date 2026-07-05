@@ -330,11 +330,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="footer-grid" role="navigation" aria-label="Footer">
                 <div class="footer-col">
                     <h4>Services</h4>
-                    <a href="${basePath}corporate-investment-services-turkey.html">Corporate and Investment Services in Turkey</a>
+                    <a href="${basePath}setup-a-business-in-turkey.html">Setup a Business in Turkey</a>
                     <a href="${basePath}international-trade-customs-services-turkey.html">International Trade and Customs Services in Turkey</a>
                     <a href="${basePath}commercial-contract-services-turkey.html">Commercial Contract Services in Turkey</a>
                     <a href="${basePath}compliance-data-protection-services-turkey.html">Compliance and Data Protection Services in Turkey</a>
-                    <a href="${basePath}dispute-resolution-services-turkey.html">Dispute Resolution Services in Turkey</a>
+                    <a href="${basePath}dispute-resolution-in-turkey.html">Dispute Resolution in Turkey</a>
                     <a href="${basePath}employment-mobility-services-turkey.html">Employment and Mobility Services in Turkey</a>
                 </div>
 

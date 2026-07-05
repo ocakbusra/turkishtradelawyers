@@ -5362,16 +5362,19 @@ img[loading="lazy"][src] {
    Full-Width Content Section (below 2-column layout)
    ========================================================================== */
 
-.debt-fullwidth-section {
+.debt-fullwidth-section,
+.dispute-fullwidth-section {
     padding: 3rem 0 4rem;
 }
 
-.debt-fullwidth-inner {
+.debt-fullwidth-inner,
+.dispute-fullwidth-inner {
     max-width: 900px;
     margin: 0 auto;
 }
 
-.debt-fullwidth-inner h2 {
+.debt-fullwidth-inner h2,
+.dispute-fullwidth-inner h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #0F172A;
@@ -5379,11 +5382,13 @@ img[loading="lazy"][src] {
     margin-bottom: 1.5rem;
 }
 
-.debt-fullwidth-inner h2:first-child {
+.debt-fullwidth-inner h2:first-child,
+.dispute-fullwidth-inner h2:first-child {
     margin-top: 0;
 }
 
-.debt-fullwidth-inner > p {
+.debt-fullwidth-inner > p,
+.dispute-fullwidth-inner > p {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.65;
