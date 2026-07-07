@@ -1,0 +1,410 @@
+import re
+
+with open('setup-a-business-in-turkey.html', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+idx_main_start = content.find('<div class="service-main-content">')
+idx_aside = content.find('<!-- End of 2-column left column -->')
+idx_fullwidth_start = content.find('<div class="container debt-fullwidth-inner">')
+idx_fullwidth_end = content.find('<div class="article-cta"')
+
+new_main_content = """<div class="service-main-content">
+                    
+                    <!-- GEO Definition Block -->
+                    <div class="glass-card intro-card" style="margin-bottom: 2rem;">
+                        <h2 id="definition">What Is Company Formation in Turkey?</h2>
+                        <p>Company formation in Turkey is the legal process by which foreign investors and international businesses establish a formal corporate presence under the <strong>Turkish Commercial Code (TCC) No. 6102</strong> and the <strong>Foreign Direct Investment Law No. 4875</strong>. A qualified corporate formation lawyer in Turkey coordinates the entire process — from selecting the appropriate entity type (Joint-Stock Company, Limited Liability Company, Branch, or Liaison Office) to completing Trade Registry enrollment, tax registration, and Social Security Institution (SGK) notifications — ensuring full compliance and operational readiness.</p>
+                    </div>
+
+                    <!-- Strategic Overview Card -->
+                    <div class="glass-card intro-card" style="margin-bottom: 2rem;">
+                        <h2>Strategic Market Entry for International Investors</h2>
+                        <p>The strategic geographical position of Turkey, acting as a crossroads between Europe, Asia, and the Middle East, makes it an attractive hub for international trade, logistics, manufacturing, and technology sectors. Furthermore, the <strong>Turkish Foreign Direct Investment Law No. 4875</strong> guarantees that foreign investors are subject to equal treatment with domestic investors, allowing 100% foreign ownership without the mandatory requirement of a local sponsor or partner.</p>
+                        <p>This guide details every corporate vehicle available under Turkish law — from Joint-Stock and Limited Liability Companies to Free Zone Branches and Liaison Offices — and provides practical guidance on corporate governance, BPO services, and sector-specific licensing.</p>
+                    </div>
+
+                    <!-- Section 1: Company Formation Options -->
+                    <h2 id="formation">1. Company Formation in Turkey: An Overview</h2>
+                    <p>The strategic geographical position of Turkey, acting as a crossroads between Europe, Asia, and the Middle East, makes it an attractive hub for international trade, logistics, manufacturing, and technology sectors. Furthermore, the <strong>Turkish Foreign Direct Investment Law No. 4875</strong> guarantees that foreign investors are subject to equal treatment with domestic investors. This fundamental principle ensures that foreign individuals and corporate entities can establish companies with 100% foreign ownership without the mandatory requirement of a local sponsor or partner—a significant advantage compared to many other jurisdictions in the region.</p>
+                    <p>The comprehensive <strong>Turkish Commercial Code (TCC) No. 6102</strong> governs every aspect of commercial enterprise, providing a modern, transparent, and European-aligned legal framework. The TCC emphasizes corporate governance, auditing standards, and minority shareholder protections, making it highly predictable for international capital. Investors typically choose between Capital Companies (such as Joint Stock Companies and Limited Liability Companies) and General Partnerships. However, Capital Companies are overwhelmingly preferred due to their robust liability protections, structured governance, and scalability.</p>
+                    
+                    <div class="glass-card intro-card" style="margin-bottom: 2.5rem;">
+                        <h3>Differences Between General Partnerships and Capital Companies in Turkey</h3>
+                        <p style="margin-bottom: 1.5rem; line-height: 1.8;">Before diving into specific corporate structures, it is absolutely crucial to understand the fundamental legal divergence between General Partnerships and Capital Companies under Turkish law. This distinction dictates the level of risk exposure that investors face when operating a business.</p>
+                        <ul class="service-checklist" style="gap: 1.5rem;">
+                            <li><strong>Capital Companies (Sermaye Şirketleri):</strong> Include Joint Stock Companies (A.Ş.) and Limited Liability Companies (Ltd. Şti.). In these structures, the personal assets of the shareholders are strictly protected by the corporate veil. Their liability towards the company's public and private debts is generally limited only to the amount of capital they have committed to contribute. This means creditors cannot pursue the personal bank accounts or real estate of the shareholders if the company fails (with specific exceptions for public tax/SSI debts in LLCs, where shareholders may be held liable if the company cannot pay). This limited risk profile is the primary reason why foreign direct investment almost exclusively flows into Capital Companies.</li>
+                            <li><strong>General Partnerships (Şahıs Şirketleri):</strong> Include Ordinary Partnerships (Kollektif Şirket) and Commandite Partnerships. In a General Partnership, the entity does not provide a robust corporate shield. The partners bear unlimited, joint, and several liability for all the debts and obligations of the partnership using their entire personal wealth. If the partnership incurs a debt it cannot pay, creditors can directly seize the personal assets of the individual partners. Because of this exceptionally high-risk profile, foreign corporate investors and international entrepreneurs avoid general partnerships entirely, favoring the security of capital companies.</li>
+                        </ul>
+                        <p style="margin-top: 1.5rem; line-height: 1.8;">Furthermore, Capital Companies benefit from established regulatory precedents regarding mergers, acquisitions, and public offerings. General partnerships lack these sophisticated mechanisms, rendering them unsuitable for scalable business models or enterprises seeking external venture capital funding.</p>
+                    </div>
+                </div>
+                """
+
+new_fullwidth_content = """<div class="container debt-fullwidth-inner">
+
+                <!-- Section 2: JSC vs LLC -->
+                <h2 id="jsc-vs-llc">2. Key Differences Between Joint Stock Company (JSC) and Limited Liability Company (LLC) (2025/2026 Update)</h2>
+                <p>Are you choosing between a Joint Stock Company (JSC) and a Limited Liability Company (LLC) to set up a company in Turkey? This updated guide outlines the essential differences in legal structure, capital requirements, liability, taxation, and fundraising potential—helping you decide which entity best suits your business goals.</p>
+
+                <!-- Tabs for JSC vs LLC -->
+                <div class="legal-tabs-wrapper">
+                    <div class="legal-tabs-header">
+                        <button class="legal-tab-btn active" data-tab="jsc-details">Joint Stock Company (JSC - A.Ş.)</button>
+                        <button class="legal-tab-btn" data-tab="llc-details">Limited Liability Company (LLC - Ltd. Şti.)</button>
+                        <button class="legal-tab-btn" data-tab="jsc-llc-comparison">Comparison Summary</button>
+                    </div>
+
+                    <div class="legal-tab-content active glass-card" id="jsc-details">
+                        <h3 style="margin-top:0;">Establishing a Joint-Stock Company (Anonim Şirket) in Turkey</h3>
+                        <p>A Joint-Stock Company (JSC) is the most prestigious and robust corporate structure available under Turkish law. It is the preferred structure for large-scale operations, manufacturing hubs, financial institutions, and ambitious companies that intend to eventually go public or raise substantial venture capital. In fact, certain strictly regulated sectors—such as banking, insurance, financial leasing, and electric vehicle (EV) charging networks—legally mandate the JSC structure.</p>
+                        <ul class="service-checklist">
+                            <li><strong>Minimum Capital Requirements:</strong> The minimum share capital has been significantly increased to 250,000 TRY for the basic capital system, or 500,000 TRY if adopting the registered capital system. Crucially, at least 25% of this nominal capital must be deposited into a blocked bank account prior to official registration at the Trade Registry. The remaining 75% must be paid within 24 months.</li>
+                            <li><strong>Shareholder Structure:</strong> A JSC can be established with a minimum of one shareholder, which can be either a real person or a legal entity (domestic or foreign). There is no upper limit to the number of shareholders.</li>
+                            <li><strong>Corporate Management:</strong> The JSC is managed and represented by a Board of Directors (Yönetim Kurulu). Directors do not legally have to be shareholders of the company, allowing for the appointment of independent, professional management teams.</li>
+                            <li><strong>Absolute Protection from Public Debts:</strong> One of the most significant advantages of a JSC is that shareholders are completely shielded from the company's public debts (such as unpaid taxes and social security premiums), provided they have fulfilled their commitment to pay their capital share. Only the acting Board Members face personal liability for the company's unpaid public obligations.</li>
+                            <li><strong>Confidential and Seamless Share Transfers:</strong> Shares in a JSC can be transferred freely simply by the endorsement and physical delivery of printed share certificates (or via electronic transfer for publicly traded entities). Unlike an LLC, share transfers in a JSC do not require a Notary Public's involvement, nor do they require approval or registration by the Trade Registry. This ensures absolute privacy regarding the ownership structure.</li>
+                            <li><strong>Mandatory Legal Counsel:</strong> Under the Turkish Attorneys' Act, any Joint Stock Company with a foundational capital exceeding 1,250,000 TRY is legally mandated to retain a contracted lawyer (Sözleşmeli Avukat). Failure to do so results in severe monthly administrative fines.</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-tab-content glass-card" id="llc-details">
+                        <h3 style="margin-top:0;">Establishing a Limited Liability Company (Limited Şirket) in Turkey</h3>
+                        <p>A Limited Liability Company (LLC) is by far the most common corporate entity chosen by small to medium-sized enterprises (SMEs), tech startups, service providers, and local trading companies. It offers a much simpler, highly flexible governance structure compared to a JSC, but it carries distinct and serious liabilities for shareholders regarding public debts.</p>
+                        <ul class="service-checklist">
+                            <li><strong>Minimum Capital Requirements:</strong> The minimum share capital for an LLC was recently increased to 50,000 TRY. A major advantage of the LLC structure is that the requirement to pay 25% of the capital prior to registration was completely abolished. The entire committed capital can be paid within 24 months of incorporation, meaning no upfront bank blockage is required.</li>
+                            <li><strong>Shareholder Structure:</strong> An LLC can be established with a minimum of one shareholder and a strict maximum of 50 shareholders. Like a JSC, shareholders can be real persons or foreign legal entities.</li>
+                            <li><strong>Corporate Management:</strong> The company is managed and legally represented by one or more Managers (Müdür or Müdürler Kurulu). Unlike a JSC, Turkish law dictates that at least one Manager must also be a shareholder of the LLC.</li>
+                            <li><strong>Liability for Public Debts:</strong> This is a critical risk factor. In an LLC, if the company defaults on public debts (taxes, customs duties, social security premiums) and the assets of the company and the managers are insufficient to cover them, the Shareholders become personally liable using their private assets. This liability is calculated in direct proportion to their percentage of shareholding in the company.</li>
+                            <li><strong>Strict Share Transfer Procedures:</strong> Transferring shares in an LLC is a highly formal and bureaucratic process. It requires executing a Share Transfer Agreement in the physical presence of a Turkish Notary Public. Subsequently, the transfer must be approved by the General Assembly of Shareholders, registered with the local Trade Registry, and officially published in the Trade Registry Gazette. Consequently, all ownership changes in an LLC become public record.</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-tab-content glass-card" id="jsc-llc-comparison">
+                        <h3 style="margin-top:0;">Which Should You Choose? The Ultimate Verdict</h3>
+                        <p>Choosing between a JSC and an LLC is the most critical foundational decision you will make when entering the Turkish market. The choice ultimately depends on your investment scale, privacy requirements, and risk appetite regarding public debts.</p>
+                        <p>If you prioritize <strong>absolute confidentiality of share transfers</strong>, comprehensive <strong>protection of shareholders from public debts</strong>, and the <strong>future ability to go public or raise institutional capital</strong>, the Joint Stock Company (JSC) is unequivocally the superior choice. Despite the higher initial capital requirements and the necessity of blocking 25% of funds upfront, the legal protections it offers to investors are unparalleled.</p>
+                        <p>Conversely, if you prefer <strong>lower initial capital requirements</strong>, the immense cash flow advantage of having <strong>no immediate capital blockage at the bank</strong>, and simpler, less formal general assembly procedures, the Limited Liability Company (LLC) is highly effective and cost-efficient for standard commercial operations. Just remain acutely aware of the personal liability risks associated with unpaid company taxes.</p>
+                    </div>
+                </div>
+
+                <!-- Section 4: Free Zones -->
+                <h2 id="free-zones" style="margin-top: 3.5rem;">4. Free Zone Branch Establishment in Turkey</h2>
+                <p>Turkey boasts 19 specialized Free Zones specifically designed to promote export-oriented investment, facilitate international trade, and attract foreign direct investment. Establishing a Free Zone Branch enables a foreign company to conduct commercial and manufacturing activities within a designated free zone without incorporating a separate legal entity in the mainland.</p>
+                <div class="glass-card intro-card" style="margin-top: 1.5rem;">
+                    <p style="margin-bottom: 1.5rem;">The branch operates under the legal identity of the parent company but is subject to the unique, highly advantageous Free Zones regulatory framework. Free Zones in Turkey offer exceptional, unparalleled incentives for manufacturers and exporters:</p>
+                    <ul class="service-checklist" style="gap: 1.2rem;">
+                        <li><strong>100% Corporate Tax Exemption:</strong> Total exemption on manufacturing income generated within the zone, dramatically increasing net profitability.</li>
+                        <li><strong>Total Income Tax Exemption for Employees:</strong> If the company exports at least 85% of its FOB production value out of Turkey, the salaries of all employees working within the free zone are 100% exempt from income tax, massively reducing payroll costs.</li>
+                        <li><strong>Customs Duties & VAT Exemption:</strong> Goods and raw materials brought into the zone from abroad are entirely free of customs duties, Value Added Tax (VAT), and the KKDF (Resource Utilization Support Fund). This allows for highly competitive import-export operations.</li>
+                        <li><strong>Unrestricted Profit Repatriation:</strong> Earnings and revenues generated in the Free Zone can be freely transferred to mainland Turkey or repatriated abroad without requiring any prior government permission or facing capital controls.</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem;">Setting up in a Free Zone requires obtaining an Operating License (Faaliyet Ruhsatı) from the Ministry of Trade, presenting a detailed business plan, leasing or buying property in the zone, and finalizing the trade registry incorporation. The application process is highly scrutinized to ensure the business aligns with Turkey's export goals.</p>
+                </div>
+
+                <!-- Section 5: Bank Accounts -->
+                <h2 id="bank-accounts" style="margin-top: 3.5rem;">5. Open a Corporate Bank Account in Turkey</h2>
+                <p>Opening a corporate bank account is a non-negotiable prerequisite for JSC capital blockage and ongoing operational funding. Due to stringent global Anti-Money Laundering (AML) and Know Your Customer (KYC) regulations, Turkish banks implement highly rigorous due diligence processes for foreign-owned entities. Navigating this bureaucracy requires expert local counsel.</p>
+                
+                <div class="legal-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 1: Obtain Potential Tax IDs</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Before a bank will even open a file, foreign corporate shareholders and non-resident foreign directors must obtain a Potential Tax Identification Number (Potansiyel Vergi Numarası) from the Turkish Tax Authority. This critical step can often be completed online via the Interactive Tax Office or physically via a granted power of attorney.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 2: Submit Corporate Documents (KYC)</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>The bank's compliance department requires the draft Articles of Association, the Trade Registry Gazette (if already formed), a Notarized Signature Circular (imza sirküleri), and the Notarized Passports of the ultimate beneficial owners (UBO) and directors. Any documents originating outside of Turkey must be formally Apostilled (or legalized by a Turkish consulate) and officially translated into Turkish.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 3: Capital Blockage (JSC Only)</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>For Joint Stock Companies, a temporary, blocked bank account is opened. The shareholders deposit 25% of their committed capital into this account. The bank then issues an official blockage letter addressed to the Trade Registry, proving the funds are secured. Without this letter, the JSC cannot be incorporated.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 4: Account Activation & Internet Banking</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Once the company is officially registered, the final Trade Registry Gazette is submitted to the bank branch. The blocked capital is subsequently unblocked, and the account transitions to a fully operational commercial account. Finally, physical tokens and internet banking credentials are issued to the authorized signatories.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6: Corporate Governance -->
+                <h2 id="corporate-governance" style="margin-top: 3.5rem;">6. Corporate Governance: Meeting and Decision Quorums in Limited Companies</h2>
+                <p>Governance in a Turkish LLC relies heavily on the General Assembly of Shareholders and the Board of Managers. Understanding the quorums is vital to prevent corporate deadlock.</p>
+
+                <div class="glass-card intro-card" style="margin-top: 2rem;">
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 1rem; margin-bottom: 2rem;">
+                        <h3>General Rule (Article 620 of the Turkish Commercial Code)</h3>
+                        <p style="margin-bottom: 0;">Unless otherwise stipulated by the TCC or the articles of association, all decisions of the General Assembly, including election decisions, shall be taken by an <strong>absolute majority of the votes represented at the meeting</strong>.</p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--accent-color); padding-left: 1rem;">
+                        <h3>Important Decisions (Article 621 of the Turkish Commercial Code)</h3>
+                        <p style="margin-bottom: 1rem;">To protect minority shareholders, the TCC mandates a higher quorum for fundamental structural changes. The following decisions require at least <strong>two-thirds of the represented votes AND an absolute majority of the total capital</strong> of the company:</p>
+                        <ul class="service-checklist">
+                            <li>Amending the scope of the enterprise (company purpose).</li>
+                            <li>Creating shares with privileged voting rights.</li>
+                            <li>Restricting the transfer of registered shares.</li>
+                            <li>Increasing the share capital.</li>
+                            <li>Approving mergers, demergers, or conversion of the company type.</li>
+                            <li>Filing for voluntary liquidation of the company.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 7: BPO & Secretarial -->
+                <h2 id="bpo-secretarial" style="margin-top: 3.5rem;">7. BPO Services and Corporate Secretarial Services in Turkey</h2>
+                <p>Operating a business in Turkey requires strict compliance with corporate governance regulations. Outsourcing non-core functions allows foreign investors to mitigate risk, unlock efficiency, and focus on growth.</p>
+
+                <div class="flip-cards-grid" style="margin-top: 2rem;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>BPO Services in Turkey</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Strategic Advantage</h4>
+                                <p>Business Process Outsourcing (BPO) leverages Turkey's strategic location, skilled workforce, and competitive costs. Key advantages include favorable labor/FX dynamics, deep pools of multi-lingual tech talent, and streamlined payroll/HR management.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-file-signature"></i>
+                                <h4>Corporate Secretarial</h4>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Statutory Compliance</h4>
+                                <p>We ensure seamless TCC compliance through management of General Meetings, drafting Board Resolutions, executing Trade Registry filings, preserving Statutory Books, and executing capital increases or address changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 8: Specialized Licensing -->
+                <h2 id="licensing" style="margin-top: 3.5rem;">8. Specialized Sector Licensing and Permits</h2>
+                <p>Certain highly regulated industries in Turkey require extensive permitting beyond standard company formation. Our administrative law team handles the complex bureaucracy of these sectors.</p>
+                
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 2rem;">
+                    
+                    <div class="glass-card procedure-card new-design-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><i class="fas fa-mountain"></i></div>
+                            <h3>Mining Exploration & Licensing</h3>
+                        </div>
+                        <p>Regulated by the General Directorate of Mining and Petroleum Affairs (MAPEG). The Turkish Mining Law categorizes minerals into specific groups, each requiring tailored licensing procedures. Companies seeking to explore and extract minerals must undergo a rigorous tender process or apply for vacant licenses. Before commencing operations, mining companies must secure comprehensive environmental impact assessments (EIA/ÇED reports), forestry permits from the Ministry of Agriculture and Forestry, workplace opening permits from local municipalities, and property usage rights.</p>
+                    </div>
+
+                    <div class="glass-card procedure-card new-design-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><i class="fas fa-charging-station"></i></div>
+                            <h3>EV Charging Station Licensing</h3>
+                        </div>
+                        <p>As the demand for electric vehicles grows exponentially, establishing a charging network in Turkey has become a highly lucrative investment. The sector is strictly governed by the Energy Market Regulatory Authority (EPDK). Applicants must be incorporated as a Joint Stock Company (JSC) or Limited Liability Company (LLC) with a significantly high minimum capital. Furthermore, operators must secure trademark registrations for their network brand, provide a highly sophisticated and interoperable IT infrastructure that complies with national roaming standards, and ensure that all physical charging stations strictly adhere to the TSE electrical safety protocols.</p>
+                    </div>
+
+                    <div class="glass-card procedure-card new-design-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Defense Industry Permits</h3>
+                        </div>
+                        <p>The defense industry is crucial for national security, independence, and technological advancement. Regulated heavily by the Ministry of National Defense (MSB) under Law No. 5202, companies manufacturing weapons, military vehicles, strategic software, or dual-use goods must undergo an intensely rigorous permitting process. This involves exhaustive background checks on shareholders and key personnel to obtain NATO or National Secret clearances. Facilities must undergo physical security audits to obtain a "Facility Security Clearance" (Tesis Güvenlik Belgesi) before any official Production Permit (Üretim İzni) can be applied for.</p>
+                    </div>
+
+                    <div class="glass-card procedure-card new-design-card">
+                        <div class="card-header-flex">
+                            <div class="card-icon-box"><i class="fas fa-industry"></i></div>
+                            <h3>Industrial Capacity Reports</h3>
+                        </div>
+                        <p>The industrial sector forms the backbone of Turkey's export economy. Industrial facilities and manufacturing plants must obtain a Capacity Report (Kapasite Raporu) from the Union of Chambers and Commodity Exchanges of Turkey (TOBB) to operate legally and effectively. This comprehensive report meticulously quantifies the facility's machinery park, annual raw material consumption needs, labor force, and theoretical production capacity. Holding a valid Capacity Report is a mandatory prerequisite for obtaining an Industrial Registry Certificate (Sanayi Sicil Belgesi) and unlocking access to critical government benefits like investment incentive certificates.</p>
+                    </div>
+                </div>
+
+                <!-- Section 9: FAQ -->
+                <h2 id="faq" style="margin-top: 4rem;">9. Frequently Asked Questions: Setup a Business in Turkey</h2>
+                
+                <div class="legal-accordion" style="margin-top: 2rem;">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What are the main types of companies in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The main types of companies are Joint Stock Companies (JSC - Anonim Şirket) and Limited Liability Companies (LLC - Limited Şirket). Branches and Liaison Offices are also highly common for foreign investors seeking a presence without incorporating a brand-new subsidiary. A Joint Stock Company is generally preferred for larger investments, manufacturing operations, and businesses that may eventually go public. A Limited Liability Company is typically chosen for SMEs, software startups, and trading businesses due to its slightly lower initial capital requirements and less formal corporate governance structure.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is the minimum capital for a Limited Liability Company (LLC) in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The minimum share capital for a Limited Liability Company in Turkey was recently increased to 50,000 TRY. One of the greatest advantages of forming an LLC is that the entire amount can be paid within 24 months of the official registration date; absolutely no upfront bank deposit or capital blockage is required prior to incorporation. This provides immense cash-flow flexibility for startups in their crucial first year of operation.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is the minimum capital for a Joint Stock Company (JSC) in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The minimum share capital for a standard Joint Stock Company is 250,000 TRY. If the company decides to adopt a registered capital system, the minimum initial capital requirement doubles to 500,000 TRY. Importantly, at least 25% of this nominal capital must be physically deposited into a blocked corporate bank account prior to registration at the Trade Registry. The remaining 75% can be paid over the next 24 months in installments determined by the Board of Directors.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Can a foreign national own 100% of a company in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Absolutely. Under the progressive Turkish Foreign Direct Investment Law, foreign nationals and foreign corporate entities can own 100% of the shares in a Turkish JSC or LLC without requiring any local Turkish partner, sponsor, or silent shareholder. The law guarantees that foreign investors are treated exactly the same as domestic investors, allowing full repatriation of profits and dividends to their home countries without restriction.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How long does it take to establish a company in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The actual physical Trade Registry process takes only 2 to 3 business days once all paperwork is filed. However, gathering the necessary documents from abroad, drafting the bespoke Articles of Association, and getting foreign passports or corporate resolutions officially Apostilled, translated, and notarized in Turkey generally extends the end-to-end timeline to 1 to 2 weeks. The timeline largely depends on how quickly the parent company can courier the notarized documents.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Is a local director required for an LLC in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>No, a local Turkish citizen is not strictly required by law to be a director (Manager). A foreign national living completely outside of Turkey can act as the sole manager of the company. However, from a practical standpoint, it is highly recommended to have a local representative or assign a local proxy. This is because tax authorities, social security offices, and local banks frequently require physical signatures or in-person visits to resolve bureaucratic issues, which can be difficult to manage from abroad.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How do I open a corporate bank account in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>To open a bank account, you must first obtain a potential tax ID for the company and its foreign directors. You then submit the draft company's articles of association, the official trade registry gazette, signature circulars, and the directors' notarized passports (or residence permits) to a Turkish bank. Because of global AML/KYC regulations, compliance procedures for foreign-owned entities are thorough and banks may require extensive documentation proving the source of funds and the ultimate beneficial owners (UBO).</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What are Free Zones in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Free Zones are special fenced-in geographical areas located outside the standard Turkish customs territory. They offer massive financial incentives designed to boost exports. These include 100% Corporate Tax exemption on manufacturing income, sweeping VAT and Customs duties exemptions on imported machinery and raw materials, and Income Tax exemptions on employee salaries for businesses that export at least 85% of their production. They are highly lucrative for foreign manufacturers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is a Liaison Office in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>A Liaison Office cannot engage in any commercial, revenue-generating activities under any circumstances. It is strictly used for conducting market research, performing feasibility studies, communicating with local suppliers, and promoting the foreign parent company's brand. Because it generates no revenue, it is entirely exempt from Corporate Tax, and all funding must come directly from the parent company's foreign bank accounts.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What are the quorums for LLC General Assemblies in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>According to TCC Article 620, standard general decisions require an absolute majority of the votes represented at the meeting. However, Article 621 dictates that fundamentally important decisions—such as changing the company's core purpose, increasing capital, approving mergers, or severely restricting share transfers—require at least two-thirds of the represented votes AND an absolute majority of the total capital of the company. This strict requirement prevents hostile takeovers and protects minority shareholders.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What are Corporate Secretarial Services in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Corporate Secretarial Services involve the professional administrative management of a company's strict statutory obligations. This complex service includes legally organizing annual General Assembly meetings, meticulously drafting Board of Directors' resolutions, managing Trade Registry filings for address changes or capital increases, and accurately maintaining the mandatory statutory books as required by the Turkish Commercial Code to avoid severe penalties.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Do I need a Capacity Report for industrial production?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Yes. An Industrial Capacity Report from the Union of Chambers (TOBB) is legally required for all active manufacturers in Turkey. It officially registers your specific machinery park and calculates theoretical production capacity. Holding this report is the key to benefiting from lucrative industrial investment incentives, accessing discounted utility and electricity rates, and securing export quotas for raw materials.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            How to get an Electric Vehicle (EV) Charging Station License in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>You must first incorporate a robust JSC or LLC in Turkey. Following incorporation, you submit an extensive application to the Energy Market Regulatory Authority (EPDK). This process mandates fulfilling extremely high minimum capital requirements, deploying an interoperable IT infrastructure (to support national roaming capabilities), and ensuring that all physical charging hardware strictly meets the rigorous safety protocols established by the Turkish Standards Institute (TSE).</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What are the defense industry production permits in Turkey?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Entities producing military equipment, advanced defense software, or dual-use technological goods must obtain a Facility Security Clearance and a Production Permit from the Ministry of National Defense (MSB). This heavily bureaucratic process involves rigorous physical security audits of the manufacturing site and intense background checks on all shareholders and key personnel to secure NATO or National Secret clearances before any production can legally begin.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            What is the difference between General Partnerships and Capital Companies?
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>The core difference lies in liability. In Capital Companies (JSC/LLC), a shareholder's financial risk is strictly limited to the capital they committed to the company, shielding their personal wealth. In General Partnerships, the partners bear unlimited, joint, and several liability for the company's debts, meaning creditors can seize their personal assets. Therefore, Capital Companies are overwhelmingly preferred by both domestic and foreign investors seeking to minimize risk exposure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-cta" style="margin-top: 2rem;">
+"""
+
+new_content = content[:idx_main_start] + new_main_content + content[idx_aside:idx_fullwidth_start] + new_fullwidth_content + content[idx_fullwidth_end:]
+
+with open('setup-a-business-in-turkey.html', 'w', encoding='utf-8') as f:
+    f.write(new_content)

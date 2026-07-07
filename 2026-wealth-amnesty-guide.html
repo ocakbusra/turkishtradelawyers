@@ -53,6 +53,147 @@
     <link rel="icon" href="logo-square.png" type="image/png">
     <link rel="apple-touch-icon" href="logo-square.png">
     <link rel="canonical" href="https://www.turkishtradelawyers.com/2026-wealth-amnesty-guide.html">
+    <style>
+        .guide-download-box {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border: 1px solid #dbe4f0;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #f8fbff 0%, #eef4ff 100%);
+            box-shadow: 0 12px 32px rgba(26, 39, 66, 0.08);
+        }
+
+        .guide-download-box h3 {
+            margin: 0 0 0.65rem;
+            font-size: 1.25rem;
+        }
+
+        .guide-download-box p {
+            margin: 0 0 1rem;
+        }
+
+        .guide-download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.9rem 1.3rem;
+            border-radius: 999px;
+            background: #1a2742;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .guide-download-link:hover {
+            background: #2d4cc8;
+            transform: translateY(-1px);
+        }
+
+        .ttl-dl-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 20px;
+        }
+
+        .ttl-dl-overlay[hidden] {
+            display: none;
+        }
+
+        .ttl-dl-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 460px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .ttl-dl-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            line-height: 1;
+            color: #94a3b8;
+            cursor: pointer;
+        }
+
+        .ttl-dl-close:hover {
+            color: #1e293b;
+        }
+
+        .ttl-dl-box h3 {
+            margin: 0 0 8px;
+            color: #1e293b;
+            font-size: 1.35rem;
+        }
+
+        .ttl-dl-box input[type="email"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            box-sizing: border-box;
+            margin-top: 6px;
+        }
+
+        .ttl-dl-box input[type="email"]:focus {
+            outline: none;
+            border-color: #2d4cc8;
+            box-shadow: 0 0 0 3px rgba(45, 76, 200, 0.12);
+        }
+
+        .ttl-dl-error {
+            display: none;
+            color: #dc2626;
+            font-size: 0.85rem;
+            margin: 8px 0 0;
+        }
+
+        .ttl-dl-note {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            margin: 14px 0 0;
+        }
+
+        #ttl-dl-form .cta-btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+
+        .ttl-dl-success {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+            border-radius: 10px;
+            padding: 16px;
+            font-size: 0.92rem;
+        }
+
+        .ttl-dl-success a {
+            color: #2d4cc8;
+            font-weight: 600;
+        }
+    </style>
 
     <!-- Article Schema -->
     <script type="application/ld+json">
@@ -141,6 +282,15 @@
                     <p>On July 4, 2026, the Ministry of Treasury and Finance (Revenue Administration) published the <strong>General Communiqué on Bringing Certain Assets into the Economy (Series No: 1)</strong> in the Official Gazette (Issue: 33300). This initiative, often referred to as the "Wealth Amnesty," provides procedures and principles for Provisional Article 19 of the Corporate Tax Law No. 5520, which was introduced by Law No. 7582 on May 21, 2026.</p>
 
                     <p>The objective is to integrate unrecorded assets (money, gold, foreign exchange, securities, and other capital market instruments) located abroad or domestically into the national economy, while granting significant tax inspection immunities to the declarants.</p>
+
+                    <div class="guide-download-box">
+                        <h3>Download the full communiqué as a PDF</h3>
+                        <p>Access the printable version of this 2026 wealth amnesty guide, including the main declaration deadlines, Annex-1 and Annex-2 forms, and the applicable tax rates.</p>
+                        <button type="button" class="guide-download-link" id="openLeadMagnetBtn">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                            Download the guide
+                        </button>
+                    </div>
 
                     <hr>
 
@@ -369,6 +519,122 @@
             </p>
         </div>
     </footer>
+
+    <!-- Email-gated PDF download modal -->
+    <div id="ttl-dl-modal" class="ttl-dl-overlay" role="dialog" aria-modal="true" aria-labelledby="ttl-dl-title" hidden>
+        <div class="ttl-dl-box">
+            <button type="button" class="ttl-dl-close" id="ttl-dl-close" aria-label="Close">&times;</button>
+            <h3 id="ttl-dl-title"><i class="fas fa-file-pdf" style="color:#2D4CC8;"></i> Download the Wealth Amnesty Guide</h3>
+            <p style="color:#475467; font-size:0.95rem; margin: 0 0 6px;">Enter your email address to download the full General Communiqué (Series No: 1) PDF.</p>
+            <form id="ttl-dl-form" novalidate>
+                <label for="ttl-dl-email" style="font-size:0.85rem; font-weight:600; color:#334155;">Email address</label>
+                <input type="email" id="ttl-dl-email" name="email" placeholder="name@company.com" required autocomplete="email">
+                <p class="ttl-dl-error" id="ttl-dl-error">Please enter a valid email address.</p>
+                <button type="submit" class="cta-btn"><i class="fas fa-download"></i> Get the PDF</button>
+            </form>
+            <p class="ttl-dl-note">We respect your privacy. Your email may be used to send relevant Turkish trade-law updates. You can unsubscribe at any time.</p>
+            <div class="ttl-dl-success" id="ttl-dl-success" hidden>
+                <i class="fas fa-circle-check"></i> Thank you. Your download has started. If it does not begin automatically,
+                <a href="General_Communique_Serial_1.pdf" download>click here to download the PDF</a>.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var PDF = "General_Communique_Serial_1.pdf";
+            var overlay = document.getElementById('ttl-dl-modal');
+            var openBtn = document.getElementById('openLeadMagnetBtn');
+            var closeBtn = document.getElementById('ttl-dl-close');
+            var form = document.getElementById('ttl-dl-form');
+            var emailInput = document.getElementById('ttl-dl-email');
+            var errEl = document.getElementById('ttl-dl-error');
+            var successEl = document.getElementById('ttl-dl-success');
+
+            function openModal() {
+                overlay.hidden = false;
+                document.body.style.overflow = 'hidden';
+                setTimeout(function () {
+                    emailInput.focus();
+                }, 50);
+            }
+
+            function closeModal() {
+                overlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+
+            function triggerDownload() {
+                var a = document.createElement('a');
+                a.href = PDF;
+                a.download = PDF;
+                a.rel = 'noopener';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            }
+
+            if (openBtn) {
+                openBtn.addEventListener('click', openModal);
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
+
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    closeModal();
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && !overlay.hidden) {
+                    closeModal();
+                }
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var email = (emailInput.value || '').trim();
+                var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+                if (!valid) {
+                    errEl.style.display = 'block';
+                    emailInput.focus();
+                    return;
+                }
+
+                errEl.style.display = 'none';
+
+                try {
+                    fetch('https://formspree.io/f/mnneobaw', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            _subject: 'PDF Download Lead - 2026 Wealth Amnesty Guide',
+                            message: 'PDF download lead from the 2026 Wealth Amnesty guide.',
+                            source: '2026-wealth-amnesty-guide.html'
+                        })
+                    }).catch(function () { });
+                } catch (_) { }
+
+                try {
+                    if (window.gtag) {
+                        gtag('event', 'pdf_download', {
+                            event_category: 'lead',
+                            event_label: '2026 Wealth Amnesty Guide'
+                        });
+                    }
+                } catch (_) { }
+
+                form.style.display = 'none';
+                successEl.hidden = false;
+                triggerDownload();
+            });
+        })();
+    </script>
 
     <script src="script.js"></script>
 
