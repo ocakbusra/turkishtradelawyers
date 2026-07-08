@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import os
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -675,3 +677,11 @@
     </script>
 </body>
 </html>
+"""
+
+# Write to the file
+file_path = "/Users/busraocak/Desktop/turkish trade/compliance-data-protection-services-turkey.html"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Successfully generated {file_path}")
