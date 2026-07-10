@@ -1,0 +1,465 @@
+import json
+
+def build_page():
+    # 1. HTML Head
+    head_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert Turkish patent and trademark attorneys providing full-range IP services in Turkey. Specializing in trademark registration, EPC validations, WIPO entries, and IP litigation.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Turkish Trade Lawyers">
+    <meta name="keywords" content="Turkish Patent Attorney, Trademark Registration Turkey, TURKPATENT, EPC Validation Turkey, Trademark Opposition Turkey, Patent Litigation Turkey, WIPO Madrid Protocol Turkey, Industrial Property Code Turkey">
+    <title>Turkish Patent and Trademark Attorney Services | IP Law Firm Turkey</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Turkish Patent and Trademark Attorney Services | IP Law Firm Turkey">
+    <meta property="og:description" content="Expert Turkish patent and trademark attorneys providing full-range IP services in Turkey. Specializing in trademark registration, EPC validations, WIPO entries, and IP litigation.">
+    <meta property="og:url" content="https://www.turkishtradelawyers.com/intellectual-property-law-services-turkey.html">
+    <meta property="og:site_name" content="Turkish Trade Lawyers">
+    <meta property="og:image" content="https://www.turkishtradelawyers.com/logo-square.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo-48x48.png">
+    <link rel="canonical" href="https://www.turkishtradelawyers.com/intellectual-property-law-services-turkey.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Turkish Patent and Trademark Attorney Services",
+      "serviceType": "Intellectual Property Law, Patent Registration, Trademark Prosecution, IP Enforcement",
+      "provider": {
+        "@type": "LegalService",
+        "name": "Turkish Trade Lawyers",
+        "url": "https://www.turkishtradelawyers.com"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Turkey"
+      },
+      "url": "https://www.turkishtradelawyers.com/intellectual-property-law-services-turkey.html",
+      "description": "Comprehensive intellectual property law services in Turkey including patents, utility models, trademarks, copyrights, and industrial designs."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Intellectual Property Law in Turkey | Comprehensive Guide for Foreign Applicants",
+      "description": "A deep dive into Turkish Industrial Property Code No. 6769, EPC validations, trademark registration at TURKPATENT, and IP litigation strategies.",
+      "author": {
+        "@type": "Person",
+        "name": "Busra Ocak",
+        "jobTitle": "Attorney-at-Law & Patent Attorney",
+        "affiliation": {"@type": "Organization", "name": "Istanbul Bar Association"}
+      },
+      "publisher": {
+        "@type": "LegalService",
+        "name": "Turkish Trade Lawyers",
+        "url": "https://www.turkishtradelawyers.com"
+      }
+    }
+    </script>
+"""
+
+    faqs = [
+        ("How long does it take to register a trademark in Turkey?", "Under the Turkish Industrial Property Code No. 6769, the standard trademark registration process at TURKPATENT takes approximately 6 to 8 months from the filing date, provided there are no absolute grounds for refusal and no third-party oppositions are filed during the 2-month publication period. If an opposition is filed, the process may be extended by an additional 6 to 12 months due to the review proceedings by the Re-examination and Evaluation Board (YİDK)."),
+        ("Do I need a Turkish attorney to validate an EP patent in Turkey?", "Yes. Foreign individuals and legal entities domiciled outside of Turkey cannot directly apply to or represent themselves before the Turkish Patent and Trademark Office (TURKPATENT). You are legally mandated to appoint a registered Turkish Patent Attorney to handle European Patent Convention (EPC) validations, PCT national phase entries, and all correspondence with the registry."),
+        ("What is the translation deadline for EPC validation in Turkey?", "Once the European Patent Office (EPO) publishes the grant of a European Patent, the patentee has a strict 3-month non-extendable deadline to file the Turkish translation of the patent specification and claims with TURKPATENT. Failure to meet this 3-month deadline, or failing to pay the prescribed official publication fee, results in the European Patent being deemed void ab initio within the jurisdiction of Turkey."),
+        ("Are software patents allowed in Turkey?", "Similar to the European Patent Convention guidelines, computer programs 'as such' are explicitly excluded from patentability under Turkish Law No. 6769. However, software that demonstrates a 'technical effect' or solves a technical problem—known as Computer Implemented Inventions (CII)—is eligible for patent protection in Turkey. Software code itself can also be protected under the Law on Intellectual and Artistic Works (Copyright Law)."),
+        ("What is the trademark opposition period in Turkey?", "Following the successful preliminary examination by TURKPATENT, a trademark application is published in the Official Trademark Bulletin. From the date of publication, third parties have a strict 2-month window to file a formal opposition based on relative grounds for refusal, such as likelihood of confusion with a prior registered mark or unauthorized use of a well-known mark. This deadline was reduced from 3 months to 2 months with the enactment of the new IP Code in 2017."),
+        ("Can I file a PCT national phase entry in Turkey?", "Yes, Turkey is a contracting state to the Patent Cooperation Treaty (PCT). Applicants must enter the Turkish national phase within 30 months from the earliest priority date. The application must be submitted to TURKPATENT through a registered Turkish Patent Attorney along with the Turkish translation of the PCT application and the official filing fees."),
+        ("What are the costs for filing a patent in Turkey?", "The costs involve official TURKPATENT filing fees, examination and search request fees, translation costs (which depend on the word count of the specification), and professional attorney fees. While official fees are relatively standardized and updated annually by the government, the bulk of the cost often arises from highly technical translation requirements necessary for EPC validations or PCT nationalizations."),
+        ("How do I enforce an IP right against counterfeiters in Turkey?", "IP enforcement in Turkey is highly effective if strategically managed. Rights holders can request preliminary injunctions from Specialized IP Courts to halt infringement immediately. In cases of trademark counterfeiting, criminal complaints can be filed leading to search and seizure raids conducted by the police within 24 hours. Furthermore, customs IP recordals allow authorities to detain suspected counterfeit shipments at the border."),
+        ("Is the Madrid Protocol effective in Turkey?", "Yes, Turkey is a member of the Madrid Protocol. Foreign applicants can designate Turkey in their international trademark applications filed through WIPO. TURKPATENT will examine the international registration under local Turkish law (Industrial Property Code No. 6769) to determine if it meets the criteria for protection, specifically checking for absolute grounds for refusal."),
+        ("How is a trademark use requirement enforced in Turkey?", "In Turkey, a registered trademark must be put to genuine use within 5 years of its registration date. If a mark is not used for a continuous period of 5 years without a justifiable reason, it becomes vulnerable to a revocation (cancellation) action. Under the new IP Code regulations, revocation requests are directly handled by TURKPATENT rather than the civil courts, making the process faster and more administrative."),
+        ("What is the Re-examination and Evaluation Board (YİDK)?", "The YİDK (Yeniden İnceleme ve Değerlendirme Kurulu) is the ultimate administrative appellate body within TURKPATENT. If an applicant's trademark is rejected by an examiner, or if a third party's opposition is dismissed, the aggrieved party can appeal to the YİDK. The Board's decisions are final at the administrative level; any further challenge must be filed as a cancellation lawsuit before the Specialized IP Courts in Ankara."),
+        ("Can foreign companies apply directly to TURKPATENT?", "No. Article 160 of the Industrial Property Code expressly requires that individuals and corporate entities domiciled abroad must be represented by a registered trademark or patent attorney residing in Turkey. Any direct application or correspondence sent by a foreign entity without an appointed local attorney will be rejected by TURKPATENT."),
+        ("What is the duration of patent and utility model protection in Turkey?", "In Turkey, a standard examined Patent is protected for a non-renewable term of 20 years from the filing date, subject to the payment of annual maintenance fees. A Utility Model, which requires novelty and industrial applicability but has a lower threshold for inventive step, is protected for a non-renewable term of 10 years from the filing date."),
+        ("How are customs recordals handled in Turkey?", "Foreign right holders can file an online IP Customs Recordal application with the Turkish Ministry of Trade. This recordal covers trademarks, patents, and designs, and is valid for one year (renewable). It automatically alerts customs officials across all Turkish borders, airports, and seaports to monitor, suspend, and seize suspected counterfeit goods during import, export, or transit."),
+        ("What are the penalties for trademark infringement in Turkey?", "Trademark counterfeiting is a criminal offense in Turkey. Producing, offering for sale, selling, importing, or exporting counterfeit goods bearing a registered trademark is punishable by 1 to 3 years of imprisonment and judicial fines up to 20,000 days. Civil remedies include compensation for material and moral damages, confiscation of goods, and the destruction of the manufacturing equipment used to produce the infringing items.")
+    ]
+
+    faq_schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]
+    }
+    
+    head_content += f"    <script type=\"application/ld+json\">\n    {json.dumps(faq_schema, indent=4)}\n    </script>\n</head>\n<body>\n"
+
+    # 2. Navbar
+    navbar = """    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-logo">
+                <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="logo-icon">
+                <span class="logo-text">
+                    <span class="logo-main">Turkish Trade Lawyers</span>
+                    <span class="logo-tagline">Legal Excellence in TÜRKİYE</span>
+                </span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="ourexperts.html" class="nav-link">About</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="ourexperts.html" class="nav-link">Our Experts</a></li>
+                <li><a href="guides.html" class="nav-link">Guides</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+"""
+
+    # 3. Hero Section
+    hero = """    <main>
+        <section class="service-landing-hero">
+            <div class="container service-landing-shell">
+                <span class="service-landing-kicker"><i class="fas fa-lightbulb"></i> Practice Area</span>
+                <h1 class="service-landing-title">Turkish Patent & Trademark Attorney Services</h1>
+                <span class="service-landing-h1-sub">Registration, EPC Validations, Opposition & IP Litigation</span>
+                <p class="service-landing-subtitle">We represent multinational corporations, tech innovators, and foreign legal counsel in Turkey. Our licensed Turkish Patent and Trademark Attorneys provide highly technical IP prosecution, aggressive anti-counterfeiting enforcement, and strategic patent validations before TURKPATENT and Specialized IP Courts.</p>
+                <div class="service-landing-actions">
+                    <a href="contact.html" class="btn btn-primary-new">Discuss your IP Strategy</a>
+                    <a href="services.html" class="btn btn-outline-new">Back to Practice Areas</a>
+                </div>
+                <div class="service-landing-pills">
+                    <span class="service-landing-pill"><i class="fas fa-award"></i> TURKPATENT Authorized</span>
+                    <span class="service-landing-pill"><i class="fas fa-globe-europe"></i> EPC / WIPO Validations</span>
+                    <span class="service-landing-pill"><i class="fas fa-gavel"></i> IP Litigation Experts</span>
+                </div>
+            </div>
+        </section>
+"""
+
+    # 4. Main Content
+    main_content = """        <section class="service-landing-content">
+            <div class="container service-landing-layout">
+                <div class="service-main-content">
+                    
+                    <div class="glass-card intro-card" style="margin-bottom: 2rem;">
+                        <h2 id="definition">Intellectual Property Protection in Turkey</h2>
+                        <p>Protecting intellectual property (IP) in Turkey is governed primarily by the comprehensive <strong>Industrial Property Code (Law No. 6769)</strong>, which entered into force in 2017. This modern legislative framework consolidated previously fragmented decree-laws and fully aligned Turkish IP regulations with the European Union acquis and major international treaties, including the Paris Convention, the TRIPS Agreement, the Madrid Protocol, and the European Patent Convention (EPC).</p>
+                        <p>For foreign investors, multinational brands, and tech developers, the Turkish market represents a critical commercial hub bridging Europe and Asia. However, the jurisdiction strictly operates on a "first-to-file" principle. Failing to secure registered rights at the Turkish Patent and Trademark Office (<strong>TURKPATENT</strong>) immediately exposes entities to bad-faith registrations, trademark squatters, and widespread counterfeiting. Navigating the rigid administrative timelines, overcoming absolute grounds for refusal, and successfully litigating against infringement requires the strategic intervention of specialized legal counsel and registered IP attorneys.</p>
+                        <p>Our dedicated IP practice does not merely process applications; we engineer robust defense mechanisms. From conducting comprehensive Freedom to Operate (FTO) searches to executing rapid ex-parte preliminary injunctions against counterfeiters, our Turkish patent and trademark attorneys ensure your intangible assets are secured, monetized, and violently protected across all 81 provinces of Turkey.</p>
+                    </div>
+
+                    <div class="glass-card intro-card" style="margin-bottom: 2rem;">
+                        <h2>The Indispensable Role of a Registered Turkish Patent Attorney</h2>
+                        <p>Under Article 160 of the Industrial Property Code, foreign individuals and legal entities domiciled outside the borders of the Republic of Turkey cannot directly apply to or communicate with TURKPATENT. The law dictates an absolute requirement of mandatory representation. You must appoint a licensed trademark or patent attorney who officially resides in Turkey and is registered with the registry.</p>
+                        <p>Beyond this statutory requirement, the procedural landscape of Turkish IP law demands highly technical expertise. Whether translating complex biochemical claims for an EPC validation, drafting precise counter-statements against a malicious trademark opposition at the Re-examination and Evaluation Board (YİDK), or pursuing criminal search and seizure warrants under Article 30 of the Code, a qualified attorney acts as the ultimate shield for your commercial interests. Our dual-qualified lawyers and registered patent attorneys provide a seamless transition from administrative registry prosecution to fierce courtroom litigation.</p>
+                    </div>
+
+                    <h2 id="core-services">1. Core Intellectual Property Practice Areas</h2>
+                    <p>We provide end-to-end IP lifecycle management, addressing the unique regulatory challenges inherent to the Turkish jurisdiction. Our services are categorized below:</p>
+                    
+                    <div class="legal-tabs-wrapper">
+                        <div class="legal-tabs-header">
+                            <button class="legal-tab-btn active" data-tab="tab-patents">Patents & Utility Models</button>
+                            <button class="legal-tab-btn" data-tab="tab-trademarks">Trademarks & WIPO</button>
+                            <button class="legal-tab-btn" data-tab="tab-designs">Designs & Copyrights</button>
+                        </div>
+                        
+                        <div id="tab-patents" class="legal-tab-content active glass-card">
+                            <h3>Patent Prosecution and EPC Validations in Turkey</h3>
+                            <p>Securing a monopoly over technical innovations in Turkey requires rigorous adherence to the substantive criteria of novelty, inventive step, and industrial applicability. As a contracting state to the European Patent Convention (EPC), Turkey plays a crucial role in international patent strategies.</p>
+                            <h4>EPC Validations (European Patent Entry)</h4>
+                            <p>When the European Patent Office (EPO) grants a patent, it does not automatically confer protection in Turkey. Within three months of the EPO publication of the grant, the patentee must submit a high-quality Turkish translation of the patent specification and claims to TURKPATENT. Missing this strict 3-month deadline permanently forfeits your patent rights within Turkey. Our technical translators and attorneys meticulously convert complex mechanical, pharmaceutical, and software claims to ensure zero loss of scope, handling the entire validation procedure seamlessly.</p>
+                            <h4>PCT National Phase Entries</h4>
+                            <p>For international applicants utilizing the Patent Cooperation Treaty (PCT), Turkey serves as a vital national phase destination. The deadline to enter the Turkish national phase is 30 months from the earliest priority date. We manage the nationalization process, responding to substantive examination reports issued by TURKPATENT, and conducting aggressive amendments to overcome prior art citations.</p>
+                            <h4>Freedom to Operate (FTO) & Patentability Analysis</h4>
+                            <p>Before launching a product or initiating manufacturing in Turkey, mitigating infringement risks is paramount. We conduct exhaustive Freedom to Operate searches across local and international databases, delivering definitive legal opinions on potential infringement liabilities and guiding R&D teams on strategic workarounds to avoid existing Turkish patents and utility models.</p>
+                        </div>
+
+                        <div id="tab-trademarks" class="legal-tab-content glass-card">
+                            <h3>Trademark Registration, Oppositions & Madrid Protocol</h3>
+                            <p>A brand's identity is its most valuable asset. Turkey’s "first-to-file" trademark regime means that unregistered brands are constantly at risk of being hijacked by opportunistic third parties, distributors, or competitors. We manage extensive trademark portfolios for global brands, ensuring ironclad protection.</p>
+                            <h4>Direct National Filings vs. Madrid Protocol Designations</h4>
+                            <p>Foreign applicants can file directly at TURKPATENT or designate Turkey via the WIPO Madrid System. When TURKPATENT receives a Madrid designation, it applies the exact same substantive examination rules as a national filing. We frequently step in to overcome Provisional Refusals issued by Turkish examiners based on absolute grounds (e.g., distinctiveness issues or descriptive terms under Article 5 of the Code), filing highly persuasive legal arguments to reverse the refusal.</p>
+                            <h4>Trademark Oppositions and YİDK Appeals</h4>
+                            <p>If a third party applies for a confusingly similar mark, it is published in the Official Trademark Bulletin for a period of 2 months. We maintain vigilant watching services for our clients and file aggressive oppositions based on prior rights, well-known trademark status, and bad faith. Conversely, if our client's application is opposed, we draft meticulous counter-statements. If necessary, we escalate the matter to the Re-examination and Evaluation Board (YİDK), the highest administrative authority within TURKPATENT.</p>
+                            <h4>Cancellation and Revocation (Non-Use) Actions</h4>
+                            <p>Under Turkish law, if a registered trademark is not put to genuine commercial use for five consecutive years, it becomes vulnerable to revocation. Starting in 2024, the authority to revoke non-used trademarks has shifted entirely from the Civil Intellectual Property Courts directly to TURKPATENT, making the procedure faster and more administrative. We represent clients in both initiating non-use cancellations against blocking marks and defending their own portfolios with comprehensive evidence of use.</p>
+                        </div>
+
+                        <div id="tab-designs" class="legal-tab-content glass-card">
+                            <h3>Industrial Designs & Copyrights</h3>
+                            <p>Beyond patents and trademarks, aesthetic innovations and creative works require distinct legal strategies for protection in the Turkish market.</p>
+                            <h4>Industrial Design Registration (The Hague System)</h4>
+                            <p>The visual appearance, contours, and ornamentation of products—from fashion apparel and UI interfaces to automotive parts—can be protected as Industrial Designs. To be valid, a design must meet the criteria of "novelty" and "individual character." We manage design applications both directly at TURKPATENT and through the WIPO Hague Agreement. A registered design grants a 5-year monopoly, renewable up to 25 years, providing an incredibly potent tool to combat cheap aesthetic knockoffs.</p>
+                            <h4>Copyright Protection & Software Registrations</h4>
+                            <p>Unlike industrial property rights, copyrights (governed by the Law on Intellectual and Artistic Works No. 5846) arise automatically upon the creation of the work. However, for evidentiary purposes—especially in infringement litigation—registering the copyright is highly recommended. We assist software developers, authors, architects, and media companies in registering their works with the Directorate General of Copyrights under the Ministry of Culture and Tourism. This formalized timestamp is crucial when demanding injunctions against digital piracy or code theft.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside>
+                    <div class="sidebar-sticky-wrapper">
+                        <div class="service-sidebar-card glass-card" style="padding: 24px;">
+                            <h3 style="margin-top:0;">On This Page</h3>
+                            <ul class="service-link-list">
+                                <li><a href="#definition">IP Protection in Turkey</a></li>
+                                <li><a href="#core-services">Core IP Services</a></li>
+                                <li><a href="#registration-procedures">Registration Procedures</a></li>
+                                <li><a href="#ip-enforcement">IP Enforcement & Anti-Counterfeiting</a></li>
+                                <li><a href="#faq">FAQ (15 Questions)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="service-sidebar-card glass-card" style="padding: 24px;">
+                            <h3 style="margin-top:0;">Typical IP Triggers</h3>
+                            <ul class="service-checklist">
+                                <li>WIPO Provisional Refusal received from TURKPATENT</li>
+                                <li>3-Month EPC Validation deadline approaching</li>
+                                <li>Counterfeit goods discovered in Turkish markets</li>
+                                <li>Competitor filed a confusingly similar trademark</li>
+                                <li>Need to record IP rights with Turkish Customs</li>
+                            </ul>
+                        </div>
+
+                        <div class="service-sidebar-card glass-card sidebar-form-card" style="padding: 24px;">
+                            <h3 style="margin-top:0;">Discuss your IP Strategy</h3>
+                            <p>Secure your intangible assets. Contact our Turkish Patent & Trademark Attorneys for immediate assistance.</p>
+                            <form action="#" method="POST" class="sidebar-form">
+                                <div class="form-group">
+                                    <label for="client-name">Full Name / Company</label>
+                                    <input type="text" id="client-name" name="client_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="client-email">Corporate Email</label>
+                                    <input type="email" id="client-email" name="client_email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dispute-type">IP Service Category</label>
+                                    <select id="dispute-type" name="dispute_type" style="width: 100%; padding: 10px; border: 1px solid #CBD5E1; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: white;" required>
+                                        <option value="">Select Category</option>
+                                        <option value="Patent EPC">Patent EPC Validation</option>
+                                        <option value="Trademark Filing">Trademark Filing / WIPO Response</option>
+                                        <option value="Trademark Opposition">Trademark Opposition</option>
+                                        <option value="IP Litigation">IP Litigation & Infringement</option>
+                                        <option value="Anti-Counterfeiting">Anti-Counterfeiting & Customs</option>
+                                    </select>
+                                </div>
+                                <div class="form-group sidebar-form-details">
+                                    <label for="dispute-details">Brief Case Details (Optional)</label>
+                                    <textarea id="dispute-details" name="case_details" placeholder="Please specify the application number, deadline, or the nature of the infringement."></textarea>
+                                </div>
+                                <button type="submit" class="sidebar-form-submit">Request IP Evaluation</button>
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+"""
+
+    # 5. Fullwidth Section
+    fullwidth = """        <section class="dispute-fullwidth-section">
+            <div class="container dispute-fullwidth-inner">
+                
+                <h2 id="registration-procedures">2. The TURKPATENT Registration Lifecycle</h2>
+                <p>Navigating the bureaucracy of the Turkish Patent and Trademark Office requires precision. The administrative procedures for trademarks and patents follow strict statutory timelines defined by the Industrial Property Code. Missing a deadline by a single day results in the irrevocable loss of rights. Below is the standard procedural timeline for resolving oppositions and securing grants.</p>
+                
+                <div class="legal-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 1: Application & Formal Examination</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Upon submission of an application by your registered Turkish Patent Attorney, TURKPATENT conducts an initial formal examination. For patents, this involves checking the formatting of the description, claims, and drawings. For trademarks, the examiner verifies the Nice Classification of goods and services and evaluates the mark against absolute grounds for refusal (Article 5 of Law No. 6769). If the mark is deemed generic, descriptive, or devoid of distinctiveness, an ex officio refusal is issued.</p>
+                            <p>If a provisional refusal is issued against an international Madrid Protocol designation, the applicant has a strict two-month deadline to appoint a local Turkish attorney and file an appeal to the YİDK. Overcoming absolute grounds refusals requires submitting extensive evidence of acquired distinctiveness through use in the Turkish market.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 2: Publication & The Opposition Window</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Once the application passes the formal and absolute grounds examination, it is published in the Official Trademark Bulletin or the Patent Bulletin. Publication shifts the burden to third parties who believe the new application infringes upon their prior rights.</p>
+                            <p>For trademarks, third parties have a strict 2-month window to file a formal opposition based on relative grounds (Article 6). Oppositions commonly allege a likelihood of confusion, dilution of a well-known mark, or bad faith. For patents, following the publication of the substantive search and examination report, third parties have six months to file post-grant oppositions against the patent's validity, citing lack of novelty or inventive step based on newly discovered prior art.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 3: Re-examination and Evaluation Board (YİDK) Appeals</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>When an opposition is filed, the applicant is notified and granted an opportunity to submit counter-statements. A critical defense mechanism introduced in the new IP Code is the "Non-Use Defense." If the opponent's trademark has been registered for over 5 years, the applicant can demand that the opponent prove genuine commercial use of their mark in Turkey. If they fail to provide invoices, catalogs, or sales data, their opposition is summarily dismissed.</p>
+                            <p>Decisions made by the initial examiner regarding oppositions can be appealed to the Re-examination and Evaluation Board (YİDK). The YİDK acts as the final administrative judge within TURKPATENT. If the YİDK issues an unfavorable ruling, the only remaining recourse is to file a cancellation lawsuit against TURKPATENT before the Specialized Civil Intellectual Property Courts in Ankara within two months.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-header">
+                            <h4>Step 4: Grant, Certification & Annuity Maintenance</h4>
+                            <i class="fas fa-chevron-down timeline-header-icon"></i>
+                        </div>
+                        <div class="timeline-body">
+                            <p>If no oppositions are filed, or if they are successfully defeated, the application moves to the final grant stage. Upon payment of the official registration fees, TURKPATENT issues the physical and electronic Certificate of Registration, formally vesting the monopoly rights to the owner.</p>
+                            <p>However, securing the grant is not the end of the lifecycle. Patents and Utility Models require the payment of annual maintenance fees (annuities) at the beginning of each protection year to remain in force. Trademarks must be renewed every 10 years indefinitely. Our docketing department utilizes advanced IP management software to monitor all impending deadlines, alerting clients months in advance to ensure their valuable Turkish IP rights never lapse due to administrative oversight.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 id="ip-enforcement">3. IP Enforcement & Anti-Counterfeiting Strategies</h2>
+                <p>Turkey is a major manufacturing hub and transit route, making aggressive IP enforcement essential for global brands. The Industrial Property Code empowers rights holders with robust civil, criminal, and border measures to disrupt counterfeiting networks and seek substantial damages. Our litigation department executes multi-jurisdictional anti-counterfeiting campaigns across the country.</p>
+
+                <div class="service-grid">
+                    <div class="glass-card">
+                        <i class="fas fa-scale-unbalanced fa-2x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                        <h3>Civil Litigation & Injunctions</h3>
+                        <p>When infringement is detected, we file immediate actions before the Specialized Intellectual and Industrial Property Rights Courts. We petition for ex parte Preliminary Injunctions (<em>İhtiyati Tedbir</em>) to immediately halt the manufacturing, sale, or distribution of infringing goods before a final judgment is rendered. Our civil lawsuits seek the confiscation of illicit products, the destruction of the manufacturing molds, and the recovery of material and moral damages, calculated based on the infringer's illicit profits or the hypothetical licensing fees.</p>
+                    </div>
+                    <div class="glass-card">
+                        <i class="fas fa-handcuffs fa-2x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                        <h3>Criminal Search & Seizure Raids</h3>
+                        <p>Unlike patent infringement, trademark counterfeiting constitutes a serious criminal offense in Turkey. We file criminal complaints with the Public Prosecutor's Office, orchestrating synchronized police raids against wholesale depots, retail shops, and manufacturing facilities. Under Article 30 of the IP Code, offenders face up to 3 years in prison and significant judicial fines. The threat of criminal prosecution provides unparalleled leverage to force infringers into immediate settlements and secure the physical destruction of counterfeit inventory.</p>
+                    </div>
+                    <div class="glass-card">
+                        <i class="fas fa-ship fa-2x" style="color: var(--primary); margin-bottom: 15px;"></i>
+                        <h3>Customs IP Recordals</h3>
+                        <p>The most cost-effective method of anti-counterfeiting is stopping goods at the border. We file centralized IP Customs Recordals through the Turkish Ministry of Trade’s electronic portal. This puts all Turkish customs checkpoints on high alert. When suspected counterfeit goods are detected during import, export, or transit, customs officials temporarily suspend the shipment and notify our attorneys. We then inspect the goods, verify their counterfeit nature, and secure permanent seizure orders without the goods ever entering the local market.</p>
+                    </div>
+                </div>
+
+                <h2 id="faq">Frequently Asked Questions: Turkish IP Law</h2>
+                <p>Direct answers to the procedural, financial, and jurisdictional questions most frequently raised by foreign applicants and corporate counsel regarding Intellectual Property in Turkey.</p>
+                <div class="legal-accordion">
+"""
+    
+    # 6. Accordions
+    accordions = ""
+    for q, a in faqs:
+        accordions += f"""                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            {q}
+                            <i class="fas fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>{a}</p>
+                        </div>
+                    </div>
+"""
+    
+    footer = """                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Turkish Trade Lawyers</span>
+                <p>Leading corporate and commercial law firm in Istanbul, representing international clients across Turkey.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Practice Areas</h4>
+                <ul>
+                    <li><a href="debt-collection-in-turkey.html">Debt Collection</a></li>
+                    <li><a href="dispute-resolution-in-turkey.html">Dispute Resolution</a></li>
+                    <li><a href="intellectual-property-law-services-turkey.html">Intellectual Property</a></li>
+                    <li><a href="services.html#company-formation">Corporate Law</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>Istanbul, Turkey</p>
+                <p><a href="contact.html">Request a Consultation</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Turkish Trade Lawyers. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header & Mobile Menu
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Tabs Logic
+        const tabBtns = document.querySelectorAll('.legal-tab-btn');
+        const tabContents = document.querySelectorAll('.legal-tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Accordion Logic
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-header i').classList.replace('fa-minus', 'fa-plus');
+                });
+
+                if (!wasActive) {
+                    item.classList.add('active');
+                    header.querySelector('i').classList.replace('fa-plus', 'fa-minus');
+                }
+            });
+        });
+
+        // Timeline Logic
+        const timelineHeaders = document.querySelectorAll('.timeline-header');
+        timelineHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+"""
+
+    html = head_content + navbar + hero + main_content + fullwidth + accordions + footer
+    with open("intellectual-property-law-services-turkey.html", "w", encoding="utf-8") as f:
+        f.write(html)
+
+    print("Successfully built the IP page.")
+
+if __name__ == "__main__":
+    build_page()

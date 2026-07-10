@@ -1160,7 +1160,7 @@ function generateIndustryPage(industry) {
             "addressCountry": "TR",
             "addressLocality": "Istanbul"
         },
-        "telephone": "+90 212 706 59 16"
+        "telephone": "+90 501 635 94 65"
     }
     </script>
 
