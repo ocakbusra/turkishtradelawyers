@@ -5337,6 +5337,31 @@ img[loading="lazy"][src] {
     margin-bottom: 0;
 }
 
+/* Plain lists inside intro cards: match the spacing of tab-content lists so
+   bullets don't stack tight against each other (the global reset zeroes
+   list margins). Styled .service-checklist lists keep their own spacing. */
+.intro-card ul:not(.service-checklist),
+.intro-card ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.65;
+}
+
+.intro-card ul:not(.service-checklist) li,
+.intro-card ol li {
+    margin-bottom: 0.75rem;
+}
+
+.intro-card ul:not(.service-checklist) li:last-child,
+.intro-card ol li:last-child {
+    margin-bottom: 0;
+}
+
+.intro-card ul:not(.service-checklist):last-child,
+.intro-card ol:last-child {
+    margin-bottom: 0;
+}
+
 /* Heading Hierarchy & Spacing */
 .intro-card h2 {
     font-family: 'Inter', sans-serif;
