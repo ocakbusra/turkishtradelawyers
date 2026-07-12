@@ -152,7 +152,10 @@
       "url": "https://www.turkishtradelawyers.com/",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.turkishtradelawyers.com/guides.html?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.turkishtradelawyers.com/guides.html?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
@@ -166,7 +169,11 @@
       "name": "Turkish Trade Lawyers",
       "url": "https://www.turkishtradelawyers.com",
       "logo": "https://www.turkishtradelawyers.com/logo-square.png",
-      "sameAs": [],
+      "sameAs": [
+        "https://www.linkedin.com/company/turkish-trade-lawyers",
+        "https://www.youtube.com/@TurkishTradeLawyers",
+        "https://www.facebook.com/turkishtradelawyers/"
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+90 501 635 94 65",
