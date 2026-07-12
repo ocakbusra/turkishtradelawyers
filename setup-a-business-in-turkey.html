@@ -22,8 +22,13 @@
     <link rel="canonical" href="https://www.turkishtradelawyers.com/setup-a-business-in-turkey.html">
 
     <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body, p, li, a, span, div { font-family: 'Inter', sans-serif !important; }
+        p:not(.service-page-cta-badge):not(.small-text), 
+        li:not(.nav-item) { font-size: 1rem !important; line-height: 1.7 !important; }
+    </style>
     <link rel="stylesheet" href="styles.css">
 
     <!-- Schema 1: Service -->
@@ -387,7 +392,7 @@
                     </div>
 
                     <div class="legal-tab-content glass-card" id="jsc-llc-comparison">
-                        <h3 style="margin-top:0;">Which Should You Choose? The Ultimate Verdict</h3>
+                        <h3 style="margin-top:0;">Which Should You Choose? </h3>
                         <p>Choosing between a JSC and an LLC is the most critical foundational decision you will make when entering the Turkish market. The choice ultimately depends on your investment scale, privacy requirements, and risk appetite regarding public debts.</p>
                         <p>If you prioritize easier share transfers, stronger shareholder insulation from public debt exposure, and the future ability to go public or raise institutional capital, the Joint Stock Company (JSC) is often the better choice. It carries higher initial capital requirements and the need to block 25% of subscribed capital before registration.</p>
                         <p>Conversely, if you prefer lower minimum capital, no pre-registration capital blockage, and simpler governance for standard commercial operations, the Limited Liability Company (LLC) is often effective and cost-efficient. The main caution is the shareholder exposure for uncollectible public debts, including taxes and social security premiums.</p>
@@ -399,11 +404,11 @@
                 <p>Foreign companies can enter the Turkish market without immediately forming a subsidiary, but a branch and a liaison office serve very different legal purposes.</p>
                 <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem; margin-bottom: 2rem;">
                     <div class="glass-card">
-                        <h3>Branch Office</h3>
+                        <h3 style="margin-bottom: 1rem;">Branch Office</h3>
                         <p>A branch is not a separate legal entity from the foreign parent company and operates within the parent company's corporate purpose. It is registered with the Trade Registry, has no statutory minimum capital requirement, and must appoint a fully authorized representative resident in Turkey. Branch profits transferred to the foreign headquarters may be subject to dividend withholding tax, subject to treaty relief where available.</p>
                     </div>
                     <div class="glass-card">
-                        <h3>Liaison Office</h3>
+                        <h3 style="margin-bottom: 1rem;">Liaison Office</h3>
                         <p>A liaison office is a representative office authorized by the Ministry of Industry and Technology. It cannot conduct commercial activities or generate revenue in Turkey. It is suitable for market research, feasibility studies, representation, supplier coordination, and similar non-commercial functions. Initial permits are generally granted for a maximum of three years depending on the declared activity.</p>
                     </div>
                 </div>
@@ -732,11 +737,11 @@
         </section>
         <!-- End full-width content section -->
 
-        <section class="service-page-cta" aria-labelledby="service-cta-title">
+        <section class="service-page-cta" aria-labelledby="service-cta-title" style="background: transparent; padding-bottom: 0;">
             <div class="container">
-                <div class="service-page-cta-card">
+                <div class="service-page-cta-card glass-card" style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(255, 255, 255, 0.8);">
                     <div class="service-page-cta-copy">
-                        <span class="service-page-cta-badge"><i class="fas fa-envelope-open-text"></i> Ask Our Team</span>
+                        <span class="service-page-cta-badge" style="background: rgba(224, 231, 255, 0.7);"><i class="fas fa-envelope-open-text"></i> Ask Our Team</span>
                         <h2 id="service-cta-title">Need Turkish legal input before your next move?</h2>
                         <p>Send a short note about the transaction, document, deadline, or risk you are dealing with. We will route it to the right practice team and respond with the next practical step.</p>
                         <div class="service-page-cta-links">
@@ -761,15 +766,15 @@
         </section>
 
 
-        <section class="cluster-links-section" style="padding: 3rem 0;">
-            <div class="container">
+        <section class="cluster-links-section" style="padding: 3rem 0; margin-bottom: 3rem;">
+            <div class="container glass-card" style="padding: 2.5rem; background: rgba(255, 255, 255, 0.5);">
                 <h2 style="margin-bottom: 1.5rem;">Deep-Dive Guides on Company Formation</h2>
                 <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                    <li><a href="establishing-limited-liability-company-turkey.html" style="font-weight: 600; color: #2D4CC8;">Establishing a Limited Liability Company (Ltd. Şti.)</a></li>
-                    <li><a href="llc-or-joint-stock-company-turkey.html" style="font-weight: 600; color: #2D4CC8;">LLC or Joint-Stock Company: Which to Choose?</a></li>
-                    <li><a href="liaison-office-vs-branch-office-turkey.html" style="font-weight: 600; color: #2D4CC8;">Liaison Office vs. Branch Office</a></li>
-                    <li><a href="company-formation-turkey-uk.html" style="font-weight: 600; color: #2D4CC8;">Company Formation for UK Businesses</a></li>
-                    <li><a href="turkish-investment-lawyer.html" style="font-weight: 600; color: #2D4CC8;">Legal Support for Foreign Investors</a></li>
+                    <li><a href="establishing-limited-liability-company-turkey.html" style="font-weight: 600; color: var(--navy); text-decoration: none;"><i class="fas fa-arrow-right" style="margin-right: 8px; color: var(--primary-blue); font-size: 0.9em;"></i>Establishing a Limited Liability Company (Ltd. Şti.)</a></li>
+                    <li><a href="llc-or-joint-stock-company-turkey.html" style="font-weight: 600; color: var(--navy); text-decoration: none;"><i class="fas fa-arrow-right" style="margin-right: 8px; color: var(--primary-blue); font-size: 0.9em;"></i>LLC or Joint-Stock Company: Which to Choose?</a></li>
+                    <li><a href="liaison-office-vs-branch-office-turkey.html" style="font-weight: 600; color: var(--navy); text-decoration: none;"><i class="fas fa-arrow-right" style="margin-right: 8px; color: var(--primary-blue); font-size: 0.9em;"></i>Liaison Office vs. Branch Office</a></li>
+                    <li><a href="company-formation-turkey-uk.html" style="font-weight: 600; color: var(--navy); text-decoration: none;"><i class="fas fa-arrow-right" style="margin-right: 8px; color: var(--primary-blue); font-size: 0.9em;"></i>Company Formation for UK Businesses</a></li>
+                    <li><a href="turkish-investment-lawyer.html" style="font-weight: 600; color: var(--navy); text-decoration: none;"><i class="fas fa-arrow-right" style="margin-right: 8px; color: var(--primary-blue); font-size: 0.9em;"></i>Legal Support for Foreign Investors</a></li>
                 </ul>
             </div>
         </section>

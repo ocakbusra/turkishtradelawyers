@@ -3125,7 +3125,7 @@ a {
     margin-bottom: 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     /* Trying to mimic the premium feel if possible, but sticking to Inter */
 }
 
@@ -3169,7 +3169,7 @@ a {
 
 .section-headline {
     text-align: center;
-    font-family: 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
     color: var(--dark-blue);
     margin-bottom: 16px;
@@ -4821,6 +4821,14 @@ img[loading="lazy"][src] {
     transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(15, 23, 42, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Restore heading-to-body spacing inside plain content cards.
+   The global `* { margin: 0 }` reset strips default heading margins, so a
+   bare <h3> sits directly on the paragraph below it. Variant cards
+   (new-design, tab, sidebar) define their own spacing and are excluded. */
+.glass-card:not(.new-design-card):not(.legal-tab-content):not(.tab-content-box):not(.service-sidebar-card) > h3 {
+    margin-bottom: 1rem;
 }
 
 /* Legal Tabs */
