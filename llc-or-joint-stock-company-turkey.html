@@ -201,13 +201,14 @@
                         </div>
                     </div>
                 </header>
-                <p class="pillar-cluster-note" style="background: #F5F7FA; border-left: 4px solid #2D4CC8; padding: 12px 16px; border-radius: 6px; font-size: 0.95rem; margin-top: 1.25rem;">
-                    For tailored assistance, see our service page: <a href="setup-a-business-in-turkey.html" style="font-weight: 600; color: #2D4CC8;">Setup a Business in Türkiye — Company Formation &amp; Corporate Services</a>
+                <p class="pillar-cluster-note">
+                    <span>For tailored assistance, see our service page:</span>
+                    <a href="setup-a-business-in-turkey.html">Setup a Business in Türkiye — Company Formation &amp; Corporate Services</a>
                 </p>
 
 
                 <section id="introduction" class="article-content">
-                    <p class="lead" style="font-size: 1.1rem; line-height: 1.8; color: #374151;">
+                    <p>
                         If you are planning to invest in Turkey, one of the first and most important decisions you will
                         face is choosing the right legal structure for your company.
                     </p>
@@ -223,7 +224,7 @@
                         business in Turkey.</p>
                 </section>
 
-                <aside class="article-lead-magnet" aria-labelledby="company-choice-checklist-title">
+                <aside class="article-lead-magnet article-guide-download-box" aria-labelledby="company-choice-checklist-title">
                     <div>
                         <span class="article-lead-magnet-badge"><i class="fas fa-file-arrow-down"></i> Free 2026 Decision Tool</span>
                         <h2 id="company-choice-checklist-title">Compare LLC, JSC, Liaison Office, and Branch</h2>
@@ -231,10 +232,9 @@
                             checklist, and the questions that determine the right market-entry route.</p>
                     </div>
                     <div class="lead-magnet-actions">
-                        <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="lead-magnet-btn"
-                            data-conversion-event="lead_magnet_download" data-conversion-label="llc_jsc_article">
+                        <button type="button" class="lead-magnet-btn guide-download-link" id="openEntityChecklistModalBtn">
                             <i class="fas fa-download"></i> Download the Decision Checklist
-                        </a>
+                        </button>
                         <a href="#article-assessment" class="lead-magnet-secondary"
                             data-conversion-event="early_assessment_click" data-conversion-label="llc_jsc_article">
                             Ask Which Structure Fits
@@ -486,46 +486,53 @@
                     <p>Whether you are forming an LLC for a lean market entry or establishing a JSC for a major
                         investment, our team provides clear, practical legal counsel tailored to your specific needs.
                     </p>
-                    <div class="article-cta conversion-article-cta" id="article-assessment">
-                        <h3>Not Sure Whether an LLC or JSC Fits Your Investment?</h3>
-                        <p>Tell us about the shareholders, planned capital, governance needs, fundraising strategy, and
-                            exit goals. We will assess whether a Limited Şirket or Anonim Şirket is the more suitable
-                            starting structure.</p>
-                        <div class="article-reviewer"><i class="fas fa-user-shield"></i> Reviewed by Büşra Ocak,
-                            Attorney-at-Law, Istanbul Bar Association</div>
-                        <form class="article-lead-form" action="https://formspree.io/f/mnneobaw" method="POST"
-                            data-conversion-form data-form-id="llc-jsc-structure-inline">
-                            <input type="hidden" name="_subject" value="LLC or JSC Structure Review Request">
-                            <input type="hidden" name="source_page" value="LLC or Joint-Stock Company in Turkey article">
-                            <input type="hidden" name="request_type" value="LLC or JSC Structure Review">
-                            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
-                            <div class="form-group">
-                                <label for="choice-lead-email">Email address</label>
-                                <input type="email" id="choice-lead-email" name="email" placeholder="name@company.com" required>
+                    <section class="service-page-cta article-form-cta conversion-article-cta" id="article-assessment" aria-labelledby="choice-assessment-title">
+                        <div class="service-page-cta-card">
+                            <div class="service-page-cta-copy">
+                                <span class="service-page-cta-badge"><i class="fas fa-envelope-open-text"></i> Ask Our Team</span>
+                                <h2 id="choice-assessment-title">Not sure whether an LLC or JSC fits your investment?</h2>
+                                <p>Tell us about the shareholders, planned capital, governance needs, fundraising strategy, and
+                                    exit goals. We will assess whether a Limited Şirket or Anonim Şirket is the more suitable
+                                    starting structure.</p>
+                                <div class="service-page-cta-links">
+                                    <a href="tel:+905016359465" class="service-page-cta-link"><i class="fas fa-phone"></i> +90 501 635 94 65</a>
+                                    <a href="mailto:hi@turkishtradelawyers.com" class="service-page-cta-link"><i class="fas fa-envelope"></i> hi@turkishtradelawyers.com</a>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="choice-lead-priority">Main structuring priority</label>
-                                <select id="choice-lead-priority" name="structuring_priority" required>
-                                    <option value="">Select one</option>
-                                    <option>Simple and cost-efficient operation</option>
-                                    <option>Fundraising or future investors</option>
-                                    <option>Flexible share transfers or exit</option>
-                                    <option>Governance and minority protections</option>
-                                    <option>Not sure yet</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-group-wide">
-                                <label for="choice-lead-summary">Shareholders and business plan (optional)</label>
-                                <textarea id="choice-lead-summary" name="project_summary" placeholder="Briefly describe the owners, planned activity, investment scale, and target date."></textarea>
-                            </div>
-                            <div class="article-form-actions">
-                                <button type="submit" class="article-form-submit">Request a Company Structure Review <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                            <p class="form-disclosure">Confidential preliminary review. Sending this form does not
-                                oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
-                            <p class="form-status" role="status" aria-live="polite"></p>
+                            <form class="service-cta-form contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                                data-conversion-form data-form-id="llc-jsc-structure-inline">
+                                <input type="hidden" name="_subject" value="LLC or JSC Structure Review Request">
+                                <input type="hidden" name="source_page" value="LLC or Joint-Stock Company in Turkey article">
+                                <input type="hidden" name="request_type" value="LLC or JSC Structure Review">
+                                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                                <div class="form-group">
+                                    <label for="choice-lead-email">Email address</label>
+                                    <input type="email" id="choice-lead-email" name="email" placeholder="name@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="choice-lead-priority">Main structuring priority</label>
+                                    <select id="choice-lead-priority" name="structuring_priority" required>
+                                        <option value="">Select one</option>
+                                        <option>Simple and cost-efficient operation</option>
+                                        <option>Fundraising or future investors</option>
+                                        <option>Flexible share transfers or exit</option>
+                                        <option>Governance and minority protections</option>
+                                        <option>Not sure yet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group service-cta-field-wide">
+                                    <label for="choice-lead-summary">Shareholders and business plan (optional)</label>
+                                    <textarea id="choice-lead-summary" name="project_summary" placeholder="Briefly describe the owners, planned activity, investment scale, and target date."></textarea>
+                                </div>
+                                <p class="form-disclosure">Confidential preliminary review. Sending this form does not
+                                    oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                                <div class="service-cta-submit-row">
+                                    <button type="submit" class="form-submit-btn">Request a Company Structure Review <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                                <p class="form-status" role="status" aria-live="polite"></p>
                         </form>
-                    </div>
+                        </div>
+                    </section>
                 </section>
             </article>
         </div>
@@ -543,6 +550,124 @@
             </p>
         </div>
     </footer>
+
+    <!-- Lead Magnet Modal -->
+    <div id="entityChecklistModal" class="lm-modal" aria-hidden="true">
+        <div class="lm-modal-content" role="dialog" aria-modal="true" aria-labelledby="entityChecklistModalTitle">
+            <button type="button" class="lm-close" aria-label="Close download form">&times;</button>
+            <h2 id="entityChecklistModalTitle">Download Your Checklist</h2>
+            <p>Enter your email address to receive the 2026 Turkey Entity Selection Checklist instantly.</p>
+            <form id="entityChecklistLeadForm" class="lead-magnet-email-form" action="https://formspree.io/f/mnneobaw" method="POST">
+                <input type="hidden" name="_subject" value="Turkey Entity Selection Checklist Download">
+                <input type="hidden" name="source" value="LLC or JSC article lead magnet">
+                <input type="hidden" name="source_page" value="LLC or Joint-Stock Company in Turkey article">
+                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                <input type="email" id="entityChecklistEmail" name="email" placeholder="Your work email address" required>
+                <button type="submit" class="lm-submit-btn">Download PDF</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('entityChecklistModal');
+            const openBtn = document.getElementById('openEntityChecklistModalBtn');
+            const closeBtn = modal ? modal.querySelector('.lm-close') : null;
+            const form = document.getElementById('entityChecklistLeadForm');
+            const emailInput = document.getElementById('entityChecklistEmail');
+            const downloadUrl = 'output/pdf/turkey-entity-selection-checklist-2026.pdf';
+            const downloadName = 'Turkey-Entity-Selection-Checklist-2026.pdf';
+            const conversionLabel = 'llc_jsc_article';
+
+            const trackLeadMagnet = function (eventName, parameters) {
+                if (typeof trackConversionEvent === 'function') {
+                    trackConversionEvent(eventName, parameters || {});
+                }
+            };
+
+            const openModal = function () {
+                if (!modal) return;
+                modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
+                if (emailInput) emailInput.focus();
+                trackLeadMagnet('lead_magnet_modal_open', { conversion_label: conversionLabel });
+            };
+
+            const closeModal = function () {
+                if (!modal) return;
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+            };
+
+            const downloadChecklist = function () {
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = downloadName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                trackLeadMagnet('lead_magnet_download', { conversion_label: conversionLabel });
+            };
+
+            if (openBtn) {
+                openBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    openModal();
+                });
+            }
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) closeModal();
+            });
+
+            window.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') closeModal();
+            });
+
+            if (form) {
+                form.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const submitBtn = form.querySelector('.lm-submit-btn');
+                    const status = form.querySelector('.form-status');
+                    const originalText = submitBtn ? submitBtn.textContent : '';
+
+                    if (submitBtn) {
+                        submitBtn.textContent = 'Processing...';
+                        submitBtn.disabled = true;
+                    }
+                    if (status) {
+                        status.className = 'form-status is-visible';
+                        status.textContent = 'Preparing your download...';
+                    }
+                    trackLeadMagnet('lead_magnet_submit_attempt', { conversion_label: conversionLabel });
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { Accept: 'application/json' }
+                        });
+                        if (!response.ok) throw new Error('Lead magnet submission failed');
+                        trackLeadMagnet('generate_lead', { form_id: 'entity-checklist-lead-magnet' });
+                    } catch (error) {
+                        trackLeadMagnet('lead_magnet_submit_error', { form_id: 'entity-checklist-lead-magnet' });
+                    } finally {
+                        closeModal();
+                        downloadChecklist();
+                        form.reset();
+                        if (status) status.className = 'form-status';
+                        if (submitBtn) {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
     <script src="script.js?v=20260721-conversion2"></script>
 

@@ -259,13 +259,14 @@
                         </div>
                     </div>
                 </header>
-                <p class="pillar-cluster-note" style="background: #F5F7FA; border-left: 4px solid #2D4CC8; padding: 12px 16px; border-radius: 6px; font-size: 0.95rem; margin-top: 1.25rem;">
-                    For tailored assistance, see our service page: <a href="setup-a-business-in-turkey.html" style="font-weight: 600; color: #2D4CC8;">Setup a Business in Türkiye — Company Formation &amp; Corporate Services</a>
+                <p class="pillar-cluster-note">
+                    <span>For tailored assistance, see our service page:</span>
+                    <a href="setup-a-business-in-turkey.html">Setup a Business in Türkiye — Company Formation &amp; Corporate Services</a>
                 </p>
 
 
                 <section id="abstract" class="article-content">
-                    <p class="lead" style="font-size: 1.15rem; line-height: 1.8; color: #374151;">
+                    <p>
                         Foreign companies entering the Turkish market frequently face a critical structural decision at
                         the initial stage of market entry: whether to establish a <a href="glossary.html"
                             style="color: #2D4CC8; text-decoration: none;">liaison office</a> or a branch office. These
@@ -278,7 +279,7 @@
                         selecting the most suitable model based on their business objectives.</p>
                 </section>
 
-                <aside class="article-lead-magnet" aria-labelledby="market-entry-checklist-title">
+                <aside class="article-lead-magnet article-guide-download-box" aria-labelledby="market-entry-checklist-title">
                     <div>
                         <span class="article-lead-magnet-badge"><i class="fas fa-file-arrow-down"></i> Free 2026 Eligibility Checklist</span>
                         <h2 id="market-entry-checklist-title">Can Your Planned Activities Use a Liaison Office?</h2>
@@ -286,10 +287,9 @@
                             staffing, tax exposure, parent-company responsibility, and establishment requirements.</p>
                     </div>
                     <div class="lead-magnet-actions">
-                        <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="lead-magnet-btn"
-                            data-conversion-event="lead_magnet_download" data-conversion-label="liaison_branch_article">
+                        <button type="button" class="lead-magnet-btn guide-download-link" id="openEntityChecklistModalBtn">
                             <i class="fas fa-download"></i> Download the Eligibility Checklist
-                        </a>
+                        </button>
                         <a href="#article-assessment" class="lead-magnet-secondary"
                             data-conversion-event="early_assessment_click" data-conversion-label="liaison_branch_article">
                             Assess Your Planned Activities
@@ -530,44 +530,51 @@
                         decision at the outset significantly reduces future restructuring risks and compliance exposure.
                     </p>
 
-                    <div class="article-cta conversion-article-cta" id="article-assessment">
-                        <h3>Liaison Office, Branch, or Turkish Subsidiary?</h3>
-                        <p>Describe your planned activities, invoicing needs, staffing model, and expected duration in
-                            Turkey. We will assess the appropriate market-entry structure and the permits or
-                            registrations it requires.</p>
-                        <div class="article-reviewer"><i class="fas fa-user-shield"></i> Reviewed by Büşra Ocak,
-                            Attorney-at-Law, Istanbul Bar Association</div>
-                        <form class="article-lead-form" action="https://formspree.io/f/mnneobaw" method="POST"
-                            data-conversion-form data-form-id="liaison-branch-inline">
-                            <input type="hidden" name="_subject" value="Liaison, Branch or Subsidiary Assessment Request">
-                            <input type="hidden" name="source_page" value="Liaison Office vs Branch Office in Turkey article">
-                            <input type="hidden" name="request_type" value="Liaison, Branch or Subsidiary Assessment">
-                            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
-                            <div class="form-group">
-                                <label for="liaison-lead-email">Email address</label>
-                                <input type="email" id="liaison-lead-email" name="email" placeholder="name@company.com" required>
+                    <section class="service-page-cta article-form-cta conversion-article-cta" id="article-assessment" aria-labelledby="liaison-assessment-title">
+                        <div class="service-page-cta-card">
+                            <div class="service-page-cta-copy">
+                                <span class="service-page-cta-badge"><i class="fas fa-envelope-open-text"></i> Ask Our Team</span>
+                                <h2 id="liaison-assessment-title">Liaison office, branch, or Turkish subsidiary?</h2>
+                                <p>Describe your planned activities, invoicing needs, staffing model, and expected duration in
+                                    Turkey. We will assess the appropriate market-entry structure and the permits or
+                                    registrations it requires.</p>
+                                <div class="service-page-cta-links">
+                                    <a href="tel:+905016359465" class="service-page-cta-link"><i class="fas fa-phone"></i> +90 501 635 94 65</a>
+                                    <a href="mailto:hi@turkishtradelawyers.com" class="service-page-cta-link"><i class="fas fa-envelope"></i> hi@turkishtradelawyers.com</a>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="liaison-lead-revenue">Will the Turkish presence earn revenue?</label>
-                                <select id="liaison-lead-revenue" name="turkish_revenue_plan" required>
-                                    <option value="">Select one</option>
-                                    <option>Yes - sales, services, or invoicing</option>
-                                    <option>No - research, promotion, or coordination only</option>
-                                    <option>Not sure yet</option>
-                                </select>
-                            </div>
-                            <div class="form-group form-group-wide">
-                                <label for="liaison-lead-activity">Planned activities and staffing (optional)</label>
-                                <textarea id="liaison-lead-activity" name="planned_activities" placeholder="Describe the activities, contracts, invoicing, employees, and expected duration in Turkey."></textarea>
-                            </div>
-                            <div class="article-form-actions">
-                                <button type="submit" class="article-form-submit">Request a Market-Entry Assessment <i class="fas fa-arrow-right"></i></button>
-                            </div>
-                            <p class="form-disclosure">Confidential preliminary review. Sending this form does not
-                                oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
-                            <p class="form-status" role="status" aria-live="polite"></p>
-                        </form>
-                    </div>
+                            <form class="service-cta-form contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                                data-conversion-form data-form-id="liaison-branch-inline">
+                                <input type="hidden" name="_subject" value="Liaison, Branch or Subsidiary Assessment Request">
+                                <input type="hidden" name="source_page" value="Liaison Office vs Branch Office in Turkey article">
+                                <input type="hidden" name="request_type" value="Liaison, Branch or Subsidiary Assessment">
+                                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                                <div class="form-group">
+                                    <label for="liaison-lead-email">Email address</label>
+                                    <input type="email" id="liaison-lead-email" name="email" placeholder="name@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="liaison-lead-revenue">Will the Turkish presence earn revenue?</label>
+                                    <select id="liaison-lead-revenue" name="turkish_revenue_plan" required>
+                                        <option value="">Select one</option>
+                                        <option>Yes - sales, services, or invoicing</option>
+                                        <option>No - research, promotion, or coordination only</option>
+                                        <option>Not sure yet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group service-cta-field-wide">
+                                    <label for="liaison-lead-activity">Planned activities and staffing (optional)</label>
+                                    <textarea id="liaison-lead-activity" name="planned_activities" placeholder="Describe the activities, contracts, invoicing, employees, and expected duration in Turkey."></textarea>
+                                </div>
+                                <p class="form-disclosure">Confidential preliminary review. Sending this form does not
+                                    oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                                <div class="service-cta-submit-row">
+                                    <button type="submit" class="form-submit-btn">Request a Market-Entry Assessment <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                                <p class="form-status" role="status" aria-live="polite"></p>
+                            </form>
+                        </div>
+                    </section>
                 </section>
 
                 <!-- FAQ Section -->
@@ -634,6 +641,124 @@
             </p>
         </div>
     </footer>
+
+    <!-- Lead Magnet Modal -->
+    <div id="entityChecklistModal" class="lm-modal" aria-hidden="true">
+        <div class="lm-modal-content" role="dialog" aria-modal="true" aria-labelledby="entityChecklistModalTitle">
+            <button type="button" class="lm-close" aria-label="Close download form">&times;</button>
+            <h2 id="entityChecklistModalTitle">Download Your Checklist</h2>
+            <p>Enter your email address to receive the 2026 Turkey Entity Selection Checklist instantly.</p>
+            <form id="entityChecklistLeadForm" class="lead-magnet-email-form" action="https://formspree.io/f/mnneobaw" method="POST">
+                <input type="hidden" name="_subject" value="Turkey Entity Selection Checklist Download">
+                <input type="hidden" name="source" value="Liaison vs Branch article lead magnet">
+                <input type="hidden" name="source_page" value="Liaison Office vs Branch Office in Turkey article">
+                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                <input type="email" id="entityChecklistEmail" name="email" placeholder="Your work email address" required>
+                <button type="submit" class="lm-submit-btn">Download PDF</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('entityChecklistModal');
+            const openBtn = document.getElementById('openEntityChecklistModalBtn');
+            const closeBtn = modal ? modal.querySelector('.lm-close') : null;
+            const form = document.getElementById('entityChecklistLeadForm');
+            const emailInput = document.getElementById('entityChecklistEmail');
+            const downloadUrl = 'output/pdf/turkey-entity-selection-checklist-2026.pdf';
+            const downloadName = 'Turkey-Entity-Selection-Checklist-2026.pdf';
+            const conversionLabel = 'liaison_branch_article';
+
+            const trackLeadMagnet = function (eventName, parameters) {
+                if (typeof trackConversionEvent === 'function') {
+                    trackConversionEvent(eventName, parameters || {});
+                }
+            };
+
+            const openModal = function () {
+                if (!modal) return;
+                modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
+                if (emailInput) emailInput.focus();
+                trackLeadMagnet('lead_magnet_modal_open', { conversion_label: conversionLabel });
+            };
+
+            const closeModal = function () {
+                if (!modal) return;
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+            };
+
+            const downloadChecklist = function () {
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = downloadName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                trackLeadMagnet('lead_magnet_download', { conversion_label: conversionLabel });
+            };
+
+            if (openBtn) {
+                openBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    openModal();
+                });
+            }
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) closeModal();
+            });
+
+            window.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') closeModal();
+            });
+
+            if (form) {
+                form.addEventListener('submit', async function (event) {
+                    event.preventDefault();
+                    const submitBtn = form.querySelector('.lm-submit-btn');
+                    const status = form.querySelector('.form-status');
+                    const originalText = submitBtn ? submitBtn.textContent : '';
+
+                    if (submitBtn) {
+                        submitBtn.textContent = 'Processing...';
+                        submitBtn.disabled = true;
+                    }
+                    if (status) {
+                        status.className = 'form-status is-visible';
+                        status.textContent = 'Preparing your download...';
+                    }
+                    trackLeadMagnet('lead_magnet_submit_attempt', { conversion_label: conversionLabel });
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form),
+                            headers: { Accept: 'application/json' }
+                        });
+                        if (!response.ok) throw new Error('Lead magnet submission failed');
+                        trackLeadMagnet('generate_lead', { form_id: 'entity-checklist-lead-magnet' });
+                    } catch (error) {
+                        trackLeadMagnet('lead_magnet_submit_error', { form_id: 'entity-checklist-lead-magnet' });
+                    } finally {
+                        closeModal();
+                        downloadChecklist();
+                        form.reset();
+                        if (status) status.className = 'form-status';
+                        if (submitBtn) {
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
     <script src="script.js?v=20260721-conversion2"></script>
 

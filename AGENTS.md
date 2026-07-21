@@ -1,5 +1,17 @@
 # Project Instructions
 
+## Article CTA and box design standard
+
+When creating or editing CTA boxes, lead magnet boxes, service-reference notes, or similar callout cards in article HTML files:
+
+1. Use the site's neutral callout background: `var(--light-gray)` / `#F5F7FA`.
+2. Do not use pale blue gradients or off-brand blue backgrounds for these boxes.
+3. Use `var(--border-gray)` / `#E4E7EC` for the box border unless an existing component requires a stronger border.
+4. Use `var(--primary-blue)` / `#2D4CC8` for badges, icons, and primary download/CTA buttons so the button color matches the badge text color.
+5. Use `var(--navy)` for primary CTA hover states.
+6. Prefer reusing the existing `.article-guide-download-box`, `.pillar-cluster-note`, and `.service-page-cta` patterns instead of adding new one-off inline styles.
+7. Avoid inline styles for article CTA/callout box colors and spacing when a shared CSS class can be used.
+
 ## SEO indexation policy
 
 Whenever work changes files under `industries/` or `countries/`:
