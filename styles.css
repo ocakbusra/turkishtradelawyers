@@ -701,6 +701,19 @@ iframe[title="chat widget"] {
         width: 100%;
     }
 
+    .hero-cta-group .btn-whatsapp-hero {
+        align-self: center;
+        width: 52px;
+        min-width: 52px;
+        max-width: 52px;
+        height: 52px;
+        padding: 0;
+    }
+
+    .btn-whatsapp-hero::after {
+        display: none;
+    }
+
     .hero-stats-row {
         flex-direction: column;
         gap: 24px;
