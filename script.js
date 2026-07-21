@@ -264,20 +264,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Contact Form Security Question Validation
-    const contactForm = document.getElementById('consultation-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            const securityAnswer = document.getElementById('security-answer').value;
-            // Simple check for "3 + 4"
-            if (securityAnswer.trim() !== '7') {
-                e.preventDefault();
-                alert('Please provide the correct answer to the security question (3 + 4).');
-                document.getElementById('security-answer').focus();
-            }
-        });
-    }
-
 });
 
 // Footer Injection
@@ -982,7 +968,15 @@ function generateBreadcrumbSchema() {
 
 // Initialize internal link tracking for analytics
 function trackInternalLinks() {
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"], a[href^="../"]');
+    const internalLinks = Array.from(document.querySelectorAll('a[href]')).filter(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return false;
+        try {
+            return new URL(href, window.location.href).origin === window.location.origin;
+        } catch {
+            return false;
+        }
+    });
 
     internalLinks.forEach(link => {
         link.addEventListener('click', function () {
@@ -994,6 +988,210 @@ function trackInternalLinks() {
             }
         });
     });
+}
+
+function trackConversionEvent(eventName, parameters = {}) {
+    if (typeof gtag !== 'function') return;
+    gtag('event', eventName, {
+        page_path: window.location.pathname,
+        page_title: document.title,
+        ...parameters
+    });
+}
+
+function initSecurityQuestionValidation() {
+    document.querySelectorAll('form').forEach(form => {
+        const securityInput = form.querySelector('[name="security-answer"]');
+        if (!securityInput) return;
+
+        form.addEventListener('submit', event => {
+            if (securityInput.value.trim() === '7') return;
+            event.preventDefault();
+            securityInput.setCustomValidity('Please provide the correct answer to 3 + 4.');
+            securityInput.reportValidity();
+            securityInput.focus();
+            trackConversionEvent('form_validation_error', {
+                form_id: form.dataset.formId || form.id || 'contact-form',
+                field_name: 'security-answer'
+            });
+        });
+
+        securityInput.addEventListener('input', () => securityInput.setCustomValidity(''));
+    });
+}
+
+function initBusinessFormContext() {
+    const form = document.querySelector('[data-form-id="business-setup-main"]');
+    if (!form) return;
+
+    const sourceInput = form.querySelector('[name="source_page"]');
+    const entitySelect = form.querySelector('[name="entity_type"]');
+    const params = new URLSearchParams(window.location.search);
+    const sourceParam = params.get('source');
+    let source = sourceParam || '';
+
+    if (!source && document.referrer) {
+        try {
+            const referrer = new URL(document.referrer);
+            if (referrer.origin === window.location.origin) source = referrer.pathname.split('/').pop() || 'internal-page';
+        } catch {
+            source = '';
+        }
+    }
+
+    const contextMap = {
+        'limited-company': 'Limited Şirket',
+        'establishing-limited-liability-company-turkey.html': 'Limited Şirket',
+        'llc-vs-jsc': 'Not sure',
+        'llc-or-joint-stock-company-turkey.html': 'Not sure',
+        'liaison-branch': 'Liaison Office',
+        'liaison-office-vs-branch-office-turkey.html': 'Liaison Office',
+        'liaison-office': 'Liaison Office',
+        'branch-office': 'Branch Office',
+        'joint-stock-company': 'Anonim Şirket',
+        'company-formation': 'Not sure',
+        'market-entry': 'Not sure',
+        'uk-company-formation': 'Not sure'
+    };
+
+    if (sourceInput && source) sourceInput.value = `Setup a Business in Turkey | Source: ${source}`;
+    if (entitySelect && contextMap[source]) entitySelect.value = contextMap[source];
+}
+
+function initHashLandingCorrection() {
+    if (!window.location.hash) return;
+
+    const correctPosition = () => {
+        const targetId = decodeURIComponent(window.location.hash.slice(1));
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        target.scrollIntoView({ block: 'start' });
+    };
+
+    window.addEventListener('load', () => {
+        window.requestAnimationFrame(correctPosition);
+        window.setTimeout(correctPosition, 350);
+    }, { once: true });
+}
+
+function initConversionForms() {
+    document.querySelectorAll('[data-conversion-event]').forEach(element => {
+        element.addEventListener('click', () => {
+            trackConversionEvent(element.dataset.conversionEvent || 'conversion_cta_click', {
+                conversion_label: element.dataset.conversionLabel || element.textContent.trim().substring(0, 80),
+                link_url: element.href || ''
+            });
+        });
+    });
+
+    const viewTargets = document.querySelectorAll('.conversion-article-cta, .service-page-cta');
+    if (viewTargets.length && 'IntersectionObserver' in window) {
+        const viewed = new WeakSet();
+        const viewObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting || viewed.has(entry.target)) return;
+                viewed.add(entry.target);
+                trackConversionEvent('conversion_cta_view', {
+                    conversion_id: entry.target.id || entry.target.className
+                });
+            });
+        }, { threshold: 0.35 });
+        viewTargets.forEach(target => viewObserver.observe(target));
+    }
+
+    document.querySelectorAll('form[data-conversion-form]').forEach(form => {
+        const formId = form.dataset.formId || form.id || 'conversion-form';
+        const status = form.querySelector('.form-status');
+        let started = false;
+
+        const trackStart = () => {
+            if (started) return;
+            started = true;
+            trackConversionEvent('form_start', { form_id: formId });
+        };
+        form.addEventListener('input', trackStart);
+        form.addEventListener('change', trackStart);
+
+        form.addEventListener('submit', async event => {
+            if (event.defaultPrevented || !form.action.includes('formspree.io')) return;
+            event.preventDefault();
+
+            let sourceInput = form.querySelector('[name="source_page"]');
+            if (!sourceInput) {
+                sourceInput = document.createElement('input');
+                sourceInput.type = 'hidden';
+                sourceInput.name = 'source_page';
+                form.appendChild(sourceInput);
+            }
+            if (!sourceInput.value) sourceInput.value = window.location.pathname;
+
+            const submitButton = form.querySelector('button[type="submit"]');
+            if (submitButton) submitButton.disabled = true;
+            if (status) {
+                status.className = 'form-status is-visible';
+                status.textContent = 'Sending your request...';
+            }
+            trackConversionEvent('form_submit_attempt', { form_id: formId });
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { Accept: 'application/json' }
+                });
+                if (!response.ok) throw new Error('Submission failed');
+
+                form.reset();
+                if (status) {
+                    status.className = 'form-status is-visible is-success';
+                    status.textContent = 'Thank you. Your request has been received. We will reply using the email provided.';
+                }
+                trackConversionEvent('generate_lead', { form_id: formId });
+            } catch {
+                if (status) {
+                    status.className = 'form-status is-visible is-error';
+                    status.textContent = 'We could not send the form. Please email hi@turkishtradelawyers.com.';
+                }
+                trackConversionEvent('form_submit_error', { form_id: formId });
+            } finally {
+                if (submitButton) submitButton.disabled = false;
+            }
+        });
+    });
+}
+
+function initConversionChatBehavior() {
+    const mobileBar = document.querySelector('.mobile-conversion-bar');
+    const conversionZones = document.querySelectorAll('.conversion-article-cta, .service-page-cta');
+    if (!mobileBar && !conversionZones.length) return;
+
+    window.Tawk_API = window.Tawk_API || {};
+    const previousOnLoad = window.Tawk_API.onLoad;
+
+    const configureWidget = () => {
+        if (window.matchMedia('(max-width: 768px)').matches && mobileBar) {
+            window.Tawk_API.hideWidget?.();
+            return;
+        }
+
+        if (!conversionZones.length || !('IntersectionObserver' in window)) return;
+        const activeZones = new Set();
+        const chatObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) activeZones.add(entry.target);
+                else activeZones.delete(entry.target);
+            });
+            if (activeZones.size) window.Tawk_API.hideWidget?.();
+            else window.Tawk_API.showWidget?.();
+        }, { threshold: 0.15 });
+        conversionZones.forEach(zone => chatObserver.observe(zone));
+    };
+
+    window.Tawk_API.onLoad = function () {
+        if (typeof previousOnLoad === 'function') previousOnLoad();
+        configureWidget();
+    };
+    if (typeof window.Tawk_API.hideWidget === 'function') configureWidget();
 }
 
 // Smooth scroll for table of contents links
@@ -1080,6 +1278,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initLazyLoading();
     generateBreadcrumbSchema();
     trackInternalLinks();
+    initSecurityQuestionValidation();
+    initBusinessFormContext();
+    initHashLandingCorrection();
+    initConversionForms();
+    initConversionChatBehavior();
     deferNonCriticalScripts();
 });
 

@@ -29,7 +29,7 @@
         p:not(.service-page-cta-badge):not(.small-text), 
         li:not(.nav-item) { font-size: 1rem !important; line-height: 1.7 !important; }
     </style>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260721-conversion2">
 
     <!-- Schema 1: Service -->
     <script type="application/ld+json">
@@ -322,9 +322,11 @@
                         <div class="service-sidebar-card glass-card sidebar-form-card" style="padding: 24px;">
                             <h3 style="margin-top:0;">Discuss Your Setup</h3>
                             <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.25rem;">Provide preliminary details for a confidential consultation with our corporate team.</p>
-                            <form class="sidebar-lead-form" action="https://formsubmit.co/info@turkishtradelawyers.com" method="POST">
+                            <form class="sidebar-lead-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                                data-conversion-form data-form-id="business-setup-sidebar">
                                 <input type="hidden" name="_subject" value="Business Setup Inquiry">
-                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="source_page" value="Setup a Business in Turkey sidebar">
+                                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
                                 <div class="form-group">
                                     <label for="sb-name">Name</label>
                                     <input type="text" id="sb-name" name="name" placeholder="Full name" required>
@@ -341,7 +343,9 @@
                                     <label for="sb-details">Brief Project Details (Optional)</label>
                                     <textarea id="sb-details" name="project_details"></textarea>
                                 </div>
-                                <button type="submit" class="sidebar-form-submit">Request Consultation</button>
+                                <button type="submit" class="sidebar-form-submit">Request Structure Guidance</button>
+                                <p class="form-disclosure">Confidential preliminary review. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                                <p class="form-status" role="status" aria-live="polite"></p>
                             </form>
                         </div>
                     </div>
@@ -728,38 +732,46 @@
                 </div>
 
                 <div class="article-cta" style="margin-top: 2rem;">
-                        <h3>Ready to expand your business into Turkey?</h3>
-                        <p>Our expert corporate attorneys handle end-to-end company formation, compliance, and specialized licensing.</p>
-                        <a href="contact.html" class="cta-btn">Schedule Consultation <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <h3>Not Ready to Contact a Lawyer Yet?</h3>
+                    <p>Download the free 2026 Turkey Entity Selection Checklist and compare a Limited Şirket, Anonim
+                        Şirket, liaison office, and branch before choosing a route.</p>
+                    <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="cta-btn"
+                        data-conversion-event="lead_magnet_download" data-conversion-label="setup_business_page">
+                        Download the Free Checklist <i class="fas fa-download"></i>
+                    </a>
+                </div>
 
             </div>
         </section>
         <!-- End full-width content section -->
 
-        <section class="service-page-cta" aria-labelledby="service-cta-title" style="background: transparent; padding-bottom: 0;">
+        <section id="consultation-form" class="service-page-cta" aria-labelledby="service-cta-title" style="background: transparent; padding-bottom: 0;">
             <div class="container">
                 <div class="service-page-cta-card glass-card" style="background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(255, 255, 255, 0.8);">
                     <div class="service-page-cta-copy">
                         <span class="service-page-cta-badge" style="background: rgba(224, 231, 255, 0.7);"><i class="fas fa-envelope-open-text"></i> Ask Our Team</span>
-                        <h2 id="service-cta-title">Ready to set up your company or branch in Turkey?</h2>
-                        <p>Send a short note about the entity type, sector, or ownership plan you have in mind. We will map out the right formation route and respond with the next practical step.</p>
+                        <h2 id="service-cta-title">Company, liaison office, branch, or not sure yet?</h2>
+                        <p>Send the essentials only. Our corporate team will review the planned activity and outline the
+                            next practical step for the appropriate Turkish structure.</p>
+                        <p class="service-cta-trust"><i class="fas fa-user-shield"></i> Confidential preliminary review by our Turkish corporate law team.</p>
                         <div class="service-page-cta-links">
                             <a href="tel:+905016359465" class="service-page-cta-link"><i class="fas fa-phone"></i> +90 501 635 94 65</a>
                             <a href="mailto:hi@turkishtradelawyers.com" class="service-page-cta-link"><i class="fas fa-envelope"></i> hi@turkishtradelawyers.com</a>
                         </div>
                     </div>
-                    <form class="service-cta-form contact-form" action="https://formspree.io/f/mnneobaw" method="POST">
-                        <input type="hidden" name="_subject" value="Service Page Consultation Request">
-                        <input type="hidden" name="source_page" value="Setup a Business in Turkey">
-                        <div class="form-group"><label for="service-cta-name">Full Name</label><input type="text" id="service-cta-name" name="full-name" placeholder="John Doe" required></div>
+                    <form class="service-cta-form contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                        data-conversion-form data-form-id="business-setup-main">
+                        <input type="hidden" name="_subject" value="Business Structure Guidance Request">
+                        <input type="hidden" name="source_page" id="business-form-source" value="Setup a Business in Turkey">
+                        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                        <div class="form-group"><label for="service-cta-name">Full Name</label><input type="text" id="service-cta-name" name="full-name" placeholder="John Doe"></div>
                         <div class="form-group"><label for="service-cta-email">Email Address</label><input type="email" id="service-cta-email" name="email" placeholder="john@example.com" required></div>
                         <div class="form-group"><label for="service-cta-phone">Phone Number</label><input type="tel" id="service-cta-phone" name="phone" placeholder="+90 XXX XXX XXXX"></div>
-                        <div class="form-group"><label for="service-cta-service">Service Needed</label><select id="service-cta-service" name="service" required><option value="Setup a Business in Turkey">Setup a Business in Turkey</option><option value="Commercial Contracts">Commercial Contracts</option><option value="International Trade and Customs">International Trade and Customs</option><option value="Compliance and Data Protection">Compliance and Data Protection</option><option value="Employment and Mobility">Employment and Mobility</option><option value="Tax and Trade Finance">Tax and Trade Finance</option><option value="Real Estate and Commercial Lease">Real Estate and Commercial Lease</option><option value="Intellectual Property">Intellectual Property</option><option value="Debt Collection">Debt Collection</option><option value="Dispute Resolution">Dispute Resolution</option><option value="Other">Other</option></select></div>
-                        <div class="form-group service-cta-field-wide"><label for="service-cta-message">Message</label><textarea id="service-cta-message" name="message" placeholder="Briefly describe the matter, deadline, and counterparties involved." rows="4" required></textarea></div>
-                        <div class="form-group"><label for="service-cta-security">Security Question: What is 3 + 4?</label><input type="text" id="service-cta-security" name="security-answer" placeholder="Your answer" required></div>
-                        <div class="service-cta-consent"><input type="checkbox" id="service-cta-consent" name="terms_consent" required><label for="service-cta-consent">I have read, understood, and accept the <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</label></div>
-                        <div class="service-cta-submit-row"><button type="submit" class="form-submit-btn">Submit Request <i class="fas fa-arrow-right"></i></button></div>
+                        <div class="form-group"><label for="service-cta-entity">Planned Structure</label><select id="service-cta-entity" name="entity_type" required><option value="">Select one</option><option value="Not sure">Not sure - please advise</option><option value="Limited Şirket">Limited Şirket (LLC)</option><option value="Anonim Şirket">Anonim Şirket (JSC)</option><option value="Liaison Office">Liaison Office</option><option value="Branch Office">Branch Office</option><option value="Other">Other structure</option></select></div>
+                        <div class="form-group service-cta-field-wide"><label for="service-cta-activity">Planned Turkish Activity (Optional)</label><textarea id="service-cta-activity" name="business_activity" placeholder="What will the Turkish operation do? Will it invoice customers, employ staff, or have foreign shareholders?" rows="4"></textarea></div>
+                        <p class="form-disclosure service-cta-field-wide">Sending this form does not oblige you to instruct us. We use your details only to respond to this request. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                        <div class="service-cta-submit-row"><button type="submit" class="form-submit-btn">Request Structure Guidance <i class="fas fa-arrow-right"></i></button></div>
+                        <p class="form-status service-cta-field-wide" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -768,6 +780,6 @@
     </main>
 
     <footer class="footer"><div class="container"><p>&copy; 2026 Turkish Trade Lawyers. All rights reserved.</p></div></footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260721-conversion2"></script>
 </body>
 </html>

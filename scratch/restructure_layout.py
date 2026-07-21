@@ -23,9 +23,9 @@ old_sidebar_close = '''                    </div>
 new_sidebar_with_form = '''                        <div class="service-sidebar-card glass-card sidebar-form-card" style="padding: 24px;">
                             <h3 style="margin-top:0;">Discuss a Collection Matter</h3>
                             <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1.25rem;">Provide preliminary details for a confidential case evaluation by our enforcement team.</p>
-                            <form class="sidebar-lead-form" action="https://formsubmit.co/info@turkishtradelawyers.com" method="POST">
+                            <form class="sidebar-lead-form" action="https://formspree.io/f/mnneobaw" method="POST" data-conversion-form data-form-id="debt-collection-sidebar">
                                 <input type="hidden" name="_subject" value="Debt Collection Inquiry">
-                                <input type="hidden" name="_captcha" value="false">
+                                <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
                                 <div class="form-group">
                                     <label for="dc-name">Name</label>
                                     <input type="text" id="dc-name" name="name" placeholder="Full name" required>

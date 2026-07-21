@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260721-conversion2">
     <link rel="icon" href="logo-square.png" type="image/png">
     <link rel="apple-touch-icon" href="logo-square.png">
     <link rel="canonical" href="https://www.turkishtradelawyers.com/llc-or-joint-stock-company-turkey.html">
@@ -223,6 +223,25 @@
                         business in Turkey.</p>
                 </section>
 
+                <aside class="article-lead-magnet" aria-labelledby="company-choice-checklist-title">
+                    <div>
+                        <span class="article-lead-magnet-badge"><i class="fas fa-file-arrow-down"></i> Free 2026 Decision Tool</span>
+                        <h2 id="company-choice-checklist-title">Compare LLC, JSC, Liaison Office, and Branch</h2>
+                        <p>Download the Turkey Entity Selection Checklist for a practical decision table, readiness
+                            checklist, and the questions that determine the right market-entry route.</p>
+                    </div>
+                    <div class="lead-magnet-actions">
+                        <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="lead-magnet-btn"
+                            data-conversion-event="lead_magnet_download" data-conversion-label="llc_jsc_article">
+                            <i class="fas fa-download"></i> Download the Decision Checklist
+                        </a>
+                        <a href="#article-assessment" class="lead-magnet-secondary"
+                            data-conversion-event="early_assessment_click" data-conversion-label="llc_jsc_article">
+                            Ask Which Structure Fits
+                        </a>
+                    </div>
+                </aside>
+
                 <section id="comparison-table" class="article-content">
                     <div style="overflow-x: auto; margin: 2rem 0;">
                         <table
@@ -301,6 +320,15 @@
                 </section>
 
                 <section id="share-transfer" class="article-content">
+                    <div class="article-mid-cta">
+                        <i class="fas fa-scale-balanced"></i>
+                        <div>
+                            <h3>The right choice depends on more than minimum capital.</h3>
+                            <p>Governance, fundraising, transfers, public-debt exposure, and exit plans can change the recommendation.</p>
+                        </div>
+                        <a href="#article-assessment" data-conversion-event="mid_assessment_click"
+                            data-conversion-label="llc_jsc_article">Request a structure review <i class="fas fa-arrow-right"></i></a>
+                    </div>
                     <h2>1. Share Transfer: Flexibility vs. Control</h2>
                     <p>This is arguably the most significant practical difference between the two structures, and the
                         one that matters most for investors thinking about long-term capital mobility.</p>
@@ -458,18 +486,53 @@
                     <p>Whether you are forming an LLC for a lean market entry or establishing a JSC for a major
                         investment, our team provides clear, practical legal counsel tailored to your specific needs.
                     </p>
-                    <p>Contact us to discuss your investment plans and find the structure that works best for you.</p>
-
-                    <div class="callout-box"
-                        style="background-color: #EFF6FF; border-left: 4px solid #2D4CC8; padding: 1rem 1.5rem; margin: 1.5rem 0; color: #1E3A8A; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7;">
-                        <a href="index.html#contact"
-                            style="color: #2D4CC8; font-weight: 600; text-decoration: underline;">Contact us</a> to
-                        ensure full compliance and a smooth start to your business operations in Turkey.
+                    <div class="article-cta conversion-article-cta" id="article-assessment">
+                        <h3>Not Sure Whether an LLC or JSC Fits Your Investment?</h3>
+                        <p>Tell us about the shareholders, planned capital, governance needs, fundraising strategy, and
+                            exit goals. We will assess whether a Limited Şirket or Anonim Şirket is the more suitable
+                            starting structure.</p>
+                        <div class="article-reviewer"><i class="fas fa-user-shield"></i> Reviewed by Büşra Ocak,
+                            Attorney-at-Law, Istanbul Bar Association</div>
+                        <form class="article-lead-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                            data-conversion-form data-form-id="llc-jsc-structure-inline">
+                            <input type="hidden" name="_subject" value="LLC or JSC Structure Review Request">
+                            <input type="hidden" name="source_page" value="LLC or Joint-Stock Company in Turkey article">
+                            <input type="hidden" name="request_type" value="LLC or JSC Structure Review">
+                            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                            <div class="form-group">
+                                <label for="choice-lead-email">Email address</label>
+                                <input type="email" id="choice-lead-email" name="email" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="choice-lead-priority">Main structuring priority</label>
+                                <select id="choice-lead-priority" name="structuring_priority" required>
+                                    <option value="">Select one</option>
+                                    <option>Simple and cost-efficient operation</option>
+                                    <option>Fundraising or future investors</option>
+                                    <option>Flexible share transfers or exit</option>
+                                    <option>Governance and minority protections</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group-wide">
+                                <label for="choice-lead-summary">Shareholders and business plan (optional)</label>
+                                <textarea id="choice-lead-summary" name="project_summary" placeholder="Briefly describe the owners, planned activity, investment scale, and target date."></textarea>
+                            </div>
+                            <div class="article-form-actions">
+                                <button type="submit" class="article-form-submit">Request a Company Structure Review <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <p class="form-disclosure">Confidential preliminary review. Sending this form does not
+                                oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                            <p class="form-status" role="status" aria-live="polite"></p>
+                        </form>
                     </div>
                 </section>
             </article>
         </div>
     </main>
+
+    <a href="#article-assessment" class="mobile-conversion-bar" data-conversion-event="mobile_sticky_click"
+        data-conversion-label="llc_jsc_article"><i class="fas fa-scale-balanced"></i> Compare LLC and JSC</a>
 
     <!-- Footer -->
     <footer class="footer">
@@ -481,21 +544,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260721-conversion2"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6943c0ff63447e19862c286a/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
 </body>
 
 </html>

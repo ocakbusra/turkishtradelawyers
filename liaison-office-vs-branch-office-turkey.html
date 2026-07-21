@@ -50,7 +50,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260721-conversion2">
     <link rel="icon" href="logo-square.png" type="image/png">
     <link rel="apple-touch-icon" href="logo-square.png">
     <link rel="canonical" href="https://www.turkishtradelawyers.com/liaison-office-vs-branch-office-turkey.html">
@@ -278,6 +278,25 @@
                         selecting the most suitable model based on their business objectives.</p>
                 </section>
 
+                <aside class="article-lead-magnet" aria-labelledby="market-entry-checklist-title">
+                    <div>
+                        <span class="article-lead-magnet-badge"><i class="fas fa-file-arrow-down"></i> Free 2026 Eligibility Checklist</span>
+                        <h2 id="market-entry-checklist-title">Can Your Planned Activities Use a Liaison Office?</h2>
+                        <p>Download the Turkey Entity Selection Checklist to compare commercial activity, invoicing,
+                            staffing, tax exposure, parent-company responsibility, and establishment requirements.</p>
+                    </div>
+                    <div class="lead-magnet-actions">
+                        <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="lead-magnet-btn"
+                            data-conversion-event="lead_magnet_download" data-conversion-label="liaison_branch_article">
+                            <i class="fas fa-download"></i> Download the Eligibility Checklist
+                        </a>
+                        <a href="#article-assessment" class="lead-magnet-secondary"
+                            data-conversion-event="early_assessment_click" data-conversion-label="liaison_branch_article">
+                            Assess Your Planned Activities
+                        </a>
+                    </div>
+                </aside>
+
                 <section id="introduction" class="article-content">
                     <h2>1. Introduction</h2>
                     <p>Turkey remains an attractive market for foreign companies due to its large domestic demand,
@@ -463,6 +482,15 @@
                 </section>
 
                 <section id="strategic-use-cases" class="article-content">
+                    <div class="article-mid-cta">
+                        <i class="fas fa-compass"></i>
+                        <div>
+                            <h3>Will the Turkish presence invoice, sell, or sign customer contracts?</h3>
+                            <p>That answer often determines whether a liaison office is legally available.</p>
+                        </div>
+                        <a href="#article-assessment" data-conversion-event="mid_assessment_click"
+                            data-conversion-label="liaison_branch_article">Request a market-entry assessment <i class="fas fa-arrow-right"></i></a>
+                    </div>
                     <h2>10. Strategic Use Cases</h2>
                     <p><strong>When a Liaison Office Is Appropriate:</strong></p>
                     <ul>
@@ -502,12 +530,43 @@
                         decision at the outset significantly reduces future restructuring risks and compliance exposure.
                     </p>
 
-                    <div class="callout-box"
-                        style="background-color: #EFF6FF; border-left: 4px solid #2D4CC8; padding: 1rem 1.5rem; margin: 1.5rem 0; color: #1E3A8A;">
-                        <strong>Choosing the Right Legal Structure?</strong><br>
-                        We assist foreign companies in establishing the correct legal presence in Turkey. <a
-                            href="index.html#contact" style="color: #2D4CC8; font-weight: 600;">Contact us</a> for a
-                        strategic consultation.
+                    <div class="article-cta conversion-article-cta" id="article-assessment">
+                        <h3>Liaison Office, Branch, or Turkish Subsidiary?</h3>
+                        <p>Describe your planned activities, invoicing needs, staffing model, and expected duration in
+                            Turkey. We will assess the appropriate market-entry structure and the permits or
+                            registrations it requires.</p>
+                        <div class="article-reviewer"><i class="fas fa-user-shield"></i> Reviewed by Büşra Ocak,
+                            Attorney-at-Law, Istanbul Bar Association</div>
+                        <form class="article-lead-form" action="https://formspree.io/f/mnneobaw" method="POST"
+                            data-conversion-form data-form-id="liaison-branch-inline">
+                            <input type="hidden" name="_subject" value="Liaison, Branch or Subsidiary Assessment Request">
+                            <input type="hidden" name="source_page" value="Liaison Office vs Branch Office in Turkey article">
+                            <input type="hidden" name="request_type" value="Liaison, Branch or Subsidiary Assessment">
+                            <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" hidden>
+                            <div class="form-group">
+                                <label for="liaison-lead-email">Email address</label>
+                                <input type="email" id="liaison-lead-email" name="email" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="liaison-lead-revenue">Will the Turkish presence earn revenue?</label>
+                                <select id="liaison-lead-revenue" name="turkish_revenue_plan" required>
+                                    <option value="">Select one</option>
+                                    <option>Yes - sales, services, or invoicing</option>
+                                    <option>No - research, promotion, or coordination only</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="form-group form-group-wide">
+                                <label for="liaison-lead-activity">Planned activities and staffing (optional)</label>
+                                <textarea id="liaison-lead-activity" name="planned_activities" placeholder="Describe the activities, contracts, invoicing, employees, and expected duration in Turkey."></textarea>
+                            </div>
+                            <div class="article-form-actions">
+                                <button type="submit" class="article-form-submit">Request a Market-Entry Assessment <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                            <p class="form-disclosure">Confidential preliminary review. Sending this form does not
+                                oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                            <p class="form-status" role="status" aria-live="polite"></p>
+                        </form>
                     </div>
                 </section>
 
@@ -563,6 +622,9 @@
         </div>
     </main>
 
+    <a href="#article-assessment" class="mobile-conversion-bar" data-conversion-event="mobile_sticky_click"
+        data-conversion-label="liaison_branch_article"><i class="fas fa-compass"></i> Assess Your Market-Entry Route</a>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -573,21 +635,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260721-conversion2"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6943c0ff63447e19862c286a/default';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
 </body>
 
 </html>
