@@ -13,63 +13,7 @@ Turkish Trade Lawyers - SEO Enhancement Tool
 # Function to generate sitemap
 generate_sitemap() {
     echo "Generating sitemap.xml..."
-    
-    SITEMAP_FILE="sitemap.xml"
-    DATE=$(date +%Y-%m-%d)
-    
-    cat > $SITEMAP_FILE << 'SITEMAP_HEADER'
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-SITEMAP_HEADER
-
-    # Add homepage
-    echo "  <url>
-    <loc>${SITE_URL}/</loc>
-    <lastmod>${DATE}</lastmod>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>" >> $SITEMAP_FILE
-
-    # Add main pages
-    for page in guides.html regions.html ourexperts.html; do
-        if [ -f "$page" ]; then
-            echo "  <url>
-    <loc>${SITE_URL}/${page}</loc>
-    <lastmod>${DATE}</lastmod>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>" >> $SITEMAP_FILE
-        fi
-    done
-
-    # Add article pages
-    for article in *.html; do
-        if [[ "$article" != "index.html" && "$article" != "guides.html" && "$article" != "regions.html" && "$article" != "ourexperts.html" && "$article" != "cookie-policy.html" && "$article" != "disclaimer.html" && "$article" != "privacy-notice.html" ]]; then
-            if [ -f "$article" ]; then
-                echo "  <url>
-    <loc>${SITE_URL}/${article}</loc>
-    <lastmod>${DATE}</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>" >> $SITEMAP_FILE
-            fi
-        fi
-    done
-
-    # Add country pages
-    for country in countries/country-*.html; do
-        if [ -f "$country" ]; then
-            echo "  <url>
-    <loc>${SITE_URL}/${country}</loc>
-    <lastmod>${DATE}</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>" >> $SITEMAP_FILE
-        fi
-    done
-
-    echo "</urlset>" >> $SITEMAP_FILE
-    echo "Sitemap generated: $SITEMAP_FILE"
+    python3 update_sitemap.py
 }
 
 # Function to check for missing canonical tags
@@ -145,6 +89,7 @@ Available commands:
 5. check_structured_data - Check for missing JSON-LD
 6. count_links - Count internal links per page
 7. all - Run all checks
+8. indexation_review - Audit held industry and protected country pages
 
 Usage: ./seo-tools.sh [command]
 "
@@ -167,6 +112,9 @@ case "$1" in
         ;;
     count_links)
         count_links
+        ;;
+    indexation_review)
+        python3 seo_indexation_review.py audit
         ;;
     all)
         check_canonical

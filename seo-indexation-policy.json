@@ -1,0 +1,332 @@
+{
+  "country_pages": [
+    "countries/country-albania.html",
+    "countries/country-andorra.html",
+    "countries/country-austria.html",
+    "countries/country-belarus.html",
+    "countries/country-belgium.html",
+    "countries/country-bosnia.html",
+    "countries/country-bulgaria.html",
+    "countries/country-china.html",
+    "countries/country-croatia.html",
+    "countries/country-cyprus.html",
+    "countries/country-czechia.html",
+    "countries/country-denmark.html",
+    "countries/country-egypt.html",
+    "countries/country-estonia.html",
+    "countries/country-finland.html",
+    "countries/country-france.html",
+    "countries/country-germany.html",
+    "countries/country-greece.html",
+    "countries/country-guangzhou.html",
+    "countries/country-hong-kong.html",
+    "countries/country-hungary.html",
+    "countries/country-iceland.html",
+    "countries/country-iran.html",
+    "countries/country-iraq.html",
+    "countries/country-ireland.html",
+    "countries/country-italy.html",
+    "countries/country-japan.html",
+    "countries/country-kosovo.html",
+    "countries/country-latvia.html",
+    "countries/country-lithuania.html",
+    "countries/country-luxembourg.html",
+    "countries/country-malta.html",
+    "countries/country-moldova.html",
+    "countries/country-montenegro.html",
+    "countries/country-netherlands.html",
+    "countries/country-north-macedonia.html",
+    "countries/country-norway.html",
+    "countries/country-poland.html",
+    "countries/country-portugal.html",
+    "countries/country-qatar.html",
+    "countries/country-romania.html",
+    "countries/country-russia.html",
+    "countries/country-saudi-arabia.html",
+    "countries/country-serbia.html",
+    "countries/country-shanghai.html",
+    "countries/country-slovakia.html",
+    "countries/country-slovenia.html",
+    "countries/country-spain.html",
+    "countries/country-sweden.html",
+    "countries/country-switzerland.html",
+    "countries/country-uae.html",
+    "countries/country-ukraine.html",
+    "countries/country-united-kingdom.html",
+    "countries/country-usa.html"
+  ],
+  "created": "2026-07-21",
+  "industry_candidates": {
+    "industries/alternative-dispute-resolution.html": {
+      "baseline_fingerprint": "d4d3e679e53e074029d3a845c1e8127d76e108e76234eef6668152a8dc850071",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/alternative-medicine.html": {
+      "baseline_fingerprint": "82364f784702c9bbaea7613cb585f5b0cd7e0eb752d8c66dc3d91d09f02b710c",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/animation.html": {
+      "baseline_fingerprint": "98e7a58c3ff2dfca778aceb8dd0d102664b72f4766782199925c3431d4fea7a0",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/apparel-fashion.html": {
+      "baseline_fingerprint": "93c2a249ed05427a068aa1270eecdef6768d35e40ca93e0f76d6edf8a4668aac",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/architecture-planning.html": {
+      "baseline_fingerprint": "e8d8a0587c639128e7bcdc2abe012c4231d8879e67455e856032ea3f329e3f96",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/arts-crafts.html": {
+      "baseline_fingerprint": "befa13e602923b467b4cfbcf09273165e03857363536f31561ac365edc920e31",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/broadcast-media.html": {
+      "baseline_fingerprint": "10f70120341d00549aa6340cba621852ac814e0116e7a3b9cd03a2de6a9f9779",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/business-supplies-equipment.html": {
+      "baseline_fingerprint": "d6a5bb21f020106dca7f9b57acf6bb2a4367868dea64cf187199585fc2ffbdb8",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/computer-games.html": {
+      "baseline_fingerprint": "68fafd4d46870c3784b0fb317cfce3622aa34e3c5d78ec5fb62921920a810f33",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/computer-networking.html": {
+      "baseline_fingerprint": "7319d5934e12f8d239000c1bc2c7f936bdeae6ebb74c85b00db5c74362ae3e4a",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/consumer-goods.html": {
+      "baseline_fingerprint": "bdd6c34beecc1b971cebb16753099d22a54b9700810fb507e6b98cb822f9ea1e",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/consumer-services.html": {
+      "baseline_fingerprint": "1644a0bb2e0a16b9eb52d98baaddef160c8fc7057bb53fe55050ab2ff2ac4ad0",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/design.html": {
+      "baseline_fingerprint": "104d90dfecef5058aa46f0757462d6986f9f4e459ea2e53df353fab50e14e596",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/e-learning.html": {
+      "baseline_fingerprint": "e3439db5a01dd768c7b97903e5a4c7d5324ecb6eaad14339868692cd8537e48c",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/education-management.html": {
+      "baseline_fingerprint": "1d38694fb261b14bec0b56d457f5a181459d36e5b1569f78c532cadef25bf6ab",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/events-services.html": {
+      "baseline_fingerprint": "8dcb208c4b42383f4f07d514ee4a773658c15c90d0df84bf99b1f8a55fd6f665",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/farming.html": {
+      "baseline_fingerprint": "fbcd9e7e4800e7a3a0eb0deb7edefe15e83f3bac81d5eee97bd233a35e197c83",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/fishery.html": {
+      "baseline_fingerprint": "2fb79cdf625fb6df5ff400c4037b23b21b8789a827867640b6d614fbcce14fa2",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/fund-raising.html": {
+      "baseline_fingerprint": "41a3ed48d262e00b3db7c26251acf2779aa231dcc8d134444c9434ca24dd603b",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/furniture.html": {
+      "baseline_fingerprint": "57b26e027f9e428948b97cafaf328675f6ff8c289fc11a1ab166fb1a3f4b9f18",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/glass-ceramics-concrete.html": {
+      "baseline_fingerprint": "dfa896e649069de254c2ee9938ecaeff41b1aa6aa2d37b760bf092045a0fc15a",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/graphic-design.html": {
+      "baseline_fingerprint": "0262fff52fdcfc74675f1c0ae399b43819580116a3713563c3ee5b37331e4fd1",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/information-services.html": {
+      "baseline_fingerprint": "a0366e49ecacb1eb0ee8b658b63a37e9bc398b87c74ee665058c9b1e5016c865",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/international-affairs.html": {
+      "baseline_fingerprint": "5abe0e4e39bebe1cc4f38b8adb0e2e00cdef13ce1c8c71d92e6db34819185795",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/internet.html": {
+      "baseline_fingerprint": "811313d0abba2ee3d268ff1e12997ca1f50dc548b981f486ad8b25f118fa128c",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/media-production.html": {
+      "baseline_fingerprint": "4d37fc480f2dbfb3636069a8fc9ffbd0cd300e0542be398607416bed6524fbd1",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/medical-practice.html": {
+      "baseline_fingerprint": "bd43042e62c0376661f2bc0408c40578aac4437d52609894f2832964e14bfa0f",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/motion-pictures-film.html": {
+      "baseline_fingerprint": "36dcee8a5faeafdda7143bcaed154fb6e3c5b9463541e7142ad23dc763552a2a",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/museums-institutions.html": {
+      "baseline_fingerprint": "2b48deb0d4fd4537246ad907ae1a4128a4dfd4ebfdf07ad664b47173967118dc",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/music.html": {
+      "baseline_fingerprint": "caaa7a635a9b108293d66ca80a50c370f20687d74adc2d9058c8e24537524f7b",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/nanotechnology.html": {
+      "baseline_fingerprint": "0139f59762a689026be9a497e68abe14462154abce227a9b4b58090b36876111",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/nonprofit-organization-management.html": {
+      "baseline_fingerprint": "3784d84d93055bfea2f6c2b5d83244c537f763ac6f7fb90f68e81874a4f1e998",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/online-media.html": {
+      "baseline_fingerprint": "d50e4bd30c06dc26f0e7a6ac0e8627bb045de342a42f155f8d2a8646bb6dca8e",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/outsourcing-offshoring.html": {
+      "baseline_fingerprint": "9b199134c6ac79039c39fe23964b96de5ff27d29f87e0492ca93e62a41fdc12f",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/paper-forest-products.html": {
+      "baseline_fingerprint": "b5fff466650e637673e7ca4fbc470f71a9475350e1c887407512c35f0797dee7",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/performing-arts.html": {
+      "baseline_fingerprint": "f2228183798a4f149c2f591e3cf5f22a79f3a78bd78a95f853b91cf18a792486",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/political-organization.html": {
+      "baseline_fingerprint": "5282c75fe45b6ac40f3468ad006d4b8d16cb413a00c4d9149a1a5789a06c01fb",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/primary-secondary-education.html": {
+      "baseline_fingerprint": "c9bae1ca552ce07da05dcbd81c74a1830cba9e5007d665ad13d74e141fe9668e",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/printing.html": {
+      "baseline_fingerprint": "b5d3a0f310bb9c7bcf88c394a77f281bc5ff859c48e429c73183e69be4b28668",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/professional-training-coaching.html": {
+      "baseline_fingerprint": "2f1f88976e2f234132c03ac1bb7cd169ceb06443aaa6632063d8b7a05de471cb",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/program-development.html": {
+      "baseline_fingerprint": "d28a0fa6b1e18b071b2af06095a345dabbc18cea8c0708da229e37e51f0fa439",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/publishing.html": {
+      "baseline_fingerprint": "73e1f947cece888c507d8df92b43b496d76b1cf24c661b4ad8e82ed8737b8afc",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/railroad-manufacture.html": {
+      "baseline_fingerprint": "2826bcbf8f3e8c4ce8f33d25cc6d7706eba42286985ef4ca49a472fec59aca1a",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/ranching.html": {
+      "baseline_fingerprint": "ac7e2dba885eb249ef7d394fa617f1bad4ae3ffca57af54e8fa455e663f3e422",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/recreational-facilities-services.html": {
+      "baseline_fingerprint": "c61754aa9b66dcf2ac43735bb7991b9fc72ba800d1dae56503e7f15e1928fdbf",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/restaurants.html": {
+      "baseline_fingerprint": "ef50d41e28bd0fa1b57d3140ba8b34b0cc6c8abd0b926c6f1dd55bf044f93498",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/security-investigations.html": {
+      "baseline_fingerprint": "74ac8e4eb1e69ff5dd524ee91a7768ed2720130dbc95c19b17a88038f4d7365c",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/sporting-goods.html": {
+      "baseline_fingerprint": "bc0d8a527553200bd2bd04713079e3a88f88ec7efc650a83602c5a4f9f3f6d75",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/sports.html": {
+      "baseline_fingerprint": "e638385a52f84ca792fcd905d832fe9f29e7989ef1e5285b7699171a6677744b",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/staffing-recruiting.html": {
+      "baseline_fingerprint": "23eadf4ef14f499b93dab27c496f34f8695f8df369dd4c0e0aac6cb34fce2dbc",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/supermarkets.html": {
+      "baseline_fingerprint": "47a6592ee5f33186775ed0fc2d818b012ec70c037f0ccbaa53c24b3901f5e298",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/translation-localization.html": {
+      "baseline_fingerprint": "d141e1f818bc45be7080635279723c5b6f9f2d8734f8128b97823d2458abec05",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/veterinary.html": {
+      "baseline_fingerprint": "49279b29c9c11478756a726638d114450d53899a3cc1d43627d7173815956c6d",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    },
+    "industries/wine-spirits.html": {
+      "baseline_fingerprint": "d00f57d4e30877e8b899f98e53e398f066a61a9a27093d933032aa9b2ff550f2",
+      "reason": "Low Search Console demand; held for substantive content development.",
+      "status": "held"
+    }
+  },
+  "version": 1
+}
