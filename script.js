@@ -75,6 +75,21 @@ window.TTL_resetCookieConsent = function () {
     // No-op: banner is disabled.
 };
 
+function initFloatingWhatsAppButton() {
+    if (!document.body || document.querySelector('.floating-whatsapp-button')) return;
+
+    const whatsappButton = document.createElement('a');
+    whatsappButton.href = 'https://wa.me/message/QBSUZJNCQOQEM1';
+    whatsappButton.target = '_blank';
+    whatsappButton.rel = 'noopener noreferrer';
+    whatsappButton.className = 'floating-whatsapp-button';
+    whatsappButton.title = 'WhatsApp Business';
+    whatsappButton.setAttribute('aria-label', 'Contact us on WhatsApp Business');
+    whatsappButton.innerHTML = '<i class="fab fa-whatsapp" aria-hidden="true"></i>';
+
+    document.body.appendChild(whatsappButton);
+}
+
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -1265,6 +1280,7 @@ function deferNonCriticalScripts() {
 // Initialize all SEO enhancements
 document.addEventListener('DOMContentLoaded', () => {
     initCookieConsent();
+    initFloatingWhatsAppButton();
 
     // Check if we're on an article page
     const isArticlePage = document.querySelector('.article-section, .article-content, article');
