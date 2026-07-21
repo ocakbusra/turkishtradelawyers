@@ -486,6 +486,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const slug = (path.split('/').filter(Boolean).pop() || '').replace(/\.html$/i, '');
     if (!slug || slug === 'index' || slug === 'guides' || slug === 'services' || slug === 'monitor') return;
 
+    if (articleEl.hasAttribute('data-disable-auto-article-sections')) return;
+
     injectEEATSignals(articleEl, slug);
 
     if (articleEl.querySelector('.related-articles')) return;
