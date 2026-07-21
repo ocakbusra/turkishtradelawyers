@@ -1,26 +1,50 @@
-name: Submit to IndexNow
+name: Notify search engines
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+
+concurrency:
+  group: search-engine-notification-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
-  indexnow:
+  notify:
+    name: Submit changed pages
     runs-on: ubuntu-latest
-    # Wait for other jobs (like deploy) if there are any. If not, it just runs.
+    timeout-minutes: 10
+
     steps:
-      - name: Checkout repository
+      - name: Checkout full history
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.12"
 
-      - name: Run IndexNow Submission Script
-        run: |
-          # Add a small delay to ensure the site is deployed before pinging, 
-          # just in case the deploy job runs in parallel and takes a few seconds.
-          sleep 15 
-          python3 submit_indexnow.py
+      - name: Test URL detection
+        run: python3 -m unittest discover -s tests -p "test_submit_indexnow.py" -v
+
+      - name: Notify IndexNow and prepare Brave report
+        id: notify
+        env:
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_SHA: ${{ github.sha }}
+          URL_REPORT_PATH: changed-search-engine-urls.json
+        run: python3 submit_indexnow.py --delay 75
+
+      - name: Save changed URL report
+        if: always() && steps.notify.outputs.url_count != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: submitted-search-engine-urls-${{ github.run_number }}
+          path: changed-search-engine-urls.json
+          if-no-files-found: ignore
+          retention-days: 30
