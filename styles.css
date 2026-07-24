@@ -6129,12 +6129,12 @@ img[loading="lazy"][src] {
 }
 
 .dispute-resolution-layout {
-    grid-template-columns: minmax(0, 2.2fr) minmax(270px, 0.72fr);
+    grid-template-columns: minmax(0, 1.7fr) minmax(290px, 0.95fr);
     gap: 32px;
 }
 
 .dispute-sidebar-secondary {
-    margin-top: clamp(280px, 34vw, 460px);
+    margin-top: clamp(700px, 58vw, 880px);
 }
 
 @media (max-width: 960px) {
@@ -6144,6 +6144,19 @@ img[loading="lazy"][src] {
 
     .dispute-sidebar-secondary {
         margin-top: 0;
+    }
+
+    .dispute-resolution-layout .scope-diagram {
+        width: auto;
+        max-width: none;
+    }
+
+    .dispute-resolution-layout .scope-diagram-stage {
+        min-height: 0;
+    }
+
+    .dispute-resolution-layout .scope-node {
+        min-height: 0;
     }
 }
 
@@ -7495,12 +7508,34 @@ img[loading="lazy"][src] {
 }
 
 .dispute-resolution-layout .scope-diagram {
+    position: relative;
+    z-index: 3;
+    width: calc(100% + clamp(320px, 30vw, 430px));
+    max-width: calc(100vw - 32px);
     padding: 34px;
+}
+
+.dispute-resolution-layout .scope-diagram-stage {
+    min-height: 500px;
+}
+
+.dispute-resolution-layout .scope-node {
+    min-height: 142px;
 }
 
 @media (max-width: 768px) {
     .dispute-resolution-layout .scope-diagram {
+        width: auto;
+        max-width: none;
         padding: 20px;
+    }
+
+    .dispute-resolution-layout .scope-diagram-stage {
+        min-height: 0;
+    }
+
+    .dispute-resolution-layout .scope-node {
+        min-height: 0;
     }
 }
 
