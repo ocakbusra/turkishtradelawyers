@@ -6764,6 +6764,19 @@ img[loading="lazy"][src] {
     border-top: 4px solid var(--navy);
 }
 
+/* As a direct child of the article grid the schema runs the full container
+   width, so the five stages sit on one rail and the grid gap handles spacing. */
+.service-landing-layout > .recovery-flow {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* The column below the schema opens a new grid row — drop the stacked-section
+   top margin so its heading lines up with the sidebar beside it. */
+.service-main-content > h2:first-child {
+    margin-top: 0;
+}
+
 /* Neutralise the lift/border swap inherited from .glass-card:hover — this is a
    full-width content block, not an interactive card. */
 .recovery-flow:hover {
@@ -6897,29 +6910,51 @@ img[loading="lazy"][src] {
     color: #64748B;
 }
 
-/* Two stages per row once the column can carry them */
+/* Column count steps up with the viewport; each step re-shows the rail on the
+   stages that gained a right-hand neighbour and hides it at the row ends. */
 @media (min-width: 600px) {
     .recovery-flow-track {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .recovery-flow-stage:not(:nth-child(2n)):not(:last-child)::after {
+    .recovery-flow-stage::after {
         display: block;
+    }
+
+    .recovery-flow-stage:nth-child(2n)::after,
+    .recovery-flow-stage:last-child::after {
+        display: none;
     }
 }
 
-/* Three per row on desktop — mirrors the 1→5 rail of the source schema while
-   keeping the cards readable inside the article column. */
-@media (min-width: 1120px) {
+@media (min-width: 880px) {
     .recovery-flow-track {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .recovery-flow-stage:not(:nth-child(3n)):not(:last-child)::after {
+    .recovery-flow-stage:nth-child(2n)::after {
         display: block;
     }
 
-    .recovery-flow-stage:nth-child(3n):not(:last-child)::after {
+    .recovery-flow-stage:nth-child(3n)::after,
+    .recovery-flow-stage:last-child::after {
+        display: none;
+    }
+}
+
+/* Full desktop width carries all five stages on a single 1→5 rail, as in the
+   source schema. */
+@media (min-width: 1120px) {
+    .recovery-flow-track {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .recovery-flow-stage:nth-child(2n)::after,
+    .recovery-flow-stage:nth-child(3n)::after {
+        display: block;
+    }
+
+    .recovery-flow-stage:last-child::after {
         display: none;
     }
 
