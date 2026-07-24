@@ -6121,6 +6121,13 @@ img[loading="lazy"][src] {
     height: max-content;
 }
 
+/* Centers the card stack within the aside's stretched height, e.g. so
+   "Typical Triggers" + the lead form sit level with the middle of the
+   taller tab content beside them, instead of pinned to the top. */
+.sidebar-sticky-wrapper-centered {
+    justify-content: center;
+}
+
 .sidebar-form-card {
     position: static;
     top: auto;
