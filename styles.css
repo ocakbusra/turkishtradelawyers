@@ -7248,3 +7248,226 @@ img[loading="lazy"][src] {
         justify-content: flex-start;
     }
 }
+
+/* ==========================================================================
+   Scope of Services Diagram (hub-and-spoke)
+   ========================================================================== */
+
+.scope-diagram {
+    container-type: inline-size;
+    gap: 0;
+}
+
+/* The diagram is a large surface, so the standard card lift is suppressed;
+   the individual nodes carry the hover feedback instead. */
+.scope-diagram:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.scope-diagram-stage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+/* --- Central hub --- */
+.scope-hub {
+    position: relative;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.scope-hub-core {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 26px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+    text-align: center;
+}
+
+.scope-hub-core h3 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.scope-hub-core p {
+    max-width: 30ch;
+    margin: 8px 0 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Ring and connector lines only make sense in the radial layout. */
+.scope-hub::before,
+.scope-spoke {
+    display: none;
+}
+
+/* --- Nodes --- */
+.scope-node {
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: 20px 20px 20px 18px;
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 12px;
+    background: var(--light-gray);
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.scope-node:hover {
+    border-color: var(--primary-blue);
+    background: #FFFFFF;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+    transform: translateY(-2px);
+}
+
+.scope-node-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: rgba(45, 76, 200, 0.08);
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+}
+
+.scope-node:hover .scope-node-icon {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+}
+
+.scope-node h4 {
+    margin: 0 0 8px;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.scope-node p {
+    max-width: none;
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    line-height: 1.55;
+}
+
+/* --- Footnote --- */
+.scope-diagram-note {
+    margin: 24px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-gray);
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    line-height: 1.55;
+}
+
+/* --- Radial layout (wide containers) --- */
+@container (min-width: 620px) {
+    .scope-diagram-stage {
+        grid-template-columns: minmax(0, 1fr) minmax(180px, 232px) minmax(0, 1fr);
+        grid-template-areas:
+            "scope-top    scope-top    scope-top"
+            "scope-lu     scope-hub    scope-ru"
+            "scope-ll     scope-hub    scope-rl";
+        gap: 18px 20px;
+        align-items: start;
+    }
+
+    .scope-hub {
+        grid-area: scope-hub;
+        align-self: center;
+        aspect-ratio: 1;
+        margin-bottom: 0;
+    }
+
+    /* Outer ring */
+    .scope-hub::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 138%;
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        border: 1px solid var(--border-gray);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    .scope-hub-core {
+        aspect-ratio: 1;
+        padding: 18px;
+        border-radius: 50%;
+    }
+
+    .scope-hub-core h3 {
+        font-size: 1.2rem;
+    }
+
+    .scope-hub-core p {
+        max-width: 18ch;
+        font-size: 0.8rem;
+    }
+
+    /* Connector lines: drawn from the hub centre outwards, hidden beneath the
+       opaque core so only the segment past the ring is visible. */
+    .scope-spoke {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 82%;
+        height: 1px;
+        background: var(--border-gray);
+        transform-origin: 0 50%;
+        z-index: 1;
+    }
+
+    /* The top node sits further from the hub than the side nodes, so its
+       connector runs longer; the surplus is covered by the node itself. */
+    .scope-spoke-top {
+        width: 125%;
+        transform: rotate(-90deg);
+    }
+
+    .scope-spoke-ru  { transform: rotate(-35deg); }
+    .scope-spoke-rl  { transform: rotate(35deg); }
+    .scope-spoke-ll  { transform: rotate(145deg); }
+    .scope-spoke-lu  { transform: rotate(215deg); }
+
+    .scope-node-top {
+        grid-area: scope-top;
+        justify-self: center;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .scope-node-lu  { grid-area: scope-lu; }
+    .scope-node-ru  { grid-area: scope-ru; }
+    .scope-node-ll  { grid-area: scope-ll; }
+    .scope-node-rl  { grid-area: scope-rl; }
+}
