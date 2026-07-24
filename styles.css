@@ -6755,6 +6755,223 @@ img[loading="lazy"][src] {
 }
 
 /* ==========================================================================
+   Recovery Stages Schema (numbered service-flow card)
+   ========================================================================== */
+
+.recovery-flow {
+    margin-bottom: 2rem;
+    padding: 30px 32px 26px;
+    border-top: 4px solid var(--navy);
+}
+
+/* As a direct child of the article grid the schema runs the full container
+   width, so the five stages sit on one rail and the grid gap handles spacing. */
+.service-landing-layout > .recovery-flow {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+/* The column below the schema opens a new grid row — drop the stacked-section
+   top margin so its heading lines up with the sidebar beside it. */
+.service-main-content > h2:first-child {
+    margin-top: 0;
+}
+
+/* Neutralise the lift/border swap inherited from .glass-card:hover — this is a
+   full-width content block, not an interactive card. */
+.recovery-flow:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 4px solid var(--navy);
+}
+
+.recovery-flow-head {
+    margin-bottom: 28px;
+}
+
+.recovery-flow-head h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 6px;
+}
+
+.recovery-flow-head p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.recovery-flow-track {
+    list-style: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px 18px;
+}
+
+.recovery-flow-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Rail linking consecutive stages on the same row */
+.recovery-flow-stage::after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 17px;
+    left: 46px;
+    right: -18px;
+    height: 2px;
+    background: var(--border-gray);
+}
+
+.recovery-flow-step {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(30, 58, 138, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+.recovery-flow-box {
+    flex: 1;
+    background: var(--light-gray);
+    border: 1px solid var(--border-gray);
+    border-left: 3px solid var(--navy);
+    border-radius: 12px;
+    padding: 18px;
+    transition: var(--transition);
+}
+
+.recovery-flow-box:hover {
+    border-left-color: var(--primary-blue);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    transform: translateY(-2px);
+}
+
+.recovery-flow-box h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #0F172A;
+    margin-bottom: 12px;
+}
+
+.recovery-flow-box ul {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.recovery-flow-box li {
+    position: relative;
+    padding-left: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #475569;
+}
+
+.recovery-flow-box li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-teal), var(--primary-blue));
+}
+
+.recovery-flow-note {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-gray);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #64748B;
+}
+
+/* Column count steps up with the viewport; each step re-shows the rail on the
+   stages that gained a right-hand neighbour and hides it at the row ends. */
+@media (min-width: 600px) {
+    .recovery-flow-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .recovery-flow-stage::after {
+        display: block;
+    }
+
+    .recovery-flow-stage:nth-child(2n)::after,
+    .recovery-flow-stage:last-child::after {
+        display: none;
+    }
+}
+
+@media (min-width: 880px) {
+    .recovery-flow-track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .recovery-flow-stage:nth-child(2n)::after {
+        display: block;
+    }
+
+    .recovery-flow-stage:nth-child(3n)::after,
+    .recovery-flow-stage:last-child::after {
+        display: none;
+    }
+}
+
+/* Full desktop width carries all five stages on a single 1→5 rail, as in the
+   source schema. */
+@media (min-width: 1120px) {
+    .recovery-flow-track {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .recovery-flow-stage:nth-child(2n)::after,
+    .recovery-flow-stage:nth-child(3n)::after {
+        display: block;
+    }
+
+    .recovery-flow-stage:last-child::after {
+        display: none;
+    }
+
+    .recovery-flow-box {
+        padding: 16px;
+    }
+
+    .recovery-flow-box h4 {
+        font-size: 0.95rem;
+    }
+
+    .recovery-flow-box li {
+        font-size: 0.875rem;
+    }
+}
+
+/* ==========================================================================
    Debt Collection — Mobile Optimisation
    ========================================================================== */
 
