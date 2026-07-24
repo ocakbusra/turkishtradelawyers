@@ -6128,6 +6128,25 @@ img[loading="lazy"][src] {
     width: 100%;
 }
 
+.dispute-resolution-layout {
+    grid-template-columns: minmax(0, 2.2fr) minmax(270px, 0.72fr);
+    gap: 32px;
+}
+
+.dispute-sidebar-secondary {
+    margin-top: clamp(280px, 34vw, 460px);
+}
+
+@media (max-width: 960px) {
+    .dispute-resolution-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dispute-sidebar-secondary {
+        margin-top: 0;
+    }
+}
+
 /* ==========================================================================
    Service Page Horizontal CTA Form
    ========================================================================== */
@@ -7475,6 +7494,16 @@ img[loading="lazy"][src] {
     gap: 0;
 }
 
+.dispute-resolution-layout .scope-diagram {
+    padding: 34px;
+}
+
+@media (max-width: 768px) {
+    .dispute-resolution-layout .scope-diagram {
+        padding: 20px;
+    }
+}
+
 /* The diagram is a large surface, so the standard card lift is suppressed;
    the individual nodes carry the hover feedback instead. */
 .scope-diagram:hover {
@@ -7613,6 +7642,11 @@ img[loading="lazy"][src] {
         align-items: start;
     }
 
+    .dispute-resolution-layout .scope-diagram-stage {
+        grid-template-columns: minmax(220px, 1fr) minmax(210px, 270px) minmax(220px, 1fr);
+        gap: 24px 30px;
+    }
+
     .scope-hub {
         grid-area: scope-hub;
         align-self: center;
@@ -7681,6 +7715,10 @@ img[loading="lazy"][src] {
         justify-self: center;
         width: 100%;
         max-width: 300px;
+    }
+
+    .dispute-resolution-layout .scope-node-top {
+        max-width: 380px;
     }
 
     .scope-node-lu  { grid-area: scope-lu; }
