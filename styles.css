@@ -6121,6 +6121,13 @@ img[loading="lazy"][src] {
     height: max-content;
 }
 
+/* Centers the card stack within the aside's stretched height, e.g. so
+   "Typical Triggers" + the lead form sit level with the middle of the
+   taller tab content beside them, instead of pinned to the top. */
+.sidebar-sticky-wrapper-centered {
+    justify-content: center;
+}
+
 .sidebar-form-card {
     position: static;
     top: auto;
@@ -6703,6 +6710,16 @@ img[loading="lazy"][src] {
 
 .sidebar-form-submit:active {
     transform: translateY(0);
+}
+
+/* Debt collection page: lead-form button uses the page's own navy, not the
+   shared --primary-blue used by other service pages' sidebar forms. */
+form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit {
+    background: #24245E;
+}
+
+form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
+    background: #1A1A45;
 }
 
 /* Procedure Cards (Grid) */
