@@ -1,5 +1,23 @@
 # Project Instructions
 
+## Brand color mandate (non-negotiable)
+
+`#1E3A8A` (`var(--navy)`) is Turkish Trade Lawyers' required brand color. It is
+non-negotiable for the site's design system:
+
+1. Primary CTA and action buttons (form submits, "Request ..." / "Discuss ..."
+   buttons, main conversion buttons) must use `var(--navy)` / `#1E3A8A` as
+   their background, with `var(--navy-dark)` on hover.
+2. `var(--primary-blue)` / `#2D4CC8` may still be used for badges, icons, and
+   secondary accents (see the CTA/box rule below), but never replace navy on
+   primary CTA buttons for the sake of a gradient or accent match.
+3. When adding or editing any button, CTA, or prominent design element and
+   the brand color is unspecified, default to `var(--navy)` / `#1E3A8A`.
+4. When a shared CSS class used across many pages defaults to a different
+   color, scope the navy override to the specific page/component (e.g. via a
+   unique `data-form-id` or page-specific selector) rather than changing the
+   shared class default for every page that reuses it.
+
 ## Article CTA and box design standard
 
 When creating or editing CTA boxes, lead magnet boxes, service-reference notes, or similar callout cards in article HTML files:

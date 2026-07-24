@@ -7688,3 +7688,17 @@ img[loading="lazy"][src] {
     .scope-node-ll  { grid-area: scope-ll; }
     .scope-node-rl  { grid-area: scope-rl; }
 }
+
+/* ==========================================================================
+   Setup-a-Business Sidebar CTA: brand navy button
+   Scoped to this page's sidebar form (unique data-form-id) so the shared
+   .sidebar-form-submit default used on other practice pages is untouched.
+   ========================================================================== */
+
+.sidebar-lead-form[data-form-id="business-setup-sidebar"] .sidebar-form-submit {
+    background: var(--navy);
+}
+
+.sidebar-lead-form[data-form-id="business-setup-sidebar"] .sidebar-form-submit:hover {
+    background: var(--navy-dark);
+}
