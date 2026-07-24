@@ -7037,3 +7037,214 @@ img[loading="lazy"][src] {
         padding: 8px 12px;
     }
 }
+
+/* ==========================================================================
+   Incorporation Process Flow (setup-a-business-in-turkey)
+   Brand-styled process diagram: phase columns, step boxes and connectors.
+   ========================================================================== */
+
+.incorp-flow {
+    background: #FFFFFF;
+    border: 1px solid var(--border-gray);
+    border-radius: 24px;
+    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.05);
+    padding: 32px;
+    margin-bottom: 2.5rem;
+}
+
+.incorp-flow-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+}
+
+.incorp-flow-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.incorp-flow-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 26px;
+    margin-top: 20px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.incorp-flow-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.85rem;
+    color: var(--text-gray);
+}
+
+.incorp-flow-swatch {
+    width: 22px;
+    height: 15px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.incorp-flow-swatch.is-client {
+    background: #FFFFFF;
+    border: 1px solid var(--border-gray);
+}
+
+.incorp-flow-swatch.is-firm {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+}
+
+.incorp-flow-swatch.is-milestone {
+    background: var(--light-gray);
+    border: 1px solid var(--primary-blue);
+}
+
+.incorp-flow-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 28px;
+    align-items: start;
+    margin-top: 28px;
+}
+
+.incorp-flow-phase-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.incorp-flow-phase-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.incorp-flow-phase-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.incorp-flow-phase-kicker {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-blue);
+}
+
+.incorp-flow-phase-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--dark-blue);
+}
+
+.incorp-flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.incorp-flow-step {
+    position: relative;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+.incorp-flow-step.is-client {
+    background: #FFFFFF;
+    border: 1px solid var(--border-gray);
+    color: var(--text-dark);
+}
+
+.incorp-flow-step.is-firm {
+    background: var(--navy);
+    border: 1px solid var(--navy);
+    color: #FFFFFF;
+}
+
+.incorp-flow-step.is-milestone {
+    background: var(--light-gray);
+    border: 1px solid var(--primary-blue);
+    color: var(--navy);
+    font-weight: 600;
+}
+
+/* Connector line and arrowhead between consecutive steps */
+.incorp-flow-step + .incorp-flow-step::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: -26px;
+    width: 2px;
+    height: 26px;
+    background: #CBD5E1;
+}
+
+.incorp-flow-step + .incorp-flow-step::after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #CBD5E1;
+}
+
+.incorp-flow-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-gray);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.incorp-flow-brand {
+    font-weight: 600;
+    color: var(--navy);
+}
+
+@media (max-width: 640px) {
+    .incorp-flow {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .incorp-flow-title {
+        font-size: 1.3rem;
+    }
+
+    .incorp-flow-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .incorp-flow-foot {
+        justify-content: flex-start;
+    }
+}
