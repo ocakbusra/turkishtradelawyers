@@ -247,7 +247,7 @@ a {
 
 /* Contact button - special styling */
 .nav-menu li:last-child .nav-link {
-    background: var(--navy);
+    background: var(--primary-blue);
     color: #ffffff;
     font-weight: 600;
     padding: 12px 28px;
@@ -261,7 +261,7 @@ a {
 }
 
 .nav-menu li:last-child .nav-link:hover {
-    background: var(--navy-dark);
+    background: var(--navy);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
     color: #ffffff;
@@ -7780,10 +7780,20 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 }
 
 /* ==========================================================================
-   Setup-a-Business Sidebar CTA: brand navy button
-   Scoped to this page's sidebar form (unique data-form-id) so the shared
+   Practice-page Sidebar CTAs
+   Scoped to each page's sidebar form (unique data-form-id) so the shared
    .sidebar-form-submit default used on other practice pages is untouched.
    ========================================================================== */
+
+.sidebar-lead-form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit,
+.sidebar-lead-form[data-form-id="dispute-sidebar"] .sidebar-form-submit {
+    background: var(--primary-blue);
+}
+
+.sidebar-lead-form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover,
+.sidebar-lead-form[data-form-id="dispute-sidebar"] .sidebar-form-submit:hover {
+    background: var(--navy);
+}
 
 .sidebar-lead-form[data-form-id="business-setup-sidebar"] .sidebar-form-submit {
     background: var(--navy);
