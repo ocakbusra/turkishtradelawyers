@@ -4498,6 +4498,21 @@ iframe[title="chat widget"] {
     margin-top: 1.5rem;
 }
 
+.real-estate-support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.real-estate-support-grid .service-sidebar-card {
+    padding: 1.5rem;
+}
+
+.real-estate-support-grid .service-sidebar-card + .service-sidebar-card {
+    margin-top: 0;
+}
+
 .real-estate-scope-section {
     padding: 0 0 5rem;
     background: #F8FAFC;
@@ -4686,6 +4701,10 @@ iframe[title="chat widget"] {
     }
 
     .real-estate-scope-grid-three {
+        grid-template-columns: 1fr;
+    }
+
+    .real-estate-support-grid {
         grid-template-columns: 1fr;
     }
 
