@@ -4480,6 +4480,272 @@ iframe[title="chat widget"] {
     }
 }
 
+/* Real estate and commercial leasing service page */
+.real-estate-service-page .service-landing-title {
+    max-width: 1100px;
+    font-size: 3rem;
+}
+
+.real-estate-intro-section {
+    padding-bottom: 4rem;
+}
+
+.real-estate-why-card {
+    margin-top: 1.5rem;
+}
+
+.real-estate-scope-section {
+    padding: 0 0 5rem;
+    background: #F8FAFC;
+}
+
+.real-estate-scope-header {
+    padding: 2.25rem 0 1.75rem;
+    border-top: 4px solid var(--navy);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.real-estate-scope-eyebrow {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.real-estate-scope-header h2,
+.real-estate-faq-header h2 {
+    margin: 0 0 0.65rem;
+    color: var(--dark-blue);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.real-estate-scope-header p,
+.real-estate-faq-header p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-gray);
+    line-height: 1.65;
+}
+
+.real-estate-scope-group {
+    margin-top: 2.25rem;
+}
+
+.real-estate-scope-group > h3 {
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-gray);
+    color: #667085;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.real-estate-scope-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.real-estate-scope-grid-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.real-estate-scope-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.real-estate-scope-card {
+    min-height: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--navy);
+    border-radius: 8px;
+    background: var(--light-gray);
+}
+
+.real-estate-scope-number {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.real-estate-scope-card h4 {
+    margin: 0 0 0.75rem;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.real-estate-scope-card p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.real-estate-scope-card-highlight {
+    border-color: var(--navy);
+    background: var(--navy);
+}
+
+.real-estate-scope-card-highlight .real-estate-scope-number {
+    color: #93C5FD;
+}
+
+.real-estate-scope-card-highlight h4 {
+    color: #FFFFFF;
+}
+
+.real-estate-scope-card-highlight p {
+    color: #E2E8F0;
+}
+
+.real-estate-scope-card-wide {
+    padding-right: max(1.4rem, 8%);
+}
+
+.real-estate-scope-note {
+    margin: 2rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-gray);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.real-estate-details-section {
+    padding: 5rem 0;
+    background: #FFFFFF;
+}
+
+.real-estate-details-inner {
+    max-width: 980px;
+}
+
+.real-estate-faq-header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.real-estate-faq-category {
+    padding-top: 3.5rem;
+    scroll-margin-top: 100px;
+}
+
+.real-estate-faq-category > h2 {
+    margin: 0 0 1.5rem;
+    color: var(--dark-blue);
+    font-size: 1.55rem;
+    line-height: 1.3;
+}
+
+.real-estate-faq-category .legal-accordion {
+    margin-top: 0;
+}
+
+.real-estate-faq-category .accordion-header {
+    gap: 1rem;
+}
+
+.real-estate-faq-category .accordion-icon {
+    flex: 0 0 auto;
+}
+
+.real-estate-faq-category .accordion-item.active .accordion-content {
+    max-height: 3000px;
+}
+
+.real-estate-faq-category .accordion-content p,
+.real-estate-faq-category .accordion-content li {
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+.real-estate-faq-category .accordion-content p + p,
+.real-estate-faq-category .accordion-content p + ul,
+.real-estate-faq-category .accordion-content ul + p {
+    margin-top: 1rem;
+}
+
+.real-estate-faq-category .accordion-content ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.real-estate-faq-category .accordion-content li + li {
+    margin-top: 0.7rem;
+}
+
+.real-estate-sources,
+.real-estate-related {
+    margin-top: 4rem;
+}
+
+#scope,
+#official-sources {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 1100px) {
+    .real-estate-scope-grid-four {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .real-estate-service-page .service-landing-title {
+        font-size: 2.25rem;
+    }
+
+    .real-estate-scope-section,
+    .real-estate-details-section {
+        padding-bottom: 4rem;
+    }
+
+    .real-estate-scope-grid-three {
+        grid-template-columns: 1fr;
+    }
+
+    .real-estate-scope-header h2,
+    .real-estate-faq-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .real-estate-faq-category {
+        padding-top: 2.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .real-estate-service-page .service-landing-title {
+        font-size: 2rem;
+    }
+
+    .real-estate-scope-grid-four {
+        grid-template-columns: 1fr;
+    }
+
+    .real-estate-scope-card {
+        padding: 1.15rem;
+    }
+
+    .real-estate-faq-category > h2 {
+        font-size: 1.3rem;
+    }
+}
+
 /* Breadcrumb Navigation */
 .breadcrumb {
     padding: 120px 0 20px;
