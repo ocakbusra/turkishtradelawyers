@@ -3981,10 +3981,14 @@ iframe[title="chat widget"] {
 
 .sources-list li {
     margin: 0;
+    display: flex;
 }
 
 .sources-list a {
-    display: block;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 100%;
     padding: 12px 14px;
     border-radius: 12px;
     border: 1px solid #E4E7EC;
@@ -4655,39 +4659,6 @@ iframe[title="chat widget"] {
     margin-top: 0;
 }
 
-.real-estate-faq-category .accordion-header {
-    gap: 1rem;
-}
-
-.real-estate-faq-category .accordion-icon {
-    flex: 0 0 auto;
-}
-
-.real-estate-faq-category .accordion-item.active .accordion-content {
-    max-height: 3000px;
-}
-
-.real-estate-faq-category .accordion-content p,
-.real-estate-faq-category .accordion-content li {
-    color: var(--text-gray);
-    line-height: 1.7;
-}
-
-.real-estate-faq-category .accordion-content p + p,
-.real-estate-faq-category .accordion-content p + ul,
-.real-estate-faq-category .accordion-content ul + p {
-    margin-top: 1rem;
-}
-
-.real-estate-faq-category .accordion-content ul {
-    margin: 0;
-    padding-left: 1.25rem;
-}
-
-.real-estate-faq-category .accordion-content li + li {
-    margin-top: 0.7rem;
-}
-
 .real-estate-sources,
 .real-estate-related {
     margin-top: 4rem;
@@ -4742,6 +4713,238 @@ iframe[title="chat widget"] {
     }
 
     .real-estate-faq-category > h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tax and trade finance service page */
+.tax-finance-service-page .service-landing-title {
+    max-width: 1050px;
+    font-size: 3rem;
+}
+
+.tax-finance-intro-section {
+    padding-bottom: 4rem;
+}
+
+.tax-finance-why-card {
+    margin-top: 1.5rem;
+}
+
+.tax-finance-scope-section {
+    padding: 0 0 5rem;
+    background: #F8FAFC;
+}
+
+.tax-finance-scope-header {
+    padding: 2.25rem 0 1.75rem;
+    border-top: 4px solid var(--navy);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.tax-finance-scope-eyebrow {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.tax-finance-scope-header h2,
+.tax-finance-faq-header h2 {
+    margin: 0 0 0.65rem;
+    color: var(--dark-blue);
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.tax-finance-scope-header p,
+.tax-finance-faq-header p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-gray);
+    line-height: 1.65;
+}
+
+.tax-finance-scope-group {
+    margin-top: 2.25rem;
+}
+
+.tax-finance-scope-group > h3 {
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-gray);
+    color: #667085;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.tax-finance-scope-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.tax-finance-scope-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tax-finance-scope-grid-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tax-finance-scope-card {
+    min-height: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--navy);
+    border-radius: 8px;
+    background: var(--light-gray);
+}
+
+.tax-finance-scope-number {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.tax-finance-scope-card h4 {
+    margin: 0 0 0.75rem;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.tax-finance-scope-card p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tax-finance-scope-card-highlight {
+    border-color: var(--navy);
+    background: var(--navy);
+}
+
+.tax-finance-scope-card-highlight .tax-finance-scope-number {
+    color: #93C5FD;
+}
+
+.tax-finance-scope-card-highlight h4 {
+    color: #FFFFFF;
+}
+
+.tax-finance-scope-card-highlight p {
+    color: #E2E8F0;
+}
+
+.tax-finance-scope-note {
+    margin: 2rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-gray);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tax-finance-details-section {
+    padding: 5rem 0;
+    background: #FFFFFF;
+}
+
+.tax-finance-details-inner {
+    max-width: 980px;
+}
+
+.tax-finance-faq-header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.tax-finance-faq-category {
+    padding-top: 3.5rem;
+    scroll-margin-top: 100px;
+}
+
+.tax-finance-faq-category > h2 {
+    margin: 0 0 1.5rem;
+    color: var(--dark-blue);
+    font-size: 1.55rem;
+    line-height: 1.3;
+}
+
+.tax-finance-faq-category .legal-accordion {
+    margin-top: 0;
+}
+
+.tax-finance-sources,
+.tax-finance-related {
+    margin-top: 4rem;
+}
+
+#tax-finance-scope,
+#tax-finance-sources,
+#tax-finance-form {
+    scroll-margin-top: 100px;
+}
+
+.tax-finance-service-page .form-submit-btn {
+    min-height: 50px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+    .tax-finance-scope-grid-three {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .tax-finance-service-page .service-landing-title {
+        font-size: 2.25rem;
+    }
+
+    .tax-finance-scope-section,
+    .tax-finance-details-section {
+        padding-bottom: 4rem;
+    }
+
+    .tax-finance-scope-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .tax-finance-scope-header h2,
+    .tax-finance-faq-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .tax-finance-faq-category {
+        padding-top: 2.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .tax-finance-service-page .service-landing-title {
+        font-size: 2rem;
+    }
+
+    .tax-finance-scope-card {
+        padding: 1.15rem;
+    }
+
+    .tax-finance-faq-category > h2 {
         font-size: 1.3rem;
     }
 }
@@ -6275,6 +6478,7 @@ img[loading="lazy"][src] {
 /* Accordion */
 .legal-accordion {
     margin: 2rem 0;
+    width: 100%;
 }
 
 .accordion-item {
@@ -6289,6 +6493,7 @@ img[loading="lazy"][src] {
     padding: 18px 24px;
     cursor: pointer;
     display: flex;
+    gap: 16px;
     justify-content: space-between;
     align-items: center;
     background: transparent;
@@ -6297,8 +6502,10 @@ img[loading="lazy"][src] {
     text-align: left;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--dark-blue);
     font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
     transition: background 0.2s ease;
 }
 
@@ -6307,6 +6514,7 @@ img[loading="lazy"][src] {
 }
 
 .accordion-icon {
+    flex: 0 0 auto;
     font-size: 1.2rem;
     color: #94A3B8;
     transition: transform 0.3s ease;
@@ -6314,7 +6522,7 @@ img[loading="lazy"][src] {
 
 .accordion-item.active .accordion-icon {
     transform: rotate(45deg);
-    color: var(--accent-color);
+    color: var(--primary-blue);
 }
 
 .accordion-content {
@@ -6325,8 +6533,45 @@ img[loading="lazy"][src] {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 1000px;
+    max-height: 3000px;
     padding: 0 24px 24px 24px;
+}
+
+.legal-accordion .accordion-content p,
+.legal-accordion .accordion-content li {
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+.legal-accordion .accordion-content p + p,
+.legal-accordion .accordion-content p + ul,
+.legal-accordion .accordion-content ul + p {
+    margin-top: 1rem;
+}
+
+.legal-accordion .accordion-content ul,
+.legal-accordion .accordion-content ol {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.legal-accordion .accordion-content li + li {
+    margin-top: 0.7rem;
+}
+
+@media (max-width: 600px) {
+    .accordion-header {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    .accordion-content {
+        padding: 0 16px;
+    }
+
+    .accordion-item.active .accordion-content {
+        padding: 0 16px 18px;
+    }
 }
 
 /* Flip Cards */
@@ -6889,72 +7134,9 @@ img[loading="lazy"][src] {
     display: none;
 }
 
-.tax-related-guides {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-}
-
-.tax-related-guide {
-    display: flex;
-    align-items: center;
-    min-height: 56px;
-    padding: 14px;
-    border: 1px solid var(--border-gray);
-    border-radius: 10px;
-    background: var(--light-gray);
-    color: var(--dark-blue);
-    text-decoration: none;
-}
-
-.tax-related-guide:hover {
-    border-color: var(--primary-blue);
-    color: var(--primary-blue);
-}
-
-/* Related-article links are injected by script.js; keep them within this page's neutral system. */
-.tax-incentives-article .related-articles {
-    padding: 24px;
-    border: 1px solid var(--border-gray);
-    border-left: 4px solid var(--primary-blue);
-    border-radius: 12px;
-    background: var(--light-gray);
-}
-
-.tax-incentives-article .related-articles h3 {
-    margin-bottom: 18px;
-    text-align: left;
-    font-size: 1.25rem;
-}
-
-.tax-incentives-article .related-articles h3::after {
-    width: 36px;
-    height: 3px;
-    margin: 10px 0 0;
-    background: var(--primary-blue);
-}
-
-.tax-incentives-article .related-grid {
-    gap: 12px;
-}
-
-.tax-incentives-article .related-card {
-    padding: 18px;
-    border-radius: 10px;
-    box-shadow: none;
-}
-
-.tax-incentives-article .related-card:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-.tax-incentives-article .related-category {
-    margin-bottom: 8px;
-    padding: 0;
-    border-radius: 0;
-    background: transparent;
+.tax-related-guides-box h3,
+.tax-related-guides-box .related-card h4 {
+    margin-top: 0;
 }
 
 /* ==========================================================================

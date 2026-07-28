@@ -316,22 +316,39 @@
                 </div>
 
                 <!-- CTA Section with Form -->
-                <div class="article-cta" style="text-align: left; background: #f8fafc; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0; margin-top: 40px;">
-                    <h3 style="margin-bottom: 16px; color: #1a2742; font-size: 1.5rem;">Legal Representation and Compliance Support</h3>
-                    <p style="margin: 0 0 24px 0; max-width: none; color: #475467;">Failing to maintain accurate corporate registry data can now result in the direct suspension of your company's communication infrastructure in Türkiye. Proper legal structuring of your authorized signatories and prompt updates to your MERSIS records are mandatory to ensure business continuity.</p>
-                    <p style="margin: 0 0 24px 0; max-width: none; color: #475467;">If your company requires assistance with corporate registry updates, signatory authorizations, or managing expatriate legal procedures in Türkiye, strict compliance is necessary. Send us a message below.</p>
-                    
-                    <form action="contact.html" method="POST" style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-                            <input type="text" name="name" placeholder="Full Name" required style="flex: 1; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Inter', sans-serif;">
-                            <input type="email" name="email" placeholder="Corporate Email" required style="flex: 1; padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Inter', sans-serif;">
+                <section class="service-page-cta article-form-cta conversion-article-cta" id="communications-compliance-assessment" aria-labelledby="communications-compliance-title">
+                    <div class="service-page-cta-card">
+                        <div class="service-page-cta-copy">
+                            <span class="service-page-cta-badge">Ask Our Team</span>
+                            <h2 id="communications-compliance-title">Legal Representation and Compliance Support</h2>
+                            <p>Failing to maintain accurate corporate registry data can result in the suspension of your company's communication infrastructure in Türkiye. Proper structuring of authorized signatories and prompt MERSIS updates are essential for business continuity.</p>
+                            <p>If your company requires assistance with registry updates, signatory authorizations, or expatriate legal procedures, share the relevant details with our team.</p>
+                            <div class="service-page-cta-links">
+                                <a href="tel:+905016359465" class="service-page-cta-link">+90 501 635 94 65</a>
+                                <a href="mailto:hi@turkishtradelawyers.com" class="service-page-cta-link">hi@turkishtradelawyers.com</a>
+                            </div>
                         </div>
-                        <textarea name="message" placeholder="How can we help you?" rows="4" required style="padding: 12px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Inter', sans-serif; resize: vertical;"></textarea>
-                        <button type="submit" class="cta-btn" style="border: none; cursor: pointer; align-self: flex-start; margin-top: 8px;">
-                            <i class="fas fa-paper-plane"></i> Submit Request
-                        </button>
-                    </form>
-                </div>
+                        <form class="service-cta-form contact-form" action="contact.html" method="POST" data-conversion-form data-form-id="communications-compliance-inline">
+                            <div class="form-group">
+                                <label for="communications-compliance-name">Full name</label>
+                                <input type="text" id="communications-compliance-name" name="name" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="communications-compliance-email">Corporate email</label>
+                                <input type="email" id="communications-compliance-email" name="email" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group service-cta-field-wide">
+                                <label for="communications-compliance-details">How can we help you?</label>
+                                <textarea id="communications-compliance-details" name="message" placeholder="Briefly describe the registry, signatory, identity verification, or communications compliance matter." rows="4" required></textarea>
+                            </div>
+                            <p class="form-disclosure">Confidential preliminary review. Sending this form does not oblige you to instruct us. See our <a href="privacy-notice.html" target="_blank" rel="noopener noreferrer">privacy notice</a>.</p>
+                            <div class="service-cta-submit-row">
+                                <button type="submit" class="form-submit-btn">Submit Request</button>
+                            </div>
+                            <p class="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </section>
 
             </article>
         </div>

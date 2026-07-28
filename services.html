@@ -1140,62 +1140,30 @@
         }
 
         .faq-header {
-            text-align: center;
-            margin-bottom: 60px;
+            max-width: 980px;
+            margin: 0 auto 32px;
         }
 
         .faq-title {
-            font-size: 2.5rem;
+            margin: 0;
+            font-size: 2rem;
             font-weight: 700;
             color: #1a2742;
+            line-height: 1.2;
         }
 
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 24px;
-            max-width: 1100px;
+        .faq-section .legal-accordion {
+            max-width: 980px;
             margin: 0 auto;
         }
 
-        .faq-item {
-            background: #FFFFFF;
-            border: 1px solid #E4E7EC;
-            border-radius: 16px;
-            padding: 28px 32px;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            border-color: #2D4CC8;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .faq-question {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1a2742;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .faq-question i {
-            color: #00C4B4;
-            margin-top: 4px;
-        }
-
-        .faq-answer {
-            font-size: 0.95rem;
-            color: #475467;
-            line-height: 1.7;
-            padding-left: 32px;
-        }
-
         @media (max-width: 520px) {
-            .faq-grid {
-                grid-template-columns: 1fr;
+            .faq-section {
+                padding: 72px 0;
+            }
+
+            .faq-title {
+                font-size: 1.7rem;
             }
         }
 
@@ -1814,60 +1782,42 @@
             <div class="faq-header">
                 <h2 class="faq-title">Frequently Asked Questions</h2>
             </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>Do you work fully remotely with international clients?</span>
+            <div class="legal-accordion">
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">Do you work fully remotely with international clients?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Yes, we work seamlessly with clients worldwide through video conferences, secure document sharing, and responsive communication. While based in Istanbul, we serve clients across Europe, the Americas, and Asia.</p>
                     </div>
-                    <p class="faq-answer">Yes, we work seamlessly with clients worldwide through video conferences,
-                        secure document sharing, and responsive communication. While based in Istanbul, we serve clients
-                        across Europe, the Americas, and Asia.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>How fast can you review a contract?</span>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">How fast can you review a contract?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Standard contract reviews take 3-5 business days. For urgent matters, we offer expedited review within 24-48 hours. Complex transactions may require additional time, which we communicate upfront.</p>
                     </div>
-                    <p class="faq-answer">Standard contract reviews take 3-5 business days. For urgent matters, we offer
-                        expedited review within 24-48 hours. Complex transactions may require additional time, which we
-                        communicate upfront.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>Can you coordinate with our headquarters' counsel?</span>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">Can you coordinate with our headquarters' counsel?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Absolutely. We regularly collaborate with in-house legal teams and external counsel in clients' home countries. Our multilingual team ensures seamless coordination across jurisdictions.</p>
                     </div>
-                    <p class="faq-answer">Absolutely. We regularly collaborate with in-house legal teams and external
-                        counsel in clients' home countries. Our multilingual team ensures seamless coordination across
-                        jurisdictions.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>Do you provide fixed-fee options?</span>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">Do you provide fixed-fee options?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Yes, we offer fixed-fee arrangements for defined-scope matters such as company formation, contract drafting, and compliance reviews. For ongoing advisory work, we provide flexible monthly retainer packages.</p>
                     </div>
-                    <p class="faq-answer">Yes, we offer fixed-fee arrangements for defined-scope matters such as company
-                        formation, contract drafting, and compliance reviews. For ongoing advisory work, we provide
-                        flexible monthly retainer packages.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>Which matters require notarization or Power of Attorney?</span>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">Which matters require notarization or Power of Attorney?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Company formation, real estate transactions, court representation, and official filings typically require notarized documents and Power of Attorney. We guide you through the apostille process for documents from abroad.</p>
                     </div>
-                    <p class="faq-answer">Company formation, real estate transactions, court representation, and
-                        official filings typically require notarized documents and Power of Attorney. We guide you
-                        through the apostille process for documents from abroad.</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <i class="fas fa-circle-question"></i>
-                        <span>Do you support arbitration and enforcement?</span>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-header">Do you support arbitration and enforcement?<i class="fas fa-plus accordion-icon"></i></button>
+                    <div class="accordion-content">
+                        <p>Yes, we handle institutional arbitration (ISTAC, ICC) and ad-hoc proceedings. We also manage enforcement of foreign arbitral awards under the New York Convention and recognition of foreign court judgments.</p>
                     </div>
-                    <p class="faq-answer">Yes, we handle institutional arbitration (ISTAC, ICC) and ad-hoc proceedings.
-                        We also manage enforcement of foreign arbitral awards under the New York Convention and
-                        recognition of foreign court judgments.</p>
                 </div>
             </div>
         </div>

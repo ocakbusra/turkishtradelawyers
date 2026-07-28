@@ -440,7 +440,7 @@
                 <p>Direct answers to the procedural, financial, and jurisdictional questions most frequently raised by foreign applicants and corporate counsel regarding Intellectual Property in Turkey.</p>
                 <div class="legal-accordion">
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             How long does it take to register a trademark in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -449,7 +449,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             Do I need a Turkish attorney to validate an EP patent in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -458,7 +458,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What is the translation deadline for EPC validation in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -467,7 +467,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             Are software patents allowed in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -476,7 +476,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What is the trademark opposition period in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -485,7 +485,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             Can I file a PCT national phase entry in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -494,7 +494,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What are the costs for filing a patent in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -503,7 +503,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             How do I enforce an IP right against counterfeiters in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -512,7 +512,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             Is the Madrid Protocol effective in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -521,7 +521,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             How is a trademark use requirement enforced in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -530,7 +530,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What is the Re-examination and Evaluation Board (YİDK)?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -539,7 +539,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             Can foreign companies apply directly to TURKPATENT?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -548,7 +548,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What is the duration of patent and utility model protection in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -557,7 +557,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             How are customs recordals handled in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -566,7 +566,7 @@
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <button class="accordion-header">
+                        <button type="button" class="accordion-header">
                             What are the penalties for trademark infringement in Turkey?
                             <i class="fas fa-plus accordion-icon"></i>
                         </button>
@@ -734,17 +734,14 @@
         const accordionHeaders = document.querySelectorAll('.accordion-header');
         accordionHeaders.forEach(header => {
             header.addEventListener('click', () => {
-                const item = header.parentElement;
-                const wasActive = item.classList.contains('active');
-                
-                document.querySelectorAll('.accordion-item').forEach(i => {
-                    i.classList.remove('active');
-                    i.querySelector('.accordion-header i').classList.replace('fa-minus', 'fa-plus');
-                });
-
-                if (!wasActive) {
+                const item = header.closest('.accordion-item');
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.accordion-item').forEach(openItem => {
+                        openItem.classList.remove('active');
+                    });
                     item.classList.add('active');
-                    header.querySelector('i').classList.replace('fa-plus', 'fa-minus');
                 }
             });
         });
