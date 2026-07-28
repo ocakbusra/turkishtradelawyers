@@ -4357,6 +4357,129 @@ iframe[title="chat widget"] {
 
 }
 
+/* Employment and Staff Mobility overview */
+.employment-mobility-overview {
+    margin: 0 0 3rem;
+    padding: 2rem 0;
+    border-top: 4px solid var(--navy);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.employment-mobility-overview-header {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.employment-mobility-eyebrow {
+    display: block;
+    margin-bottom: 0.65rem;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.employment-mobility-overview-header h2 {
+    margin: 0 0 0.5rem;
+    color: var(--dark-blue);
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.employment-mobility-overview-header p {
+    margin: 0;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.employment-mobility-group {
+    margin-top: 2rem;
+}
+
+.employment-mobility-group > h3 {
+    margin: 0 0 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-gray);
+    color: #667085;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.employment-mobility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.employment-mobility-card {
+    min-height: 100%;
+    padding: 1.4rem;
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--navy);
+    border-radius: 8px;
+    background: var(--light-gray);
+}
+
+.employment-mobility-card h4 {
+    margin: 0 0 0.75rem;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.employment-mobility-card p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.employment-mobility-card-highlight {
+    border-color: var(--navy);
+    background: var(--navy);
+}
+
+.employment-mobility-card-highlight h4 {
+    color: #FFFFFF;
+}
+
+.employment-mobility-card-highlight p {
+    color: #E2E8F0;
+}
+
+.employment-mobility-note {
+    margin: 2rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-gray);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .employment-mobility-overview {
+        padding-top: 1.5rem;
+    }
+
+    .employment-mobility-overview-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .employment-mobility-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .employment-mobility-card {
+        padding: 1.15rem;
+    }
+}
+
 /* Breadcrumb Navigation */
 .breadcrumb {
     padding: 120px 0 20px;
