@@ -153,7 +153,7 @@
 ./trademark-registration-turkey.html
 ./glossary.html
 ./cookie-policy.html
-./corporate-investment-services-turkey.html
+./setup-a-business-in-turkey.html
 ./tax-trade-finance-services-turkey.html
 ./ethical-principles-ai-public-officials-turkey.html
 ./debt-collection-in-turkey.html

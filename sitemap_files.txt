@@ -6,7 +6,7 @@ compliance-data-protection-services-turkey.html
 compliance-framework-ecommerce-retail-turkey.html
 contact.html
 cookie-policy.html
-corporate-investment-services-turkey.html
+setup-a-business-in-turkey.html
 corporate-tax-vat-withholding-turkey.html
 countries/country-albania.html
 countries/country-andorra.html
