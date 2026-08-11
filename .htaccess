@@ -7,6 +7,12 @@ RewriteBase /
 # setup guide; the second rule catches the truncated Turkic article URL.
 RewriteRule ^corporate-investment-services-turkey\.html$ /setup-a-business-in-turkey.html [R=301,L,NE]
 RewriteRule ^turkic-$ /turkic-states-digital-economy-partnership-agreement.html [R=301,L,NE]
+RewriteRule ^industries/cookie-policy\.html$ /cookie-policy.html [R=301,L,NE]
+RewriteRule ^industries/privacy-notice\.html$ /privacy-notice.html [R=301,L,NE]
+
+# Keep the canonical host for the glossary URL.
+RewriteCond %{HTTP_HOST} ^turkishtradelawyers\.com$ [NC]
+RewriteRule ^glossary\.html$ https://www.turkishtradelawyers.com/glossary.html [R=301,L,NE]
 
 # 1. Redirect index.html and index.php to root (/)
 # This solves the "Accessible index page" duplicate content issue
