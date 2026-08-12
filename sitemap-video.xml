@@ -1,64 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-   <url>
-     <loc>https://www.turkishtradelawyers.com/how-to-enter-turkish-market.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/zwGMRMIYlk0/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>How to Enter the Turkish Market - Video Guide</video:title>
-       <video:description>Complete legal guide for foreign companies entering the Turkish market. Expert analysis of market entry models, company formation, regulatory compliance, and tax structuring under Turkish law.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/zwGMRMIYlk0</video:player_loc>
-       <video:publication_date>2026-01-26</video:publication_date>
-     </video:video>
-   </url>
-   <url>
-     <loc>https://www.turkishtradelawyers.com/how-to-spot-fake-clinics-medical-tourism-turkey.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/Sc7oCfYmlbA/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>How to Spot Fake Clinics in Turkey - Medical Tourism Legal Guide</video:title>
-       <video:description>Learn how to verify legitimate clinics in Turkey and avoid scams. A practical legal guide for medical tourists on checking licenses, spotting red flags, and ensuring safety.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/Sc7oCfYmlbA</video:player_loc>
-       <video:publication_date>2026-01-23</video:publication_date>
-     </video:video>
-   </url>
-   <url>
-     <loc>https://www.turkishtradelawyers.com/can-international-businesses-store-turkish-customer-data-abroad-under-kvkk.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/PDEwmiungdA/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>Can International Businesses Store Turkish Customer Data Abroad under KVKK? - Video Guide</video:title>
-       <video:description>Learn about the legal regulations under Turkish KVKK concerning cross-border data transfer, standard contractual clauses (SCCs), and data localization rules for international companies.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/PDEwmiungdA</video:player_loc>
-       <video:publication_date>2026-05-23</video:publication_date>
-     </video:video>
-   </url>
-   <url>
-     <loc>https://www.turkishtradelawyers.com/countries/country-united-kingdom.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/Kj0adYCCz-o/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>Legal Insights for UK Companies in Turkey</video:title>
-       <video:description>Essential legal insights and procedures for United Kingdom businesses operating, investing, or trading in the Turkish market.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/Kj0adYCCz-o</video:player_loc>
-       <video:publication_date>2026-06-30</video:publication_date>
-     </video:video>
-   </url>
-   <url>
-     <loc>https://www.turkishtradelawyers.com/countries/country-germany.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/zOTGkuLR_T8/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>Legal Insights for German Companies in Turkey</video:title>
-       <video:description>Essential legal insights and procedures for German businesses operating, investing, or trading in the Turkish market.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/zOTGkuLR_T8</video:player_loc>
-       <video:publication_date>2026-06-30</video:publication_date>
-     </video:video>
-   </url>
-   <url>
-     <loc>https://www.turkishtradelawyers.com/countries/country-spain.html</loc>
-     <video:video>
-       <video:thumbnail_loc>https://img.youtube.com/vi/WwEgF4gRQl0/maxresdefault.jpg</video:thumbnail_loc>
-       <video:title>Legal Insights for Spanish Companies in Turkey</video:title>
-       <video:description>Essential legal insights and procedures for Spanish businesses operating, investing, or trading in the Turkish market.</video:description>
-       <video:player_loc>https://www.youtube.com/embed/WwEgF4gRQl0</video:player_loc>
-       <video:publication_date>2026-06-30</video:publication_date>
-     </video:video>
-   </url>
+  <url><loc>https://www.turkishtradelawyers.com/how-to-enter-turkish-market.html</loc><video:video><video:thumbnail_loc>https://img.youtube.com/vi/zwGMRMIYlk0/maxresdefault.jpg</video:thumbnail_loc><video:title>How to Enter the Turkish Market - Video Guide</video:title><video:description>Video guide on entering the Turkish market for foreign companies, covering market entry models, company formation and regulatory compliance.</video:description><video:player_loc>https://www.youtube.com/embed/zwGMRMIYlk0</video:player_loc><video:publication_date>2026-01-26</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/how-to-spot-fake-clinics-medical-tourism-turkey.html</loc><video:video><video:thumbnail_loc>https://img.youtube.com/vi/Sc7oCfYmlbA/maxresdefault.jpg</video:thumbnail_loc><video:title>How to Spot Fake Clinics in Turkey - Medical Tourism Legal Guide</video:title><video:description>Video guide on how to verify legitimate clinics in Turkey and avoid scams.</video:description><video:player_loc>https://www.youtube.com/embed/Sc7oCfYmlbA</video:player_loc><video:publication_date>2026-01-23</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/can-international-businesses-store-turkish-customer-data-abroad-under-kvkk.html</loc><video:video><video:thumbnail_loc>https://img.youtube.com/vi/PDEwmiungdA/maxresdefault.jpg</video:thumbnail_loc><video:title>Can International Businesses Store Turkish Customer Data Abroad under KVKK?</video:title><video:description>Video guide on KVKK data localization and cross-border transfers for international companies.</video:description><video:player_loc>https://www.youtube.com/embed/PDEwmiungdA</video:player_loc><video:publication_date>2026-05-23</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/glossary/agency-agreement.html</loc><video:video><video:thumbnail_loc>https://img.youtube.com/vi/7z4aUIEbI60/maxresdefault.jpg</video:thumbnail_loc><video:title>Agency Agreement Explained under Turkish Commercial Law</video:title><video:description>Video guide explaining agency agreements in Türkiye, including agent rights, commissions, equalization claims and termination.</video:description><video:player_loc>https://www.youtube.com/embed/7z4aUIEbI60</video:player_loc><video:publication_date>2026-06-03</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/glossary/bank-guarantee.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/wf8CsToLkKY/maxresdefault.jpg</video:thumbnail_loc><video:title>Bank Letters of Guarantee Explained in Turkish Trade Law</video:title><video:description>A visual explanation of how bank letters of guarantee work in Turkish international trade.</video:description><video:player_loc>https://www.youtube.com/embed/wf8CsToLkKY</video:player_loc><video:publication_date>2026-06-11</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/countries/country-united-kingdom.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/Kj0adYCCz-o/maxresdefault.jpg</video:thumbnail_loc><video:title>Legal Insights for UK Companies in Turkey</video:title><video:description>Essential legal insights and procedures for United Kingdom businesses operating, investing or trading in the Turkish market.</video:description><video:player_loc>https://www.youtube.com/embed/Kj0adYCCz-o</video:player_loc><video:publication_date>2026-06-30</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/countries/country-spain.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/WwEgF4gRQl0/maxresdefault.jpg</video:thumbnail_loc><video:title>Legal Insights for Spanish Companies in Turkey</video:title><video:description>Essential legal insights and procedures for Spanish businesses operating, investing or trading in the Turkish market.</video:description><video:player_loc>https://www.youtube.com/embed/WwEgF4gRQl0</video:player_loc><video:publication_date>2026-06-30</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/countries/country-germany.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/zOTGkuLR_T8/maxresdefault.jpg</video:thumbnail_loc><video:title>Legal Insights for German Companies in Turkey</video:title><video:description>Essential legal insights and procedures for German businesses operating, investing or trading in the Turkish market.</video:description><video:player_loc>https://www.youtube.com/embed/zOTGkuLR_T8</video:player_loc><video:publication_date>2026-06-30</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/glossary/letter-of-credit.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/5LFXkmx04p4/maxresdefault.jpg</video:thumbnail_loc><video:title>Letter of Credit Explained in Turkish Trade Law</video:title><video:description>A visual explanation of how letters of credit work in Turkish international trade.</video:description><video:player_loc>https://www.youtube.com/embed/5LFXkmx04p4</video:player_loc><video:publication_date>2026-06-02</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/glossary/minority-rights.html</loc><video:video><video:thumbnail_loc>https://i.ytimg.com/vi/ArGtHE9zl8U/maxresdefault.jpg</video:thumbnail_loc><video:title>Minority Shareholder Rights Explained under Turkish Law</video:title><video:description>Video guide explaining minority shareholder protections and remedies under Turkish company law.</video:description><video:player_loc>https://www.youtube.com/embed/ArGtHE9zl8U</video:player_loc><video:publication_date>2026-06-03</video:publication_date></video:video></url>
+  <url><loc>https://www.turkishtradelawyers.com/regulation-amending-commercial-advertising-and-unfair-commercial-practices.html</loc><video:video><video:thumbnail_loc>https://img.youtube.com/vi/3yKqy07gibo/maxresdefault.jpg</video:thumbnail_loc><video:title>2026 Amendments to Turkish Commercial Advertising and Unfair Commercial Practices Rules</video:title><video:description>A concise legal overview of Türkiye's 2026 amendments on commercial advertising and unfair commercial practices.</video:description><video:player_loc>https://www.youtube.com/embed/3yKqy07gibo</video:player_loc><video:publication_date>2026-07-01</video:publication_date></video:video></url>
 </urlset>

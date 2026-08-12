@@ -2652,6 +2652,26 @@ iframe[title="chat widget"] {
     transform: translateY(0);
 }
 
+/* Homepage section reveal on scroll */
+.index-scroll-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.index-scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .index-scroll-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-tagline {
@@ -3987,6 +4007,7 @@ iframe[title="chat widget"] {
 .sources-list a {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 1;
     width: 100%;
     padding: 12px 14px;
@@ -3997,6 +4018,7 @@ iframe[title="chat widget"] {
     text-decoration: none;
     font-weight: 700;
     line-height: 1.5;
+    text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -7300,6 +7322,355 @@ img[loading="lazy"][src] {
 
 .sidebar-form-submit:active {
     transform: translateY(0);
+}
+
+/* ========================================================================
+   Commercial Advertising Regulation Article
+   Long-form reading layout with a persistent conversion sidebar.
+   ======================================================================== */
+
+.advertising-regulation-article {
+    padding-top: 72px;
+    padding-bottom: 96px;
+    background: var(--off-white);
+}
+
+/* Continue the article's off-white canvas through its breadcrumb band. */
+body:has(.advertising-regulation-article) .breadcrumb {
+    background: var(--off-white);
+}
+
+.advertising-article-hero {
+    max-width: 1260px;
+    padding: 42px 56px 38px;
+    background: transparent;
+    border-radius: 18px;
+    box-shadow: none;
+    text-align: center;
+}
+
+.advertising-article-hero h1 {
+    max-width: 920px;
+    margin: 0 auto;
+    color: var(--text-dark);
+    font-size: clamp(1.9rem, 3.2vw, 3rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.028em;
+}
+
+.advertising-article-hero-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 24px;
+    color: #64748B;
+    font-size: 0.95rem;
+}
+
+.advertising-article-hero-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border: 1px dashed var(--primary-blue);
+    border-radius: 7px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.advertising-article-hero-meta time {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.advertising-regulation-article .article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    gap: 40px;
+    align-items: start;
+    max-width: 1260px;
+}
+
+.advertising-regulation-article article {
+    min-width: 0;
+    padding: 44px 48px 56px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.advertising-regulation-article .article-header {
+    text-align: left;
+    margin-bottom: 36px;
+    padding-bottom: 26px;
+}
+
+.advertising-regulation-article .article-header h1 {
+    font-size: clamp(2rem, 3.4vw, 3rem);
+}
+
+.advertising-article-wide-section {
+    max-width: 1260px;
+    margin-top: 40px;
+}
+
+.advertising-article-wide-cta {
+    width: 100%;
+    margin-top: 0;
+}
+
+.advertising-article-followups {
+    max-width: 1260px;
+}
+
+.advertising-article-followups .related-articles,
+.advertising-article-followups .sources-box {
+    width: 100%;
+}
+
+.advertising-article-video-slot {
+    width: 100%;
+}
+
+.advertising-article-sidebar {
+    align-self: stretch;
+}
+
+.advertising-sidebar-stack {
+    display: grid;
+    gap: 22px;
+    height: 100%;
+}
+
+.advertising-sidebar-cta,
+.advertising-sidebar-form-card {
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.09);
+}
+
+.advertising-sidebar-cta-form {
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: start;
+    height: max-content;
+    top: 96px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.advertising-sidebar-cta {
+    padding: 28px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.advertising-sidebar-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: var(--primary-blue);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.advertising-sidebar-cta .advertising-sidebar-eyebrow {
+    color: #BFDBFE;
+}
+
+.advertising-sidebar-cta h2,
+.advertising-sidebar-form-card h2 {
+    margin: 0 0 14px;
+    font-size: 1.35rem;
+    line-height: 1.25;
+}
+
+.advertising-sidebar-cta h2 { color: var(--white); }
+.advertising-sidebar-form-card h2 { color: var(--text-dark); }
+
+.advertising-sidebar-cta-form h2 { color: var(--white); }
+.advertising-sidebar-cta-form h2 {
+    margin-bottom: 9px;
+    font-size: 1.18rem;
+}
+
+.advertising-sidebar-cta p,
+.advertising-sidebar-form-card > p {
+    margin: 0 0 22px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.advertising-sidebar-cta p { color: rgba(255, 255, 255, 0.82); }
+.advertising-sidebar-form-card > p { color: var(--text-gray); }
+
+.advertising-sidebar-cta-form > p { color: rgba(255, 255, 255, 0.82); }
+.advertising-sidebar-cta-form > p {
+    margin-bottom: 14px;
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.advertising-sidebar-cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px 15px;
+    border-radius: 8px;
+    background: var(--navy);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: var(--white);
+    font-weight: 750;
+    font-size: 0.9rem;
+}
+
+.advertising-sidebar-cta-button:hover {
+    background: var(--navy-dark);
+    transform: translateY(-1px);
+}
+
+.advertising-sidebar-form-card {
+    padding: 26px;
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+}
+
+.advertising-sidebar-cta-form {
+    padding: 27px;
+    background: var(--navy);
+    border: 1px solid rgba(30, 58, 138, 0.28);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(22px) saturate(120%);
+    backdrop-filter: blur(22px) saturate(120%);
+}
+
+.advertising-sidebar-cta-form .advertising-sidebar-eyebrow {
+    color: #BFDBFE;
+}
+
+/* B variant: reuse the video guide's established gradient background. */
+.advertising-sidebar-cta-form--variant-b {
+    background: linear-gradient(135deg, #1a2742 0%, #2D4CC8 100%);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.advertising-sidebar-form {
+    display: grid;
+    gap: 12px;
+}
+
+.advertising-sidebar-form .form-group {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+}
+
+.advertising-sidebar-form label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.advertising-sidebar-form input,
+.advertising-sidebar-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--white);
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.advertising-sidebar-form input::placeholder,
+.advertising-sidebar-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.advertising-sidebar-form textarea {
+    min-height: 78px;
+    resize: vertical;
+}
+
+.advertising-sidebar-form input:focus,
+.advertising-sidebar-form textarea:focus {
+    outline: none;
+    border-color: #BFDBFE;
+    box-shadow: 0 0 0 3px rgba(191, 219, 254, 0.18);
+}
+
+.advertising-sidebar-form .sidebar-form-submit {
+    margin-top: 2px;
+    min-height: 40px;
+    padding: 9px 12px;
+    background: var(--navy);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--white);
+    font-size: 0.82rem;
+}
+
+.advertising-sidebar-form .sidebar-form-submit:hover {
+    background: var(--navy-dark);
+    color: var(--white);
+}
+
+.advertising-sidebar-form-card .advertising-sidebar-eyebrow { margin-bottom: 10px; }
+.advertising-sidebar-form-card .sidebar-lead-form { gap: 0; }
+.advertising-sidebar-form-card .form-group { margin-bottom: 14px; }
+.advertising-sidebar-form-card .sidebar-form-details { min-height: 110px; }
+.advertising-sidebar-form-card .sidebar-lead-form textarea { min-height: 88px; resize: vertical; }
+.advertising-sidebar-form-card .sidebar-lead-form label span { color: #98A2B3; font-weight: 400; }
+.advertising-sidebar-form-card .sidebar-form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 4px;
+    background: var(--navy);
+}
+.advertising-sidebar-form-card .sidebar-form-submit:hover { background: var(--navy-dark); }
+
+/* Keep the sticky article form compact enough to remain usable in the viewport. */
+.advertising-sidebar-cta-form .advertising-sidebar-form .form-group {
+    margin-bottom: 0;
+}
+
+.advertising-sidebar-cta-form .advertising-sidebar-form .sidebar-form-details {
+    min-height: 0;
+}
+
+.advertising-sidebar-cta-form .advertising-sidebar-form .sidebar-form-submit {
+    margin-top: 0;
+}
+
+@media (max-width: 1024px) {
+    .advertising-regulation-article .article-layout {
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 24px;
+    }
+    .advertising-regulation-article article { padding: 36px 32px 46px; }
+}
+
+@media (max-width: 800px) {
+    .advertising-regulation-article { padding-top: 42px; }
+    .advertising-article-hero { padding: 30px 24px 28px; text-align: left; border-radius: 14px; }
+    .advertising-article-hero h1 { font-size: clamp(2rem, 9vw, 3rem); letter-spacing: -0.035em; }
+    .advertising-article-hero-meta { justify-content: flex-start; gap: 10px 16px; }
+    .advertising-regulation-article .article-layout { grid-template-columns: 1fr; }
+    .advertising-regulation-article article { padding: 28px 22px 38px; border-radius: 14px; }
+    .advertising-article-sidebar { position: static; align-self: start; }
+    .advertising-sidebar-stack { height: auto; }
+    .advertising-sidebar-cta-form { position: static; }
+    .advertising-sidebar-stack { grid-template-columns: 1fr; }
 }
 
 /* Debt collection page: lead-form button uses the page's own navy, not the

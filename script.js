@@ -181,6 +181,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroFeatures = document.querySelectorAll('.hero-feature');
     const heroBadges = document.querySelectorAll('.hero-badge');
     const teamCards = document.querySelectorAll('.team-card');
+    const homeScrollSections = document.querySelectorAll(
+        '.practice-areas, .contact-inline, .about-v2, .internal-links, .why-us, .team, .testimonials-v2'
+    );
+
+    if (document.querySelector('.hero')) {
+        homeScrollSections.forEach((section, index) => {
+            section.classList.add('index-scroll-reveal');
+            section.style.transitionDelay = `${Math.min(index * 0.06, 0.3)}s`;
+            observer.observe(section);
+        });
+    }
 
     serviceCards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -497,6 +508,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const articleEl = document.querySelector('article');
     if (!articleEl) return;
 
+    const articleWideFollowups = document.querySelector('.advertising-article-followups');
+
     const path = (window.location && window.location.pathname) ? window.location.pathname : '';
     const slug = (path.split('/').filter(Boolean).pop() || '').replace(/\.html$/i, '');
     if (!slug || slug === 'index' || slug === 'guides' || slug === 'services' || slug === 'monitor') return;
@@ -507,7 +520,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (articleEl.querySelector('.related-articles')) return;
 
-    const related = pickRelatedArticles(slug, 4);
+    // Project rule: every article must show six related article cards.
+    const related = pickRelatedArticles(slug, 6);
     if (related.length === 0) return;
 
     const scriptEl = document.querySelector('script[src$="script.js"]');
@@ -528,7 +542,14 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     `;
 
-    articleEl.appendChild(section);
+    if (articleWideFollowups) {
+        const videoSlot = articleWideFollowups.querySelector('.advertising-article-video-slot');
+        const sourcesBox = articleWideFollowups.querySelector('.sources-box');
+        if (videoSlot) articleWideFollowups.insertBefore(section, videoSlot);
+        else if (sourcesBox) articleWideFollowups.insertBefore(section, sourcesBox);
+        else articleWideFollowups.appendChild(section);
+    }
+    else articleEl.appendChild(section);
 });
 
 function injectEEATSignals(articleEl, slug) {
@@ -546,6 +567,7 @@ function injectEEATSignals(articleEl, slug) {
     const hasAuthorBox = !!articleEl.querySelector('.author-box') || !!articleEl.querySelector('.expert-contributors');
 
     const insertBeforeEl = articleEl.querySelector('.related-articles') || null;
+    const articleWideFollowups = document.querySelector('.advertising-article-followups');
 
     const scriptEl = document.querySelector('script[src$="script.js"]');
     const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
@@ -580,7 +602,8 @@ function injectEEATSignals(articleEl, slug) {
                 </ul>
             `;
 
-            if (insertBeforeEl) articleEl.insertBefore(sourcesSection, insertBeforeEl);
+            if (articleWideFollowups) articleWideFollowups.appendChild(sourcesSection);
+            else if (insertBeforeEl) articleEl.insertBefore(sourcesSection, insertBeforeEl);
             else articleEl.appendChild(sourcesSection);
         }
     }
@@ -753,13 +776,9 @@ function pickRelatedArticles(currentSlug, maxCount) {
 
     // Fallback to popular articles if cluster is too small or current not indexed.
     if (unique.length < Math.min(3, maxCount)) {
-        const fallback = [
-            'establishing-limited-liability-company-turkey',
-            'how-to-enter-turkish-market',
-            'kvkk-compliance-checklist',
-            'key-legal-risks-in-cross-border-trade-and-how-to-mitigate-them',
-            'corporate-tax-vat-withholding-turkey'
-        ];
+        // Keep filling from the complete index so the six-card rule is met
+        // even when a topic cluster contains fewer than six candidates.
+        const fallback = Object.keys(RELATED_ARTICLES_INDEX);
         for (const candidate of fallback) {
             if (candidate === currentSlug) continue;
             if (!RELATED_ARTICLES_INDEX[candidate]) continue;
