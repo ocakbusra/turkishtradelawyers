@@ -7359,6 +7359,14 @@ body:has(.advertising-regulation-article) .breadcrumb {
     letter-spacing: -0.028em;
 }
 
+.advertising-article-hero-subtitle {
+    max-width: 780px;
+    margin: 16px auto 0;
+    color: var(--text-gray);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
 .advertising-article-hero-meta {
     display: flex;
     align-items: center;
@@ -7379,6 +7387,18 @@ body:has(.advertising-regulation-article) .breadcrumb {
     border-radius: 7px;
     color: var(--primary-blue);
     font-weight: 700;
+}
+
+.advertising-article-hero-meta .advertising-article-hero-meta-detail {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: #64748B;
+    font-weight: 400;
+}
+
+.advertising-article-hero-meta .advertising-article-hero-meta-detail i {
+    color: #64748B;
 }
 
 .advertising-article-hero-meta time {
@@ -7402,6 +7422,22 @@ body:has(.advertising-regulation-article) .breadcrumb {
     border: 0;
     border-radius: 0;
     box-shadow: none;
+}
+
+/* Guide callouts use the shared Turkish Trade Lawyers neutral palette. */
+.advertising-regulation-article .callout-box {
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 12px;
+    background: var(--light-gray);
+    color: var(--dark-blue);
+    box-shadow: none;
+}
+
+.advertising-regulation-article .callout-box strong {
+    color: var(--dark-blue);
 }
 
 .advertising-regulation-article .article-header {
