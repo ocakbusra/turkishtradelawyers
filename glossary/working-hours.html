@@ -141,6 +141,16 @@
     </script>
 
     <style>
+        /* Keep every textual control on this page on the required Inter family. */
+        body,
+        body *:not(i):not(svg):not(path) {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .glossary-details li::marker {
+            font-family: 'Inter', sans-serif !important;
+        }
+
         .glossary-page-hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1E3A8A 100%);
             padding: 140px 0 60px;
@@ -299,19 +309,17 @@
         
         /* Key Points Box */
         .key-points-box {
-            background: #F8FAFC;
+            background: #F5F7FA;
+            border: 1px solid #E4E7EC;
             border-left: 4px solid #2D4CC8;
-            border-radius: 0 12px 12px 0;
-            padding: 24px;
+            border-radius: 12px;
+            padding: 24px 28px;
             margin: 32px 0;
         }
         
         .key-points-box h4 {
-            color: #1a2742;
+            color: #1E3A8A;
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
         
         .key-points-box ul {
@@ -321,12 +329,13 @@
 
         /* Custom elements from original page */
         .warning-box {
-            background: #FFF7ED;
-            border-left: 4px solid #EA580C;
-            padding: 16px 20px;
+            background: #F5F7FA;
+            border: 1px solid #E4E7EC;
+            border-left: 4px solid #2D4CC8;
+            padding: 18px 24px;
             margin: 24px 0;
-            color: #9A3412;
-            border-radius: 0 10px 10px 0;
+            color: #475467;
+            border-radius: 12px;
         }
 
         .compliance-table {
@@ -660,7 +669,7 @@
                     <p>Regardless of how the 45 hours are distributed, the law imposes a strict absolute limit: <strong>An employee cannot work for more than 11 hours in a single day.</strong> This 11-hour ceiling encompasses both standard working time and any potential overtime. Any agreement attempting to extend daily work beyond 11 hours is null and void, and subjects the employer to administrative fines.</p>
                     
                     <div class="key-points-box">
-                        <h4><i class="fas fa-balance-scale"></i> Equalization Period (Denkleştirme Dönemi)</h4>
+                        <h4>Equalization Period (Denkleştirme Dönemi)</h4>
                         <p>To provide operational flexibility, Labor Law No. 4857 introduced the "Equalization Period." If the parties agree (via employment contract or collective agreement), the 45-hour weekly limit can be distributed unevenly across the working days.</p>
                         <ul>
                             <li><strong>The Mechanism:</strong> An employee might work 50 hours one week and 40 hours the next.</li>
