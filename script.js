@@ -1165,7 +1165,9 @@ function initConversionForms() {
             if (submitButton) submitButton.disabled = true;
             if (status) {
                 status.className = 'form-status is-visible';
-                status.textContent = 'Sending your request...';
+                status.textContent = formId === 'advertising-regulation-sidebar'
+                    ? 'Form gönderiliyor...'
+                    : 'Sending your request...';
             }
             trackConversionEvent('form_submit_attempt', { form_id: formId });
 
@@ -1183,6 +1185,9 @@ function initConversionForms() {
                     status.textContent = formId === 'advertising-regulation-sidebar'
                         ? 'Formunuz gönderildi. En kısa sürede sizinle iletişime geçeceğiz.'
                         : 'Thank you. Your request has been received. We will reply using the email provided.';
+                }
+                if (submitButton && formId === 'advertising-regulation-sidebar') {
+                    submitButton.innerHTML = 'Form gönderildi <i class="fas fa-check" aria-hidden="true"></i>';
                 }
                 trackConversionEvent('generate_lead', { form_id: formId });
             } catch {
