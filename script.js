@@ -518,7 +518,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     injectEEATSignals(articleEl, slug);
 
-    if (articleEl.querySelector('.related-articles')) return;
+    // Full-width post-article sections may live outside <article>. Check the
+    // whole page so the automatic injector does not create a duplicate above
+    // the assistance CTA.
+    if (document.querySelector('.related-articles')) return;
 
     // Project rule: every article must show six related article cards.
     const related = pickRelatedArticles(slug, 6);
@@ -558,10 +561,10 @@ function injectEEATSignals(articleEl, slug) {
     // 1) Legal disclaimer (skip if already present)
     const hasDisclaimer = articleText.includes('does not constitute legal advice')
         || articleText.includes('informational purposes only')
-        || !!articleEl.querySelector('.legal-disclaimer');
+        || !!document.querySelector('.legal-disclaimer');
 
     // 2) Sources / citations
-    const hasSources = !!articleEl.querySelector('.sources-box');
+    const hasSources = !!document.querySelector('.sources-box');
 
     // 3) Author / contributors
     const hasAuthorBox = !!articleEl.querySelector('.author-box') || !!articleEl.querySelector('.expert-contributors');
@@ -793,7 +796,7 @@ function pickRelatedArticles(currentSlug, maxCount) {
 
 const AUTHORITATIVE_SOURCES = {
     general: [
-        { label: 'Mevzuat Bilgi Sistemi (official legislation portal)', url: 'https://www.mevzuat.gov.tr' },
+        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' },
         { label: 'Official Gazette (Resmî Gazete)', url: 'https://www.resmigazete.gov.tr' },
         { label: 'Republic of Türkiye Ministry of Trade', url: 'https://www.trade.gov.tr' }
     ],
@@ -806,7 +809,7 @@ const AUTHORITATIVE_SOURCES = {
     contracts: [
         { label: 'Turkish Code of Obligations (Law No. 6098) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf' },
         { label: 'Turkish Commercial Code (Law No. 6102) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf' },
-        { label: 'Mevzuat Bilgi Sistemi (official legislation portal)', url: 'https://www.mevzuat.gov.tr' }
+        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' }
     ],
     kvkk: [
         { label: 'Law on the Protection of Personal Data (KVKK, Law No. 6698) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf' },
@@ -815,7 +818,7 @@ const AUTHORITATIVE_SOURCES = {
     ],
     tax: [
         { label: 'Revenue Administration (GİB)', url: 'https://www.gib.gov.tr' },
-        { label: 'Mevzuat Bilgi Sistemi (official legislation portal)', url: 'https://www.mevzuat.gov.tr' },
+        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' },
         { label: 'Central Bank of the Republic of Türkiye (CBRT)', url: 'https://www.tcmb.gov.tr' }
     ],
     customsTrade: [
@@ -825,7 +828,7 @@ const AUTHORITATIVE_SOURCES = {
     ],
     employment: [
         { label: 'Turkish Labour Law (Law No. 4857) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf' },
-        { label: 'Mevzuat Bilgi Sistemi (official legislation portal)', url: 'https://www.mevzuat.gov.tr' }
+        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' }
     ],
     ip: [
         { label: 'Industrial Property Code (Law No. 6769) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf' },
