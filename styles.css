@@ -7633,6 +7633,27 @@ body:has(.advertising-regulation-article) .breadcrumb {
     color: var(--white);
 }
 
+.advertising-sidebar-form .advertising-sidebar-form-status {
+    margin-top: 2px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--white) !important;
+    font-size: 0.78rem !important;
+    font-weight: 600;
+}
+
+.advertising-sidebar-form .advertising-sidebar-form-status.is-success {
+    background: rgba(236, 253, 243, 0.16);
+    border-color: rgba(187, 247, 208, 0.42);
+    color: #ECFDF3 !important;
+}
+
+.advertising-sidebar-form .advertising-sidebar-form-status.is-error {
+    background: rgba(254, 243, 242, 0.16);
+    border-color: rgba(254, 205, 202, 0.42);
+    color: #FFF1F0 !important;
+}
+
 .advertising-sidebar-form-card .advertising-sidebar-eyebrow { margin-bottom: 10px; }
 .advertising-sidebar-form-card .sidebar-lead-form { gap: 0; }
 .advertising-sidebar-form-card .form-group { margin-bottom: 14px; }

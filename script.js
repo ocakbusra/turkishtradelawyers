@@ -1180,7 +1180,9 @@ function initConversionForms() {
                 form.reset();
                 if (status) {
                     status.className = 'form-status is-visible is-success';
-                    status.textContent = 'Thank you. Your request has been received. We will reply using the email provided.';
+                    status.textContent = formId === 'advertising-regulation-sidebar'
+                        ? 'Formunuz gönderildi. En kısa sürede sizinle iletişime geçeceğiz.'
+                        : 'Thank you. Your request has been received. We will reply using the email provided.';
                 }
                 trackConversionEvent('generate_lead', { form_id: formId });
             } catch {
