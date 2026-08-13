@@ -7175,6 +7175,89 @@ img[loading="lazy"][src] {
     display: none;
 }
 
+/* ========================================================================
+   Income Tax Incentives guide: match the established single-column guide
+   presentation used by the minority shareholder rights article.
+   ======================================================================== */
+
+.income-tax-reference {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: var(--white);
+}
+
+body:has(.income-tax-reference) .breadcrumb {
+    background: var(--white);
+}
+
+.income-tax-reference .advertising-article-hero {
+    max-width: 1000px;
+    padding: 0 0 30px;
+    text-align: center;
+}
+
+.income-tax-reference .advertising-article-hero h1 {
+    max-width: none;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.income-tax-reference .advertising-article-hero-meta {
+    margin-top: 24px;
+}
+
+.income-tax-reference .article-layout {
+    display: block;
+    max-width: 1000px;
+}
+
+.income-tax-reference .article-layout article {
+    padding: 0;
+}
+
+.income-tax-reference .advertising-article-sidebar {
+    display: none;
+}
+
+.income-tax-reference .advertising-article-wide-section {
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+.income-tax-reference .advertising-article-wide-cta {
+    margin-top: 0;
+}
+
+.income-tax-reference .article-cta .cta-btn {
+    background: var(--navy);
+}
+
+.income-tax-reference .article-cta .cta-btn:hover {
+    background: var(--navy-dark);
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+}
+
+@media (max-width: 800px) {
+    .income-tax-reference {
+        padding-top: 42px;
+        padding-bottom: 72px;
+    }
+
+    .income-tax-reference .advertising-article-hero {
+        padding: 0 22px 28px;
+        text-align: center;
+    }
+
+    .income-tax-reference .advertising-article-hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .income-tax-reference .article-layout article {
+        padding: 0 22px;
+    }
+}
+
 .tax-related-guides-box h3,
 .tax-related-guides-box .related-card h4 {
     margin-top: 0;
