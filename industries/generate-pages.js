@@ -1633,6 +1633,14 @@ if (!fs.existsSync(industriesDir)) {
 console.log('Generating industry pages...');
 
 allIndustries.forEach((industry, index) => {
+    // Accounting, agriculture and aviation have dedicated long-form pages.
+    // Keep them out of the generic template so bulk generation does not
+    // overwrite their industry-specific SEO structures and content.
+    if (['accounting', 'agriculture', 'airlines-aviation'].includes(industry.id)) {
+        console.log(`[${index + 1}/${allIndustries.length}] Preserved custom page: ${industry.id}.html`);
+        return;
+    }
+
     const html = generateIndustryPage(industry);
     const fileName = `${industry.id}.html`;
     const filePath = path.join(__dirname, fileName);
