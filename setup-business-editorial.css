@@ -819,10 +819,13 @@
     display: grid;
     grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
     gap: 18px;
+    align-items: start;
     margin-top: 34px;
     padding: 0;
     border: 0;
+    border-radius: 0;
     background: transparent;
+    box-shadow: none;
 }
 
 .business-setup-editorial .governance-quorum-rule {
@@ -835,6 +838,10 @@
 .business-setup-editorial .governance-quorum-rule-important {
     border-color: #C7D2FE;
     background: #EEF2FF;
+}
+
+.business-setup-editorial .governance-quorum-rule:not(.governance-quorum-rule-important) {
+    align-self: center;
 }
 
 .business-setup-editorial .governance-quorum-rule h3 {
@@ -942,6 +949,10 @@
 
 .business-setup-editorial .business-licensing-grid .card-icon-box {
     background: var(--business-navy);
+    color: #FFFFFF;
+}
+
+.business-setup-editorial .business-licensing-grid .card-icon-box i {
     color: #FFFFFF;
 }
 
@@ -1328,21 +1339,25 @@
     }
 }
 
-/* The form rail continues through the opening of the full-width article and
-   releases precisely when the first long-form section begins. */
+/* Match the canonical guide sidebar: the form sticks naturally inside the
+   two-column row and releases when that row ends before the full-width
+   article begins. */
 @media (min-width: 921px) {
     .business-setup-editorial .service-landing-layout > aside {
         position: static;
     }
 
     .business-setup-editorial .sidebar-form-card {
-        position: relative;
-        will-change: transform;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 96px;
+        align-self: start;
+        height: max-content;
     }
 }
 
 @media (max-width: 920px) {
     .business-setup-editorial .sidebar-form-card {
-        transform: none !important;
+        position: static;
     }
 }
