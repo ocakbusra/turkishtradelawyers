@@ -607,6 +607,11 @@
     line-height: 1.4;
 }
 
+/* Nudge the closing Free Zone note without changing the surrounding spacing. */
+.business-setup-editorial .business-free-zone-card > p:last-child {
+    transform: translateY(4px);
+}
+
 /* Entity selector */
 .business-setup-editorial .legal-tabs-wrapper {
     margin-top: 38px;
@@ -646,9 +651,9 @@
 .business-setup-editorial .legal-tab-content {
     margin-top: 14px;
     padding: clamp(28px, 4.5vw, 50px);
-    border: 1px solid var(--business-border);
-    border-radius: 3px;
-    background: #FFFFFF;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     box-shadow: none;
 }
 
@@ -817,7 +822,7 @@
 /* Governance */
 .business-setup-editorial .governance-quorum-panel {
     display: grid;
-    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.28fr);
+    grid-template-columns: minmax(0, 1.28fr) minmax(260px, 0.72fr);
     gap: 18px;
     align-items: start;
     margin-top: 34px;
@@ -829,6 +834,7 @@
 }
 
 .business-setup-editorial .governance-quorum-rule {
+    order: 2;
     padding: clamp(26px, 3.5vw, 40px);
     border: 1px solid var(--business-border);
     border-radius: 16px;
@@ -836,6 +842,7 @@
 }
 
 .business-setup-editorial .governance-quorum-rule-important {
+    order: 1;
     border-color: #C7D2FE;
     background: #EEF2FF;
 }

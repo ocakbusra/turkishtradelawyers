@@ -699,31 +699,31 @@
 
     <script>
         // Sticky Header & Mobile Menu
-        const navbar = document.getElementById('navbar');
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
+        const ipNavbar = document.getElementById('navbar');
+        const ipNavToggle = document.getElementById('navToggle');
+        const ipNavMenu = document.getElementById('navMenu');
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+                ipNavbar.classList.add('scrolled');
             } else {
-                navbar.classList.remove('scrolled');
+                ipNavbar.classList.remove('scrolled');
             }
         });
 
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+        ipNavToggle.addEventListener('click', () => {
+            ipNavMenu.classList.toggle('active');
+            ipNavToggle.classList.toggle('active');
         });
 
         // Tabs Logic
-        const tabBtns = document.querySelectorAll('.legal-tab-btn');
-        const tabContents = document.querySelectorAll('.legal-tab-content');
+        const ipTabBtns = document.querySelectorAll('.legal-tab-btn');
+        const ipTabContents = document.querySelectorAll('.legal-tab-content');
 
-        tabBtns.forEach(btn => {
+        ipTabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.remove('active'));
+                ipTabBtns.forEach(b => b.classList.remove('active'));
+                ipTabContents.forEach(c => c.classList.remove('active'));
 
                 btn.classList.add('active');
                 document.getElementById(btn.dataset.tab).classList.add('active');
@@ -731,8 +731,8 @@
         });
 
         // Accordion Logic
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-        accordionHeaders.forEach(header => {
+        const ipAccordionHeaders = document.querySelectorAll('.accordion-header');
+        ipAccordionHeaders.forEach(header => {
             header.addEventListener('click', () => {
                 const item = header.closest('.accordion-item');
                 if (item.classList.contains('active')) {
@@ -747,8 +747,8 @@
         });
 
         // Timeline Logic
-        const timelineHeaders = document.querySelectorAll('.timeline-header');
-        timelineHeaders.forEach(header => {
+        const ipTimelineHeaders = document.querySelectorAll('.timeline-header');
+        ipTimelineHeaders.forEach(header => {
             header.addEventListener('click', () => {
                 const item = header.parentElement;
                 item.classList.toggle('active');

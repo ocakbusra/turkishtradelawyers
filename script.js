@@ -419,6 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isIndustries = path.includes('/industries/');
     const isGlossary = path.includes('/glossary/');
     const isMonitor = fileName === 'monitor.html' || fileName.startsWith('monitor-');
+    const isServicePage = Boolean(document.querySelector('.service-landing-hero'));
 
     if (isCountries) {
         crumbs.push({ name: 'Regions', href: '/regions.html' });
@@ -433,6 +434,9 @@ document.addEventListener('DOMContentLoaded', () => {
         crumbs.push({ name: 'Guides' });
     } else if (fileName === 'services.html') {
         crumbs.push({ name: 'Services' });
+    } else if (isServicePage) {
+        crumbs.push({ name: 'Services', href: '/services.html' });
+        crumbs.push({ name: currentLabel });
     } else if (fileName === 'contact.html') {
         crumbs.push({ name: 'Contact' });
     } else if (fileName === 'ourexperts.html') {

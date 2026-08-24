@@ -1,0 +1,239 @@
+/* Editorial treatment for the dispute-resolution service page.
+   The content stays page-specific while the shell follows the setup-business
+   visual system. */
+
+.dispute-resolution-editorial {
+    --dispute-ink: var(--business-ink, #101828);
+    --dispute-muted: var(--business-muted, #475467);
+    --dispute-border: var(--business-border, #E4E7EC);
+    --dispute-navy: var(--business-navy, #1E3A8A);
+    --dispute-blue: var(--business-blue, #2D4CC8);
+}
+
+.dispute-resolution-editorial .service-landing-hero {
+    min-height: 720px;
+}
+
+.dispute-resolution-editorial .dispute-entry-map {
+    background:
+        linear-gradient(140deg, rgba(30, 58, 138, 0.06), transparent 58%),
+        rgba(245, 247, 250, 0.94);
+}
+
+.dispute-resolution-editorial .dispute-entry-map .business-entry-route strong {
+    color: var(--dispute-navy);
+}
+
+.dispute-resolution-editorial .service-landing-content {
+    padding-top: clamp(72px, 8vw, 110px);
+    padding-bottom: clamp(82px, 9vw, 128px);
+}
+
+.dispute-resolution-editorial .service-landing-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 350px);
+    gap: clamp(38px, 5vw, 70px);
+    align-items: start;
+}
+
+.dispute-resolution-editorial .service-landing-layout > aside {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+}
+
+.dispute-resolution-editorial .dispute-sidebar-secondary {
+    margin-top: 0;
+}
+
+.dispute-resolution-editorial .sidebar-lead-form .sidebar-form-submit {
+    border-radius: 8px;
+    background: var(--dispute-navy);
+}
+
+.dispute-resolution-editorial .sidebar-lead-form .sidebar-form-submit:hover {
+    background: var(--business-navy-dark, #142A63);
+}
+
+.dispute-resolution-editorial .service-main-content {
+    min-width: 0;
+}
+
+.dispute-resolution-editorial .service-main-content > h2#preaction-mediation {
+    max-width: 1000px;
+    margin: clamp(86px, 10vw, 148px) 0 30px;
+    padding-top: 28px;
+    border-top: 1px solid var(--dispute-border);
+    color: var(--dispute-ink);
+    font-size: clamp(2.7rem, 5.2vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.058em;
+    line-height: 0.99;
+    text-wrap: balance;
+    scroll-margin-top: 110px;
+}
+
+/* The scope map remains an information graphic, but uses the same restrained
+   single-surface treatment as the setup page's editorial cards. */
+.dispute-resolution-editorial .dispute-scope-card {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0;
+    padding: clamp(28px, 4vw, 46px);
+    border: 1px solid var(--dispute-border);
+    border-radius: 16px;
+    background: #FFFFFF;
+    box-shadow: none;
+}
+
+.dispute-resolution-editorial .dispute-scope-card:hover {
+    box-shadow: none;
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-hub-core {
+    background: var(--dispute-navy);
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-node {
+    border-color: var(--dispute-border);
+    border-left-color: var(--dispute-blue);
+    background: var(--business-wash);
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-node:hover {
+    border-color: var(--dispute-blue);
+    background: #FFFFFF;
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-node-icon {
+    color: var(--dispute-blue);
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-node h4,
+.dispute-resolution-editorial .dispute-scope-card .scope-hub-core h3 {
+    color: var(--dispute-ink);
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-hub-core h3 {
+    color: #FFFFFF;
+}
+
+.dispute-resolution-editorial .dispute-scope-card .scope-node p,
+.dispute-resolution-editorial .dispute-scope-card .scope-diagram-note {
+    color: var(--dispute-muted);
+}
+
+/* Long-form sections inherit the same large heading rhythm as setup-business. */
+.dispute-resolution-editorial .dispute-fullwidth-section {
+    padding: clamp(86px, 10vw, 148px) 0;
+    background: #FFFFFF;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner {
+    max-width: 1160px;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > h2 {
+    scroll-margin-top: 110px;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > p {
+    max-width: 76ch;
+    color: var(--dispute-muted);
+}
+
+.dispute-resolution-editorial .business-licensing-grid {
+    margin-top: 34px;
+}
+
+.dispute-resolution-editorial .interim-relief-grid .new-design-card {
+    min-height: 0;
+}
+
+.dispute-resolution-editorial .procedure-card .btn-expand-link {
+    color: var(--dispute-navy);
+}
+
+.dispute-resolution-editorial .procedure-card .btn-expand-link:hover {
+    color: var(--dispute-blue);
+}
+
+/* Comparison table: preserve every value while replacing the legacy bordered
+   panel with the setup page's neutral ledger surface. */
+.dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] {
+    margin: 34px 0 42px !important;
+    padding: 0;
+    border: 1px solid var(--dispute-border) !important;
+    border-radius: 16px !important;
+    background: var(--business-wash) !important;
+    overflow-x: auto;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] table {
+    min-width: 760px;
+    border-collapse: collapse !important;
+    font-size: 0.92rem !important;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] th {
+    padding: 18px 20px !important;
+    border-bottom: 1px solid var(--dispute-border) !important;
+    background: #FFFFFF !important;
+    color: var(--dispute-ink) !important;
+    font-weight: 750 !important;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] td {
+    padding: 18px 20px !important;
+    border-bottom: 1px solid var(--dispute-border) !important;
+    color: var(--dispute-muted) !important;
+    line-height: 1.6;
+}
+
+.dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+.dispute-resolution-editorial .business-structure-note {
+    margin-top: 46px;
+}
+
+.dispute-resolution-editorial .business-structure-note ol {
+    margin-top: 30px !important;
+    color: var(--dispute-muted) !important;
+}
+
+.dispute-resolution-editorial .business-download-cta {
+    margin-top: 70px !important;
+}
+
+.dispute-resolution-editorial .business-download-cta .cta-btn {
+    background: var(--dispute-navy);
+}
+
+.dispute-resolution-editorial .business-download-cta .cta-btn:hover {
+    background: var(--business-navy-dark, #142A63);
+}
+
+@media (max-width: 960px) {
+    .dispute-resolution-editorial .service-landing-layout > aside {
+        position: static;
+    }
+
+    .dispute-resolution-editorial .dispute-sidebar-secondary {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .dispute-resolution-editorial .dispute-scope-card {
+        padding: 22px;
+    }
+
+    .dispute-resolution-editorial .business-licensing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dispute-resolution-editorial .dispute-fullwidth-inner > div[style*="overflow-x"] table {
+        min-width: 700px;
+    }
+}
