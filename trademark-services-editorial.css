@@ -465,6 +465,71 @@
     background: var(--navy-dark);
 }
 
+/* Patent page variant: same editorial system, with restrained technology cues. */
+.patent-services-editorial .business-entry-map {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.16), transparent 38%),
+        linear-gradient(145deg, #FFFFFF 0%, #F5F7FA 100%);
+}
+
+.patent-services-editorial .business-entry-core strong {
+    letter-spacing: -0.04em;
+}
+
+/* Keep the strategy message directly before its explanatory service overview. */
+.patent-services-editorial .service-main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.patent-services-editorial .trademark-definition-card { order: 1; }
+.patent-services-editorial .trademark-strategy-card { order: 2; }
+.patent-services-editorial .trademark-quick-card { order: 3; }
+
+/* Keep the final two patent services aligned as a matched pair. */
+.patent-services-editorial .trademark-service-card:nth-child(17),
+.patent-services-editorial .trademark-service-card:nth-child(18) {
+    aspect-ratio: 1 / 1;
+}
+
+.patent-services-editorial .trademark-service-card:last-child {
+    grid-column: auto;
+}
+
+.patent-services-editorial .trademark-service-card:last-child ul {
+    columns: 1;
+}
+
+.patent-services-editorial .patent-disclosure-note {
+    margin-top: 28px;
+    padding: 22px 24px 22px 28px;
+    border: 1px solid var(--trademark-border);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 10px;
+    background: var(--trademark-wash);
+}
+
+.patent-services-editorial .patent-disclosure-note h3 {
+    margin: 0 0 7px;
+    color: var(--trademark-ink);
+    font-size: 1.08rem;
+}
+
+.patent-services-editorial .patent-disclosure-note p {
+    margin: 0;
+    color: var(--trademark-muted);
+}
+
+.patent-services-editorial .sidebar-lead-form[data-form-id="patent-services-sidebar"] .sidebar-form-submit,
+.patent-services-editorial .service-cta-form[data-form-id="patent-services-main"] .form-submit-btn {
+    background: var(--navy);
+}
+
+.patent-services-editorial .sidebar-lead-form[data-form-id="patent-services-sidebar"] .sidebar-form-submit:hover,
+.patent-services-editorial .service-cta-form[data-form-id="patent-services-main"] .form-submit-btn:hover {
+    background: var(--navy-dark);
+}
+
 @media (max-width: 1080px) {
     .trademark-services-editorial .service-landing-pills {
         grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -840,10 +840,10 @@
                     <h3>Not Ready to Contact a Lawyer Yet?</h3>
                     <p>Download the free 2026 Turkey Entity Selection Checklist and compare a Limited Şirket, Anonim
                         Şirket, liaison office, and branch before choosing a route.</p>
-                    <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download class="cta-btn"
+                    <button type="button" class="cta-btn setup-checklist-download-trigger" id="openSetupChecklistBtn"
                         data-conversion-event="lead_magnet_download" data-conversion-label="setup_business_page">
                         Download the Free Checklist <i class="fas fa-download"></i>
-                    </a>
+                    </button>
                 </div>
 
             </div>
@@ -884,6 +884,110 @@
     </main>
 
     <footer class="footer"><div class="container"><p>&copy; 2026 Turkish Trade Lawyers. All rights reserved.</p></div></footer>
+
+    <div id="setup-checklist-download-modal" class="setup-checklist-download-overlay" role="dialog" aria-modal="true" aria-labelledby="setup-checklist-download-title" hidden>
+        <div class="setup-checklist-download-box">
+            <button type="button" class="setup-checklist-download-close" id="setupChecklistDownloadClose" aria-label="Close">&times;</button>
+            <h3 id="setup-checklist-download-title"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download the Turkey Entity Selection Checklist</h3>
+            <p>Enter your email address to download the free 2026 Turkey Entity Selection Checklist PDF.</p>
+            <form id="setup-checklist-download-form" novalidate>
+                <label for="setup-checklist-download-email">Email address</label>
+                <input type="email" id="setup-checklist-download-email" name="email" placeholder="name@company.com" required autocomplete="email">
+                <p class="setup-checklist-download-error" id="setupChecklistDownloadError">Please enter a valid email address.</p>
+                <button type="submit" class="setup-checklist-download-submit"><i class="fas fa-download" aria-hidden="true"></i> Download the PDF</button>
+            </form>
+            <p class="setup-checklist-download-note">We respect your privacy. Your email may be used to send relevant Turkish trade-law updates. You can unsubscribe at any time.</p>
+            <div class="setup-checklist-download-success" id="setupChecklistDownloadSuccess" hidden>
+                <i class="fas fa-circle-check" aria-hidden="true"></i> Thank you. Your download has started. If it does not begin automatically,
+                <a href="output/pdf/turkey-entity-selection-checklist-2026.pdf" download>click here to download the PDF</a>.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var PDF = 'output/pdf/turkey-entity-selection-checklist-2026.pdf';
+            var overlay = document.getElementById('setup-checklist-download-modal');
+            var openBtn = document.getElementById('openSetupChecklistBtn');
+            var closeBtn = document.getElementById('setupChecklistDownloadClose');
+            var form = document.getElementById('setup-checklist-download-form');
+            var emailInput = document.getElementById('setup-checklist-download-email');
+            var errorEl = document.getElementById('setupChecklistDownloadError');
+            var successEl = document.getElementById('setupChecklistDownloadSuccess');
+
+            if (!overlay || !openBtn || !closeBtn || !form || !emailInput || !errorEl || !successEl) return;
+
+            function openModal() {
+                overlay.hidden = false;
+                document.body.style.overflow = 'hidden';
+                setTimeout(function () { emailInput.focus(); }, 50);
+            }
+
+            function closeModal() {
+                overlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+
+            function triggerDownload() {
+                var link = document.createElement('a');
+                link.href = PDF;
+                link.download = PDF.split('/').pop();
+                link.rel = 'noopener';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) closeModal();
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && !overlay.hidden) closeModal();
+            });
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var email = (emailInput.value || '').trim();
+                var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+                if (!valid) {
+                    errorEl.style.display = 'block';
+                    emailInput.focus();
+                    return;
+                }
+
+                errorEl.style.display = 'none';
+
+                try {
+                    fetch('https://formspree.io/f/mnneobaw', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            _subject: 'PDF Download Lead - Turkey Entity Selection Checklist 2026',
+                            message: 'PDF download lead from the Setup a Business in Turkey page.',
+                            source: 'setup-a-business-in-turkey.html'
+                        })
+                    }).catch(function () { });
+                } catch (_) { }
+
+                try {
+                    if (window.gtag) {
+                        gtag('event', 'pdf_download', {
+                            event_category: 'lead',
+                            event_label: 'Turkey Entity Selection Checklist 2026'
+                        });
+                    }
+                } catch (_) { }
+
+                form.style.display = 'none';
+                successEl.hidden = false;
+                triggerDownload();
+            });
+        })();
+    </script>
     <script src="script.js?v=20260721-conversion2"></script>
 </body>
 </html>

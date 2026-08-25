@@ -145,6 +145,26 @@
     margin-top: 34px;
 }
 
+/* Keep the ADR cards compact and readable as full-width horizontal rows. */
+.dispute-resolution-editorial .arbitration-adr-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.dispute-resolution-editorial .arbitration-adr-grid .new-design-card {
+    min-height: 0;
+    padding: 20px 26px;
+}
+
+.dispute-resolution-editorial .arbitration-adr-grid .card-header-flex {
+    margin-bottom: 10px;
+}
+
+.dispute-resolution-editorial .arbitration-adr-grid p {
+    margin-bottom: 14px;
+}
+
 .dispute-resolution-editorial .interim-relief-grid .new-design-card {
     min-height: 0;
 }
@@ -155,6 +175,14 @@
 
 .dispute-resolution-editorial .procedure-card .btn-expand-link:hover {
     color: var(--dispute-blue);
+}
+
+/* Remove only the outer frame from the Evidentiary and Procedural Functions
+   checklist while retaining the separators between its items. */
+.dispute-resolution-editorial .legal-tab-content .evidentiary-procedural-checklist {
+    border: 0;
+    border-radius: 0;
+    padding-left: 0;
 }
 
 /* Comparison table: preserve every value while replacing the legacy bordered
@@ -200,6 +228,31 @@
 .dispute-resolution-editorial .business-structure-note ol {
     margin-top: 30px !important;
     color: var(--dispute-muted) !important;
+}
+
+/* Normalize the Tenfiz requirements list so labels and body copy have a
+   balanced weight and consistent reading rhythm. */
+.dispute-resolution-editorial .tenfiz-requirements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 30px;
+    padding-left: 1.2rem;
+    color: var(--dispute-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.dispute-resolution-editorial .tenfiz-requirements-list li {
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.dispute-resolution-editorial .tenfiz-requirements-list strong {
+    color: var(--dispute-ink);
+    font-weight: 600;
 }
 
 .dispute-resolution-editorial .business-download-cta {
