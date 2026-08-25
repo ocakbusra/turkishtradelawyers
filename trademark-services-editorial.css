@@ -1,0 +1,526 @@
+/* Trademark services page — extends the Setup a Business editorial system. */
+.trademark-services-editorial {
+    --trademark-ink: #101828;
+    --trademark-muted: #475467;
+    --trademark-border: #E4E7EC;
+    --trademark-wash: #F5F7FA;
+}
+
+.trademark-services-editorial .business-entry-map {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(45, 76, 200, 0.14), transparent 36%),
+        linear-gradient(145deg, #FFFFFF 0%, #F5F7FA 100%);
+}
+
+.trademark-services-editorial .business-entry-route {
+    min-height: 104px;
+}
+
+.trademark-services-editorial .business-entry-route i {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--navy);
+    font-size: 1.15rem;
+}
+
+.trademark-services-editorial .business-entry-core small {
+    margin-bottom: 5px;
+}
+
+.trademark-services-editorial .service-landing-pills {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.trademark-services-editorial .service-landing-pill {
+    padding: 15px 14px;
+    font-size: 0.74rem;
+    text-align: center;
+}
+
+.trademark-services-editorial .service-landing-pill + .service-landing-pill {
+    border-left: 1px solid var(--trademark-border);
+}
+
+.trademark-services-editorial .trademark-definition-card::after { content: "01"; }
+.trademark-services-editorial .trademark-strategy-card::after { content: "02"; }
+
+.trademark-services-editorial .trademark-quick-card {
+    margin-top: 24px;
+    padding: clamp(25px, 4vw, 38px);
+    border: 1px solid var(--trademark-border);
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 16px 42px rgba(16, 24, 40, 0.06);
+}
+
+.trademark-services-editorial .trademark-quick-card h2 {
+    margin: 0 0 8px;
+    color: var(--trademark-ink);
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+.trademark-services-editorial .trademark-quick-card > p {
+    margin: 0 0 22px;
+    color: var(--trademark-muted);
+}
+
+.trademark-services-editorial .trademark-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--trademark-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trademark-services-editorial .trademark-fact {
+    min-height: 104px;
+    padding: 18px 20px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-fact:nth-child(even) {
+    border-left: 1px solid var(--trademark-border);
+}
+
+.trademark-services-editorial .trademark-fact:nth-child(n + 3) {
+    border-top: 1px solid var(--trademark-border);
+}
+
+.trademark-services-editorial .trademark-fact span,
+.trademark-services-editorial .trademark-fact strong {
+    display: block;
+}
+
+.trademark-services-editorial .trademark-fact span {
+    margin-bottom: 7px;
+    color: #667085;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.trademark-services-editorial .trademark-fact strong {
+    color: var(--navy);
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+.trademark-services-editorial .trademark-inline-cta,
+.trademark-services-editorial .trademark-card-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 11px 17px;
+    border-radius: 7px;
+    background: var(--navy);
+    color: #FFFFFF;
+    font-size: 0.86rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trademark-services-editorial .trademark-inline-cta {
+    margin-top: 22px;
+}
+
+.trademark-services-editorial .trademark-inline-cta:hover,
+.trademark-services-editorial .trademark-card-link:hover {
+    background: var(--navy-dark);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(30, 58, 138, 0.2);
+}
+
+.trademark-services-editorial .trademark-launch-note {
+    margin-top: 28px;
+    padding: 22px 24px 22px 28px;
+    border: 1px solid var(--trademark-border);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 10px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-launch-note h3 {
+    margin: 0 0 7px;
+    color: var(--trademark-ink);
+    font-size: 1.08rem;
+}
+
+.trademark-services-editorial .trademark-launch-note p {
+    margin: 0;
+    color: var(--trademark-muted);
+}
+
+.trademark-services-editorial .trademark-section-intro {
+    max-width: 880px;
+    margin: 0 auto 34px;
+    color: var(--trademark-muted);
+    text-align: center;
+}
+
+.trademark-services-editorial .trademark-service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 38px;
+}
+
+.trademark-services-editorial .trademark-service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: clamp(25px, 3.5vw, 34px);
+    border: 1px solid var(--trademark-border);
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 14px 34px rgba(16, 24, 40, 0.05);
+    overflow: hidden;
+}
+
+.trademark-services-editorial .trademark-service-card:last-child {
+    grid-column: 1 / -1;
+}
+
+.trademark-services-editorial .trademark-service-card:last-child ul {
+    columns: 2;
+    column-gap: 34px;
+}
+
+.trademark-services-editorial .trademark-service-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--navy);
+    content: "";
+}
+
+.trademark-services-editorial .trademark-service-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #EEF2FF;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.trademark-services-editorial .trademark-service-card h3 {
+    margin: 0 0 13px;
+    color: var(--trademark-ink);
+    font-size: clamp(1.28rem, 2.2vw, 1.65rem);
+    line-height: 1.22;
+}
+
+.trademark-services-editorial .trademark-service-card p,
+.trademark-services-editorial .trademark-service-card li {
+    color: var(--trademark-muted);
+    font-size: 0.93rem !important;
+    line-height: 1.66 !important;
+}
+
+.trademark-services-editorial .trademark-service-card ul,
+.trademark-services-editorial .international-matter-list {
+    margin: 9px 0 24px;
+    padding: 0;
+    list-style: none;
+}
+
+.trademark-services-editorial .trademark-service-card li,
+.trademark-services-editorial .international-matter-list li {
+    position: relative;
+    padding: 6px 0 6px 24px;
+}
+
+.trademark-services-editorial .trademark-service-card li::before,
+.trademark-services-editorial .international-matter-list li::before {
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50%;
+    content: "";
+}
+
+.trademark-services-editorial .trademark-card-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.trademark-services-editorial .trademark-guide-link {
+    margin: 18px 0 22px;
+    padding: 20px;
+    border: 1px solid var(--trademark-border);
+    border-radius: 10px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-guide-link strong,
+.trademark-services-editorial .trademark-guide-link a {
+    color: var(--navy);
+}
+
+.trademark-services-editorial .trademark-fee-wrap {
+    margin-top: 34px;
+    border: 1px solid var(--trademark-border);
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 14px 36px rgba(16, 24, 40, 0.05);
+    overflow-x: auto;
+}
+
+.trademark-services-editorial .trademark-fee-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+}
+
+.trademark-services-editorial .trademark-fee-table th,
+.trademark-services-editorial .trademark-fee-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--trademark-border);
+    text-align: left;
+}
+
+.trademark-services-editorial .trademark-fee-table th {
+    background: var(--navy);
+    color: #FFFFFF;
+    font-size: 0.76rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.trademark-services-editorial .trademark-fee-table td {
+    color: var(--trademark-muted);
+    font-size: 0.92rem;
+}
+
+.trademark-services-editorial .trademark-fee-table td:last-child {
+    color: var(--trademark-ink);
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.trademark-services-editorial .trademark-fee-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.trademark-services-editorial .trademark-cost-note {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.trademark-services-editorial .trademark-cost-note > div {
+    padding: 22px;
+    border: 1px solid var(--trademark-border);
+    border-radius: 10px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-cost-note h3 {
+    margin: 0 0 8px;
+    color: var(--trademark-ink);
+    font-size: 1rem;
+}
+
+.trademark-services-editorial .trademark-cost-note p {
+    margin: 0;
+    color: var(--trademark-muted);
+    font-size: 0.9rem !important;
+}
+
+.trademark-services-editorial .trademark-process-grid,
+.trademark-services-editorial .trademark-value-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.trademark-services-editorial .trademark-process-step,
+.trademark-services-editorial .trademark-value-card {
+    padding: 26px 22px;
+    border: 1px solid var(--trademark-border);
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+.trademark-services-editorial .trademark-process-step span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.trademark-services-editorial .trademark-process-step h3,
+.trademark-services-editorial .trademark-value-card h3 {
+    margin: 0 0 10px;
+    color: var(--trademark-ink);
+    font-size: 1.05rem;
+}
+
+.trademark-services-editorial .trademark-process-step p,
+.trademark-services-editorial .trademark-value-card p {
+    margin: 0;
+    color: var(--trademark-muted);
+    font-size: 0.88rem !important;
+}
+
+.trademark-services-editorial .trademark-international-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    gap: 36px;
+    margin-top: 34px;
+    padding: clamp(28px, 5vw, 48px);
+    border: 1px solid var(--trademark-border);
+    border-radius: 16px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-international-panel h3 {
+    margin-top: 0;
+    color: var(--trademark-ink);
+}
+
+.trademark-services-editorial .trademark-international-panel p,
+.trademark-services-editorial .international-matter-list li {
+    color: var(--trademark-muted);
+}
+
+.trademark-services-editorial .trademark-source-box {
+    margin-top: 64px;
+    padding: clamp(26px, 4vw, 40px);
+    border: 1px solid var(--trademark-border);
+    border-radius: 14px;
+    background: var(--trademark-wash);
+}
+
+.trademark-services-editorial .trademark-source-box h2 {
+    margin: 0 0 10px;
+    color: var(--trademark-ink);
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.trademark-services-editorial .trademark-source-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.trademark-services-editorial .trademark-source-list a {
+    display: flex;
+    align-items: center;
+    min-height: 62px;
+    padding: 14px 16px;
+    border: 1px solid var(--trademark-border);
+    border-radius: 9px;
+    background: #FFFFFF;
+    color: var(--navy);
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.trademark-services-editorial .trademark-source-list a:hover {
+    border-color: #BBC6DD;
+    box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
+.trademark-services-editorial .trademark-reviewed {
+    margin: 18px 0 0;
+    color: #667085;
+    font-size: 0.82rem !important;
+    font-weight: 650;
+}
+
+.trademark-services-editorial .sidebar-lead-form[data-form-id="trademark-services-sidebar"] .sidebar-form-submit,
+.trademark-services-editorial .service-cta-form[data-form-id="trademark-services-main"] .form-submit-btn {
+    background: var(--navy);
+}
+
+.trademark-services-editorial .sidebar-lead-form[data-form-id="trademark-services-sidebar"] .sidebar-form-submit:hover,
+.trademark-services-editorial .service-cta-form[data-form-id="trademark-services-main"] .form-submit-btn:hover {
+    background: var(--navy-dark);
+}
+
+@media (max-width: 1080px) {
+    .trademark-services-editorial .service-landing-pills {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .trademark-services-editorial .service-landing-pill:nth-child(4) {
+        border-left: 0;
+        border-top: 1px solid var(--trademark-border);
+    }
+
+    .trademark-services-editorial .service-landing-pill:nth-child(5) {
+        border-top: 1px solid var(--trademark-border);
+    }
+
+    .trademark-services-editorial .trademark-process-grid,
+    .trademark-services-editorial .trademark-value-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .trademark-services-editorial .service-landing-pills,
+    .trademark-services-editorial .trademark-facts-grid,
+    .trademark-services-editorial .trademark-service-grid,
+    .trademark-services-editorial .trademark-cost-note,
+    .trademark-services-editorial .trademark-process-grid,
+    .trademark-services-editorial .trademark-value-grid,
+    .trademark-services-editorial .trademark-international-panel,
+    .trademark-services-editorial .trademark-source-list {
+        grid-template-columns: 1fr;
+    }
+
+    .trademark-services-editorial .service-landing-pill + .service-landing-pill,
+    .trademark-services-editorial .service-landing-pill:nth-child(4),
+    .trademark-services-editorial .service-landing-pill:nth-child(5) {
+        border-top: 1px solid var(--trademark-border);
+        border-left: 0;
+    }
+
+    .trademark-services-editorial .trademark-fact:nth-child(even) {
+        border-left: 0;
+    }
+
+    .trademark-services-editorial .trademark-fact + .trademark-fact {
+        border-top: 1px solid var(--trademark-border);
+    }
+
+    .trademark-services-editorial .trademark-service-card {
+        padding: 25px 21px;
+    }
+
+    .trademark-services-editorial .trademark-service-card:last-child {
+        grid-column: auto;
+    }
+
+    .trademark-services-editorial .trademark-service-card:last-child ul {
+        columns: 1;
+    }
+}

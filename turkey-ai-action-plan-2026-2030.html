@@ -40,6 +40,162 @@
         .turkey-ai-action-plan .article-cta .cta-btn:hover,
         .turkey-ai-action-plan .sidebar-form-submit:hover { background: var(--navy-dark); }
         .turkey-ai-action-plan .article-guide-download-box h2::after { display: none; }
+
+        .turkey-ai-action-plan .ai-action-download-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .turkey-ai-action-plan .ai-action-download-overlay[hidden] { display: none; }
+
+        .turkey-ai-action-plan .ai-action-download-box {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            padding: 40px;
+            border-radius: 16px;
+            background: #FFFFFF;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .turkey-ai-action-plan .ai-action-download-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            border: 0;
+            background: transparent;
+            color: #94A3B8;
+            font-size: 1.8rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-close:hover { color: #1E293B; }
+
+        .turkey-ai-action-plan .ai-action-download-box h3 {
+            margin: 0 0 8px;
+            color: #1E293B;
+            font-size: 1.35rem;
+            line-height: 1.25;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-box h3 i {
+            margin-right: 8px;
+            color: var(--primary-blue);
+        }
+
+        .turkey-ai-action-plan .ai-action-download-box > p {
+            margin: 0 0 12px;
+            color: #475467;
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+
+        .turkey-ai-action-plan #ai-action-download-form label {
+            display: block;
+            color: #334155;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .turkey-ai-action-plan #ai-action-download-form input[type="email"] {
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 6px;
+            padding: 12px 14px;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font: inherit;
+            font-size: 1rem;
+        }
+
+        .turkey-ai-action-plan #ai-action-download-form input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(45, 76, 200, 0.12);
+        }
+
+        .turkey-ai-action-plan .ai-action-download-error {
+            display: none;
+            margin: 8px 0 0;
+            color: #DC2626;
+            font-size: 0.85rem;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            width: 100%;
+            min-height: 46px;
+            margin-top: 16px;
+            padding: 12px 18px;
+            border: 1px solid var(--navy);
+            border-radius: 8px;
+            background: var(--navy);
+            color: #FFFFFF;
+            font: inherit;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.2;
+            cursor: pointer;
+            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-submit:hover {
+            border-color: var(--navy-dark);
+            background: var(--navy-dark);
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        .turkey-ai-action-plan .ai-action-download-submit:focus-visible,
+        .turkey-ai-action-plan .ai-action-download-close:focus-visible {
+            outline: 3px solid rgba(45, 76, 200, 0.25);
+            outline-offset: 2px;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-note {
+            margin: 14px 0 0 !important;
+            color: #94A3B8 !important;
+            font-size: 0.78rem !important;
+            line-height: 1.5 !important;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-success {
+            margin-top: 14px;
+            padding: 16px;
+            border: 1px solid #BBF7D0;
+            border-radius: 10px;
+            background: #F0FDF4;
+            color: #166534;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-success a {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .turkey-ai-action-plan .ai-action-download-trigger {
+            border: 0;
+            cursor: pointer;
+            font: inherit;
+        }
+
+        @media (max-width: 560px) {
+            .turkey-ai-action-plan .ai-action-download-box { padding: 32px 24px; }
+        }
     </style>
     <link rel="icon" href="logo-square.png" type="image/png">
     <link rel="apple-touch-icon" href="logo-square.png">
@@ -95,7 +251,10 @@
                 <h2 id="ai-action-plan-download-title">Download the original Türkiye AI Action Plan 2026-2030 as a PDF</h2>
                 <p>Access the official 44-page plan in its original printable format, published by the Republic of Türkiye Ministry of Industry and Technology.</p>
                 <div class="lead-magnet-actions">
-                    <a class="guide-download-link" href="Turkiye_AI_Action_Plan.pdf" download="Turkiye_AI_Action_Plan_2026-2030.pdf" type="application/pdf" aria-label="Download the original Türkiye AI Action Plan 2026-2030 PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download the original plan</a>
+                    <button type="button" class="guide-download-link ai-action-download-trigger" id="openAiActionPlanDownloadBtn"
+                        data-conversion-event="lead_magnet_download" data-conversion-label="turkey_ai_action_plan_2026_2030">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i> Download the original plan
+                    </button>
                 </div>
             </aside>
             <h2>Key Targets Under Türkiye's AI Action Plan</h2>
@@ -254,7 +413,7 @@
                 <a class="related-card" href="can-international-businesses-store-turkish-customer-data-abroad-under-kvkk.html"><span class="related-category">Data Protection</span><h4>Can International Businesses Store Turkish Customer Data Abroad?</h4><p>How KVKK, cloud infrastructure and cross-border data transfers interact.</p></a>
                 <a class="related-card" href="data-controller-representative-kvkk-turkey.html"><span class="related-category">KVKK Compliance</span><h4>Data Controller Representative Requirements in Türkiye</h4><p>A practical guide to representative obligations for businesses operating cross-border.</p></a>
                 <a class="related-card" href="investment-incentives-turkiye-2026-guide.html"><span class="related-category">Foreign Investment</span><h4>Investment Incentives in Türkiye: 2026 Guide</h4><p>Key incentive and structuring considerations for foreign investors in Türkiye.</p></a>
-                <a class="related-card" href="intellectual-property-law-services-turkey.html"><span class="related-category">Intellectual Property</span><h4>Intellectual Property Law Services in Türkiye</h4><p>Protecting technology, data, software and commercial innovation in Türkiye.</p></a>
+                <a class="related-card" href="services/trademark-lawyer-turkey.html"><span class="related-category">Trademark &amp; Brand Protection</span><h4>Trademark Legal Services in Türkiye</h4><p>Protecting brand identity through searches, filings, oppositions and enforcement.</p></a>
             </div></section>
             <section class="sources-box" aria-labelledby="sources-title"><h3 id="sources-title">Sources &amp; Authorities</h3><p class="sources-note">Primary sources and official institutions referenced for accuracy and transparency.</p><ul class="sources-list">
                 <li><a href="https://www.sanayi.gov.tr/medya/haber/turkiye-yapay-zek%C3%A2-eylem-plani-aciklandi" target="_blank" rel="noopener noreferrer">Türkiye Artificial Intelligence Action Plan Announced – Republic of Türkiye Ministry of Industry and Technology</a></li>
@@ -265,6 +424,110 @@
         </div>
     </main>
     <footer class="footer"><div class="container"><p>&copy; 2026 Turkish Trade Lawyers. All rights reserved. | <a href="cookie-policy.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">Cookie Policy</a> | <a href="disclaimer.html" style="color:rgba(255,255,255,0.7);text-decoration:none;">Disclaimer</a></p></div></footer>
+
+    <div id="ai-action-download-modal" class="ai-action-download-overlay" role="dialog" aria-modal="true" aria-labelledby="ai-action-download-title" hidden>
+        <div class="ai-action-download-box">
+            <button type="button" class="ai-action-download-close" id="aiActionDownloadClose" aria-label="Close">&times;</button>
+            <h3 id="ai-action-download-title"><i class="fas fa-file-pdf" aria-hidden="true"></i> Download the Türkiye AI Action Plan</h3>
+            <p>Enter your email address to download the official Türkiye Artificial Intelligence Action Plan 2026-2030 PDF.</p>
+            <form id="ai-action-download-form" novalidate>
+                <label for="ai-action-download-email">Email address</label>
+                <input type="email" id="ai-action-download-email" name="email" placeholder="name@company.com" required autocomplete="email">
+                <p class="ai-action-download-error" id="aiActionDownloadError">Please enter a valid email address.</p>
+                <button type="submit" class="ai-action-download-submit"><i class="fas fa-download" aria-hidden="true"></i> Download the PDF</button>
+            </form>
+            <p class="ai-action-download-note">We respect your privacy. Your email may be used to send relevant Turkish trade-law updates. You can unsubscribe at any time.</p>
+            <div class="ai-action-download-success" id="aiActionDownloadSuccess" hidden>
+                <i class="fas fa-circle-check" aria-hidden="true"></i> Thank you. Your download has started. If it does not begin automatically,
+                <a href="Turkiye_AI_Action_Plan.pdf" download="Turkiye_AI_Action_Plan_2026-2030.pdf">click here to download the PDF</a>.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var PDF = 'Turkiye_AI_Action_Plan.pdf';
+            var overlay = document.getElementById('ai-action-download-modal');
+            var openBtn = document.getElementById('openAiActionPlanDownloadBtn');
+            var closeBtn = document.getElementById('aiActionDownloadClose');
+            var form = document.getElementById('ai-action-download-form');
+            var emailInput = document.getElementById('ai-action-download-email');
+            var errorEl = document.getElementById('aiActionDownloadError');
+            var successEl = document.getElementById('aiActionDownloadSuccess');
+
+            if (!overlay || !openBtn || !closeBtn || !form || !emailInput || !errorEl || !successEl) return;
+
+            function openModal() {
+                overlay.hidden = false;
+                document.body.style.overflow = 'hidden';
+                setTimeout(function () { emailInput.focus(); }, 50);
+            }
+
+            function closeModal() {
+                overlay.hidden = true;
+                document.body.style.overflow = '';
+            }
+
+            function triggerDownload() {
+                var link = document.createElement('a');
+                link.href = PDF;
+                link.download = 'Turkiye_AI_Action_Plan_2026-2030.pdf';
+                link.rel = 'noopener';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) closeModal();
+            });
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && !overlay.hidden) closeModal();
+            });
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var email = (emailInput.value || '').trim();
+                var valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+                if (!valid) {
+                    errorEl.style.display = 'block';
+                    emailInput.focus();
+                    return;
+                }
+
+                errorEl.style.display = 'none';
+
+                try {
+                    fetch('https://formspree.io/f/mnneobaw', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            _subject: 'PDF Download Lead - Türkiye AI Action Plan 2026-2030',
+                            message: 'PDF download lead from the Türkiye AI Action Plan 2026-2030 page.',
+                            source: 'turkey-ai-action-plan-2026-2030.html'
+                        })
+                    }).catch(function () { });
+                } catch (_) { }
+
+                try {
+                    if (window.gtag) {
+                        gtag('event', 'pdf_download', {
+                            event_category: 'lead',
+                            event_label: 'Türkiye AI Action Plan 2026-2030'
+                        });
+                    }
+                } catch (_) { }
+
+                form.style.display = 'none';
+                successEl.hidden = false;
+                triggerDownload();
+            });
+        })();
+    </script>
     <script src="script.js?v=20260818-ai-action-plan"></script>
 </body>
 </html>

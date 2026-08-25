@@ -9,6 +9,7 @@ RewriteRule ^corporate-investment-services-turkey\.html$ /setup-a-business-in-tu
 RewriteRule ^turkic-$ /turkic-states-digital-economy-partnership-agreement.html [R=301,L,NE]
 RewriteRule ^industries/cookie-policy\.html$ /cookie-policy.html [R=301,L,NE]
 RewriteRule ^industries/privacy-notice\.html$ /privacy-notice.html [R=301,L,NE]
+RewriteRule ^intellectual-property-law-services-turkey\.html$ /services/trademark-lawyer-turkey.html [R=301,L,NE]
 
 # Keep the canonical host for the glossary URL.
 RewriteCond %{HTTP_HOST} ^turkishtradelawyers\.com$ [NC]
