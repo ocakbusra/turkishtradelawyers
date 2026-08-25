@@ -503,9 +503,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
     align-items: center;
-    gap: clamp(32px, 5vw, 72px);
+    gap: clamp(24px, 3vw, 42px);
     margin-top: 2rem;
-    padding: clamp(36px, 5vw, 58px) clamp(28px, 5vw, 64px);
+    padding: clamp(24px, 3vw, 34px) clamp(24px, 3vw, 38px);
     border: 1px solid var(--border-gray, #E4E7EC);
     border-radius: 24px;
     background: var(--light-gray, #F5F7FA);
@@ -514,21 +514,21 @@
 }
 
 .employment-mobility-editorial .article-cta h3 {
-    max-width: 760px;
-    margin: 0 0 20px;
+    max-width: 620px;
+    margin: 0 0 12px;
     color: var(--navy, #1E3A8A);
-    font-size: clamp(2.25rem, 4.6vw, 4rem);
-    font-weight: 500;
-    letter-spacing: -0.045em;
-    line-height: 1.08;
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
 }
 
 .employment-mobility-editorial .article-cta p {
-    max-width: 760px;
+    max-width: 660px;
     margin: 0;
     color: var(--debt-muted, #4B5B73);
-    font-size: clamp(1rem, 1.35vw, 1.2rem);
-    line-height: 1.65;
+    font-size: 1rem;
+    line-height: 1.55;
 }
 
 .employment-mobility-editorial .article-cta .cta-btn {
@@ -537,15 +537,15 @@
     grid-row: 1 / 3;
     align-self: center;
     width: 100%;
-    min-height: 68px;
+    min-height: 56px;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 18px 26px;
+    padding: 14px 20px;
     border-radius: 10px;
     background: var(--navy, #1E3A8A);
     color: #FFFFFF;
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
@@ -561,12 +561,12 @@
 @media (max-width: 720px) {
     .employment-mobility-editorial .article-cta {
         grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 32px 24px;
+        gap: 20px;
+        padding: 26px 22px;
     }
 
     .employment-mobility-editorial .article-cta h3 {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(1.5rem, 8vw, 2.2rem);
     }
 
     .employment-mobility-editorial .article-cta .cta-btn {

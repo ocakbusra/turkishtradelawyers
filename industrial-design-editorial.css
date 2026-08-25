@@ -1,0 +1,355 @@
+/* Industrial design service page: reuses the Setup a Business editorial system. */
+.industrial-design-page {
+    --design-ink: var(--business-ink, #101828);
+    --design-muted: var(--business-muted, #475467);
+    --design-border: var(--business-border, #E4E7EC);
+    --design-navy: var(--navy, #1E3A8A);
+    --design-blue: var(--primary-blue, #2D4CC8);
+}
+
+/* Keep the shared patent-page editorial scale for the common shell. */
+.industrial-design-page .service-main-content {
+    display: grid;
+    gap: 22px;
+}
+
+.industrial-design-page .service-landing-pills {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.industrial-design-page .business-office-grid {
+    gap: 18px;
+    margin-top: 34px;
+}
+
+.industrial-design-page .business-office-grid .glass-card {
+    padding: 22px 25px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 14px 34px rgba(16, 24, 40, 0.05);
+}
+
+.industrial-design-page .trademark-service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 38px;
+}
+
+.industrial-design-page .trademark-service-grid > .glass-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 22px 25px;
+    border: 1px solid var(--design-border);
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 14px 34px rgba(16, 24, 40, 0.05);
+    overflow: hidden;
+}
+
+.industrial-design-page .trademark-service-grid > .glass-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--design-navy);
+    content: "";
+}
+
+.industrial-design-page .trademark-service-grid > .glass-card h3 {
+    margin: 0 0 10px;
+    color: var(--design-ink);
+    font-size: clamp(1.18rem, 2vw, 1.48rem);
+    line-height: 1.22;
+}
+
+.industrial-design-page .trademark-service-grid > .glass-card p {
+    color: var(--design-muted);
+    font-size: .88rem !important;
+    line-height: 1.55 !important;
+}
+
+.industrial-design-page .business-office-grid .glass-card::before {
+    height: 4px;
+    background: var(--design-navy);
+}
+
+.industrial-design-page .business-office-grid h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.18rem, 2vw, 1.48rem);
+    line-height: 1.22;
+}
+
+.industrial-design-page .business-office-grid p,
+.industrial-design-page .design-compare-card p {
+    font-size: .88rem !important;
+    line-height: 1.55 !important;
+}
+
+.industrial-design-page .design-fact strong {
+    font-size: .96rem;
+}
+
+.industrial-design-page .design-compare-card {
+    border-radius: 14px;
+    box-shadow: 0 14px 34px rgba(16, 24, 40, 0.05);
+}
+
+.industrial-design-page .design-process .incorp-flow-title {
+    margin: 0 0 6px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.industrial-design-page .design-process {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.industrial-design-page .design-process .incorp-flow-foot {
+    margin-top: 22px;
+    padding-top: 16px;
+    font-size: .85rem;
+}
+
+.industrial-design-page .design-process .incorp-flow-subtitle {
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.industrial-design-page .design-process .incorp-flow-legend-item {
+    font-size: .85rem;
+}
+
+.industrial-design-page .design-hero-map .business-entry-route {
+    min-height: 104px;
+}
+
+.industrial-design-page .design-hero-map .business-entry-core {
+    width: 150px;
+    height: 150px;
+}
+
+.industrial-design-page .design-hero-map .business-entry-core strong {
+    font-size: .9rem;
+}
+
+.industrial-design-page .design-fact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 28px;
+    border: 1px solid var(--design-border);
+    background: var(--business-wash, #F5F7FA);
+}
+
+.industrial-design-page .design-fact {
+    padding: 20px 22px;
+    border-bottom: 1px solid var(--design-border);
+}
+
+.industrial-design-page .design-fact:nth-child(odd) {
+    border-right: 1px solid var(--design-border);
+}
+
+.industrial-design-page .design-fact:nth-last-child(-n + 2) {
+    border-bottom: 0;
+}
+
+.industrial-design-page .design-fact-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--design-blue);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.industrial-design-page .design-fact strong {
+    display: block;
+    color: var(--design-ink);
+    font-size: .97rem;
+    line-height: 1.45;
+}
+
+.industrial-design-page .design-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px 0 0;
+}
+
+.industrial-design-page .design-compare-card {
+    padding: 28px;
+    border: 1px solid var(--design-border);
+    border-radius: 14px;
+    background: var(--business-wash, #F5F7FA);
+}
+
+.industrial-design-page .design-compare-card.is-registered {
+    border-top: 4px solid var(--design-navy);
+}
+
+.industrial-design-page .design-compare-card.is-unregistered {
+    border-top: 4px solid var(--design-blue);
+}
+
+.industrial-design-page .design-compare-card h3 {
+    margin: 0 0 16px;
+    color: var(--design-ink);
+    font-size: 1.25rem;
+}
+
+.industrial-design-page .design-term {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: var(--design-navy);
+    font-size: clamp(2.4rem, 5vw, 4.3rem);
+    font-weight: 400;
+    letter-spacing: -.06em;
+    line-height: 1;
+}
+
+.industrial-design-page .design-term small {
+    color: var(--design-muted);
+    font-size: .92rem;
+    letter-spacing: 0;
+}
+
+.industrial-design-page .design-fee-wrap {
+    margin-top: 34px;
+    border: 1px solid var(--design-border);
+    border-radius: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 14px 36px rgba(16, 24, 40, 0.05);
+    overflow-x: auto;
+}
+
+.industrial-design-page .design-fee-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+}
+
+.industrial-design-page .design-fee-table th,
+.industrial-design-page .design-fee-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--design-border);
+    text-align: left;
+}
+
+.industrial-design-page .design-fee-table th {
+    background: var(--design-navy);
+    color: #FFFFFF;
+    font-size: .76rem;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+}
+
+.industrial-design-page .design-fee-table td {
+    color: var(--design-muted);
+    font-size: .92rem;
+}
+
+.industrial-design-page .design-fee-table td:last-child {
+    color: var(--design-ink);
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.industrial-design-page .design-fee-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.industrial-design-page .design-fee-table tbody tr:nth-child(even) td {
+    background: #F8F9FB;
+}
+
+.industrial-design-page .design-fee-note {
+    margin-top: 18px;
+    padding: 20px 22px;
+    border-left: 3px solid var(--design-blue);
+    background: var(--business-wash, #F5F7FA);
+    color: var(--design-muted);
+}
+
+.industrial-design-page .design-source-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 24px;
+    margin-top: 28px;
+}
+
+.industrial-design-page .design-source-list a {
+    color: var(--design-navy);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #BBC6DD;
+    text-underline-offset: 3px;
+}
+
+.industrial-design-page .design-source-list a:hover {
+    color: var(--design-blue);
+}
+
+.industrial-design-page .design-answer {
+    margin: 0 0 18px;
+    color: var(--design-navy) !important;
+    font-weight: 700;
+}
+
+.industrial-design-page .sidebar-lead-form .sidebar-form-submit,
+.industrial-design-page .business-download-cta .cta-btn {
+    background: var(--design-navy);
+}
+
+.industrial-design-page .sidebar-lead-form .sidebar-form-submit:hover,
+.industrial-design-page .business-download-cta .cta-btn:hover {
+    background: var(--navy-dark, #142A63);
+}
+
+@media (max-width: 1080px) {
+    .industrial-design-page .service-landing-pills {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 720px) {
+    .industrial-design-page .service-landing-pills,
+    .industrial-design-page .trademark-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .industrial-design-page .design-fact-grid,
+    .industrial-design-page .design-compare-grid,
+    .industrial-design-page .design-source-list {
+        grid-template-columns: 1fr;
+    }
+
+    .industrial-design-page .design-fact:nth-child(odd) {
+        border-right: 0;
+    }
+
+    .industrial-design-page .design-fact:nth-last-child(-n + 2) {
+        border-bottom: 1px solid var(--design-border);
+    }
+
+    .industrial-design-page .design-fact:last-child {
+        border-bottom: 0;
+    }
+
+    .industrial-design-page .design-hero-map .business-entry-core {
+        width: 116px;
+        height: 116px;
+    }
+}

@@ -487,17 +487,42 @@
 .patent-services-editorial .trademark-quick-card { order: 3; }
 
 /* Keep the final two patent services aligned as a matched pair. */
-.patent-services-editorial .trademark-service-card:nth-child(17),
-.patent-services-editorial .trademark-service-card:nth-child(18) {
-    aspect-ratio: 1 / 1;
-}
-
 .patent-services-editorial .trademark-service-card:last-child {
     grid-column: auto;
 }
 
 .patent-services-editorial .trademark-service-card:last-child ul {
     columns: 1;
+}
+
+/* Slightly tighter patent service cards without changing their visual language. */
+.patent-services-editorial .trademark-service-grid {
+    gap: 18px;
+}
+
+.patent-services-editorial .trademark-service-card {
+    padding: 22px 25px;
+}
+
+.patent-services-editorial .trademark-service-number {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+}
+
+.patent-services-editorial .trademark-service-card h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.18rem, 2vw, 1.48rem);
+}
+
+.patent-services-editorial .trademark-service-card p,
+.patent-services-editorial .trademark-service-card li {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+}
+
+.patent-services-editorial .trademark-service-card ul {
+    margin-bottom: 0;
 }
 
 .patent-services-editorial .patent-disclosure-note {
@@ -518,6 +543,33 @@
 .patent-services-editorial .patent-disclosure-note p {
     margin: 0;
     color: var(--trademark-muted);
+}
+
+.patent-services-editorial .trademark-quick-card {
+    margin-top: 0;
+    padding: 22px 24px;
+}
+
+.patent-services-editorial .trademark-quick-card h2 {
+    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+}
+
+.patent-services-editorial .trademark-quick-card .trademark-fact {
+    min-height: 76px;
+    padding: 12px 15px;
+}
+
+.patent-services-editorial .trademark-quick-card .trademark-fact span {
+    margin-bottom: 4px;
+}
+
+.patent-services-editorial .trademark-quick-card .trademark-fact strong {
+    font-size: 0.86rem;
+    line-height: 1.35;
+}
+
+.patent-services-editorial .trademark-international-panel > div:first-child h3 {
+    margin-bottom: 16px;
 }
 
 .patent-services-editorial .sidebar-lead-form[data-form-id="patent-services-sidebar"] .sidebar-form-submit,
