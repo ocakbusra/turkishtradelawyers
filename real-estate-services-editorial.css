@@ -1,0 +1,132 @@
+/* Real estate services page — the shared service-page editorial system with property-specific accents. */
+.real-estate-services-editorial {
+    --real-estate-ink: #101828;
+    --real-estate-muted: #475467;
+    --real-estate-border: #E4E7EC;
+    --real-estate-wash: #F5F7FA;
+}
+
+.real-estate-services-editorial .business-entry-map {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.16), transparent 38%),
+        linear-gradient(145deg, #FFFFFF 0%, #F5F7FA 100%);
+}
+
+.real-estate-services-editorial .business-entry-core strong {
+    letter-spacing: -0.04em;
+}
+
+.real-estate-services-editorial .service-main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.real-estate-services-editorial .trademark-definition-card { order: 1; }
+.real-estate-services-editorial .trademark-strategy-card { order: 2; }
+.real-estate-services-editorial .trademark-quick-card { order: 3; }
+
+.real-estate-services-editorial .trademark-service-grid {
+    gap: 18px;
+}
+
+.real-estate-services-editorial .trademark-service-card {
+    padding: 22px 25px;
+}
+
+.real-estate-services-editorial .trademark-service-number {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+}
+
+.real-estate-services-editorial .trademark-service-card h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.18rem, 2vw, 1.48rem);
+}
+
+.real-estate-services-editorial .trademark-service-card p,
+.real-estate-services-editorial .trademark-service-card li {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+}
+
+.real-estate-services-editorial .trademark-service-card ul {
+    margin-bottom: 0;
+}
+
+/* Keep cards 17 and 18 as two equal vertical cards on the final row. */
+.real-estate-services-editorial .trademark-service-card:last-child {
+    grid-column: auto;
+}
+
+.real-estate-services-editorial .trademark-service-card:last-child ul {
+    columns: 1;
+}
+
+.real-estate-services-editorial .trademark-quick-card {
+    margin-top: 0;
+    padding: 22px 24px;
+}
+
+.real-estate-services-editorial .trademark-quick-card h2 {
+    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+}
+
+.real-estate-services-editorial .trademark-quick-card .trademark-fact {
+    min-height: 76px;
+    padding: 12px 15px;
+}
+
+.real-estate-services-editorial .trademark-quick-card .trademark-fact span {
+    margin-bottom: 4px;
+}
+
+.real-estate-services-editorial .trademark-quick-card .trademark-fact strong {
+    font-size: 0.86rem;
+    line-height: 1.35;
+}
+
+.real-estate-services-editorial .trademark-international-panel > div:first-child h3 {
+    margin-bottom: 16px;
+}
+
+.real-estate-services-editorial .sidebar-lead-form[data-form-id="real-estate-services-sidebar"] .sidebar-form-submit,
+.real-estate-services-editorial .service-cta-form[data-form-id="real-estate-services-main"] .form-submit-btn {
+    background: var(--navy);
+}
+
+.real-estate-services-editorial .sidebar-lead-form[data-form-id="real-estate-services-sidebar"] .sidebar-form-submit:hover,
+.real-estate-services-editorial .service-cta-form[data-form-id="real-estate-services-main"] .form-submit-btn:hover {
+    background: var(--navy-dark);
+}
+
+.real-estate-services-editorial .service-page-cta h2 {
+    max-width: 520px;
+    font-size: clamp(1.85rem, 3vw, 2.8rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.real-estate-services-editorial .service-page-cta-copy > p {
+    max-width: 500px;
+}
+
+.real-estate-services-editorial .service-cta-submit-row {
+    justify-content: flex-start;
+}
+
+.real-estate-services-editorial .service-cta-form .form-submit-btn {
+    margin-left: 0;
+}
+
+.real-estate-services-editorial .real-estate-source-note {
+    margin-top: 10px;
+    color: var(--real-estate-muted);
+    font-size: 0.9rem !important;
+}
+
+@media (max-width: 720px) {
+    .real-estate-services-editorial .trademark-service-card {
+        padding: 25px 21px;
+    }
+}
