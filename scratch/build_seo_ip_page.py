@@ -229,7 +229,7 @@ def build_page():
                         <div class="service-sidebar-card glass-card sidebar-form-card" style="padding: 24px;">
                             <h3 style="margin-top:0;">Discuss your IP Strategy</h3>
                             <p>Secure your intangible assets. Contact our Turkish Patent & Trademark Attorneys for immediate assistance.</p>
-                            <form action="#" method="POST" class="sidebar-form">
+                            <form action="https://formspree.io/f/mnneobaw" method="POST" class="sidebar-form">
                                 <div class="form-group">
                                     <label for="client-name">Full Name / Company</label>
                                     <input type="text" id="client-name" name="client_name" required>

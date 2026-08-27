@@ -57,7 +57,7 @@ minimal_cta_html = """
         <h3 style="margin: 0; color: white; font-size: 20px;">Need Immediate Assistance with a Claim?</h3>
     </div>
     <p style="margin: 0; font-size: 15px; color: rgba(255,255,255,0.8);">Get a free preliminary assessment from our senior debt recovery attorneys. We respond within 24 hours.</p>
-    <form action="#" method="POST" style="display: flex; gap: 15px; flex-wrap: wrap;">
+    <form action="https://formspree.io/f/mnneobaw" method="POST" style="display: flex; gap: 15px; flex-wrap: wrap;">
         <input type="text" placeholder="Your Name" required style="flex: 1; min-width: 150px; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; border-radius: 6px; outline: none;">
         <input type="email" placeholder="Work Email" required style="flex: 1; min-width: 150px; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; border-radius: 6px; outline: none;">
         <button type="submit" class="btn" style="background: var(--accent-teal); color: var(--dark-blue); font-weight: 700; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; white-space: nowrap;">Request Assessment</button>
