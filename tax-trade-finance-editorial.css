@@ -1,0 +1,158 @@
+/* Tax and trade finance services page — shared service-page editorial system. */
+.tax-trade-finance-editorial {
+    --tax-ink: #101828;
+    --tax-muted: #475467;
+    --tax-border: #E4E7EC;
+    --tax-wash: #F5F7FA;
+}
+
+.tax-trade-finance-editorial .business-entry-map {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(30, 58, 138, 0.16), transparent 38%),
+        linear-gradient(145deg, #FFFFFF 0%, #F5F7FA 100%);
+}
+
+.tax-trade-finance-editorial .business-entry-core strong {
+    letter-spacing: -0.04em;
+}
+
+.tax-trade-finance-editorial .service-main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tax-trade-finance-editorial .trademark-definition-card { order: 1; }
+.tax-trade-finance-editorial .trademark-strategy-card { order: 2; }
+.tax-trade-finance-editorial .trademark-quick-card { order: 3; }
+
+.tax-trade-finance-editorial .trademark-service-grid {
+    gap: 18px;
+}
+
+.tax-trade-finance-editorial .trademark-service-card {
+    padding: 22px 25px;
+}
+
+.tax-trade-finance-editorial .trademark-service-number {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 14px;
+}
+
+.tax-trade-finance-editorial .trademark-service-card h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.18rem, 2vw, 1.48rem);
+}
+
+.tax-trade-finance-editorial .trademark-service-card p,
+.tax-trade-finance-editorial .trademark-service-card li {
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+}
+
+.tax-trade-finance-editorial .trademark-service-card ul {
+    margin-bottom: 0;
+}
+
+.tax-trade-finance-editorial .trademark-quick-card {
+    margin-top: 0;
+    padding: 22px 24px;
+}
+
+.tax-trade-finance-editorial .trademark-quick-card h2 {
+    font-size: clamp(1.45rem, 2.4vw, 1.95rem);
+}
+
+.tax-trade-finance-editorial .trademark-quick-card .trademark-fact {
+    min-height: 76px;
+    padding: 12px 15px;
+}
+
+.tax-trade-finance-editorial .trademark-quick-card .trademark-fact span {
+    margin-bottom: 4px;
+}
+
+.tax-trade-finance-editorial .trademark-quick-card .trademark-fact strong {
+    font-size: 0.86rem;
+    line-height: 1.35;
+}
+
+/* Keep the transaction-advice card in the same restrained editorial type scale
+   as the patent and trademark service pages. */
+.tax-trade-finance-editorial .business-strategy-card {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.tax-trade-finance-editorial .business-strategy-card h2 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+}
+
+.tax-trade-finance-editorial .business-strategy-card > p {
+    margin: 0 0 16px;
+    color: var(--tax-muted);
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0;
+}
+
+.tax-trade-finance-editorial .business-strategy-card > p strong {
+    color: var(--tax-ink);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+}
+
+.tax-trade-finance-editorial .business-strategy-card .patent-disclosure-note {
+    margin-top: 24px;
+    padding: 20px 22px 20px 24px;
+    border: 1px solid var(--tax-border);
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 10px;
+    background: var(--tax-wash);
+}
+
+.tax-trade-finance-editorial .business-strategy-card .patent-disclosure-note h3 {
+    margin: 0 0 7px;
+    color: var(--tax-ink);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.tax-trade-finance-editorial .business-strategy-card .patent-disclosure-note p {
+    margin: 0;
+    color: var(--tax-muted);
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0;
+}
+
+.tax-trade-finance-editorial .trademark-service-card:last-child {
+    grid-column: auto;
+}
+
+.tax-trade-finance-editorial .trademark-service-card:last-child ul {
+    columns: 1;
+}
+
+.tax-trade-finance-editorial .trademark-international-panel > div:first-child h3 {
+    margin-bottom: 16px;
+}
+
+.tax-trade-finance-editorial .sidebar-lead-form[data-form-id="tax-trade-finance-sidebar"] .sidebar-form-submit,
+.tax-trade-finance-editorial .service-cta-form[data-form-id="tax-trade-finance-main"] .form-submit-btn {
+    background: var(--navy);
+}
+
+.tax-trade-finance-editorial .sidebar-lead-form[data-form-id="tax-trade-finance-sidebar"] .sidebar-form-submit:hover,
+.tax-trade-finance-editorial .service-cta-form[data-form-id="tax-trade-finance-main"] .form-submit-btn:hover {
+    background: var(--navy-dark);
+}
+
+@media (max-width: 720px) {
+    .tax-trade-finance-editorial .trademark-service-card {
+        padding: 25px 21px;
+    }
+}
