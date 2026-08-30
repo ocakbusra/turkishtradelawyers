@@ -137,6 +137,14 @@
         {
           "@type": "Country",
           "name": "Sweden"
+        },
+        {
+          "@type": "Country",
+          "name": "Southern Cyprus"
+        },
+        {
+          "@type": "Country",
+          "name": "Northern Cyprus (TRNC)"
         }
       ],
       "serviceType": [
@@ -420,6 +428,14 @@
             margin-bottom: 12px;
         }
 
+        .country-popup-flag img {
+            width: 84px;
+            height: 56px;
+            object-fit: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         .country-popup h3 {
             font-size: 1.25rem;
             font-weight: 700;
@@ -531,6 +547,14 @@
 
         .country-card-flag {
             font-size: 1.75rem;
+        }
+
+        .country-card-flag img {
+            width: 42px;
+            height: 28px;
+            object-fit: cover;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .country-card-name {
@@ -707,7 +731,8 @@
             { name: 'Estonia', flag: '🇪🇪', lat: 58.5953, lng: 25.0136, active: true, url: 'countries/country-estonia.html' },
             { name: 'Luxembourg', flag: '🇱🇺', lat: 49.6116, lng: 6.1319, active: true, url: 'countries/country-luxembourg.html' },
             { name: 'Malta', flag: '🇲🇹', lat: 35.8989, lng: 14.5146, active: true, url: 'countries/country-malta.html' },
-            { name: 'Cyprus', flag: '🇨🇾', lat: 35.1264, lng: 33.4299, active: true, url: 'countries/country-cyprus.html' },
+            { name: 'Southern Cyprus', flag: '🇨🇾', lat: 35.1264, lng: 33.4299, active: true, url: 'countries/country-cyprus.html' },
+            { name: 'Northern Cyprus (TRNC)', flag: '<img src="images/flag-northern-cyprus.webp" alt="Flag of Northern Cyprus">', lat: 35.1856, lng: 33.3823, active: true, url: 'countries/country-northern-cyprus.html' },
             { name: 'Iceland', flag: '🇮🇸', lat: 64.9631, lng: -19.0208, active: true, url: 'countries/country-iceland.html' },
             { name: 'Serbia', flag: '🇷🇸', lat: 44.0165, lng: 21.0059, active: true, url: 'countries/country-serbia.html' },
             { name: 'Bosnia & Herzegovina', flag: '🇧🇦', lat: 43.9159, lng: 17.6791, active: true, url: 'countries/country-bosnia.html' },

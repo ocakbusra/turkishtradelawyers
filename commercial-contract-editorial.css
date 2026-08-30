@@ -1,0 +1,56 @@
+/* Commercial contracts service page uses the shared editorial shell while
+   keeping its conversion and map details page-specific. */
+.commercial-contract-editorial .service-landing-kicker {
+    color: var(--business-navy, #1E3A8A);
+}
+
+.commercial-contract-editorial .debt-entry-map {
+    background:
+        linear-gradient(140deg, rgba(30, 58, 138, 0.08), transparent 58%),
+        rgba(245, 247, 250, 0.94);
+}
+
+.commercial-contract-editorial .business-entry-route strong {
+    color: var(--business-navy, #1E3A8A);
+}
+
+.commercial-contract-editorial .sidebar-lead-form[data-form-id="commercial-contract-sidebar"] .sidebar-form-submit {
+    border-radius: 8px;
+    background: var(--navy, #1E3A8A);
+}
+
+.commercial-contract-editorial .sidebar-lead-form[data-form-id="commercial-contract-sidebar"] .sidebar-form-submit:hover {
+    background: var(--navy-dark, #142A63);
+}
+
+.commercial-contract-editorial .service-checklist a,
+.commercial-contract-editorial .service-main-content a,
+.commercial-contract-editorial .debt-fullwidth-inner a {
+    color: var(--primary-blue, #2D4CC8);
+}
+
+.commercial-contract-editorial .contract-principles-card {
+    margin-top: 0;
+}
+
+.commercial-contract-editorial .contract-principles-card .service-checklist li {
+    line-height: 1.6;
+}
+
+.commercial-contract-editorial .commercial-cta {
+    margin-top: 44px;
+}
+
+.commercial-contract-editorial .commercial-cta .cta-btn {
+    background: var(--navy, #1E3A8A);
+}
+
+.commercial-contract-editorial .commercial-cta .cta-btn:hover {
+    background: var(--navy-dark, #142A63);
+}
+
+@media (max-width: 720px) {
+    .commercial-contract-editorial .commercial-cta {
+        margin-top: 32px;
+    }
+}
