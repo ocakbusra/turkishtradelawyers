@@ -201,7 +201,6 @@ industries.html
 industries/accounting.html
 industries/agriculture.html
 industries/airlines-aviation.html
-industries/alternative-dispute-resolution.html
 industries/alternative-medicine.html
 industries/animation.html
 industries/apparel-fashion.html

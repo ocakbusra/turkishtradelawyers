@@ -58,30 +58,33 @@
   ],
   "created": "2026-07-21",
   "industry_candidates": {
-    "industries/alternative-dispute-resolution.html": {
-      "baseline_fingerprint": "d4d3e679e53e074029d3a845c1e8127d76e108e76234eef6668152a8dc850071",
-      "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
-    },
     "industries/alternative-medicine.html": {
       "baseline_fingerprint": "82364f784702c9bbaea7613cb585f5b0cd7e0eb752d8c66dc3d91d09f02b710c",
+      "promoted": "2026-09-04",
+      "promotion_fingerprint": "e1d58455225ce2b3fe373eaaa22dd1a21607764b88ca113ae4c2f31967723839",
       "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
+      "status": "promoted"
     },
     "industries/animation.html": {
       "baseline_fingerprint": "98e7a58c3ff2dfca778aceb8dd0d102664b72f4766782199925c3431d4fea7a0",
+      "promoted": "2026-09-04",
+      "promotion_fingerprint": "221c25d1d6336462ee7be2d51beb68dec31c4b9997d2f215e8b0f3e17db1c3cb",
       "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
+      "status": "promoted"
     },
     "industries/apparel-fashion.html": {
       "baseline_fingerprint": "93c2a249ed05427a068aa1270eecdef6768d35e40ca93e0f76d6edf8a4668aac",
+      "promoted": "2026-09-04",
+      "promotion_fingerprint": "ae96df4ca80cd498e1a07c4a6e14c1bf848ba4c35e64115539d456389408e46c",
       "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
+      "status": "promoted"
     },
     "industries/architecture-planning.html": {
       "baseline_fingerprint": "e8d8a0587c639128e7bcdc2abe012c4231d8879e67455e856032ea3f329e3f96",
+      "promoted": "2026-09-04",
+      "promotion_fingerprint": "db09b1884d1ae7796d7365bae8e268100cc6177d32a7e87c4544427cf42ef2ea",
       "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
+      "status": "promoted"
     },
     "industries/arts-crafts.html": {
       "baseline_fingerprint": "befa13e602923b467b4cfbcf09273165e03857363536f31561ac365edc920e31",

@@ -30,7 +30,6 @@
 ./industries/political-organization.html
 ./industries/alternative-medicine.html
 ./industries/nanotechnology.html
-./industries/alternative-dispute-resolution.html
 ./industries/design.html
 ./industries/higher-education.html
 ./industries/apparel-fashion.html

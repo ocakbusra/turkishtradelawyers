@@ -81,124 +81,100 @@ const industries = [
         keywords: ["aviation lawyer Turkey", "airline licensing Turkey", "SHGM compliance", "aircraft registration Turkey"]
     },
     {
-        id: "alternative-dispute-resolution",
-        name: "Alternative Dispute Resolution",
-        title: "Alternative Dispute Resolution Lawyer in Turkey",
-        metaDescription: "Expert ADR legal services in Turkey. Arbitration, mediation, and dispute resolution for commercial conflicts.",
-        intro: "Turkey has developed a robust alternative dispute resolution framework that provides efficient alternatives to traditional litigation. With mandatory mediation requirements for many commercial disputes and growing recognition of arbitration, understanding Turkey's ADR landscape is essential for businesses operating in the country. Our dispute resolution team brings extensive experience in guiding clients through all forms of ADR proceedings.",
-        services: [
-            "Domestic and international commercial arbitration",
-            "Mandatory mediation for commercial disputes",
-            "Expert determination and adjudication",
-            "Negotiation and settlement facilitation",
-            "Enforcement of arbitral awards and mediation settlements",
-            "ADR clause drafting and dispute resolution planning"
-        ],
-        issues: [
-            "Mandatory mediation requirements under Turkish law",
-            "Istanbul Arbitration Centre (ISTAC) proceedings",
-            "Recognition and enforcement of foreign arbitral awards under the New York Convention",
-            "Arbitrator selection and challenge procedures",
-            "Interim measures in arbitration proceedings",
-            "Cost and time considerations in Turkish ADR"
-        ],
-        keywords: ["arbitration lawyer Turkey", "mediation Turkey", "dispute resolution Turkey", "ISTAC arbitration"]
-    },
-    {
         id: "alternative-medicine",
         name: "Alternative Medicine",
-        title: "Alternative Medicine Lawyer in Turkey",
-        metaDescription: "Legal services for alternative medicine practitioners and wellness businesses in Turkey. Licensing, regulatory compliance, and practice establishment.",
-        intro: "The alternative and complementary medicine sector in Turkey operates within a specific regulatory framework that balances patient safety with practitioner interests. Traditional and complementary medicine practices are subject to Ministry of Health oversight and require proper licensing and qualification verification. Our healthcare law team assists practitioners and businesses in navigating these requirements.",
+        title: "Alternative Medicine Lawyer in Türkiye",
+        metaDescription: "Legal counsel for GETAT clinics, practitioners and wellness businesses in Türkiye. Licensing, advertising, products, compliance and disputes.",
+        intro: "Alternative medicine businesses in Türkiye should distinguish regulated traditional and complementary medicine practices, known as GETAT, from wellness, cosmetic, food and other consumer activities. The current framework addresses permitted methods, certified practitioners, authorized units and practice centres, patient records, informed consent, inspections and sanctions.",
         services: [
-            "Practice licensing and registration applications",
-            "Facility establishment permits and compliance",
-            "Product registration for natural remedies and supplements",
-            "Advertising and marketing compliance",
-            "Professional liability and insurance matters",
-            "Cross-border practice arrangements"
+            "GETAT regulatory classification and facility permissions",
+            "Practitioner certificates, work permissions and supervision",
+            "Product classification for supplements, medicines and cosmetics",
+            "Healthcare advertising and digital content compliance",
+            "Patient consent, records and personal health data",
+            "Health tourism and cross-border service arrangements"
         ],
         issues: [
-            "Traditional and Complementary Medicine Practice Regulation requirements",
-            "Practitioner qualification and certification standards",
-            "Scope of practice limitations and prohibited treatments",
-            "Health claims and advertising restrictions",
-            "Import regulations for alternative medicine products",
-            "Patient consent and documentation requirements"
+            "2026 Traditional and Complementary Medicine Practices Regulation",
+            "Ministry-registered certificates and method-specific authority",
+            "Unit, practice-centre and healthcare-facility permissions",
+            "Health claims, advertising and patient testimonials",
+            "Product, import, storage and adverse-event requirements",
+            "Patient rights, consent and KVKK compliance"
         ],
-        keywords: ["alternative medicine lawyer Turkey", "complementary medicine regulations", "wellness business Turkey", "natural health practice licensing"]
+        keywords: ["alternative medicine lawyer Türkiye", "GETAT lawyer Turkey", "traditional complementary medicine regulation", "wellness business legal advice"]
     },
     {
         id: "animation",
         name: "Animation",
-        title: "Animation Lawyer in Turkey",
-        metaDescription: "Legal services for animation studios and digital content creators in Turkey. IP protection, production agreements, and media regulations.",
-        intro: "Turkey's animation and digital content industry has experienced significant growth, supported by government incentives and a talented creative workforce. Animation studios and content creators must navigate intellectual property protection, broadcasting regulations, and complex production agreements. Our media and entertainment law practice provides comprehensive legal support for animation businesses.",
+        title: "Animation Lawyer in Türkiye",
+        metaDescription: "Animation lawyer in Türkiye for studios, producers and creators. Copyright, animator rights, production agreements, licensing and streaming.",
+        intro: "Animation production in Türkiye sits at the intersection of copyright, film and audiovisual regulation, broadcasting, advertising, employment, production finance and international licensing. Under FSEK, the animator is expressly included among the joint authors of cinematographic works created through animation techniques, making a clear chain of title fundamental to commercialization.",
         services: [
-            "Intellectual property protection for animated content",
-            "Production and co-production agreements",
-            "Distribution and licensing arrangements",
-            "Talent and employment contracts",
-            "Government incentive and subsidy applications",
-            "Broadcasting and streaming platform compliance"
+            "Animation copyright, FSEK and chain-of-title reviews",
+            "Animator, creator, voice and freelancer agreements",
+            "Production, co-production and financing agreements",
+            "Distribution, licensing and streaming arrangements",
+            "Producer certification, registration and film support",
+            "Character, merchandising, advertising and AI matters"
         ],
         issues: [
-            "Copyright protection for animated works",
-            "RTÜK broadcasting regulations for animated content",
-            "Child protection standards in animation",
-            "International co-production treaty benefits",
-            "Tax incentives for animation production",
-            "Music and voice-over licensing requirements"
+            "FSEK Article 8 animator authorship and economic rights",
+            "Broken chain of title and incomplete rights transfers",
+            "Producer certificates and cinematographic registration",
+            "RTÜK, streaming and children’s content requirements",
+            "AI disclosure, voice replicas and third-party material",
+            "Music, voice-over, character and merchandising rights"
         ],
-        keywords: ["animation lawyer Turkey", "animation studio legal", "digital content Turkey", "animation IP protection"]
+        keywords: ["animation lawyer Türkiye", "animation studio lawyer Turkey", "animation copyright Turkey", "animator rights Turkey"]
     },
     {
         id: "apparel-fashion",
         name: "Apparel & Fashion",
-        title: "Apparel & Fashion Lawyer in Turkey",
-        metaDescription: "Legal services for fashion brands and apparel companies in Turkey. Manufacturing agreements, trademark protection, and retail compliance.",
-        intro: "Turkey is one of the world's leading textile and apparel manufacturing hubs, offering significant opportunities for fashion brands and apparel companies. The sector requires careful attention to intellectual property protection, manufacturing agreements, and retail regulations. Our commercial law team provides comprehensive legal support for fashion and apparel businesses operating in Turkey.",
+        title: "Apparel & Fashion Lawyer in Türkiye",
+        metaDescription: "Fashion lawyer in Türkiye for apparel brands, textile manufacturers and retailers. Product safety, labelling, TAREKS, customs, contracts, IP and e-commerce.",
+        intro: "Türkiye’s apparel and fashion sector combines product safety, textile and footwear labelling, chemicals regulation, customs, intellectual property, consumer, e-commerce, advertising and commercial contract rules. Our legal team advises fashion brands, manufacturers, importers, distributors, retailers and investors across this connected framework.",
         services: [
-            "Trademark and design registration and enforcement",
-            "Manufacturing and supply agreements",
-            "Retail franchise and distribution arrangements",
-            "E-commerce and online retail compliance",
-            "Anti-counterfeiting strategies and enforcement",
-            "Employment matters for retail operations"
+            "Product safety, textile and footwear labelling",
+            "KKDİK, chemical compliance and market surveillance",
+            "TAREKS, import registration, customs and trade remedies",
+            "Manufacturing, sourcing, private-label and supply agreements",
+            "Trademark, industrial design and anti-counterfeiting",
+            "E-commerce, influencer, discount and sustainability claims"
         ],
         issues: [
-            "Trademark protection and brand enforcement",
-            "Product safety and labeling requirements",
-            "Consumer protection regulations for retail",
-            "Customs procedures for textile imports and exports",
-            "Sustainability and environmental compliance",
-            "Personal data protection for customer databases"
+            "Incorrect fibre or footwear labelling",
+            "Unsafe products, restricted chemicals and recalls",
+            "TAREKS, import registration, origin and anti-dumping",
+            "Defective manufacturing and uncontrolled subcontracting",
+            "Counterfeit fashion, copied designs and brand misuse",
+            "Online sales, influencer advertising and greenwashing"
         ],
-        keywords: ["fashion lawyer Turkey", "apparel legal services", "textile manufacturing Turkey", "fashion brand protection"]
+        keywords: ["fashion lawyer Türkiye", "apparel lawyer Turkey", "textile compliance Turkey", "fashion brand lawyer Turkey"]
     },
     {
         id: "architecture-planning",
         name: "Architecture & Planning",
-        title: "Architecture & Planning Lawyer in Turkey",
-        metaDescription: "Legal services for architects and urban planners in Turkey. Professional licensing, project contracts, and construction regulations.",
-        intro: "Architectural and urban planning services in Turkey are subject to professional licensing requirements and comprehensive project regulations. Foreign architects and planning firms must navigate registration procedures and understand Turkey's construction and zoning frameworks. Our construction and real estate law team provides specialized legal support for architecture and planning professionals.",
+        title: "Architecture & Planning Lawyer in Türkiye",
+        metaDescription: "Architecture lawyer in Türkiye for foreign architects, planners and developers. TMMOB, zoning, permits, contracts, liability, heritage and planning disputes.",
+        intro: "Architecture and urban planning in Türkiye combine professional qualification, TMMOB and chamber requirements with zoning, permits, building inspection, earthquake, heritage, environmental, energy and copyright rules. Our legal team advises architects, planners, developers, investors and international design businesses across the project lifecycle.",
         services: [
-            "Professional registration with the Chamber of Architects",
-            "Project contracts and fee arrangements",
-            "Design liability and professional indemnity matters",
-            "Zoning and land use compliance",
-            "Building permit applications and appeals",
-            "International project partnerships and joint ventures"
+            "Architect and planner professional regulation",
+            "Foreign architect work permits and TMMOB procedures",
+            "Zoning, planning, permits and occupancy matters",
+            "Construction, design and development agreements",
+            "Building inspection, earthquake, fire and energy compliance",
+            "Architectural copyright, BIM and project disputes"
         ],
         issues: [
-            "Professional qualification recognition for foreign architects",
-            "Chamber of Architects (TMMOB) membership requirements",
-            "Building code compliance and certification",
-            "Heritage and conservation area regulations",
-            "Environmental impact assessment requirements",
-            "Professional liability limitations and insurance"
+            "Professional title, registration and signing authority",
+            "Foreign architect work permits and temporary membership",
+            "Zoning plans, plan amendments and building permits",
+            "Project-author, inspection and construction liability",
+            "Earthquake, fire, accessibility and energy requirements",
+            "Heritage approvals, EIA and architectural copyright"
         ],
-        keywords: ["architecture lawyer Turkey", "urban planning legal", "architect licensing Turkey", "construction law Turkey"]
+        keywords: ["architecture lawyer Türkiye", "foreign architect Turkey", "zoning lawyer Turkey", "urban planning lawyer Turkey"]
     },
     {
         id: "arts-crafts",
