@@ -1,0 +1,1140 @@
+:root {
+            --monitor-navy: #1E3A8A;
+            --monitor-blue: #2D4CC8;
+            --monitor-ink: #172554;
+            --monitor-muted: #667085;
+            --monitor-line: #E4E7EC;
+            --monitor-canvas: #F5F7FA;
+            --monitor-card: #FFFFFF;
+        }
+
+        .monitor-page {
+            background: var(--monitor-canvas);
+            color: var(--text-gray);
+        }
+
+        .monitor-page .breadcrumb {
+            background: var(--monitor-canvas);
+        }
+
+        .monitor-breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .monitor-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 44px 24px 40px;
+            background: linear-gradient(120deg, var(--monitor-navy) 0%, var(--monitor-blue) 100%);
+            color: #fff;
+        }
+
+        .monitor-hero::after {
+            content: "";
+            position: absolute;
+            width: 460px;
+            height: 460px;
+            right: -170px;
+            top: -270px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 50%;
+            box-shadow: 0 0 0 36px rgba(255, 255, 255, 0.035), 0 0 0 72px rgba(255, 255, 255, 0.025);
+            pointer-events: none;
+        }
+
+        .monitor-hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .monitor-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            color: #BFDBFE;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .monitor-hero h1 {
+            margin: 0;
+            color: #fff;
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            text-transform: none;
+        }
+
+        .monitor-hero-subtitle {
+            max-width: 640px;
+            margin: 13px 0 0;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1rem;
+        }
+
+        .monitor-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 22px;
+        }
+
+        .monitor-hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .monitor-main {
+            padding: 28px 0 64px;
+        }
+
+        .monitor-container {
+            width: min(1480px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        .monitor-intro .card {
+            margin: 0;
+            padding: 24px 26px;
+            border: 1px solid var(--monitor-line);
+            border-left: 4px solid var(--monitor-blue);
+            border-radius: 12px;
+            background: var(--monitor-card);
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+        }
+
+        .monitor-page .card h2 {
+            margin: 0 0 10px;
+            color: var(--monitor-ink);
+            font-size: clamp(1.16rem, 1.7vw, 1.42rem);
+            line-height: 1.22;
+            letter-spacing: -0.025em;
+        }
+
+        .monitor-page .card p {
+            margin: 0 0 10px;
+            color: #475467;
+            font-size: 0.88rem;
+            line-height: 1.58;
+        }
+
+        .monitor-page .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .monitor-page .tag {
+            margin-bottom: 12px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            font-size: 0.64rem;
+            letter-spacing: 0.055em;
+        }
+
+        .monitor-tools {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 18px 0;
+        }
+
+        .monitor-tools .widget {
+            min-width: 0;
+            margin: 0;
+            padding: 18px;
+            border: 1px solid var(--monitor-line);
+            border-radius: 12px;
+            background: var(--monitor-card);
+            box-shadow: 0 7px 18px rgba(15, 23, 42, 0.04);
+        }
+
+        .monitor-tools .widget h3 {
+            margin: 0 0 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--monitor-line);
+            color: var(--monitor-ink);
+            font-size: 0.98rem;
+        }
+
+        .monitor-tools .snapshot-item {
+            padding: 9px 0;
+        }
+
+        .monitor-tools .snapshot-title {
+            font-size: 0.78rem;
+        }
+
+        .monitor-tools .snapshot-value {
+            color: var(--monitor-navy);
+            font-size: 0.78rem;
+        }
+
+        .monitor-tools .snapshot-desc {
+            font-size: 0.74rem;
+            line-height: 1.4;
+        }
+
+        .monitor-tools .calendar-item {
+            margin-bottom: 8px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .monitor-tools .date-box {
+            min-width: 34px;
+            margin-right: 9px;
+            padding: 6px 7px;
+            border-radius: 6px;
+            background: var(--monitor-blue);
+        }
+
+        .monitor-tools .date-box span {
+            font-size: 0.9rem;
+        }
+
+        .monitor-tools .date-desc h4 {
+            font-size: 0.78rem;
+        }
+
+        .monitor-tools .date-desc p {
+            font-size: 0.68rem;
+        }
+
+        .monitor-tools .contact-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--monitor-navy);
+            color: #fff;
+        }
+
+        .monitor-tools .contact-box h3 {
+            color: #fff !important;
+            border-bottom-color: rgba(255, 255, 255, 0.22);
+        }
+
+        .monitor-tools .contact-box p {
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .monitor-tools .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            align-self: flex-start;
+            margin: 8px 0 0;
+            padding: 10px 14px;
+            border-radius: 7px;
+            background: var(--monitor-navy);
+            color: #fff;
+            font-size: 0.78rem;
+            box-shadow: none;
+        }
+
+        .monitor-tools .contact-box .btn {
+            background: var(--monitor-navy);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+        }
+
+        .monitor-tools .btn:hover {
+            background: #172E6B;
+            transform: translateY(-1px);
+        }
+
+        .monitor-tools .social-link {
+            margin: 0 7px 0 0;
+            font-size: 0.72rem;
+        }
+
+        .monitor-tools .trend-up i {
+            margin-right: 4px;
+        }
+
+        .monitor-tools .contact-links {
+            margin-top: 14px;
+        }
+
+        .monitor-articles {
+            display: grid;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .monitor-articles .card {
+            display: grid;
+            grid-template-columns: minmax(245px, 0.72fr) minmax(0, 1.8fr);
+            column-gap: 30px;
+            min-width: 0;
+            margin: 0;
+            padding: 22px 26px;
+            border: 1px solid var(--monitor-line);
+            border-left: 3px solid var(--monitor-blue);
+            border-radius: 11px;
+            background: var(--monitor-card);
+            box-shadow: 0 7px 18px rgba(15, 23, 42, 0.045);
+        }
+
+        .monitor-articles .card:hover {
+            border-color: #C7D2FE;
+            border-left-color: var(--monitor-blue);
+            box-shadow: 0 9px 20px rgba(15, 23, 42, 0.07);
+        }
+
+        .monitor-articles .card > .tag {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            justify-self: start;
+        }
+
+        .monitor-articles .card > h2 {
+            grid-column: 1;
+            grid-row: 2;
+            align-self: start;
+            margin-bottom: 0;
+        }
+
+        .monitor-articles .card > .meta-info {
+            grid-column: 1;
+            grid-row: 3;
+            align-self: start;
+            margin-top: 12px;
+        }
+
+        .monitor-articles .card > p:first-of-type {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .monitor-articles .card > p:nth-of-type(2) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .monitor-articles .card > .ttl-insight {
+            grid-column: 2;
+            grid-row: 3;
+            align-self: start;
+        }
+
+        .monitor-articles .ttl-insight {
+            margin-top: 14px;
+            padding: 12px 13px;
+            border-left: 2px solid var(--monitor-blue);
+            border-radius: 0 7px 7px 0;
+            background: var(--monitor-canvas);
+            color: #344054;
+            font-size: 0.78rem;
+            line-height: 1.48;
+        }
+
+        .monitor-articles .ttl-insight strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--monitor-ink);
+            font-size: 0.7rem;
+            letter-spacing: 0.035em;
+        }
+
+        .monitor-page .meta-info {
+            margin: -2px 0 10px;
+            padding: 0;
+            border: 0;
+            color: var(--monitor-muted);
+            font-size: 0.72rem;
+        }
+
+        .monitor-page .disclaimer {
+            margin-top: 0;
+            padding: 28px 24px;
+            background: var(--monitor-navy);
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 0.78rem;
+            line-height: 1.55;
+        }
+
+        .monitor-page .disclaimer h3 {
+            margin: 0 0 8px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .monitor-tools {
+                grid-template-columns: 1fr;
+            }
+
+            .monitor-tools .widget {
+                min-height: 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .monitor-hero {
+                padding: 36px 20px 32px;
+            }
+
+            .monitor-container {
+                width: min(100% - 32px, 600px);
+            }
+
+            .monitor-articles {
+                grid-template-columns: 1fr;
+            }
+
+            .monitor-articles .card {
+                display: block;
+            }
+
+            .monitor-articles .card > .ttl-insight {
+                margin-top: 14px;
+            }
+
+            .monitor-intro .card,
+            .monitor-articles .card {
+                padding: 18px;
+            }
+
+            .monitor-page .card p {
+                font-size: 0.86rem;
+            }
+        }
+
+        /* Keep the calendar and snapshot modules aligned as equal-height columns. */
+        @media (min-width: 901px) {
+            .monitor-tools {
+                align-items: stretch;
+            }
+
+            .monitor-tools .calendar-widget,
+            .monitor-tools .economic-widget {
+                align-self: stretch;
+                height: auto;
+            }
+        }
+
+        /* Horizontal digest cards: one continuous reading column with a compact split. */
+        .monitor-articles .card {
+            display: grid;
+            grid-template-columns: minmax(245px, 0.72fr) minmax(0, 1.8fr);
+            gap: 0 30px;
+            align-items: start;
+        }
+
+        .monitor-card-heading,
+        .monitor-card-body {
+            min-width: 0;
+        }
+
+        .monitor-card-heading {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .monitor-card-heading .tag {
+            margin-bottom: 12px;
+        }
+
+        .monitor-card-heading h2 {
+            margin-bottom: 0;
+        }
+
+        .monitor-card-heading .meta-info {
+            display: block;
+            margin-top: 12px;
+        }
+
+        .monitor-card-body {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .monitor-card-body p {
+            margin-bottom: 10px;
+        }
+
+        .monitor-card-body .ttl-insight {
+            margin-top: 14px;
+        }
+
+        /* Ground the title in a full-height editorial panel instead of leaving it floating. */
+        .monitor-articles .card {
+            align-items: stretch;
+            padding: 14px;
+        }
+
+        .monitor-card-heading {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: stretch;
+            padding: 22px 22px 24px;
+            border: 1px solid #E7EBF3;
+            border-radius: 8px;
+            background: #F8FAFC;
+        }
+
+        .monitor-card-heading .tag {
+            align-self: flex-start;
+        }
+
+        .monitor-card-body {
+            align-self: stretch;
+            padding: 8px 10px 8px 4px;
+        }
+
+        @media (max-width: 700px) {
+            .monitor-articles .card {
+                display: block;
+                padding: 14px;
+            }
+
+            .monitor-card-heading {
+                display: block;
+                padding: 18px;
+            }
+
+            .monitor-card-body {
+                margin-top: 16px;
+                padding: 0 4px;
+            }
+        }
+
+        /* Keep the utility row compact and make its dates read like calendar entries. */
+        .monitor-tools {
+            align-items: start;
+        }
+
+        .monitor-tools .calendar-widget {
+            align-self: start;
+        }
+
+        .monitor-tools .calendar-month {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: -2px 0 12px;
+            padding: 9px 10px;
+            border: 1px solid #D9E2FF;
+            border-radius: 8px;
+            background: #F5F7FF;
+            color: var(--monitor-navy);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .monitor-tools .calendar-month span {
+            color: var(--monitor-blue);
+            font-size: 0.68rem;
+        }
+
+        .monitor-tools .calendar-item {
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 9px;
+            padding: 8px 0;
+            border: 0;
+            border-bottom: 1px solid #EEF1F6;
+            background: transparent;
+        }
+
+        .monitor-tools .calendar-item:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+
+        .monitor-tools .calendar-item {
+            display: grid;
+            grid-template-columns: 56px minmax(0, 1fr);
+            align-items: center;
+        }
+
+        .monitor-tools .date-desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            min-width: 0;
+        }
+
+        .monitor-tools .date-desc p {
+            flex: 0 1 auto;
+            margin-top: 0;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .monitor-tools .date-box {
+            display: flex;
+            flex: 0 0 52px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            margin-right: 0;
+            padding: 0;
+            border: 1px solid #C7D2FE;
+            border-radius: 8px;
+            background: #EEF2FF;
+            color: var(--monitor-navy);
+            box-shadow: none;
+        }
+
+        .monitor-tools .date-box span {
+            color: var(--monitor-navy);
+            font-size: 1.18rem;
+            line-height: 1;
+        }
+
+        .monitor-tools .date-box small {
+            margin-top: 4px;
+            color: var(--monitor-blue);
+            font-size: 0.62rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+        }
+
+        .monitor-tools .date-desc h4 {
+            color: var(--monitor-ink);
+            font-size: 0.82rem;
+            line-height: 1.25;
+        }
+
+        .monitor-tools .date-desc p {
+            margin-top: 4px;
+            color: var(--monitor-muted);
+            font-size: 0.72rem;
+            line-height: 1.35;
+        }
+
+        .monitor-tools .contact-box {
+            align-self: start;
+            min-height: 0;
+            height: auto;
+            padding: 22px;
+            justify-content: flex-start;
+        }
+
+        .monitor-tools .contact-box h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .monitor-tools .contact-box p {
+            margin-bottom: 14px;
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        .monitor-tools .contact-box .btn {
+            font-size: 0.86rem;
+        }
+
+        .monitor-tools .contact-links {
+            font-size: 0.78rem;
+        }
+
+        /* Tall calendar on the left; the two supporting cards share its height on the right. */
+        .monitor-tools {
+            grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.9fr);
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            grid-template-areas:
+                "calendar snapshot"
+                "calendar contact";
+            align-items: stretch;
+        }
+
+        .monitor-tools .economic-widget {
+            grid-area: snapshot;
+            align-self: stretch;
+        }
+
+        .monitor-tools .calendar-widget {
+            grid-area: calendar;
+            height: auto;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .monitor-tools .contact-box {
+            grid-area: contact;
+            align-self: stretch;
+        }
+
+        .monitor-tools .calendar-widget .calendar-item {
+            flex: 1;
+        }
+
+        @media (max-width: 900px) {
+            .monitor-tools {
+                grid-template-columns: 1fr;
+                grid-template-rows: none;
+                grid-template-areas: none;
+            }
+
+            .monitor-tools .economic-widget,
+            .monitor-tools .calendar-widget,
+            .monitor-tools .contact-box {
+                grid-area: auto;
+            }
+        }
+
+
+        /* Final premium editorial polish. */
+        .monitor-page .monitor-hero {
+            background: linear-gradient(135deg, #162B68 0%, var(--monitor-navy) 58%, #2948A2 100%);
+            border-bottom: 3px solid #BFDBFE;
+        }
+
+        .monitor-page .monitor-hero-eyebrow {
+            color: #D7E3FF;
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+        }
+
+        .monitor-page .monitor-hero h1 {
+            font-weight: 750;
+            letter-spacing: -0.045em;
+        }
+
+        .monitor-page .monitor-hero-subtitle {
+            max-width: 560px;
+            color: rgba(255, 255, 255, 0.76);
+        }
+
+        .monitor-page .monitor-hero-meta span {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.07);
+            font-size: 0.7rem;
+            letter-spacing: 0.02em;
+        }
+
+        .monitor-page .monitor-intro .card,
+        .monitor-page .monitor-tools .widget,
+        .monitor-page .monitor-articles .card {
+            border-color: #DCE3EC;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.045);
+        }
+
+        .monitor-page .monitor-intro .card {
+            border-left-color: var(--monitor-navy);
+            border-radius: 10px;
+        }
+
+        .monitor-page .monitor-articles {
+            gap: 14px;
+        }
+
+        .monitor-page .monitor-articles .card {
+            border-left-color: var(--monitor-navy);
+            border-radius: 10px;
+            box-shadow: 0 5px 14px rgba(15, 23, 42, 0.035);
+        }
+
+        .monitor-page .monitor-articles .card:hover {
+            border-color: #C8D3E3;
+            border-left-color: var(--monitor-navy);
+            box-shadow: 0 10px 22px rgba(15, 23, 42, 0.065);
+        }
+
+        .monitor-page .monitor-card-heading {
+            border-color: #E3E8F0;
+            background: #FAFBFD;
+        }
+
+        .monitor-page .monitor-card-heading .tag {
+            margin-bottom: 14px;
+            padding: 0;
+            border: 0;
+            background: transparent !important;
+            color: #667085 !important;
+            font-size: 0.64rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+        }
+
+        .monitor-page .monitor-card-heading h2 {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--monitor-ink);
+            font-size: clamp(1.2rem, 1.65vw, 1.42rem);
+            line-height: 1.18;
+        }
+
+        .monitor-page .monitor-card-heading .tag,
+        .monitor-page .monitor-card-body,
+        .monitor-page .monitor-card-body p,
+        .monitor-page .monitor-disclaimer {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .monitor-page .monitor-card-body p {
+            color: #4B5870;
+            font-size: 0.86rem;
+            line-height: 1.62;
+        }
+
+        .monitor-page .monitor-articles .ttl-insight {
+            border-left-color: var(--monitor-blue);
+            border-radius: 0 8px 8px 0;
+            background: #F7F9FC;
+            color: #3F4C64;
+        }
+
+        .monitor-page .monitor-articles .ttl-insight strong {
+            color: var(--monitor-navy);
+            font-size: 0.66rem;
+            letter-spacing: 0.12em;
+        }
+
+        .monitor-page .monitor-tools .widget {
+            border-radius: 10px;
+        }
+
+        .monitor-page .monitor-tools .calendar-month {
+            border-color: #DCE5FF;
+            background: #F7F9FF;
+        }
+
+        .monitor-page .monitor-tools .contact-box {
+            background: var(--monitor-navy);
+            border-color: rgba(30, 58, 138, 0.4);
+            box-shadow: 0 10px 22px rgba(30, 58, 138, 0.16);
+        }
+
+        /* Calendar table rows: date | development | status. */
+        .monitor-tools .calendar-widget .calendar-item {
+            display: grid;
+            grid-template-columns: 116px minmax(0, 1fr) minmax(190px, 0.8fr);
+            align-items: center;
+            gap: 18px;
+            flex: 1 1 0;
+            margin: 0;
+            padding: 14px 0;
+            border-bottom: 1px solid #DCE3EC;
+        }
+
+        .monitor-tools .calendar-widget .calendar-item:last-child {
+            border-bottom: 0;
+        }
+
+        .monitor-tools .calendar-date {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 7px;
+            color: var(--monitor-navy);
+            white-space: nowrap;
+        }
+
+        .monitor-tools .calendar-date strong {
+            font-size: 1.12rem;
+            line-height: 1;
+        }
+
+        .monitor-tools .calendar-date span {
+            color: var(--monitor-blue);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .monitor-tools .calendar-widget .calendar-item h4 {
+            margin: 0;
+            color: var(--monitor-ink);
+            font-size: 0.86rem;
+            line-height: 1.3;
+        }
+
+        .monitor-tools .calendar-widget .calendar-item > p {
+            margin: 0;
+            color: var(--monitor-muted);
+            font-size: 0.75rem;
+            line-height: 1.35;
+            text-align: right;
+        }
+
+        /* Compact calendar: let the module fit its rows instead of stretching to the rail. */
+        .monitor-tools {
+            align-items: start;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "calendar snapshot";
+        }
+
+        .monitor-tools .calendar-widget {
+            align-self: start;
+            height: max-content;
+            display: block;
+        }
+
+        .monitor-tools .calendar-widget .calendar-month {
+            margin-bottom: 6px;
+            padding: 7px 9px;
+        }
+
+        .monitor-tools .calendar-widget .calendar-item {
+            min-height: 0;
+            flex: none;
+            padding: 11px 0;
+        }
+
+        @media (max-width: 700px) {
+            .monitor-tools .calendar-widget .calendar-item {
+                grid-template-columns: 92px minmax(0, 1fr);
+                gap: 10px;
+            }
+
+            .monitor-tools .calendar-widget .calendar-item > p {
+                grid-column: 2;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .monitor-tools .date-desc {
+                display: block;
+            }
+
+            .monitor-tools .date-desc p {
+                margin-top: 4px;
+                text-align: left;
+                white-space: normal;
+            }
+        }
+
+        .monitor-page .breadcrumb {
+            background: var(--monitor-navy);
+        }
+
+        .monitor-page .monitor-hero {
+            background: var(--monitor-navy);
+        }
+
+        .monitor-page .monitor-hero::after {
+            display: none;
+            filter: none;
+        }
+
+        .monitor-contact-bottom {
+            width: min(1540px, calc(100% - 40px));
+            margin: 24px auto 0;
+            padding: 26px 30px;
+            display: grid;
+            grid-template-columns: minmax(240px, 1.15fr) minmax(280px, 1fr) auto;
+            align-items: center;
+            gap: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 24px;
+            background: linear-gradient(135deg, #0F172A 0%, var(--monitor-navy) 100%);
+            color: #FFFFFF;
+            box-shadow: 0 18px 38px rgba(15, 23, 42, 0.2);
+        }
+
+        .monitor-contact-copy {
+            min-width: 0;
+        }
+
+        .monitor-contact-eyebrow {
+            display: inline-flex;
+            width: fit-content;
+            margin-bottom: 10px;
+            padding: 6px 11px;
+            border-radius: 999px;
+            background: rgba(0, 196, 180, 0.16);
+            color: #97FFF4;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .monitor-contact-copy h3 {
+            margin: 0 0 6px;
+            color: #FFFFFF;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 1.35rem;
+            line-height: 1.2;
+        }
+
+        .monitor-contact-copy p {
+            max-width: 380px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.76);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        .monitor-contact-details {
+            display: grid;
+            gap: 10px;
+            padding-left: 28px;
+            border-left: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .monitor-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+            color: #FFFFFF;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.78rem;
+            text-decoration: none;
+        }
+
+        .monitor-contact-link i {
+            width: 24px;
+            color: #97FFF4;
+            text-align: center;
+        }
+
+        .monitor-contact-link:hover {
+            color: #97FFF4;
+        }
+
+        .monitor-contact-actions {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 14px;
+        }
+
+        .monitor-contact-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 11px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.26);
+            border-radius: 8px;
+            background: var(--navy, #1E3A8A);
+            color: #FFFFFF;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .monitor-contact-cta:hover {
+            background: var(--navy-dark, #172554);
+            color: #FFFFFF;
+        }
+
+        .monitor-contact-socials {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .monitor-contact-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: #FFFFFF;
+            font-size: 0.84rem;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .monitor-contact-socials a:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 196, 180, 0.45);
+            background: rgba(0, 196, 180, 0.18);
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 980px) {
+            .monitor-contact-bottom {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            }
+
+            .monitor-contact-actions {
+                grid-column: 1 / -1;
+                justify-content: flex-start;
+            }
+        }
+
+        .monitor-page .breadcrumb-nav,
+        .monitor-page .breadcrumb-nav a,
+        .monitor-page .breadcrumb-nav .current {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .monitor-page .breadcrumb-nav a:hover {
+            color: #FFFFFF;
+        }
+
+        .monitor-page .breadcrumb-nav .separator {
+            color: #BFDBFE;
+        }
+
+        .monitor-page .monitor-disclaimer {
+            width: min(1480px, calc(100% - 48px));
+            margin: 2px auto 0;
+            padding: 16px 2px 24px;
+            border-top: 1px solid #DCE3EC;
+            color: #667085;
+            font-size: 0.74rem;
+            line-height: 1.55;
+        }
+
+        @media (max-width: 700px) {
+            .monitor-page .monitor-hero::after {
+                display: none;
+            }
+
+            .monitor-contact-bottom {
+                width: min(100% - 32px, 600px);
+                grid-template-columns: 1fr;
+                align-items: start;
+                gap: 18px;
+                padding: 20px;
+            }
+
+            .monitor-contact-details {
+                width: 100%;
+                padding-top: 16px;
+                padding-left: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.18);
+                border-left: 0;
+            }
+
+            .monitor-contact-actions {
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .monitor-page .monitor-disclaimer {
+                width: min(100% - 32px, 600px);
+                padding-top: 14px;
+            }
+        }
