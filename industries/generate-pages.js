@@ -11,26 +11,26 @@ const industries = [
     {
         id: "accounting",
         name: "Accounting",
-        title: "Accounting Lawyer in Turkey",
-        metaDescription: "Expert legal services for accounting firms and financial service providers operating in Turkey. Regulatory compliance, licensing, and cross-border advisory.",
-        intro: "The accounting and auditing sector in Turkey is subject to comprehensive regulatory oversight. Foreign accounting firms seeking to operate in the Turkish market must navigate complex licensing requirements, professional standards, and compliance obligations. Our legal team provides specialized guidance to help accounting practices establish and maintain their operations in full compliance with Turkish law.",
+        title: "Accounting & Audit Law Firm in Turkey",
+        metaDescription: "Accounting law firm in Turkey for foreign networks, SMMM, YMM and audit firms. Law 3568, KGK, MASAK, KVKK, contracts and disputes.",
+        intro: "Turkish Trade Lawyers advises foreign accounting firms, international accounting networks, independent audit companies, financial consultancy businesses, SMMM practices and YMM firms on Turkish legal and regulatory matters. Our accounting and audit legal services in Turkey cover professional structuring, Law No. 3568, TÜRMOB requirements, KGK authorization, accounting firm contracts, professional liability, MASAK, KVKK, partner disputes, regulatory investigations and market entry.",
         services: [
-            "Licensing and registration with Turkish regulatory authorities",
-            "Compliance with Turkish Accounting Standards (TMS) and Turkish Financial Reporting Standards (TFRS)",
-            "Partnership and corporate structuring for accounting firms",
-            "Professional liability and indemnity matters",
-            "Cross-border service agreements and secondment arrangements",
-            "Regulatory investigations and disciplinary proceedings"
+            "Accounting firm market entry and professional structuring",
+            "Law No. 3568, SMMM, YMM and TÜRMOB compliance",
+            "KGK authorization and independent audit matters",
+            "Accounting, tax declaration and audit engagement agreements",
+            "Professional liability, disciplinary proceedings and disputes",
+            "MASAK, KVKK, network, employment and fee collection matters"
         ],
         issues: [
-            "Public Oversight, Accounting and Auditing Standards Authority (KGK) registration requirements",
-            "Professional qualification recognition for foreign accountants",
-            "Anti-money laundering (AML) compliance obligations",
-            "Data protection requirements under KVKK for client financial data",
-            "Tax advisory service regulations and limitations",
-            "Audit independence rules and rotation requirements"
+            "Law No. 3568 professional scope and foreign accountant authorization",
+            "SMMM, YMM and independent auditor role distinctions",
+            "KGK ownership, independence and authorization requirements",
+            "Tax declaration responsibility and professional liability",
+            "MASAK AML, KVKK and international data transfers",
+            "Partner, shareholder, disciplinary and unpaid-fee disputes"
         ],
-        keywords: ["accounting lawyer Turkey", "Turkish accounting regulations", "KGK registration", "audit firm licensing Turkey"]
+        keywords: ["accounting law firm Turkey", "accounting lawyer Turkey", "audit law firm Turkey", "KGK authorization Turkey"]
     },
     {
         id: "agriculture",
@@ -251,26 +251,50 @@ const industries = [
     {
         id: "banking",
         name: "Banking",
-        title: "Banking Lawyer in Turkey",
-        metaDescription: "Comprehensive legal services for banks and financial institutions in Turkey. BRSA licensing, regulatory compliance, and banking transactions.",
-        intro: "Turkey's banking sector operates under a robust regulatory framework overseen by the Banking Regulation and Supervision Agency (BRSA). Foreign banks seeking to establish operations in Turkey face comprehensive licensing requirements and ongoing compliance obligations. Our banking and finance practice provides end-to-end legal support for banks and financial institutions.",
+        title: "Banking Law Firm in Turkey",
+        metaDescription: "Banking law firm in Turkey for foreign banks, lenders and financial institutions. BDDK licensing, branches, lending, digital banking, AML and disputes.",
+        intro: "Turkish Trade Lawyers advises foreign banks, international banking groups, financial institutions, lenders, bank investors, technology providers and businesses working with the Turkish banking sector on Turkish banking law and regulatory matters. Our banking legal services in Turkey cover BDDK licensing, foreign bank branches and representative offices, bank acquisitions, lending and finance documentation, digital banking, outsourcing, bank secrecy, AML, regulatory compliance and banking disputes.",
         services: [
-            "Banking license applications and regulatory approvals",
-            "Branch and representative office establishment",
-            "Loan documentation and syndicated lending",
-            "Project and acquisition financing",
-            "Regulatory compliance and reporting",
-            "Bank restructuring and resolution matters"
+            "Banking market entry and BDDK licensing",
+            "Foreign bank branches and representative offices",
+            "Bank M&A and share acquisitions",
+            "Corporate, syndicated and project finance",
+            "Digital banking, BaaS and outsourcing",
+            "Bank secrecy, AML, disputes and enforcement"
         ],
         issues: [
-            "BRSA licensing and capital requirements",
-            "Consumer protection regulations for banking products",
-            "Anti-money laundering and sanctions compliance",
-            "Data protection requirements for customer information",
-            "Interest rate regulations and usury limits",
-            "Digital banking and fintech regulatory framework"
+            "Banking Law No. 5411 and BDDK establishment permissions",
+            "Foreign bank branch and representative-office limits",
+            "Bank share transfers, ownership thresholds and M&A approvals",
+            "Loan security, guarantees, cross-border lending and enforcement",
+            "Digital banking, payment services, outsourcing and cybersecurity",
+            "Bank secrecy, MASAK, KVKK, consumer and regulatory investigations"
         ],
-        keywords: ["banking lawyer Turkey", "bank licensing Turkey", "BRSA compliance", "financial institution Turkey"]
+        keywords: ["banking law firm Turkey", "banking lawyer Turkey", "BDDK lawyer Turkey", "foreign bank Turkey"]
+    },
+    {
+        id: "saas-law-firm-turkey",
+        name: "SaaS",
+        title: "SaaS Law Firm in Turkey",
+        metaDescription: "SaaS law firm in Turkey advising foreign software companies on agreements, SLA, DPA, KVKK, VERBIS, data transfers, e-commerce and disputes.",
+        intro: "Turkish Trade Lawyers advises foreign SaaS companies, software providers, cloud businesses, technology platforms, enterprise software vendors and investors entering or operating in Türkiye. Our SaaS legal services cover SaaS agreements, SLA and DPA documentation, KVKK compliance, Data Controller Representative services, VERBIS, international data transfers, reseller arrangements, e-commerce, software IP, cybersecurity and commercial disputes.",
+        services: [
+            "SaaS agreements, MSA, subscription and order forms",
+            "SLA, support, business continuity and data exit",
+            "DPA, KVKK, VERBIS and Data Controller Representative",
+            "International data transfers and Standard Contracts",
+            "Reseller, API, integration and white-label arrangements",
+            "Software IP, cybersecurity, e-commerce and disputes"
+        ],
+        issues: [
+            "Turkish contract law and online SaaS contracting",
+            "Controller-processor roles, DPA and KVKK compliance",
+            "VERBIS, representative appointment and Authority communications",
+            "International transfers, subprocessors and Standard Contracts",
+            "Consumer subscriptions, ETBIS, IYS and payment services",
+            "Software ownership, open source, AI, cybersecurity and liability"
+        ],
+        keywords: ["SaaS law firm Turkey", "SaaS lawyer Turkey", "SaaS agreements Turkey", "KVKK SaaS Turkey", "technology lawyer Turkey"]
     },
     {
         id: "biotechnology",
@@ -1609,10 +1633,10 @@ if (!fs.existsSync(industriesDir)) {
 console.log('Generating industry pages...');
 
 allIndustries.forEach((industry, index) => {
-    // Accounting, agriculture and aviation have dedicated long-form pages.
+    // Accounting, agriculture, aviation and SaaS have dedicated long-form pages.
     // Keep them out of the generic template so bulk generation does not
     // overwrite their industry-specific SEO structures and content.
-    if (['accounting', 'agriculture', 'airlines-aviation'].includes(industry.id)) {
+    if (['accounting', 'agriculture', 'airlines-aviation', 'saas-law-firm-turkey'].includes(industry.id)) {
         console.log(`[${index + 1}/${allIndustries.length}] Preserved custom page: ${industry.id}.html`);
         return;
     }
