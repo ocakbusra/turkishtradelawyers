@@ -88,8 +88,10 @@
     },
     "industries/arts-crafts.html": {
       "baseline_fingerprint": "befa13e602923b467b4cfbcf09273165e03857363536f31561ac365edc920e31",
+      "promoted": "2026-09-08",
+      "promotion_fingerprint": "e1e35b708141c36d794f752cced4a78939088737127b44dc1d55ebc0e1ac3b2e",
       "reason": "Low Search Console demand; held for substantive content development.",
-      "status": "held"
+      "status": "promoted"
     },
     "industries/broadcast-media.html": {
       "baseline_fingerprint": "10f70120341d00549aa6340cba621852ac814e0116e7a3b9cd03a2de6a9f9779",

@@ -35,26 +35,26 @@ const industries = [
     {
         id: "agriculture",
         name: "Agriculture",
-        title: "Agriculture Lawyer in Turkey",
-        metaDescription: "Legal services for agricultural businesses in Turkey. Land acquisition, farming regulations, export compliance, and agribusiness contracts.",
-        intro: "Turkey's agricultural sector offers significant opportunities for foreign investment, supported by fertile land, diverse climate zones, and strategic export positioning. However, agricultural operations are subject to specific regulations regarding land ownership, environmental compliance, and product standards. Our legal team assists agribusiness clients with the full spectrum of legal matters affecting agricultural enterprises in Turkey.",
+        title: "Agriculture & Agribusiness Law Firm in Turkey",
+        metaDescription: "Agriculture law firm in Turkey for foreign investors, agribusinesses and producers. Land, contract farming, imports, food, water, permits and disputes.",
+        intro: "Foreign agricultural investors, agribusinesses, producers, food processors, importers, exporters and businesses sourcing products from Türkiye face a connected framework covering land, production planning, contract farming, plant and food regulation, water, environmental permits, trade and disputes. Our agriculture legal services in Turkey follow the operating model from acquisition or lease through production, processing, sale and export.",
         services: [
-            "Agricultural land acquisition and leasing arrangements",
-            "Farming operation licensing and permits",
-            "Agricultural product export and import compliance",
-            "Contract farming and supply chain agreements",
-            "Agricultural cooperative formation and governance",
-            "Water rights and irrigation permits"
+            "Agricultural land acquisition, leasing and due diligence",
+            "Foreign agricultural investment and market entry",
+            "Production planning, Ministry permits and compliance",
+            "Contract farming, agricultural supply and processing agreements",
+            "Agricultural imports, exports, phytosanitary and customs",
+            "Food, organic, seed, water and environmental regulation"
         ],
         issues: [
-            "Foreign ownership restrictions on agricultural land",
-            "Environmental regulations affecting farming operations",
-            "Organic certification and product labeling requirements",
-            "Agricultural subsidy and incentive programs",
-            "Phytosanitary and veterinary compliance for exports",
-            "Land consolidation and zoning regulations"
+            "Foreign ownership, land classification and non-agricultural use",
+            "Production planning, permits and agricultural support conditions",
+            "Contract farming, quality, crop failure and mediation",
+            "Plant health, food, organic and seed compliance",
+            "Groundwater, irrigation, environmental and facility approvals",
+            "Agricultural trade, cooperatives, disputes and debt collection"
         ],
-        keywords: ["agriculture lawyer Turkey", "Turkish agricultural law", "farmland acquisition Turkey", "agribusiness legal services"]
+        keywords: ["agriculture law firm Turkey", "agriculture lawyer Turkey", "agricultural land lawyer Turkey", "agribusiness legal services Turkey"]
     },
     {
         id: "airlines-aviation",
@@ -179,74 +179,74 @@ const industries = [
     {
         id: "arts-crafts",
         name: "Arts & Crafts",
-        title: "Arts & Crafts Lawyer in Turkey",
-        metaDescription: "Legal services for artists, craftspeople, and creative businesses in Turkey. IP protection, gallery agreements, and export compliance.",
-        intro: "Turkey's rich artistic heritage and thriving contemporary art scene create diverse opportunities for artists, craftspeople, and creative businesses. Legal considerations include intellectual property protection, cultural property regulations, and commercial arrangements with galleries and collectors. Our arts and entertainment law practice provides tailored legal support for the creative sector.",
+        title: "Arts & Crafts Lawyer in Türkiye",
+        metaDescription: "Art lawyer in Türkiye for artists, galleries, collectors and auction houses. Copyright, cultural property, provenance, MASAK, export and art disputes.",
+        intro: "Türkiye’s arts and crafts sector combines copyright, cultural-property, gallery and auction rules with AML, customs, consumer and commercial law. Our legal team advises artists, galleries, collectors, dealers, auction businesses, craft brands and international buyers on the creation, sale, ownership and movement of artworks.",
         services: [
-            "Copyright and moral rights protection",
-            "Gallery representation and consignment agreements",
-            "Artist residency and commission contracts",
-            "Cultural property export compliance",
-            "Art authentication and provenance matters",
-            "Collective management organization dealings"
+            "Artwork copyright, moral rights and licensing",
+            "Gallery representation, consignment and sale agreements",
+            "Cultural-property classification, trade and export",
+            "Provenance, authenticity and acquisition due diligence",
+            "MASAK, KYC and art-market compliance",
+            "Craft brands, designs, trademarks and geographical indications"
         ],
         issues: [
-            "Copyright protection for artistic works",
-            "Cultural heritage and antiquities regulations",
-            "VAT and customs for art transactions",
-            "Resale royalty rights (droit de suite)",
-            "Insurance and transportation for artworks",
-            "Import and export of cultural property"
+            "Physical ownership versus copyright and moral rights",
+            "Gallery certification and auction-house obligations",
+            "Provenance, authenticity and disputed title",
+            "Cultural-property trading, collection and export rules",
+            "MASAK obligations in high-value art transactions",
+            "Copied crafts, online sales, customs and disputes"
         ],
-        keywords: ["arts lawyer Turkey", "artist legal services", "art gallery law", "cultural property Turkey"]
+        keywords: ["art lawyer Türkiye", "artist lawyer Turkey", "art gallery law Turkey", "cultural property lawyer Turkey"]
     },
     {
         id: "automotive",
         name: "Automotive",
-        title: "Automotive Lawyer in Turkey",
-        metaDescription: "Expert legal services for automotive manufacturers and suppliers in Turkey. Type approval, dealer networks, and automotive regulations.",
-        intro: "Turkey is a major automotive manufacturing hub with significant production capacity for both passenger vehicles and commercial vehicles. The automotive sector is subject to comprehensive type approval, environmental, and consumer protection regulations. Our automotive industry practice provides specialized legal counsel for manufacturers, suppliers, and distributors operating in the Turkish market.",
+        title: "Automotive Law Firm in Turkey",
+        metaDescription: "Automotive law firm in Turkey for foreign manufacturers, suppliers and importers. Homologation, TAREKS, recalls, dealers, EVs, contracts and disputes.",
+        intro: "Foreign vehicle manufacturers, automotive suppliers, importers, distributors and mobility businesses face a connected framework covering market entry, homologation, product safety, customs, contracts, consumer law, competition, EV charging and connected-vehicle data. Our automotive legal services in Turkey follow the vehicle lifecycle from design and import to sale, after-sales support, recall and dispute resolution.",
         services: [
-            "Type approval and vehicle certification",
-            "Manufacturing facility establishment and licensing",
-            "Dealer and distributor network agreements",
-            "Automotive supply chain contracts",
-            "Product recall and liability matters",
-            "Investment incentives for automotive manufacturing"
+            "Automotive market entry and corporate structuring",
+            "Vehicle type approval, homologation and product compliance",
+            "Vehicle and parts imports, TAREKS and customs",
+            "OEM supply, tooling, dealer and distribution agreements",
+            "Product safety, recalls, warranties and liability",
+            "EV charging, connected vehicles and mobility regulation"
         ],
         issues: [
-            "Vehicle type approval and homologation requirements",
-            "Emissions standards and environmental compliance",
-            "Consumer protection and warranty obligations",
-            "Competition law in dealer relationships",
-            "Customs procedures for automotive components",
-            "Industrial zone incentives for automotive investment"
+            "Type approval, technical conformity and market surveillance",
+            "TAREKS, GTIP, customs value, origin and import controls",
+            "Product safety, corrective measures and recall costs",
+            "Dealer, distributor, authorised service and competition rules",
+            "Consumer warranties, after-sales and second-hand vehicle rules",
+            "EV charging licences, connected-vehicle data and cybersecurity"
         ],
-        keywords: ["automotive lawyer Turkey", "vehicle type approval", "car manufacturer Turkey", "automotive regulations"]
+        keywords: ["automotive law firm Turkey", "automotive lawyer Turkey", "vehicle type approval Turkey", "automotive regulatory compliance Turkey"]
     },
     {
         id: "aviation-aerospace",
         name: "Aviation & Aerospace",
-        title: "Aviation & Aerospace Lawyer in Turkey",
-        metaDescription: "Legal services for aerospace manufacturers and defense contractors in Turkey. Export controls, joint ventures, and aerospace regulations.",
-        intro: "Turkey's aerospace and defense sector has experienced substantial growth, with increasing domestic manufacturing capabilities and international partnerships. The sector is subject to strict export control regulations, security clearance requirements, and complex procurement procedures. Our aerospace practice provides comprehensive legal support for companies operating in this strategic industry.",
+        title: "Aviation & Aerospace Law Firm in Turkey",
+        metaDescription: "Aviation law firm in Turkey for foreign manufacturers, MROs, suppliers and UAS businesses. SHGM, certification, parts, contracts, customs and disputes.",
+        intro: "Foreign aviation and aerospace manufacturers, aircraft and component suppliers, MRO businesses, technology companies, investors, drone companies and space businesses face a connected Turkish regulatory and commercial framework. Our aviation and aerospace legal services cover SHGM approvals, SHT-21 certification, design and production organisations, aircraft parts, maintenance, UAS operations, customs, contracts, product liability, cybersecurity, investment and disputes.",
         services: [
-            "Defense procurement and government contracting",
-            "International joint ventures and partnerships",
-            "Export control and sanctions compliance",
-            "Technology transfer agreements",
-            "Intellectual property protection for aerospace innovations",
-            "Offset and industrial participation arrangements"
+            "SHGM approvals, aviation certification and market entry",
+            "SHT-21, type certification, DOA and POA matters",
+            "Aircraft parts, supplier, import and customs compliance",
+            "SHT-145 MRO, maintenance and continuing airworthiness",
+            "UAS, drone, VTOL and advanced-air-mobility regulation",
+            "Aerospace contracts, IP, export controls and disputes"
         ],
         issues: [
-            "Defense industry security clearance requirements",
-            "Export licensing for dual-use technologies",
-            "Foreign investment restrictions in defense sector",
-            "Government contract compliance and audit procedures",
-            "Industrial property rights in defense contracts",
-            "International traffic in arms regulations (ITAR) considerations"
+            "SHGM approval, SHT-21 certification and airworthiness",
+            "Design Organisation Approval and Production Organisation Approval",
+            "Approved suppliers, counterfeit parts and product safety",
+            "SHT-145 maintenance, modifications and continuing airworthiness",
+            "UAS import, registration, pilot licensing and operations",
+            "Export controls, cybersecurity, IP, insurance and liability"
         ],
-        keywords: ["aerospace lawyer Turkey", "defense contractor Turkey", "aviation manufacturing", "export controls Turkey"]
+        keywords: ["aviation aerospace law firm Turkey", "aviation lawyer Turkey", "SHGM lawyer Turkey", "aerospace regulatory compliance Turkey"]
     },
     {
         id: "banking",
