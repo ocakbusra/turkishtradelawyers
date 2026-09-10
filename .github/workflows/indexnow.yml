@@ -32,6 +32,9 @@ jobs:
       - name: Test URL detection
         run: python3 -m unittest discover -s tests -p "test_submit_indexnow.py" -v
 
+      - name: Verify site build output
+        run: python3 build.py --check
+
       - name: Notify IndexNow and prepare Brave report
         id: notify
         env:

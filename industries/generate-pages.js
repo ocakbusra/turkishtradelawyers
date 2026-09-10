@@ -1122,6 +1122,9 @@ function generateIndustryPage(industry) {
         gtag('config', 'G-9FX7T07VPM');
     </script>
 
+    <!-- Buffsend form tracking -->
+    <script async src="https://www.buffsend.com/forms/tracker.js" data-buffsend-site="site_XGR96yxc0fobgZxw-mylYrCzCuo"></script>
+
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
