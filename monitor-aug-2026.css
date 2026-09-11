@@ -1138,3 +1138,21 @@
                 padding-top: 14px;
             }
         }
+
+        /* The compact desktop utility layout is declared above the final
+           mobile rules. Reset its two-column areas here so the snapshot and
+           calendar remain readable on phones and narrow tablets. */
+        @media (max-width: 900px) {
+            .monitor-tools {
+                grid-template-columns: 1fr;
+                grid-template-rows: none;
+                grid-template-areas: none;
+            }
+
+            .monitor-tools .economic-widget,
+            .monitor-tools .calendar-widget,
+            .monitor-tools .contact-box {
+                grid-area: auto;
+                width: auto;
+            }
+        }
