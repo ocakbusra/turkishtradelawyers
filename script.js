@@ -974,6 +974,12 @@ function generateBreadcrumbSchema() {
     const breadcrumbNav = document.querySelector('.breadcrumb-nav');
     if (!breadcrumbNav) return;
 
+    // Do not append a second breadcrumb schema when a page already provides
+    // its canonical BreadcrumbList markup.
+    const hasBreadcrumbSchema = Array.from(document.querySelectorAll('script[type="application/ld+json"]'))
+        .some(s => (s.textContent || '').includes('"BreadcrumbList"') || (s.textContent || '').includes('"@type":"BreadcrumbList"'));
+    if (hasBreadcrumbSchema) return;
+
     const items = [];
     const links = breadcrumbNav.querySelectorAll('a');
     const current = breadcrumbNav.querySelector('.current');
