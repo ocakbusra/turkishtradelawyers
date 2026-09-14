@@ -299,26 +299,26 @@ const industries = [
     {
         id: "biotechnology",
         name: "Biotechnology",
-        title: "Biotechnology Lawyer in Turkey",
-        metaDescription: "Legal services for biotechnology companies in Turkey. Research regulations, IP protection, and biotech licensing compliance.",
-        intro: "Turkey's biotechnology sector is growing, supported by research institutions and increasing investment in life sciences. Biotechnology companies must navigate complex regulatory frameworks covering research activities, product approvals, and intellectual property protection. Our life sciences practice provides specialized legal counsel for biotechnology enterprises.",
+        title: "Biotechnology Law Firm in Turkey",
+        metaDescription: "Biotechnology law firm in Turkey advising foreign biotech companies on TİTCK, biosimilars, clinical trials, GMO, patents, genetic data and licensing.",
+        intro: "Turkish Trade Lawyers advises foreign biotechnology companies, life sciences businesses, biotech manufacturers, diagnostic companies, research organisations, investors, laboratories and technology developers operating in or entering Türkiye. Our biotechnology legal services cover regulatory classification, TİTCK approvals, biological and biosimilar medicines, advanced therapy medicinal products, clinical research, GMO and biosafety regulation, tissue and cell products, biotechnology agreements, patents, genetic data, KVKK and commercial disputes.",
         services: [
-            "Research and development agreements",
-            "Intellectual property protection for biotech innovations",
-            "Regulatory pathway strategy and submissions",
-            "Clinical trial agreements and site contracts",
-            "Licensing and technology transfer arrangements",
-            "Biosafety and bioethics compliance"
+            "Biotechnology market entry and product classification",
+            "TİTCK, biological medicines, biosimilars and ATMPs",
+            "Clinical trials, CRO and research agreements",
+            "GMO, biosafety and tissue or cell compliance",
+            "Biotech patents, licensing, MTAs and R&D agreements",
+            "Genetic data, KVKK, manufacturing, M&A and disputes"
         ],
         issues: [
-            "Biosafety regulations and GMO restrictions",
-            "Clinical trial authorization requirements",
-            "Patent protection for biotechnological inventions",
-            "Data exclusivity and regulatory protection",
-            "Bioethics committee approvals",
-            "Environmental release regulations for GMOs"
+            "TİTCK classification, authorization and post-market obligations",
+            "Biological medicines, biosimilar and ATMP requirements",
+            "Clinical trials, ethics review, biological materials and CROs",
+            "GMO approvals, imports, feed, labelling and traceability",
+            "Patent ownership, employee inventions, licensing and freedom to operate",
+            "Genetic and health data, VERBIS, transfers and Data Controller Representative"
         ],
-        keywords: ["biotechnology lawyer Turkey", "biotech regulations", "life sciences legal", "GMO regulations Turkey"]
+        keywords: ["biotechnology law firm Turkey", "biotechnology lawyer Turkey", "TİTCK lawyer Turkey", "biotech patents Turkey", "genetic data Turkey"]
     },
     {
         id: "broadcast-media",
@@ -1636,10 +1636,10 @@ if (!fs.existsSync(industriesDir)) {
 console.log('Generating industry pages...');
 
 allIndustries.forEach((industry, index) => {
-    // Accounting, agriculture, aviation and SaaS have dedicated long-form pages.
+    // Accounting, agriculture, aviation, biotechnology and SaaS have dedicated long-form pages.
     // Keep them out of the generic template so bulk generation does not
     // overwrite their industry-specific SEO structures and content.
-    if (['accounting', 'agriculture', 'airlines-aviation', 'saas-law-firm-turkey'].includes(industry.id)) {
+    if (['accounting', 'agriculture', 'airlines-aviation', 'biotechnology', 'saas-law-firm-turkey'].includes(industry.id)) {
         console.log(`[${index + 1}/${allIndustries.length}] Preserved custom page: ${industry.id}.html`);
         return;
     }
