@@ -11,7 +11,7 @@ const SiteConfig = {
     description: 'Expert legal counsel for international trade, corporate law, and dispute resolution in Turkey.',
     url: 'https://www.turkishtradelawyers.com',
     logo: 'https://www.turkishtradelawyers.com/logo-square.png',
-    phone: '+90 501 635 94 65',
+    phone: '+90 850 304 6995',
     email: 'hi@turkishtradelawyers.com',
     address: {
         street: 'Maslak Mah. Buyukdere Cad. No:255',

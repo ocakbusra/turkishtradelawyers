@@ -79,7 +79,7 @@ function initFloatingWhatsAppButton() {
     if (!document.body || document.querySelector('.floating-whatsapp-button')) return;
 
     const whatsappButton = document.createElement('a');
-    whatsappButton.href = 'https://wa.me/message/QBSUZJNCQOQEM1';
+    whatsappButton.href = 'https://wa.me/message/4EFUGRGODJRZM1';
     whatsappButton.target = '_blank';
     whatsappButton.rel = 'noopener noreferrer';
     whatsappButton.className = 'floating-whatsapp-button';
@@ -317,11 +317,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="footer-contact-card">
                     <span class="footer-eyebrow">Contact</span>
-                    <a href="tel:+905016359465" class="footer-contact-link">+90 501 635 94 65</a>
+                    <a href="tel:+908503046995" class="footer-contact-link">+90 850 304 6995</a>
                     <a href="mailto:hi@turkishtradelawyers.com" class="footer-contact-link">hi@turkishtradelawyers.com</a>
                     <p class="footer-contact-copy">Maslak Mah. Buyukdere Cad. No:255, Sariyer, Istanbul</p>
                     <div class="footer-social-links">
-                        <a href="https://wa.me/message/QBSUZJNCQOQEM1" target="_blank"
+                        <a href="https://wa.me/message/4EFUGRGODJRZM1" target="_blank"
                             rel="noopener noreferrer" aria-label="WhatsApp" class="footer-social-link">
                             <i class="fab fa-whatsapp"></i>
                         </a>

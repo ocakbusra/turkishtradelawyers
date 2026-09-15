@@ -399,7 +399,7 @@ def build_pdf():
 
     contact_box = Table([[p("Request structure guidance", "ContactTitle")],
                          [p("www.turkishtradelawyers.com/setup-a-business-in-turkey.html", "ContactBody")],
-                         [p("hi@turkishtradelawyers.com  |  +90 501 635 94 65", "ContactBody")]],
+                         [p("hi@turkishtradelawyers.com  |  +90 850 304 6995", "ContactBody")]],
                         colWidths=[174 * mm])
     contact_box.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, -1), NAVY),
