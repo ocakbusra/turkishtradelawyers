@@ -1,6 +1,7 @@
 // Mobile Navigation Toggle
 const COOKIE_CONSENT_KEY = 'ttl_cookie_consent_v1';
 const ANALYTICS_MEASUREMENT_ID = window.TTL_ANALYTICS_ID || 'G-9FX7T07VPM';
+const GOOGLE_ADS_TAG_ID = 'AW-18437766591';
 const CLARITY_PROJECT_ID = window.TTL_CLARITY_ID || 'vv2a5uwdk0';
 let analyticsInitialized = false;
 let clarityInitialized = false;
@@ -54,6 +55,7 @@ function enableAnalytics() {
         if (typeof window.gtag === 'function') {
             window.gtag('js', new Date());
             window.gtag('config', ANALYTICS_MEASUREMENT_ID);
+            window.gtag('config', GOOGLE_ADS_TAG_ID);
         }
         analyticsInitialized = true;
     }
