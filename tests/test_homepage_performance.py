@@ -133,6 +133,7 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("box-sizing: border-box", critical.group(1))
         self.assertIn("visibility: hidden", critical.group(1))
         self.assertIn("visibility: visible", critical.group(1))
+        self.assertRegex(critical.group(1), r"\.hero-container\s*\{[^}]*\bwidth:\s*100%")
         for selector in (".navbar", ".nav-menu", ".hero-heading", ".hero-subtext", ".hero-main-image"):
             with self.subTest(selector=selector):
                 self.assertIn(selector, critical.group(1))
