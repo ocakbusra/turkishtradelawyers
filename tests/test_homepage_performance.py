@@ -1,4 +1,5 @@
 import unittest
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -68,6 +69,25 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("size-adjust: 103%", self.styles)
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
         self.assertIn("&display=optional", (ROOT / "index.html").read_text(encoding="utf-8"))
+
+    def test_homepage_critical_styles_are_inline_and_shared_css_is_nonblocking(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        critical = re.search(r'<style id="homepage-critical-css">(.*?)</style>', html, re.S)
+        stylesheet = re.search(
+            r'<link rel="stylesheet" href="styles\.css"[^>]*>', html
+        )
+
+        self.assertIsNotNone(critical)
+        self.assertLess(len(critical.group(1).encode("utf-8")), 15_000)
+        for selector in (".navbar", ".nav-menu", ".hero-heading", ".hero-subtext", ".hero-main-image"):
+            with self.subTest(selector=selector):
+                self.assertIn(selector, critical.group(1))
+
+        self.assertIsNotNone(stylesheet)
+        self.assertIn('media="print"', stylesheet.group(0))
+        self.assertIn("onload=\"this.media='all'\"", stylesheet.group(0))
+        self.assertIn('fetchpriority="low"', stylesheet.group(0))
+        self.assertIn('<noscript><link rel="stylesheet" href="styles.css"></noscript>', html)
 
     @staticmethod
     def _srcset_paths(srcset):

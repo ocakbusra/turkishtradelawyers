@@ -58,7 +58,169 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <link rel="stylesheet" href="styles.css">
+    <!-- Keep the first mobile and desktop view styled while the shared site stylesheet loads. -->
+    <style id="homepage-critical-css">
+        * { margin: 0; padding: 0; }
+        :root {
+            --primary-blue: #2D4CC8;
+            --navy: #1E3A8A;
+            --navy-dark: #172554;
+            --dark-blue: #1a2742;
+            --accent-teal: #00C4B4;
+            --white: #ffffff;
+            --text-gray: #475467;
+            --border-gray: #E4E7EC;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @font-face {
+            font-family: 'Inter Fallback';
+            src: local('Arial');
+            font-style: normal;
+            font-weight: 400 600;
+            size-adjust: 107%;
+        }
+        @font-face {
+            font-family: 'Inter Fallback';
+            src: local('Arial Bold');
+            font-style: normal;
+            font-weight: 700 900;
+            size-adjust: 103%;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            overflow-x: clip;
+            color: var(--text-gray);
+            font: 16px/1.7 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--dark-blue);
+            font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        a { color: inherit; text-decoration: none; transition: var(--transition); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .navbar { position: fixed; top: 0; z-index: 1000; width: 100%; transition: all 0.3s ease; }
+        .navbar::before {
+            position: absolute;
+            z-index: -1;
+            content: '';
+            inset: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled::before { background: rgba(255, 255, 255, 0.99); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 4px 20px rgba(0, 0, 0, 0.03); }
+        .nav-container {
+            position: relative;
+            display: flex;
+            max-width: 1280px;
+            height: 72px;
+            margin: 0 auto;
+            padding: 0 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-container::after {
+            position: absolute;
+            right: 40px;
+            bottom: 0;
+            left: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(45, 76, 200, 0.1) 20%, rgba(45, 76, 200, 0.1) 80%, transparent 100%);
+            content: '';
+        }
+        .nav-logo { display: flex; gap: 14px; align-items: center; text-decoration: none; transition: all 0.3s ease; }
+        .nav-logo:hover { transform: translateX(4px); }
+        .nav-logo:hover .logo-icon { transform: rotate(-5deg) scale(1.05); }
+        .logo-icon { width: 46px; height: 46px; object-fit: contain; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .logo-text { display: flex; flex-direction: column; gap: 2px; }
+        .logo-main { color: var(--dark-blue); font: 700 1.2rem/1.2 'Inter', 'Inter Fallback', sans-serif; letter-spacing: -0.01em; }
+        .logo-tagline { color: var(--text-gray); font: 500 0.7rem 'Inter', 'Inter Fallback', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+        .nav-menu { display: flex; gap: 4px; align-items: center; list-style: none; }
+        .nav-link { position: relative; padding: 12px 20px; border-radius: 8px; color: var(--text-gray); font-size: 0.92rem; font-weight: 500; transition: all 0.3s ease; }
+        .nav-link::after { position: absolute; right: 20px; bottom: 8px; left: 20px; height: 2px; transform: scaleX(0); transform-origin: center; border-radius: 2px; background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal)); content: ''; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .nav-link:hover { color: var(--dark-blue); }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+        .nav-link.active { color: var(--primary-blue); font-weight: 600; }
+        .nav-menu li:last-child .nav-link { margin-left: 12px; padding: 12px 28px; border-radius: 8px; background: var(--navy); color: #fff; font-weight: 600; transition: all 0.3s ease; }
+        .nav-menu li:last-child .nav-link::after { display: none; }
+        .nav-menu li:last-child .nav-link:hover { transform: translateY(-2px); background: var(--primary-blue); box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25); color: #fff; }
+        .nav-toggle { display: none; flex-direction: column; gap: 4px; padding: 8px; border: 2px solid var(--border-gray); border-radius: 8px; background: transparent; cursor: pointer; transition: all 0.3s ease; }
+        .nav-toggle:hover { border-color: var(--primary-blue); }
+        .nav-toggle span { width: 20px; height: 2px; transform-origin: center; border-radius: 2px; background: var(--dark-blue); transition: all 0.3s ease; }
+        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
+        .hero { position: relative; display: flex; padding: 160px 0 100px; overflow: hidden; align-items: center; background: linear-gradient(135deg, #F0F4FF 0%, #FFF 100%); }
+        .hero-container { position: relative; z-index: 1; display: flex; gap: 60px; align-items: center; justify-content: space-between; }
+        .hero-content-left { flex: 1; max-width: 600px; }
+        .hero-content-right { position: relative; display: flex; flex: 1; justify-content: flex-end; }
+        .hero-badge-pill { display: inline-flex; gap: 8px; margin-bottom: 24px; padding: 8px 16px; align-items: center; border-radius: 20px; background: #E0E7FF; color: var(--primary-blue); font-size: 0.9rem; font-weight: 600; }
+        .hero-badge-pill i { font-size: 0.9rem; }
+        .hero-heading { margin-bottom: 24px; color: var(--dark-blue); font: 800 4rem/1.1 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.03em; }
+        .hero-subtext { max-width: 500px; margin-bottom: 40px; color: #475467; font: 1.125rem/1.6 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .hero-cta-group { display: flex; gap: 16px; margin-bottom: 60px; }
+        .btn-primary-new, .btn-outline-new { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; transition: all 0.3s ease; }
+        .btn-primary-new { background-color: var(--navy); color: #fff; box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2); }
+        .btn-primary-new:hover { transform: translateY(-2px); background-color: var(--navy-dark); box-shadow: 0 8px 12px rgba(30, 58, 138, 0.3); }
+        .btn-outline-new { padding: 14px 30px; border: 2px solid var(--navy); background-color: transparent; color: var(--navy); }
+        .btn-outline-new:hover { transform: translateY(-2px); background-color: #EFF6FF; }
+        .btn-whatsapp-hero { position: relative; display: inline-flex; width: 52px; height: 52px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 50%; background-color: #25D366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); color: #fff; font-size: 1.5rem; transition: all 0.3s ease; }
+        .btn-whatsapp-hero::after { position: absolute; top: -4px; right: -8px; padding: 2px 7px; border: 1px solid #e2e8f0; border-radius: 10px; background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); color: var(--dark-blue); content: '24/7'; font: 800 0.7rem 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.02em; pointer-events: none; }
+        .btn-whatsapp-hero:hover { transform: translateY(-2px) scale(1.08); background-color: #1EBE57; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); color: #fff; }
+        .btn-whatsapp-hero:hover::after { transform: scale(1.05); }
+        .floating-whatsapp-button { position: fixed; right: 24px; bottom: 24px; z-index: 2147483000; display: inline-flex; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; background-color: #25D366; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35); color: #fff; font-size: 1.7rem; text-decoration: none; transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; }
+        .hero-stats-row { display: flex; gap: 32px; align-items: center; }
+        .hero-stat { display: flex; flex-direction: column; }
+        .stat-number { margin-bottom: 4px; color: var(--navy); font: 800 2rem/1 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .stat-label { color: #64748B; font-size: 0.875rem; font-weight: 500; }
+        .hero-stat-divider { width: 1px; height: 40px; background-color: #CBD5E1; }
+        .hero-image-frame { position: relative; max-width: 600px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
+        .hero-main-image { display: block; width: 100%; height: auto; border-radius: 24px; object-fit: cover; }
+        .hero-floating-card { position: absolute; z-index: 10; bottom: 40px; left: -40px; display: flex; gap: 16px; padding: 16px 24px; align-items: center; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); animation: floatCard 4s ease-in-out infinite; }
+        .floating-icon-wrapper { display: flex; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 50%; background: #DCFCE7; color: #16A34A; font-size: 1.5rem; }
+        .floating-content { display: flex; flex-direction: column; }
+        .floating-label { margin-bottom: 2px; color: #64748B; font-size: 0.75rem; }
+        .floating-value { color: #0F172A; font-size: 0.95rem; font-weight: 700; }
+        @keyframes floatCard { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @media (max-width: 1024px) {
+            .hero-container { flex-direction: column; padding-top: 40px; text-align: center; }
+            .hero-content-left { display: flex; max-width: 100%; flex-direction: column; align-items: center; }
+            .hero-heading { font-size: 3rem; }
+            .hero-cta-group, .hero-stats-row { justify-content: center; }
+            .hero-content-right { width: 100%; margin-top: 40px; justify-content: center; }
+            .hero-floating-card { bottom: 20px; left: 50%; width: max-content; transform: translateX(-50%); animation: none; }
+        }
+        @media (max-width: 768px) {
+            .logo-tagline { display: none; }
+            .logo-main { font-size: 1.1rem; }
+            .logo-icon { width: 40px; height: 40px; }
+            .hero { min-height: auto; padding: 120px 0 80px; }
+            .nav-menu { position: fixed; top: 88px; left: -100%; display: flex; width: 100%; padding: 24px 20px; flex-direction: column; gap: 8px; border-top: 1px solid rgba(228, 231, 236, 0.6); border-radius: 0 0 24px 24px; background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 1) 100%); box-shadow: 0 12px 40px rgba(30, 58, 138, 0.12); text-align: center; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+            .nav-menu li { padding: 0; }
+            .nav-menu li .nav-link { display: block; padding: 16px 24px; border-radius: 12px; }
+            .nav-menu li:last-child .nav-link { margin-top: 12px; border-radius: 12px; }
+            .nav-menu.active { left: 0; }
+            .nav-toggle { display: flex; }
+        }
+        @media (max-width: 600px) { .floating-whatsapp-button { right: 16px; bottom: 16px; width: 52px; height: 52px; font-size: 1.55rem; } }
+        @media (max-width: 480px) {
+            .hero-heading { font-size: 2.25rem; }
+            .hero-cta-group { width: 100%; flex-direction: column; }
+            .btn { width: 100%; }
+            .hero-cta-group .btn-whatsapp-hero { width: 52px; min-width: 52px; max-width: 52px; height: 52px; padding: 0; align-self: center; }
+            .btn-whatsapp-hero::after { display: none; }
+            .hero-stats-row { flex-direction: column; gap: 24px; }
+            .hero-stat-divider { width: 40px; height: 1px; }
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" fetchpriority="low">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <link rel="icon" href="images/logo-48x48.png" type="image/png">
     <link rel="apple-touch-icon" href="logo-square.png">
     <meta name="theme-color" content="#1E3A8A">
