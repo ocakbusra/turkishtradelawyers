@@ -132,10 +132,14 @@ class MobileUiTests(unittest.TestCase):
     def test_uk_supply_chain_reveal_does_not_extend_narrow_page_width(self):
         page = (ROOT / "countries/country-united-kingdom.html").read_text(encoding="utf-8")
         mobile_rules = page.split("@media (max-width: 992px)", 1)[1].split("/* FAQ Section */", 1)[0]
-        self.assertRegex(
+        mobile_animation = re.search(
+            r"\.supply-chain-visual\.reveal-right\s*\{([^}]*)\}",
             mobile_rules,
-            r"\.supply-chain-visual\.reveal-right\s*\{[^}]*transform:\s*translateX\(0\)",
         )
+        self.assertIsNotNone(mobile_animation)
+        self.assertRegex(mobile_animation.group(1), r"transform:\s*translateX\(0\)")
+        self.assertRegex(mobile_animation.group(1), r"transition:\s*opacity\b")
+        self.assertNotRegex(mobile_animation.group(1), r"transition:[^;]*transform")
 
 
 if __name__ == "__main__":
