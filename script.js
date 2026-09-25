@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="${basePath}index.html#home" class="footer-logo">
-                        <img src="${basePath}logo.webp" alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
+                        <img src="${basePath}logo.webp" srcset="${basePath}logo-128.webp 128w, ${basePath}logo.webp 487w" sizes="56px" width="487" height="513" loading="lazy" decoding="async" alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
                         <span class="footer-logo-text">
                             <span class="footer-logo-main">Turkish Trade Lawyers</span>
                             <span class="footer-logo-tagline">Legal Excellence in Turkey</span>
