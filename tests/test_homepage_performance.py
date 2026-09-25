@@ -72,13 +72,14 @@ class HomepagePerformanceTests(unittest.TestCase):
     def test_homepage_inter_font_is_preloaded_locally_for_desktop(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         font_preloads = re.findall(r'<link rel="preload"[^>]*as="font"[^>]*>', html)
+        inter_preloads = [tag for tag in font_preloads if "fonts/inter-" in tag]
         font_stylesheet = re.search(
             r'<style media="\(min-width: 769px\)">(.*?)</style>', html, re.S
         )
 
-        self.assertEqual(len(font_preloads), 2)
-        self.assertTrue(all('media="(min-width: 769px)"' in tag for tag in font_preloads))
-        self.assertTrue(all('crossorigin' in tag for tag in font_preloads))
+        self.assertEqual(len(inter_preloads), 2)
+        self.assertTrue(all('media="(min-width: 769px)"' in tag for tag in inter_preloads))
+        self.assertTrue(all('crossorigin' in tag for tag in inter_preloads))
         self.assertIsNotNone(font_stylesheet)
         self.assertIn("font-weight: 100 900", font_stylesheet.group(1))
         self.assertEqual(font_stylesheet.group(1).count("font-display: optional"), 2)
@@ -88,6 +89,37 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertNotIn("fonts.gstatic.com", html)
         self.assertLess((ROOT / "fonts/inter-latin.woff2").stat().st_size, 70_000)
         self.assertLess((ROOT / "fonts/inter-latin-ext.woff2").stat().st_size, 10_000)
+
+    def test_homepage_font_awesome_uses_local_subsets_for_every_referenced_icon(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        script = (ROOT / "script.js").read_text(encoding="utf-8")
+        icon_css = (ROOT / "fonts" / "fontawesome-6.4.0.min.css").read_text(encoding="utf-8")
+        fontawesome_license = (ROOT / "fonts" / "FontAwesome-Free-6.4.0-LICENSE.txt").read_text(encoding="utf-8")
+
+        self.assertIn('href="fonts/fontawesome-6.4.0.min.css"', html)
+        self.assertNotIn("cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0", html)
+        self.assertIn('href="fonts/fa-solid-subset.woff2"', html)
+        self.assertIn('href="fonts/fa-brands-subset.woff2"', html)
+        self.assertIn('"TTL Icons Solid"', icon_css)
+        self.assertIn('"TTL Icons Brands"', icon_css)
+        self.assertIn("./fa-solid-subset.woff2", icon_css)
+        self.assertIn("./fa-brands-subset.woff2", icon_css)
+        self.assertIn("SIL OFL 1.1", fontawesome_license)
+        self.assertIn("CC BY 4.0", fontawesome_license)
+        self.assertIn("MIT License", fontawesome_license)
+        self.assertLess((ROOT / "fonts" / "fa-solid-subset.woff2").stat().st_size, 8_000)
+        self.assertLess((ROOT / "fonts" / "fa-brands-subset.woff2").stat().st_size, 3_000)
+
+        references = set()
+        for class_value in re.findall(r"(?:class|className)\s*=\s*[`\"']([^`\"']*)", html + script):
+            references.update(
+                token[3:] for token in class_value.split()
+                if token.startswith("fa-")
+                and token not in {"fa-brands", "fa-solid", "fa-regular", "fa-classic", "fa-sharp"}
+            )
+        mapped_icons = set(re.findall(r"\.fa-([a-z0-9-]+):before", icon_css))
+        self.assertTrue(references)
+        self.assertEqual(references - mapped_icons, set())
 
     def test_homepage_critical_styles_are_inline_and_shared_css_is_nonblocking(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
