@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="KVKK Compliance Checklist: Does your company need a Data Controller Representative in Türkiye? Determine your obligations under Turkish Data Protection Law.">
+        content="Foreign company in Türkiye? Check KVKK scope, VERBIS registration, representative appointment, required authority and contact-person details.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="author" content="Turkish Trade Lawyers">
-    <title>Data Controller Representative Checklist | Turkish Trade Lawyers</title>
+    <title>KVKK Representative &amp; VERBIS Checklist | Turkish Trade Lawyers</title>
 
     <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Data Controller Representative Checklist | Turkish Trade Lawyers">
+    <meta property="og:title" content="KVKK Representative &amp; VERBIS Checklist | Turkish Trade Lawyers">
     <meta property="og:description"
-        content="Determine your legal obligations under the Turkish Data Protection Law with our KVKK Compliance Checklist.">
+        content="Review whether a foreign data controller needs VERBIS registration and a representative in Türkiye, and what the appointment must cover.">
     <meta property="og:image" content="https://www.turkishtradelawyers.com/logo-square.png">
     <link rel="canonical" href="https://www.turkishtradelawyers.com/data-controller-representative-checklist.html">
 
@@ -39,7 +39,7 @@
         }
 
         .checklist-header {
-            background: #1a2742;
+            background: #1E3A8A;
             color: #ffffff;
             padding: 50px 40px;
             text-align: center;
@@ -131,6 +131,26 @@
             font-family: 'Inter', -apple-system, sans-serif;
         }
 
+        .item-content p {
+            color: #475467;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin: 8px 0 0;
+        }
+
+        .yes-no-option input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            accent-color: #1E3A8A;
+            cursor: pointer;
+        }
+
+        .yes-no-option input:focus-visible {
+            outline: 3px solid #2D4CC8;
+            outline-offset: 2px;
+        }
+
         .yes-no-options {
             display: flex;
             gap: 16px;
@@ -148,21 +168,6 @@
             cursor: pointer;
             font-family: 'Inter', -apple-system, sans-serif;
             font-size: 0.9em;
-        }
-
-        .yes-no-box {
-            width: 22px;
-            height: 22px;
-            border: 2px solid #CBD5E1;
-            background: #ffffff;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            position: relative;
-        }
-
-        .yes-no-option:hover .yes-no-box {
-            border-color: #2D4CC8;
-            background: rgba(45, 76, 200, 0.05);
         }
 
         .info-box {
@@ -264,107 +269,114 @@
 
         <div class="kvkk-checklist">
             <div class="checklist-header">
-                <h1>KVKK Compliance Checklist</h1>
-                <p class="subtitle">Does Your Company Need a Data Controller Representative in Türkiye?</p>
+                <h1>KVKK Representative &amp; VERBIS Checklist</h1>
+                <p class="subtitle">For data controllers established outside Türkiye</p>
             </div>
             <div class="checklist-banner">
-                Strategic Check-list
+                Foreign Controller Review
             </div>
             <div class="checklist-body">
-                
-                <p class="intro-text">
-                    Under the Turkish Data Protection Law (KVKK), foreign data controllers who process the personal data of data subjects residing in Türkiye are mandated to appoint a Data Controller Representative (Veri Sorumlusu Temsilcisi).
-                    <br><br>
-                    Use this strategic check-list to determine your company’s legal obligations:
-                </p>
-
-                <!-- Section 1 -->
-                <h3 class="section-title">Section 1: Jurisdictional Scope</h3>
-
+                <p class="intro-text">This checklist helps an organisation established outside Türkiye review its obligations under Personal Data Protection Law No. 6698 and the Data Controllers’ Registry (VERBIS) rules. Mark each answer for your own review. The page does not calculate a legal conclusion: the first decision is whether the entity is a controller subject to Turkish requirements and whether a specific registry exception applies.</p>
+                <h3 class="section-title">Step 1: Scope and registration</h3>
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Is your company established/headquartered outside of Türkiye?</h2>
+                        <h2 id="kvkk-question-1">Is the organisation established outside Türkiye?</h2>
+                        <p>Identify the legal entity that decides why and how the personal data is processed; a service provider may instead be a processor.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-1">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-1" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-1" value="no">No</label>
                     </div>
                 </div>
-
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Does your company process personal data belonging to individuals located in Türkiye?</h2>
+                        <h2 id="kvkk-question-2">Does that entity process personal data in a way that calls for a Turkish KVKK assessment?</h2>
+                        <p>Document the Turkish activities, people concerned, collection channels and processing purposes. Do not assume that the GDPR territorial-scope test is the Turkish test.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-2">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-2" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-2" value="no">No</label>
                     </div>
                 </div>
-
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Do you offer goods or services (even if free of charge) to data subjects in Türkiye?</h2>
+                        <h2 id="kvkk-question-3">Have you checked the statutory and Board-issued VERBIS exceptions?</h2>
+                        <p>A foreign controller should not assume that a small workforce or turnover creates an exemption. Any claimed exception needs a specific legal basis.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-3">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-3" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-3" value="no">No</label>
                     </div>
                 </div>
-
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Do you monitor the behavior of individuals located within Turkish territory?</h2>
+                        <h2 id="kvkk-question-4">If registration is required, is the foreign controller correctly registered in VERBIS?</h2>
+                        <p>Check the registered entity, data inventory, contact details and whether the record still matches actual processing.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-4">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-4" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-4" value="no">No</label>
                     </div>
                 </div>
-
-
-                <!-- Section 2 -->
-                <h3 class="section-title">Section 2: VERBIS Registration Requirements</h3>
-
+                <h3 class="section-title">Step 2: Representative appointment</h3>
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Is your company currently registered with the Data Controllers’ Registry (VERBIS)?</h2>
+                        <h2 id="kvkk-question-5">Has the foreign controller formally appointed a data controller representative?</h2>
+                        <p>The authorised corporate body or person should adopt an appointment decision; a service agreement alone may not satisfy the registry procedure.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-5">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-5" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-5" value="no">No</label>
                     </div>
                 </div>
-
                 <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Have you officially appointed a legal entity or a Turkish citizen resident in Türkiye as your representative?</h2>
+                        <h2 id="kvkk-question-6">Is the appointee eligible under the Turkish registry rules?</h2>
+                        <p>The representative must be a legal person established in Türkiye or a Turkish citizen natural person.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-6">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-6" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-6" value="no">No</label>
                     </div>
                 </div>
-
-                <div class="checklist-item" style="border-bottom: none;">
+                <div class="checklist-item">
                     <div class="item-content">
-                        <h2>Does your representative have the authority to facilitate communication with the KVKK Board?</h2>
+                        <h2 id="kvkk-question-7">Does the decision give the representative the required authority?</h2>
+                        <p>The minimum scope includes receiving Authority communications, forwarding requests and responses, handling data-subject applications as prescribed, and VERBIS transactions.</p>
                     </div>
-                    <div class="yes-no-options">
-                        <label class="yes-no-option"><div class="yes-no-box"></div> Yes</label>
-                        <label class="yes-no-option"><div class="yes-no-box"></div> No</label>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-7">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-7" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-7" value="no">No</label>
                     </div>
                 </div>
-
-
-                <!-- Results & Inquiry -->
+                <div class="checklist-item">
+                    <div class="item-content">
+                        <h2 id="kvkk-question-8">Have the certified decision and contact-person details been handled for VERBIS?</h2>
+                        <p>The registry rules require submission of the certified appointment decision and entry of a contact person. The contact person has a different role from the representative.</p>
+                    </div>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-8">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-8" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-8" value="no">No</label>
+                    </div>
+                </div>
+                <div class="checklist-item">
+                    <div class="item-content">
+                        <h2 id="kvkk-question-9">Are privacy notices, rights requests and overseas transfers reviewed separately?</h2>
+                        <p>A representative does not replace the controller’s substantive KVKK duties or the separate Article 9 transfer analysis.</p>
+                    </div>
+                    <div class="yes-no-options" role="group" aria-labelledby="kvkk-question-9">
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-9" value="yes">Yes</label>
+                        <label class="yes-no-option"><input type="radio" name="kvkk-question-9" value="no">No</label>
+                    </div>
+                </div>
                 <div class="info-box">
-                    <h3>How to Interpret Your Results</h3>
-                    <p>If you answered <strong>"YES"</strong> to all questions in Section 1 and <strong>"NO"</strong> to Section 2: Your company is likely in breach of Article 11 of the Regulation on the Data Controllers’ Registry. Foreign data controllers are required to appoint a representative regardless of the number of employees or annual turnover.</p>
-                    
-                    <h3 style="margin-top: 24px;">Next Steps & Professional Inquiry</h3>
-                    <p>For a technical evaluation of your company’s specific data processing activities and to ensure alignment with the latest KVKK Board resolutions, please refer to our <a href="contact.html">Contact Page</a> or communicate with our office via official corporate channels.</p>
+                    <h3>How to Use Your Answers</h3>
+                    <p>If you identified a foreign controller with a Turkish registration obligation and answered “No” to any appointment or registry question, review that gap promptly. A “Yes” to all questions does not confirm full KVKK compliance. A claimed exemption should be checked against the current Board decisions. Foreign controllers are not assessed against the domestic employee-count and balance-sheet thresholds for the start of their VERBIS registration duty.</p>
+                    <h3>What the Representative Does</h3>
+                    <p>Under Article 11 of the Registry By-Law, the appointment decision must cover communications with the Authority, relevant data-subject applications and registry transactions. The foreign controller remains responsible for its obligations; appointing a representative does not transfer that responsibility.</p>
+                    <h3>Official Sources and Next Step</h3>
+                    <p>Review the <a href="https://www.kvkk.gov.tr/Icerik/5442/VERI-SORUMLULARI-SICILI-HAKKINDA-YONETMELIK" target="_blank" rel="noopener noreferrer">Data Controllers’ Registry By-Law</a>, the Authority’s <a href="https://www.kvkk.gov.tr/Icerik/5273/Istisna" target="_blank" rel="noopener noreferrer">registry-exception decisions</a> and its <a href="https://www.kvkk.gov.tr/Icerik/4117/Veri-Sorumlulari-Sicili-Hakkinda-Bilgilendirme" target="_blank" rel="noopener noreferrer">representative guidance</a>. For a company-specific review, <a href="contact.html">contact our team</a>. See also our <a href="glossary/gdpr-kvkk-comparison.html">GDPR and KVKK comparison</a>.</p>
                 </div>
-
             </div>
         </div>
 
