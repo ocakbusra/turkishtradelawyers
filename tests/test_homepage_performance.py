@@ -68,7 +68,10 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("size-adjust: 107%", self.styles)
         self.assertIn("size-adjust: 103%", self.styles)
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
-        self.assertIn("&display=optional", (ROOT / "index.html").read_text(encoding="utf-8"))
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        self.assertIn("&display=optional", html)
+        self.assertIn('media="(min-width: 769px)"', html)
+        self.assertIn("this.media='(min-width: 769px)'", html)
 
     def test_homepage_critical_styles_are_inline_and_shared_css_is_nonblocking(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
