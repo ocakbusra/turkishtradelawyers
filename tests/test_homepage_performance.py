@@ -69,26 +69,26 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("size-adjust: 103%", self.styles)
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
 
-    def test_homepage_inter_font_is_preloaded_locally_for_desktop(self):
+    def test_homepage_inter_family_uses_metric_matched_local_faces_without_font_download(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
         font_preloads = re.findall(r'<link rel="preload"[^>]*as="font"[^>]*>', html)
-        inter_preloads = [tag for tag in font_preloads if "fonts/inter-" in tag]
         font_stylesheet = re.search(
             r'<style media="\(min-width: 769px\)">(.*?)</style>', html, re.S
         )
 
-        self.assertEqual(len(inter_preloads), 2)
-        self.assertTrue(all('media="(min-width: 769px)"' in tag for tag in inter_preloads))
-        self.assertTrue(all('crossorigin' in tag for tag in inter_preloads))
+        self.assertEqual(len(font_preloads), 2)
+        self.assertFalse(any("inter-" in tag for tag in font_preloads))
         self.assertIsNotNone(font_stylesheet)
-        self.assertIn("font-weight: 100 900", font_stylesheet.group(1))
-        self.assertEqual(font_stylesheet.group(1).count("font-display: optional"), 2)
-        self.assertIn("fonts/inter-latin.woff2", font_stylesheet.group(1))
-        self.assertIn("fonts/inter-latin-ext.woff2", font_stylesheet.group(1))
+        self.assertIn("font-weight: 400 600", font_stylesheet.group(1))
+        self.assertIn("font-weight: 700 900", font_stylesheet.group(1))
+        self.assertIn("src: local('Arial')", font_stylesheet.group(1))
+        self.assertIn("src: local('Arial Bold')", font_stylesheet.group(1))
+        self.assertIn("size-adjust: 107%", font_stylesheet.group(1))
+        self.assertIn("size-adjust: 103%", font_stylesheet.group(1))
         self.assertNotIn("fonts.googleapis.com/css2?family=Inter", html)
         self.assertNotIn("fonts.gstatic.com", html)
-        self.assertLess((ROOT / "fonts/inter-latin.woff2").stat().st_size, 70_000)
-        self.assertLess((ROOT / "fonts/inter-latin-ext.woff2").stat().st_size, 10_000)
+        self.assertFalse((ROOT / "fonts/inter-latin.woff2").exists())
+        self.assertFalse((ROOT / "fonts/inter-latin-ext.woff2").exists())
 
     def test_homepage_font_awesome_uses_local_subsets_for_every_referenced_icon(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
