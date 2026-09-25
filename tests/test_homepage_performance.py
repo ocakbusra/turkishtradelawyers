@@ -144,6 +144,17 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn('fetchpriority="low"', stylesheet.group(0))
         self.assertIn('<noscript><link rel="stylesheet" href="styles.css"></noscript>', html)
 
+    def test_homepage_hero_frame_reserves_its_responsive_square_dimensions(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        critical = re.search(r'<style id="homepage-critical-css">(.*?)</style>', html, re.S)
+        critical_frame = re.search(r"\.hero-image-frame\s*\{([^}]+)\}", critical.group(1))
+        shared_frame = re.search(r"\.hero-image-frame\s*\{([^}]+)\}", self.styles)
+
+        for rule in (critical_frame.group(1), shared_frame.group(1)):
+            with self.subTest(rule=rule[:60]):
+                self.assertRegex(rule, r"\bwidth:\s*100%")
+                self.assertRegex(rule, r"\baspect-ratio:\s*1\s*/\s*1")
+
     @staticmethod
     def _srcset_paths(srcset):
         return [candidate.strip().split()[0] for candidate in srcset.split(",")]
