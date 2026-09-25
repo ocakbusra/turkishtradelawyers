@@ -114,9 +114,15 @@ if (navToggle && navMenu) {
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+
+        const target = document.querySelector(href);
         if (target) {
+            e.preventDefault();
+            if (window.location.hash !== href) {
+                window.history.pushState(null, '', href);
+            }
             const offsetTop = target.offsetTop - 70;
             window.scrollTo({
                 top: offsetTop,
@@ -365,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="${basePath}ourexperts.html">About Turkish Trade Lawyers</a>
+                    <a href="${basePath}index.html#about">About Turkish Trade Lawyers</a>
                     <a href="${basePath}index.html#why-us">Why Choose Us</a>
                     <a href="${basePath}contact.html">Contact</a>
                 </div>
