@@ -155,6 +155,19 @@ class HomepagePerformanceTests(unittest.TestCase):
                 self.assertRegex(rule, r"\bwidth:\s*100%")
                 self.assertRegex(rule, r"\baspect-ratio:\s*1\s*/\s*1")
 
+    def test_homepage_tracking_starts_after_load_or_first_user_action(self):
+        script = (ROOT / "script.js").read_text(encoding="utf-8")
+        start = script.index("function initCookieConsent()")
+        end = script.index("\n}\n", start) + 2
+        tracking_init = script[start:end]
+
+        self.assertIn("section#home.hero", tracking_init)
+        self.assertIn("enableAnalytics();", tracking_init)
+        self.assertIn("enableClarity();", tracking_init)
+        self.assertIn("requestIdleCallback", tracking_init)
+        self.assertIn("addEventListener('load', startWhenIdle", tracking_init)
+        self.assertIn("['pointerdown', 'scroll', 'keydown']", tracking_init)
+
     @staticmethod
     def _srcset_paths(srcset):
         return [candidate.strip().split()[0] for candidate in srcset.split(",")]
