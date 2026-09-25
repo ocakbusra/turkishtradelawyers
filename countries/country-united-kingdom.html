@@ -599,6 +599,24 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
 
+        @media (max-width: 360px) {
+            .safeguard-item {
+                flex-direction: column;
+                gap: 8px;
+                padding: 20px;
+            }
+
+            .safeguard-number {
+                font-size: 2.5rem;
+            }
+
+            .safeguard-content {
+                flex: 0 1 auto;
+                min-width: 0;
+                overflow-wrap: anywhere;
+            }
+        }
+
         .safeguard-number {
             font-size: 4.5rem;
             font-weight: 800;
@@ -1233,7 +1251,7 @@
                 <h2 class="section-title">Operational Procedure</h2>
             </div>
             
-            <div class="modern-table-wrapper">
+            <div class="modern-table-wrapper responsive-table-scroll" role="region" aria-label="Country legal procedures comparison table" tabindex="0">
                 <table class="modern-table">
                     <thead>
                         <tr>

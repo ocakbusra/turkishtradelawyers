@@ -92,23 +92,36 @@ function initFloatingWhatsAppButton() {
     document.body.appendChild(whatsappButton);
 }
 
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+function initMobileNavigation() {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
 
-if (navToggle && navMenu) {
+    if (!navToggle || !navMenu) return;
+
+    const setMobileNavOpen = isOpen => {
+        navMenu.classList.toggle('active', isOpen);
+        navToggle.classList.toggle('active', isOpen);
+        navToggle.setAttribute('aria-controls', navMenu.id);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    setMobileNavOpen(navMenu.classList.contains('active'));
+
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        navToggle.classList.toggle('active');
+        setMobileNavOpen(!navMenu.classList.contains('active'));
     });
 
-    // Close mobile menu when clicking on a link
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
+            setMobileNavOpen(false);
         });
     });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileNavigation, { once: true });
+} else {
+    initMobileNavigation();
 }
 
 // Smooth Scroll for Navigation Links

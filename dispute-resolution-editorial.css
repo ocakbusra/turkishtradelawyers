@@ -290,3 +290,18 @@
         min-width: 700px;
     }
 }
+
+@media (max-width: 960px) {
+    .dispute-resolution-editorial .service-landing-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .dispute-resolution-editorial .service-landing-layout > .service-main-content,
+    .dispute-resolution-editorial .service-landing-layout > aside {
+        box-sizing: border-box;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+}

@@ -8995,3 +8995,73 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 .sidebar-lead-form[data-form-id="business-setup-sidebar"] .sidebar-form-submit:hover {
     background: var(--navy-dark);
 }
+
+/* Keep wide legal tables usable on touch screens and by keyboard. */
+.responsive-table-scroll {
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+    .pa-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pa-card {
+        box-sizing: border-box;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .pa-card-header {
+        min-width: 0;
+    }
+
+    .pa-card-header h3 {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .service-landing-layout {
+        grid-template-columns: minmax(0, 1fr);
+        min-width: 0;
+    }
+
+    .service-landing-layout > * {
+        box-sizing: border-box;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .service-main-content {
+        box-sizing: border-box;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        width: 100%;
+    }
+
+    .service-main-content .glass-card,
+    .service-main-content .legal-tabs-wrapper,
+    .service-main-content .legal-tab-content {
+        box-sizing: border-box;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .expert-grid {
+        grid-template-columns: minmax(0, 1fr);
+        min-width: 0;
+    }
+
+    .expert-card,
+    .expert-info {
+        min-width: 0;
+    }
+
+    .expert-info {
+        overflow-wrap: anywhere;
+    }
+}
