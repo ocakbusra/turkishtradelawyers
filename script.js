@@ -68,9 +68,41 @@ function enableClarity() {
 }
 
 function initCookieConsent() {
-    // Analytics and session recording load unconditionally.
-    enableAnalytics();
-    enableClarity();
+    const activateTracking = () => {
+        enableAnalytics();
+        enableClarity();
+    };
+
+    // Keep the homepage's first paint clear of tag initialization. The head
+    // stub queues gtag calls until the existing tags are loaded.
+    if (!document.querySelector('section#home.hero')) {
+        activateTracking();
+        return;
+    }
+
+    let trackingStarted = false;
+    const startTracking = () => {
+        if (trackingStarted) return;
+        trackingStarted = true;
+        activateTracking();
+    };
+    const startWhenIdle = () => {
+        if (trackingStarted) return;
+        if (typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(startTracking, { timeout: 3000 });
+        } else {
+            window.setTimeout(startTracking, 300);
+        }
+    };
+
+    if (document.readyState === 'complete') {
+        startWhenIdle();
+    } else {
+        window.addEventListener('load', startWhenIdle, { once: true });
+    }
+    ['pointerdown', 'scroll', 'keydown'].forEach(event => {
+        window.addEventListener(event, startTracking, { once: true, passive: true });
+    });
 }
 
 window.TTL_resetCookieConsent = function () {
