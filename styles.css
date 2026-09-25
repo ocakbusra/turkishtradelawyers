@@ -20,12 +20,28 @@
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@font-face {
+    font-family: 'Inter Fallback';
+    src: local('Arial');
+    font-style: normal;
+    font-weight: 400 600;
+    size-adjust: 107%;
+}
+
+@font-face {
+    font-family: 'Inter Fallback';
+    src: local('Arial Bold');
+    font-style: normal;
+    font-weight: 700 900;
+    size-adjust: 103%;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.7;
     color: var(--text-gray);
     overflow-x: clip;
@@ -41,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: var(--dark-blue);
@@ -179,7 +195,7 @@ a {
 }
 
 .logo-main {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--dark-blue);
@@ -188,7 +204,7 @@ a {
 }
 
 .logo-tagline {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.7rem;
     font-weight: 500;
     color: var(--text-gray);
@@ -355,7 +371,7 @@ a {
 
 /* Typography */
 .hero-heading {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 4rem;
     line-height: 1.1;
     font-weight: 800;
@@ -365,7 +381,7 @@ a {
 }
 
 .hero-subtext {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 1.125rem;
     line-height: 1.6;
     color: #475467;
@@ -439,7 +455,7 @@ a {
     background-color: #ffffff;
     color: var(--dark-blue);
     font-size: 0.7rem;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 800;
     padding: 2px 7px;
     border-radius: 10px;
@@ -547,7 +563,7 @@ iframe[title="chat widget"] {
 }
 
 .stat-number {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 2rem;
     font-weight: 800;
     color: var(--navy);
@@ -1202,7 +1218,7 @@ iframe[title="chat widget"] {
     font-weight: 700;
     color: var(--white);
     margin-bottom: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     width: 60px;
     height: 60px;
     display: inline-flex;
@@ -1955,7 +1971,7 @@ iframe[title="chat widget"] {
     border: 1px solid #D0D5DD;
     border-radius: 8px;
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     color: #101828;
     background: #F9FAFB;
     transition: var(--transition);
@@ -1999,7 +2015,7 @@ iframe[title="chat widget"] {
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     cursor: pointer;
     transition: var(--transition);
     margin-top: 8px;
@@ -2886,7 +2902,7 @@ iframe[title="chat widget"] {
     border-radius: 8px;
     background: #F5F7FA;
     color: #475467;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 0.92rem;
     font-weight: 500;
     line-height: 1.55;
@@ -2916,7 +2932,7 @@ iframe[title="chat widget"] {
     margin-bottom: 24px;
     padding-bottom: 10px;
     border-bottom: 2px solid var(--primary-blue);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .article-content h4 {
@@ -2932,7 +2948,7 @@ iframe[title="chat widget"] {
     line-height: 1.75;
     color: var(--text-gray);
     margin-bottom: 18px;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .article-content em {
@@ -2990,7 +3006,7 @@ iframe[title="chat widget"] {
     margin-bottom: 12px;
     padding-left: 20px;
     position: relative;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .bibliography-list li::before {
@@ -3242,7 +3258,7 @@ iframe[title="chat widget"] {
     margin-bottom: 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     /* Trying to mimic the premium feel if possible, but sticking to Inter */
 }
 
@@ -3286,7 +3302,7 @@ iframe[title="chat widget"] {
 
 .section-headline {
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 2.5rem;
     color: var(--dark-blue);
     margin-bottom: 16px;
@@ -4171,7 +4187,7 @@ iframe[title="chat widget"] {
 
 .service-landing-h1-sub {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 400;
     font-size: 1.15rem;
     letter-spacing: 0.02em;
@@ -5359,7 +5375,7 @@ iframe[title="chat widget"] {
     border: 1px solid #CBD5E1;
     border-radius: 8px;
     color: #101828;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -5376,7 +5392,7 @@ iframe[title="chat widget"] {
     border-radius: 8px;
     background: #2D4CC8;
     color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
@@ -5583,7 +5599,7 @@ iframe[title="chat widget"] {
     border: 1px solid #D0D5DD;
     background: #F9FAFB;
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     transition: var(--transition);
 }
 
@@ -5624,7 +5640,7 @@ iframe[title="chat widget"] {
     background: var(--navy);
     font-size: 1rem;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     transition: var(--transition);
 }
 
@@ -6203,7 +6219,7 @@ img[loading="lazy"][src] {
 }
 
 .legal-tab-btn {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 500;
     color: var(--text-color);
     background: transparent;
@@ -6231,7 +6247,7 @@ img[loading="lazy"][src] {
     display: none;
     padding: 32px; /* Generous internal padding */
     animation: fadeIn 0.4s ease-in-out;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     color: #334155; /* Soft dark gray */
 }
 
@@ -6250,7 +6266,7 @@ img[loading="lazy"][src] {
 
 /* Typographic Hierarchy (Inter) */
 .legal-tab-content h3, .tab-content-box h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     color: #0F172A;
@@ -6259,7 +6275,7 @@ img[loading="lazy"][src] {
 }
 
 .legal-tab-content h4, .tab-content-box h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600; /* Visual anchors for scanning */
     font-size: 1.125rem;
     color: #1E293B; /* Slightly darker than body text */
@@ -6377,7 +6393,7 @@ img[loading="lazy"][src] {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     color: var(--accent-color);
@@ -6467,7 +6483,7 @@ img[loading="lazy"][src] {
 
 .legal-modal-body, .modal-text-content {
     padding: 32px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 16px;
     font-weight: 400; /* Regular weight for body */
     color: #334155; /* Soft dark slate for reduced eye strain */
@@ -6490,7 +6506,7 @@ img[loading="lazy"][src] {
 /* Hierarchy & Weight for Subheadings */
 .legal-modal-body h4, 
 .modal-text-content h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600; /* Semi-Bold for clear hierarchy */
     color: #1E293B; /* Slightly darker than body text for contrast */
     font-size: 1.125rem; /* 18px */
@@ -6541,7 +6557,7 @@ img[loading="lazy"][src] {
     border: none;
     width: 100%;
     text-align: left;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600;
     color: var(--dark-blue);
     font-size: 1rem;
@@ -6715,7 +6731,7 @@ img[loading="lazy"][src] {
    ========================================================================== */
 
 .intro-card {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     color: #334155; /* Softer dark tone for body text to reduce eye strain */
 }
 
@@ -6758,7 +6774,7 @@ img[loading="lazy"][src] {
 
 /* Heading Hierarchy & Spacing */
 .intro-card h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 700; /* Bold */
     color: #0F172A; /* High contrast against the #334155 body text */
     margin-top: 0;
@@ -6767,7 +6783,7 @@ img[loading="lazy"][src] {
 
 /* Main Numbered Headings Spacing */
 .service-main-content > h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 700;
     color: #0F172A;
     margin-top: 3.5rem; /* Large breathing room from previous section */
@@ -6775,7 +6791,7 @@ img[loading="lazy"][src] {
 }
 
 .service-main-content > p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 16px;
     line-height: 1.65;
     color: #334155;
@@ -7028,7 +7044,7 @@ img[loading="lazy"][src] {
 .tax-incentives-article select,
 .tax-incentives-article textarea,
 .tax-incentives-article button {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .tax-topic-tags {
@@ -7280,7 +7296,7 @@ body:has(.income-tax-reference) .breadcrumb {
 
 .debt-fullwidth-inner h2,
 .dispute-fullwidth-inner h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 700;
     color: #0F172A;
     margin-top: 3.5rem;
@@ -7294,7 +7310,7 @@ body:has(.income-tax-reference) .breadcrumb {
 
 .debt-fullwidth-inner > p,
 .dispute-fullwidth-inner > p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 16px;
     line-height: 1.65;
     color: #334155;
@@ -7325,7 +7341,7 @@ body:has(.income-tax-reference) .breadcrumb {
 
 .sidebar-lead-form label {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600;
     font-size: 0.8rem;
     color: #1E293B;
@@ -7336,7 +7352,7 @@ body:has(.income-tax-reference) .breadcrumb {
 .sidebar-lead-form input[type="text"],
 .sidebar-lead-form input[type="email"] {
     width: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: #1E293B;
@@ -7365,7 +7381,7 @@ body:has(.income-tax-reference) .breadcrumb {
     flex-grow: 1;
     min-height: 120px;
     resize: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: #1E293B;
@@ -7385,7 +7401,7 @@ body:has(.income-tax-reference) .breadcrumb {
 
 .sidebar-form-submit {
     width: 100%;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     color: #ffffff;
@@ -7890,7 +7906,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
     border: none;
     padding: 0;
     color: var(--accent-color, var(--primary-blue));
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 600;
     font-size: 0.9rem;
     display: inline-flex;
@@ -7951,7 +7967,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 }
 
 .recovery-flow-head h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: #0F172A;
@@ -7959,7 +7975,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 }
 
 .recovery-flow-head p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #475569;
@@ -7998,7 +8014,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
     border-radius: 50%;
     background: var(--navy);
     color: #FFFFFF;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     display: flex;
@@ -8026,7 +8042,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 }
 
 .recovery-flow-box h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.35;
@@ -8043,7 +8059,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 .recovery-flow-box li {
     position: relative;
     padding-left: 18px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.9rem;
     line-height: 1.55;
     color: #475569;
@@ -8064,7 +8080,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
     margin-top: 26px;
     padding-top: 18px;
     border-top: 1px solid var(--border-gray);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-size: 0.85rem;
     line-height: 1.6;
     color: #64748B;
@@ -8430,7 +8446,7 @@ form[data-form-id="debt-collection-sidebar"] .sidebar-form-submit:hover {
 }
 
 .incorp-flow-title {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Inter Fallback', sans-serif;
     font-weight: 700;
     color: var(--dark-blue);
     font-size: 1.6rem;

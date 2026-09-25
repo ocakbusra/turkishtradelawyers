@@ -46,10 +46,13 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://embed.tawk.to">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" as="image" href="hero-office-bosphorus.webp"
+        imagesrcset="hero-office-bosphorus-480.webp 480w, hero-office-bosphorus-640.webp 640w, hero-office-bosphorus-768.webp 768w, hero-office-bosphorus.webp 1024w"
+        imagesizes="(max-width: 1024px) calc(100vw - 40px), 600px" media="(min-width: 1025px)" fetchpriority="high">
 
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=optional">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=optional" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=optional"></noscript>
     
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -208,7 +211,8 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="logo-icon">
+                <img src="logo.webp" srcset="logo-128.webp 128w, logo.webp 487w" sizes="46px"
+                    width="487" height="513" alt="Turkish Trade Lawyers Logo" class="logo-icon">
                 <span class="logo-text">
                     <span class="logo-main">Turkish Trade Lawyers</span>
                     <span class="logo-tagline">Legal Excellence in TÜRKİYE</span>
@@ -269,8 +273,10 @@
             </div>
             <div class="hero-content-right">
                 <div class="hero-image-frame">
-                    <img src="hero-office-bosphorus.webp" alt="Modern Law Office in Türkiye with Bosphorus View"
-                        class="hero-main-image">
+                    <img src="hero-office-bosphorus.webp"
+                        srcset="hero-office-bosphorus-480.webp 480w, hero-office-bosphorus-640.webp 640w, hero-office-bosphorus-768.webp 768w, hero-office-bosphorus.webp 1024w"
+                        sizes="(max-width: 1024px) calc(100vw - 40px), 600px" width="1024" height="1024"
+                        decoding="async" alt="Modern Law Office in Türkiye with Bosphorus View" class="hero-main-image">
                     <div class="hero-floating-card">
                         <div class="floating-icon-wrapper">
                             <i class="fas fa-check-circle"></i>
@@ -1173,7 +1179,9 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="/index.html#home" class="footer-logo">
-                        <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
+                        <img src="logo.webp" srcset="logo-128.webp 128w, logo.webp 487w" sizes="56px"
+                            width="487" height="513" loading="lazy" decoding="async"
+                            alt="Turkish Trade Lawyers Logo" class="footer-logo-icon">
                         <span class="footer-logo-text">
                             <span class="footer-logo-main">Turkish Trade Lawyers</span>
                             <span class="footer-logo-tagline">Legal Excellence in Türkiye</span>
