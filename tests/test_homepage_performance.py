@@ -79,6 +79,7 @@ class HomepagePerformanceTests(unittest.TestCase):
 
         self.assertIsNotNone(critical)
         self.assertLess(len(critical.group(1).encode("utf-8")), 15_000)
+        self.assertIn("box-sizing: border-box", critical.group(1))
         for selector in (".navbar", ".nav-menu", ".hero-heading", ".hero-subtext", ".hero-main-image"):
             with self.subTest(selector=selector):
                 self.assertIn(selector, critical.group(1))
