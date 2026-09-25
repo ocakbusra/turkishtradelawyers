@@ -100,7 +100,7 @@ function initCookieConsent() {
     } else {
         window.addEventListener('load', startWhenIdle, { once: true });
     }
-    ['pointerdown', 'scroll', 'keydown'].forEach(event => {
+    ['pointerdown', 'touchstart', 'wheel', 'keydown'].forEach(event => {
         window.addEventListener(event, startTracking, { once: true, passive: true });
     });
 }

@@ -166,7 +166,7 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("enableClarity();", tracking_init)
         self.assertIn("requestIdleCallback", tracking_init)
         self.assertIn("addEventListener('load', startWhenIdle", tracking_init)
-        self.assertIn("['pointerdown', 'scroll', 'keydown']", tracking_init)
+        self.assertIn("['pointerdown', 'touchstart', 'wheel', 'keydown']", tracking_init)
 
     @staticmethod
     def _srcset_paths(srcset):
