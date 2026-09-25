@@ -68,10 +68,26 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("size-adjust: 107%", self.styles)
         self.assertIn("size-adjust: 103%", self.styles)
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
+
+    def test_homepage_inter_font_is_preloaded_locally_for_desktop(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
-        self.assertIn("&display=optional", html)
-        self.assertIn('media="(min-width: 769px)"', html)
-        self.assertIn("this.media='(min-width: 769px)'", html)
+        font_preloads = re.findall(r'<link rel="preload"[^>]*as="font"[^>]*>', html)
+        font_stylesheet = re.search(
+            r'<style media="\(min-width: 769px\)">(.*?)</style>', html, re.S
+        )
+
+        self.assertEqual(len(font_preloads), 2)
+        self.assertTrue(all('media="(min-width: 769px)"' in tag for tag in font_preloads))
+        self.assertTrue(all('crossorigin' in tag for tag in font_preloads))
+        self.assertIsNotNone(font_stylesheet)
+        self.assertIn("font-weight: 100 900", font_stylesheet.group(1))
+        self.assertEqual(font_stylesheet.group(1).count("font-display: optional"), 2)
+        self.assertIn("fonts/inter-latin.woff2", font_stylesheet.group(1))
+        self.assertIn("fonts/inter-latin-ext.woff2", font_stylesheet.group(1))
+        self.assertNotIn("fonts.googleapis.com/css2?family=Inter", html)
+        self.assertNotIn("fonts.gstatic.com", html)
+        self.assertLess((ROOT / "fonts/inter-latin.woff2").stat().st_size, 70_000)
+        self.assertLess((ROOT / "fonts/inter-latin-ext.woff2").stat().st_size, 10_000)
 
     def test_homepage_critical_styles_are_inline_and_shared_css_is_nonblocking(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
