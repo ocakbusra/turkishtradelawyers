@@ -41,29 +41,14 @@
     </script>
 
     <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://embed.tawk.to">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="hero-office-bosphorus.webp"
         imagesrcset="hero-office-bosphorus-480.webp 480w, hero-office-bosphorus-640.webp 640w, hero-office-bosphorus-768.webp 768w, hero-office-bosphorus.webp 1024w"
         imagesizes="(max-width: 1024px) calc(100vw - 40px), 600px" media="(min-width: 1025px)" fetchpriority="high">
-
-    <!-- Keep desktop text on the same metric-matched local face used on mobile. -->
-    <style media="(min-width: 769px)">
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400 600;
-            src: local('Arial');
-            size-adjust: 107%;
-        }
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700 900;
-            src: local('Arial Bold');
-            size-adjust: 103%;
-        }
-    </style>
 
     <link rel="preload" href="fonts/fa-solid-subset.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     <link rel="preload" href="fonts/fa-brands-subset.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
@@ -85,31 +70,17 @@
             --border-gray: #E4E7EC;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial');
-            font-style: normal;
-            font-weight: 400 600;
-            size-adjust: 107%;
-        }
-        @font-face {
-            font-family: 'Inter Fallback';
-            src: local('Arial Bold');
-            font-style: normal;
-            font-weight: 700 900;
-            size-adjust: 103%;
-        }
         html { scroll-behavior: smooth; }
         body {
             overflow-x: clip;
             color: var(--text-gray);
-            font: 16px/1.7 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font: 16px/1.7 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         h1, h2, h3, h4, h5, h6 {
             color: var(--dark-blue);
-            font-family: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             font-weight: 700;
             line-height: 1.2;
             letter-spacing: -0.02em;
@@ -152,8 +123,8 @@
         .nav-logo:hover .logo-icon { transform: rotate(-5deg) scale(1.05); }
         .logo-icon { width: 46px; height: 46px; object-fit: contain; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .logo-text { display: flex; flex-direction: column; gap: 2px; }
-        .logo-main { color: var(--dark-blue); font: 700 1.2rem/1.2 'Inter', 'Inter Fallback', sans-serif; letter-spacing: -0.01em; }
-        .logo-tagline { color: var(--text-gray); font: 500 0.7rem 'Inter', 'Inter Fallback', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
+        .logo-main { color: var(--dark-blue); font: 700 1.2rem/1.2 'Inter', sans-serif; letter-spacing: -0.01em; }
+        .logo-tagline { color: var(--text-gray); font: 500 0.7rem 'Inter', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; }
         .nav-menu { display: flex; gap: 4px; align-items: center; list-style: none; }
         .nav-link { position: relative; padding: 12px 20px; border-radius: 8px; color: var(--text-gray); font-size: 0.92rem; font-weight: 500; transition: all 0.3s ease; }
         .nav-link::after { position: absolute; right: 20px; bottom: 8px; left: 20px; height: 2px; transform: scaleX(0); transform-origin: center; border-radius: 2px; background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal)); content: ''; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -175,8 +146,8 @@
         .hero-content-right { position: relative; display: flex; flex: 1; justify-content: flex-end; }
         .hero-badge-pill { display: inline-flex; gap: 8px; margin-bottom: 24px; padding: 8px 16px; align-items: center; border-radius: 20px; background: #E0E7FF; color: var(--primary-blue); font-size: 0.9rem; font-weight: 600; }
         .hero-badge-pill i { font-size: 0.9rem; }
-        .hero-heading { margin-bottom: 24px; color: var(--dark-blue); font: 800 4rem/1.1 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.03em; }
-        .hero-subtext { max-width: 500px; margin-bottom: 40px; color: #475467; font: 1.125rem/1.6 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .hero-heading { margin-bottom: 24px; color: var(--dark-blue); font: 800 4rem/1.1 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.03em; }
+        .hero-subtext { max-width: 500px; margin-bottom: 40px; color: #475467; font: 1.125rem/1.6 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         .hero-cta-group { display: flex; gap: 16px; margin-bottom: 60px; }
         .btn-primary-new, .btn-outline-new { padding: 16px 32px; border-radius: 8px; font-size: 1rem; font-weight: 600; transition: all 0.3s ease; }
         .btn-primary-new { background-color: var(--navy); color: #fff; box-shadow: 0 4px 6px rgba(30, 58, 138, 0.2); }
@@ -184,13 +155,13 @@
         .btn-outline-new { padding: 14px 30px; border: 2px solid var(--navy); background-color: transparent; color: var(--navy); }
         .btn-outline-new:hover { transform: translateY(-2px); background-color: #EFF6FF; }
         .btn-whatsapp-hero { position: relative; display: inline-flex; width: 52px; height: 52px; flex-shrink: 0; align-items: center; justify-content: center; border-radius: 50%; background-color: #25D366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); color: #fff; font-size: 1.5rem; transition: all 0.3s ease; }
-        .btn-whatsapp-hero::after { position: absolute; top: -4px; right: -8px; padding: 2px 7px; border: 1px solid #e2e8f0; border-radius: 10px; background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); color: var(--dark-blue); content: '24/7'; font: 800 0.7rem 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.02em; pointer-events: none; }
+        .btn-whatsapp-hero::after { position: absolute; top: -4px; right: -8px; padding: 2px 7px; border: 1px solid #e2e8f0; border-radius: 10px; background-color: #fff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); color: var(--dark-blue); content: '24/7'; font: 800 0.7rem 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: -0.02em; pointer-events: none; }
         .btn-whatsapp-hero:hover { transform: translateY(-2px) scale(1.08); background-color: #1EBE57; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); color: #fff; }
         .btn-whatsapp-hero:hover::after { transform: scale(1.05); }
         .floating-whatsapp-button { position: fixed; right: 24px; bottom: 24px; z-index: 2147483000; display: inline-flex; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; background-color: #25D366; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35); color: #fff; font-size: 1.7rem; text-decoration: none; transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease; }
         .hero-stats-row { display: flex; gap: 32px; align-items: center; }
         .hero-stat { display: flex; flex-direction: column; }
-        .stat-number { margin-bottom: 4px; color: var(--navy); font: 800 2rem/1 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .stat-number { margin-bottom: 4px; color: var(--navy); font: 800 2rem/1 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
         .stat-label { color: #64748B; font-size: 0.875rem; font-weight: 500; }
         .hero-stat-divider { width: 1px; height: 40px; background-color: #CBD5E1; }
         .hero-image-frame { position: relative; width: 100%; max-width: 600px; aspect-ratio: 1 / 1; border-radius: 24px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
