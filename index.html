@@ -231,6 +231,27 @@
             .hero-stats-row { flex-direction: column; gap: 24px; }
             .hero-stat-divider { width: 40px; height: 1px; }
         }
+
+        /* Keep all homepage copy on the same Inter face as the shared guide header. */
+        body,
+        body p,
+        body li,
+        body a,
+        body span,
+        body div,
+        body button,
+        body label,
+        body input,
+        body textarea,
+        body select,
+        body h1,
+        body h2,
+        body h3,
+        body h4,
+        body h5,
+        body h6 {
+            font-family: 'Inter', sans-serif !important;
+        }
     </style>
     <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" fetchpriority="low">
     <noscript><link rel="stylesheet" href="styles.css"></noscript>
@@ -385,9 +406,8 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">
-                <img src="logo.webp" srcset="logo-128.webp 128w, logo.webp 487w" sizes="46px"
-                    width="487" height="513" alt="Turkish Trade Lawyers Logo" class="logo-icon">
+            <a href="index.html#home" class="nav-logo">
+                <img src="logo.webp" alt="Turkish Trade Lawyers Logo" class="logo-icon">
                 <span class="logo-text">
                     <span class="logo-main">Turkish Trade Lawyers</span>
                     <span class="logo-tagline">Legal Excellence in TÜRKİYE</span>
@@ -399,9 +419,9 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#why-us" class="nav-link">Why Us</a></li>
                 <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="ourexperts.html" class="nav-link">Our Experts</a></li>
                 <li><a href="guides.html" class="nav-link">Guides</a></li>
