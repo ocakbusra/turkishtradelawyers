@@ -762,10 +762,11 @@
         // Initialize Map
         const map = L.map('europe-map').setView([40.0, 40.0], 3);
 
-        // Add Tile Layer (Using CartoDB Positron for a clean look)
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            subdomains: 'abcd',
+        // Add a public OpenStreetMap layer. It does not require a Google Maps
+        // or third-party tile API key, so the map remains available to visitors.
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abc',
             maxZoom: 19
         }).addTo(map);
 

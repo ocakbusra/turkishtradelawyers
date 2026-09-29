@@ -1,0 +1,297 @@
+/* Page-scoped editorial layer for the KVKK services page. The structural
+   language follows setup-business-editorial.css while the content remains
+   specific to Turkish data protection services. */
+
+.compliance-data-protection-editorial {
+    --compliance-ink: #101828;
+    --compliance-muted: #475467;
+    --compliance-paper: #FFFFFF;
+    --compliance-wash: var(--light-gray, #F5F7FA);
+    --compliance-border: var(--border-gray, #E4E7EC);
+    --compliance-navy: var(--navy, #1E3A8A);
+    --compliance-navy-dark: var(--navy-dark, #142A63);
+    --compliance-blue: var(--primary-blue, #2D4CC8);
+}
+
+.compliance-data-protection-editorial .service-landing-title {
+    max-width: 780px;
+    font-size: clamp(3.2rem, 5.45vw, 5.45rem);
+}
+
+.compliance-data-protection-editorial .service-landing-h1-sub {
+    max-width: 720px;
+}
+
+.compliance-data-protection-editorial .compliance-entry-map {
+    min-height: 470px;
+}
+
+.compliance-data-protection-editorial .compliance-entry-map .business-entry-route {
+    min-height: 96px;
+}
+
+.compliance-data-protection-editorial .service-landing-pill {
+    text-align: center;
+}
+
+.compliance-data-protection-editorial .service-landing-pill strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--compliance-navy);
+    font-size: .74rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.compliance-data-protection-editorial .compliance-service-layout {
+    align-items: start;
+}
+
+.compliance-data-protection-editorial .service-sidebar-card .service-checklist li::before {
+    background: var(--compliance-blue);
+}
+
+.compliance-data-protection-editorial .compliance-flow .incorp-flow-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.compliance-data-protection-editorial .compliance-flow .incorp-flow-col {
+    padding: 20px;
+}
+
+.compliance-data-protection-editorial .compliance-flow .incorp-flow-step {
+    font-size: .84rem;
+}
+
+.compliance-data-protection-editorial .compliance-flow .incorp-flow-phase-title {
+    font-size: .92rem;
+}
+
+.compliance-data-protection-editorial .compliance-facts {
+    margin-top: 32px;
+    padding: clamp(28px, 4vw, 48px);
+    border: 1px solid var(--compliance-border);
+    background: var(--compliance-wash);
+}
+
+.compliance-data-protection-editorial .compliance-facts h3 {
+    margin: 0 0 22px;
+    color: var(--compliance-ink);
+    font-size: clamp(1.55rem, 3vw, 2.3rem);
+    font-weight: 500;
+    letter-spacing: -.035em;
+}
+
+.compliance-data-protection-editorial .fact-grid,
+.compliance-data-protection-editorial .service-workstream-grid,
+.compliance-data-protection-editorial .fine-grid,
+.compliance-data-protection-editorial .source-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--compliance-border);
+    background: var(--compliance-border);
+}
+
+.compliance-data-protection-editorial .fact-item,
+.compliance-data-protection-editorial .workstream-card,
+.compliance-data-protection-editorial .fine-item,
+.compliance-data-protection-editorial .source-card {
+    padding: 24px;
+    background: #FFFFFF;
+}
+
+.compliance-data-protection-editorial .fact-item strong,
+.compliance-data-protection-editorial .fine-item strong,
+.compliance-data-protection-editorial .workstream-card h3,
+.compliance-data-protection-editorial .source-card strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--compliance-ink);
+}
+
+.compliance-data-protection-editorial .fact-item span,
+.compliance-data-protection-editorial .fine-item span,
+.compliance-data-protection-editorial .source-card a {
+    color: var(--compliance-muted);
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.compliance-data-protection-editorial .service-workstream-grid {
+    margin: 30px 0 34px;
+}
+
+.compliance-data-protection-editorial .workstream-card {
+    position: relative;
+    padding: 30px 28px 28px 76px;
+}
+
+.compliance-data-protection-editorial .workstream-card::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    color: var(--compliance-blue);
+    font-size: .73rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.compliance-data-protection-editorial .workstream-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+}
+
+.compliance-data-protection-editorial .workstream-card p {
+    margin: 0 0 14px;
+    color: var(--compliance-muted);
+    font-size: .94rem !important;
+    line-height: 1.65 !important;
+}
+
+.compliance-data-protection-editorial .workstream-card ul,
+.compliance-data-protection-editorial .service-list {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--compliance-muted);
+}
+
+.compliance-data-protection-editorial .workstream-card li,
+.compliance-data-protection-editorial .service-list li {
+    margin: 7px 0;
+    font-size: .9rem !important;
+    line-height: 1.55 !important;
+}
+
+.compliance-data-protection-editorial .service-inline-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    color: var(--compliance-blue);
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+
+.compliance-data-protection-editorial .service-inline-cta:hover {
+    color: var(--compliance-navy);
+}
+
+.compliance-data-protection-editorial .compliance-callout {
+    margin: 34px 0;
+    padding: 28px 30px;
+    border: 1px solid var(--compliance-border);
+    border-left: 4px solid var(--compliance-navy);
+    background: var(--compliance-wash);
+}
+
+.compliance-data-protection-editorial .compliance-callout h3 {
+    margin: 0 0 10px;
+    color: var(--compliance-ink);
+    font-size: 1.35rem;
+}
+
+.compliance-data-protection-editorial .compliance-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.compliance-data-protection-editorial .fine-grid {
+    margin-top: 28px;
+}
+
+.compliance-data-protection-editorial .fine-item strong {
+    color: var(--compliance-navy);
+}
+
+.compliance-data-protection-editorial details {
+    border-top: 1px solid var(--compliance-border);
+}
+
+.compliance-data-protection-editorial details:last-child {
+    border-bottom: 1px solid var(--compliance-border);
+}
+
+.compliance-data-protection-editorial summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    cursor: pointer;
+    color: var(--compliance-ink);
+    font-weight: 700;
+    list-style: none;
+}
+
+.compliance-data-protection-editorial summary::-webkit-details-marker {
+    display: none;
+}
+
+.compliance-data-protection-editorial summary::after {
+    content: '+';
+    color: var(--compliance-blue);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.compliance-data-protection-editorial details[open] summary::after {
+    content: '−';
+}
+
+.compliance-data-protection-editorial details p {
+    max-width: 80ch;
+    padding: 0 36px 22px 0;
+    color: var(--compliance-muted);
+}
+
+.compliance-data-protection-editorial .source-grid {
+    margin-top: 28px;
+}
+
+.compliance-data-protection-editorial .source-card a {
+    display: block;
+    overflow-wrap: anywhere;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.compliance-data-protection-editorial .compliance-final-cta {
+    background: var(--compliance-wash);
+}
+
+.compliance-data-protection-editorial .service-page-cta-card {
+    border-top: 4px solid var(--compliance-navy);
+}
+
+.compliance-data-protection-editorial .service-cta-form .form-submit-btn,
+.compliance-data-protection-editorial .sidebar-form-submit {
+    background: var(--compliance-navy);
+}
+
+.compliance-data-protection-editorial .service-cta-form .form-submit-btn:hover,
+.compliance-data-protection-editorial .sidebar-form-submit:hover {
+    background: var(--compliance-navy-dark);
+}
+
+@media (max-width: 1100px) {
+    .compliance-data-protection-editorial .compliance-flow .incorp-flow-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 920px) {
+    .compliance-data-protection-editorial .fact-grid,
+    .compliance-data-protection-editorial .service-workstream-grid,
+    .compliance-data-protection-editorial .fine-grid,
+    .compliance-data-protection-editorial .source-grid,
+    .compliance-data-protection-editorial .compliance-flow .incorp-flow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .compliance-data-protection-editorial .service-landing-title {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+}
