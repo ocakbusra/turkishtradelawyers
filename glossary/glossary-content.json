@@ -1,0 +1,2188 @@
+{
+  "absolute-nullity": {
+    "scope": "Separate an agreement that is void from one that a party may avoid. A signature, payment or later performance does not necessarily cure a defect in mandatory form, legality or subject matter.",
+    "records": "Review the instrument, the allegedly invalid clause and the mandatory rule. Whether the remaining agreement survives requires a separate assessment.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "accrual": {
+    "scope": "Accrual is the stage at which an assessed and notified tax becomes payable, rather than the movement of cash. Accounting accrual and procedural tax accrual should not be used interchangeably.",
+    "records": "Keep the declaration or assessment, notification date, accrual slip and payment schedule; an objection or litigation deadline may arise before collection starts.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "actio-pauliana": {
+    "scope": "A creditor's cancellation-of-disposition action targets a debtor's transaction that frustrates collection. It is different from asking a court to declare that a simulated transaction was never genuine.",
+    "records": "Review the debt's origin, enforcement file, insolvency evidence, transaction date, consideration and relationship between debtor and transferee. The available route determines the conditions and deadline.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "action-for-restitution": {
+    "scope": "Restitution concerns money paid through enforcement that the payer alleges was not owed. It is distinct from a negative declaratory action brought before payment.",
+    "records": "Preserve the payment receipt, enforcement notices and documents disproving the debt. Timing is important; do not assume an ordinary contract limitation period governs this remedy.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "advance-payment": {
+    "scope": "An advance funds future performance; it is not automatically a non-refundable deposit or a withdrawal fee. The contract should say how the amount is credited and when repayment becomes due.",
+    "records": "Match the transfer reference to the contract and invoice. Before paying, define milestones, acceptance evidence, refund triggers and any bank guarantee securing repayment.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "announcement": {
+    "scope": "A trade-registry announcement can affect when registered information is opposable to third parties. An internal company resolution and its public announcement are separate steps.",
+    "records": "Check the relevant registry entry, Gazette publication and dates. A website notice or an email to one counterparty does not replace a legally required publication.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "annual-leave": {
+    "scope": "Annual paid leave generally begins after one year of service, including the probation period. Statutory minimums depend on service and protected age categories; unused leave is not simply replaced with cash during continuing employment.",
+    "records": "Keep signed leave records and the service history. On termination, assess unused leave separately from severance and notice pay.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "annulment-of-objection": {
+    "scope": "When a debtor objects to an ordinary payment order, the creditor may need a merits action to annul the objection. This differs from lifting an objection before an enforcement court using qualifying documents.",
+    "records": "Review the objection's service date, invoices, delivery evidence and contract. Assess mandatory mediation and the remedy's own deadline before choosing the forum.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "anti-corruption": {
+    "scope": "Bribery and related offences require a criminal-law assessment; an ordinary commercial contract does not authorise an improper payment. Risks can arise through agents, consultants and intermediaries as well as employees.",
+    "records": "Record the recipient, purpose, approval, invoice and actual service for each unusual payment. Escalate requests involving public officials or unexplained success fees before payment.",
+    "sources": [
+      {
+        "label": "Turkish Penal Code No. 5237",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5237.pdf"
+      }
+    ]
+  },
+  "apostille": {
+    "scope": "An apostille authenticates a public document's signature, official capacity and seal. It does not confirm that the document's contents are true or that a corporate signatory had authority for a transaction.",
+    "records": "Confirm that the convention operates between the issuing and receiving jurisdictions, select the competent authority for the document, and check translation and receiving-office requirements.",
+    "sources": [
+      {
+        "label": "HCCH: Apostille Convention and country authorities",
+        "url": "https://www.hcch.net/en/instruments/conventions/specialised-sections/apostille"
+      }
+    ]
+  },
+  "articles-of-association": {
+    "scope": "Articles of association are the company's constitutional document. A shareholders' agreement is a separate contract and cannot replace mandatory corporate rules or required registry formalities.",
+    "records": "Check company type, capital, representation powers, transfer restrictions and reserved matters against the registered text before relying on a private agreement.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "asset-purchase": {
+    "scope": "An asset purchase transfers identified assets, whereas a share purchase changes ownership of the company. Liabilities, employment, licences and an enterprise transfer may trigger rules beyond the agreed asset list.",
+    "records": "Prepare an asset and liability schedule, title and security searches, consent matrix and employee analysis. Do not assume every permit follows the assets automatically.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "assignment-of-receivables": {
+    "scope": "Assignment transfers a receivable rather than the underlying contract as a whole. Written form, contractual restrictions and the debtor's available defences require review.",
+    "records": "Identify each receivable, payment history and security; notify the debtor appropriately and document who may receive payment after the transfer.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "assignment": {
+    "scope": "Distinguish assignment of a claim from transfer of a contract or assumption of debt. These transactions change different legal relationships and may require different consents.",
+    "records": "Map the outgoing party, incoming party, debtor and continuing obligations. Record the agreed effective date, required form and any retained responsibility.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "assumption-of-debt": {
+    "scope": "An internal promise to pay another person's debt does not necessarily release the original debtor against the creditor. External assumption must be assessed through the creditor relationship.",
+    "records": "Document creditor consent, remaining guarantees and security, and whether the original debtor is released. Separate payment assistance from an actual substitution of debtor.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "aval": {
+    "scope": "An aval is a guarantee associated with a negotiable instrument and differs from an ordinary suretyship. Its form, placement and the person guaranteed matter.",
+    "records": "Examine the original instrument and signature, identify the guaranteed debtor and amount, and assess presentment and recourse requirements before enforcement.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "balance-sheet": {
+    "scope": "The balance sheet reports assets, liabilities and equity at a stated date. It is not a cash-flow forecast or proof that assets can be realised at their recorded value.",
+    "records": "Review accounting notes, related-party balances, contingent liabilities and subsequent events alongside the statements when assessing solvency or an acquisition price.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "bankruptcy-administration": {
+    "scope": "The bankruptcy administration manages the estate within the insolvency procedure; it is different from the company's former management and from a concordat commissioner.",
+    "records": "Identify the estate file, office holders, creditor-meeting decisions and published notices. Direct claim filings and requests for information to the competent insolvency office.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "bankruptcy": {
+    "scope": "Bankruptcy creates a collective process for the debtor's estate rather than a race between individual creditors. A contractual payment default does not by itself mean a bankruptcy order exists.",
+    "records": "Verify the actual court order and estate notice, file the claim with supporting documents, and assess security and ranking before estimating recovery.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "barter-agreement": {
+    "scope": "Barter exchanges goods or other agreed performance instead of an ordinary cash price. Each side's delivery, defect and acceptance obligations must be specified.",
+    "records": "Define quantities, valuation, delivery dates, taxes and the remedy if one side performs first but the other defaults. Retain proof of both deliveries.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "bilateral-investment-treaty": {
+    "scope": "Treaty protection depends on an applicable treaty, a qualifying investor and investment, and the dispute provisions. A commercial disagreement with a private supplier is not automatically a treaty claim against the state.",
+    "records": "Check nationality, ownership, investment dates, treaty status, exclusions and dispute prerequisites before choosing a litigation or arbitration route.",
+    "sources": [
+      {
+        "label": "UNCTAD: investment treaty texts and status",
+        "url": "https://investmentpolicy.unctad.org/international-investment-agreements/countries/214/turkiye"
+      }
+    ]
+  },
+  "bill-of-exchange": {
+    "scope": "A bill of exchange contains a payment order and is subject to formal requirements. Acceptance, endorsement and aval create different positions within the instrument.",
+    "records": "Preserve the original, maturity and presentment records; verify the liable signatories and applicable protest or recourse steps before starting collection.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "bill-of-lading": {
+    "scope": "A bill of lading evidences the carriage relationship and may also control delivery of cargo. It should be distinguished from a non-negotiable sea waybill.",
+    "records": "Compare consignee and endorsement details, the original-document requirement, freight terms and the carrier's reservations with the sales contract and insurance documents.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "board-of-directors-resolution-book": {
+    "scope": "A resolution book records board decisions; it does not create authority for matters that belong to another corporate organ. Recording, authentication and electronic-book requirements depend on the applicable rules.",
+    "records": "Keep meeting notices, attendance, votes, conflicts and attachments with the decision. Do not backdate entries to fill a gap in the company's record.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "board-of-directors": {
+    "scope": "The board manages and represents a joint-stock company within the statutory framework. Delegation does not dispose of duties reserved to the board or create immunity for a culpable breach.",
+    "records": "Review appointment terms, registered representation powers, delegations, conflicts and minutes. Separate a company's debt from any personal-liability claim against a board member.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "board-of-partners": {
+    "scope": "In a limited company, matters reserved to the general assembly of partners should be separated from day-to-day management. Informal agreement among owners may not satisfy a required resolution.",
+    "records": "Check the articles, meeting or written-decision procedure, voting thresholds and any filing requirement for the specific matter.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "branch-office": {
+    "scope": "A branch is part of the foreign parent rather than a separate Turkish company. The parent's obligations, representation and records therefore matter when structuring the Turkish operation.",
+    "records": "Prepare parent registry documents, a branch-opening decision, representative authority and required Turkish-use authentication; assess tax and sector permissions separately.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "brokerage-agreement": {
+    "scope": "A broker facilitates an opportunity or agreement; an agent may have a continuing commercial relationship. The agreed commission trigger should identify the transaction and the broker's role.",
+    "records": "Record exclusivity, duration, expenses and when commission is earned. Check mandatory form for the transaction, especially real-estate brokerage.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "call-option": {
+    "scope": "A call option gives the holder an agreed right to buy, rather than an immediate transfer. Exercise must comply with the contract and any mandatory transfer formalities.",
+    "records": "Define the assets or shares, price mechanism, exercise window, notice method and completion steps; check restrictions on share transfer.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "capital-commitment": {
+    "scope": "Subscribed capital and paid-in capital are different. A shareholder's commitment must be assessed against the company type, subscription documents and statutory payment rules.",
+    "records": "Keep the subscription, payment evidence and calls for unpaid capital. Do not describe an unpaid commitment as available cash in a solvency review.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "carriage-agreement": {
+    "scope": "Identify the transport mode before choosing the liability regime. Domestic road carriage, international road carriage, sea and air transport may follow different statutory or treaty rules.",
+    "records": "Retain the carriage document, delivery reservations, damage photographs and notice dates. The sales contract's risk allocation does not alone decide the carrier's liability.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "change-of-company-type": {
+    "scope": "A statutory conversion changes company type through a corporate procedure, rather than selling each asset individually. Whether the proposed conversion is permitted and what reports are needed must be checked.",
+    "records": "Prepare the conversion plan, opening balance sheet, required reports, approvals and registry filings; review creditor and employee consequences.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "cheque": {
+    "scope": "A cheque is a payment instrument with strict formal and presentment rules. It is different from a promise to pay on a future maturity date.",
+    "records": "Keep the original, bank presentment record and dishonour information. Civil collection and any cheque-law complaint have separate conditions and deadlines.",
+    "sources": [
+      {
+        "label": "Cheque Law No. 5941",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5941.pdf"
+      }
+    ]
+  },
+  "circumvention-of-law": {
+    "scope": "An arrangement may be assessed by its substance where its structure attempts to evade a mandatory rule. Calling a transaction a different name does not determine its legal classification.",
+    "records": "Review the actual economic purpose, parties, performance and protected rule before relying on an artificial contractual label.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "collusion-simulation": {
+    "scope": "A simulated transaction conceals the parties' true intention. The apparent transaction and any hidden agreement must be analysed separately, including mandatory form for the hidden arrangement.",
+    "records": "Preserve payment flows, possession, correspondence and the parties' relationship; third-party reliance and evidence rules can affect the remedy.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "commercial-enterprise-pledge": {
+    "scope": "Security over movable business assets requires identification of the assets and compliance with the applicable pledge-registration route. It does not transfer ownership of the enterprise.",
+    "records": "Check the parties' eligibility, asset description, register entry, prior security and enforcement provisions before treating the lender as secured.",
+    "sources": [
+      {
+        "label": "Movable Pledge in Commercial Transactions Law No. 6750",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6750.pdf"
+      }
+    ]
+  },
+  "commercial-representative": {
+    "scope": "A commercial representative's authority is broader than a routine employee's permission to act. Statutory authority and restrictions should be distinguished from internal spending limits.",
+    "records": "Review appointment documents and trade-registry records, and obtain the specific authority needed for extraordinary transactions such as property dealings.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "commission-agreement": {
+    "scope": "A commission agent may transact in its own name for another's account. That structure differs from a disclosed representative signing directly for the principal.",
+    "records": "Allocate price instructions, custody, expenses, reporting, remittance and liability for the counterparty; preserve transaction and settlement records.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "company-formation": {
+    "scope": "Choose the entity and licensed activity before filing. Incorporation, tax activation, banking and sector permission are separate stages, so a registry certificate alone is not permission for every business activity.",
+    "records": "Prepare founder identity and authority evidence, articles, capital arrangements and address documentation; check ongoing books and beneficial-owner reporting.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "competition-law": {
+    "scope": "Competition law covers restrictive agreements, abuse of dominance and transactions requiring merger review. A signed commercial contract is not exempt merely because both parties are businesses.",
+    "records": "Assess market position, resale pricing, exclusivity and information exchange; analyse merger thresholds against the current rules before completion.",
+    "sources": [
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "compliance-program": {
+    "scope": "A compliance programme should translate identified legal risks into ownership, approval and escalation procedures. A policy document alone does not establish that employees or intermediaries follow it.",
+    "records": "Maintain a risk assessment, training and approval records, reporting channel and investigation process, with controls directed at the actual business activities.",
+    "sources": [
+      {
+        "label": "Turkish Penal Code No. 5237",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5237.pdf"
+      }
+    ]
+  },
+  "concordat-commissioner": {
+    "scope": "The court-appointed commissioner supervises the concordat process and reports on the debtor's proposal and conduct. The role differs from an insolvency administrator managing a bankruptcy estate.",
+    "records": "Confirm the appointment and scope in the court file, and submit creditor evidence through the announced procedure rather than relying on informal discussions.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "concordat": {
+    "scope": "Concordat is a court-supervised restructuring route with a proposal, supporting financial evidence and creditor process. It is distinct from a private repayment agreement or a declaration of bankruptcy.",
+    "records": "Review moratorium orders, security, published claim notices and the proposed payment schedule. A filing alone does not guarantee approval or payment.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "confidentiality-agreement": {
+    "scope": "Define the protected information and permitted purpose rather than treating every exchange as confidential. A confidentiality duty and a restriction on competition are separate obligations.",
+    "records": "Specify exclusions, recipients, security, return or deletion and duration; record the information disclosed and preserve evidence of any misuse.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "consignment-sale-agreement": {
+    "scope": "Consignment places goods with another party for sale under an agreed ownership and payment structure. Delivery to the consignee does not necessarily mean a completed sale to that party.",
+    "records": "Record stock ownership, insurance, permitted discounts, accounting, settlement and return rights; plan how unsold goods are recovered on insolvency.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "consortium": {
+    "scope": "A consortium coordinates participants for a project, but its label does not determine whether members have joint liability. Tender terms and the contract may allocate obligations differently.",
+    "records": "Identify each member's scope, lead representative, guarantees, payment route and responsibility to the customer before bidding or signature.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "construction-in-return-for-land-share": {
+    "scope": "A landowner provides an agreed land share in exchange for construction. Transfer timing, project approval and protection against unfinished works are central commercial risks.",
+    "records": "Review title and encumbrances, permits, milestones, completion security and the instrument's required form before transferring a share.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Land Registry Law No. 2644",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2644.pdf"
+      },
+      {
+        "label": "TKGM: foreign acquisition rules and the 2012 change",
+        "url": "https://www.tkgm.gov.tr/sites/default/files/users/user56/Mevzuat/K%C4%B0TAP/Ta%C5%9F%C4%B1nmaz%20Hukukunda%20Yabanc%C4%B1lara%20%C4%B0li%C5%9Fkin%20Mevzuat%2024.12.2021.pdf"
+      }
+    ],
+    "propertyNote": "For foreign natural persons, Law No. 6302 removed the former reciprocity condition in 2012. Nationality eligibility, area and location restrictions still require review. Foreign legal entities and Turkish companies with foreign investment have distinct acquisition rules under Land Registry Law Articles 35 and 36."
+  },
+  "contract-termination": {
+    "scope": "Termination for breach, expiry, agreed cancellation and withdrawal are different routes. Their grounds, notice requirements and effects on accrued rights should be assessed separately.",
+    "records": "Preserve the contract, amendments, default notices, cure periods and delivery proof; review repayment, damages and surviving obligations before sending notice.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "corporate-governance": {
+    "scope": "Governance assigns decision-making, representation and oversight within the company. Group policies and investor veto rights must operate consistently with mandatory Turkish corporate rules.",
+    "records": "Map reserved matters, authorisations, conflicts, reporting and minutes. Keep evidence of decisions and the information considered rather than relying on unwritten approvals.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "corporate-tax": {
+    "scope": "Determine the taxpayer, accounting period and income category before calculating corporate tax. A headline rate does not resolve sector-specific rates, minimum-tax rules or incentive eligibility.",
+    "records": "Review financial statements, tax adjustments, related-party transactions and available certificates with the applicable period's legislation.",
+    "sources": [
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      }
+    ]
+  },
+  "cross-border-data-transfer": {
+    "scope": "KVKK Article 9 uses a tiered transfer framework: an applicable adequacy decision, an appropriate safeguard meeting the statutory conditions, or a narrowly applicable exceptional route. GDPR compliance alone does not provide a Turkish transfer basis.",
+    "records": "Map overseas hosting, support access and onward transfers. If using a KVKK standard contract, choose the correct controller/processor combination and notify the Authority within five business days after signing; retain authority documents and notification evidence.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      },
+      {
+        "label": "KVKK: standard-contract notification within five business days",
+        "url": "https://www.kvkk.gov.tr/Icerik/8043/Standart-Sozlesme-Bildirim-Modulu-Hakkinda-Kamuoyu-Duyurusu"
+      }
+    ],
+    "answer": "Cross-border transfers require a KVKK Article 9 route: an applicable adequacy decision, a qualifying appropriate safeguard, or a narrowly applicable exceptional ground. A KVKK standard contract must use the correct party-role combination and be notified to the Authority within five business days after signing."
+  },
+  "current-account": {
+    "scope": "A contractual current account nets agreed reciprocal claims at settlement intervals. An accounting customer ledger does not by itself establish a statutory current-account agreement.",
+    "records": "Check the written agreement, eligible entries, statement objections, interest and settlement dates before claiming the closing balance.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "customs-procedures": {
+    "scope": "The intended use of goods determines the customs procedure: release for free circulation, transit, warehousing or another applicable regime. A broker's filing does not remove the importer's own responsibilities.",
+    "records": "Check classification, value, origin, licences and the declaration with the commercial invoice and transport evidence before release.",
+    "sources": [
+      {
+        "label": "Law No. 4458 No. 4458",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4458.pdf"
+      }
+    ]
+  },
+  "customs-valuation": {
+    "scope": "Customs value is assessed under the statutory valuation methods, starting with transaction value where its conditions are met. The invoice total may need adjustments for specified costs or payments.",
+    "records": "Review freight, insurance, assists, royalties, related-party pricing and other adjustments; keep evidence supporting the declared method and amount.",
+    "sources": [
+      {
+        "label": "Law No. 4458 No. 4458",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4458.pdf"
+      }
+    ]
+  },
+  "data-processing-agreement": {
+    "scope": "A processing agreement records instructions and security allocation but is not a substitute for a lawful processing or transfer basis. Roles depend on actual decision-making, not just contractual labels.",
+    "records": "Define scope, access, subprocessors, breach escalation, retention, deletion and audit evidence; separately assess overseas access under KVKK Article 9.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "data-processor": {
+    "scope": "A processor handles personal data on behalf of a controller. A service provider determining its own purposes may be a controller for some processing, even if called a processor in the contract.",
+    "records": "Map each operation, instructions and independent uses; allocate security and notification responsibilities and check any cross-border transfer route.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "declaration": {
+    "scope": "A tax declaration reports information for a specified tax and period. Filing, accrual and payment are distinct events, and correction may have procedural consequences.",
+    "records": "Retain the submitted return, acknowledgement, calculations and payment evidence. Verify the relevant period and deadline before relying on a draft return.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "default": {
+    "scope": "A debt being due and a debtor being in default are separate questions. A notice may be needed unless an agreed date or statutory exception makes it unnecessary.",
+    "records": "Identify the maturity, demand, delivery and cure period; calculate interest and other remedies against the applicable contractual and statutory rules.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "deposit-agreement": {
+    "scope": "A deposit or custody agreement concerns safekeeping and return of property. It is different from a bank deposit, security deposit or advance payment despite similar English labels.",
+    "records": "Describe the item, condition, permitted use, storage standard, insurance and return instructions; retain handover and release records.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "dispute-resolution-clause": {
+    "scope": "Specify the court or arbitration route, seat and scope rather than combining inconsistent clauses. Governing law, jurisdiction and enforcement are separate choices.",
+    "records": "Check mandatory jurisdiction, arbitration eligibility, service mechanics and likely asset locations; align the clause across related contracts.",
+    "sources": [
+      {
+        "label": "Private International and Procedural Law No. 5718",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5718.pdf"
+      },
+      {
+        "label": "International Arbitration Law No. 4686",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4686.pdf"
+      }
+    ]
+  },
+  "distribution-agreement": {
+    "scope": "A distributor generally buys and resells on its own account. Territorial restrictions, resale pricing and termination rights require both contractual and competition-law analysis.",
+    "records": "Document exclusivity, targets, stock, payment and termination notices; assess possible goodwill compensation without assuming every distributor qualifies.",
+    "sources": [
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "dividend-distribution": {
+    "scope": "A distribution requires distributable amounts and valid corporate approval; cash availability alone does not establish entitlement. Withholding is a separate tax assessment based on the recipient and payment.",
+    "records": "Keep approved accounts, reserve calculations, shareholder or partner decisions and payment records; check treaty documentation for a foreign recipient.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      }
+    ]
+  },
+  "dividend-right-certificate": {
+    "scope": "A dividend-right certificate grants the rights specified within its statutory framework without necessarily making the holder a shareholder. It should not be treated as an ordinary share certificate.",
+    "records": "Review the issue terms, corporate approvals and economic rights, including entitlement on distributions and liquidation.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "double-tax-treaty": {
+    "scope": "A treaty allocates taxing rights and may limit domestic withholding; it does not provide an exemption for every cross-border payment. Residence, beneficial ownership and anti-abuse conditions may matter.",
+    "records": "Classify the payment, select the actual bilateral treaty and obtain current residence evidence before applying relief.",
+    "sources": [
+      {
+        "label": "GİB: double-taxation agreements by jurisdiction",
+        "url": "https://gib.gov.tr/mevzuat/tur/4/anlasma/3"
+      }
+    ]
+  },
+  "doubtful-receivable": {
+    "scope": "A commercial debt considered risky is not automatically deductible as a doubtful receivable for tax purposes. The statutory evidential and accounting conditions must be met.",
+    "records": "Retain collection correspondence, litigation or enforcement records and provision calculations, and distinguish the tax allowance from a commercial write-off.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "down-payment": {
+    "scope": "A down payment may be credited toward the price, treated as earnest money or given another contractual function. Its label does not establish an automatic right to keep it after cancellation.",
+    "records": "Specify the amount's purpose, refund conditions and completion date; preserve the signed contract and transfer evidence.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "drag-along-right": {
+    "scope": "A drag-along clause allows specified shareholders to require others to join a sale under agreed conditions. It does not bypass mandatory company-specific share-transfer requirements.",
+    "records": "Define the trigger, minimum price, buyer, notice, warranties and completion process; align the clause with the articles and transfer restrictions.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "e-commerce": {
+    "scope": "Online business obligations depend on whether the operator sells its own goods, hosts a marketplace or supplies another service. B2C distance-selling and commercial-message rules need separate assessment.",
+    "records": "Review seller identification, pre-contract disclosures, withdrawal handling, consent records and applicable registration duties before launch.",
+    "sources": [
+      {
+        "label": "Electronic Commerce Law No. 6563",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6563.pdf"
+      },
+      {
+        "label": "Consumer Protection Law No. 6502",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6502.pdf"
+      }
+    ]
+  },
+  "employment-contract": {
+    "scope": "The work performed and actual relationship determine employment status; a consultancy label does not decide the issue. Fixed-term contracts need their statutory basis, and probation has separate limits.",
+    "records": "Record duties, pay, workplace, hours, confidentiality and valid restrictions. Review foreign-worker permission and payroll registration separately.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "endorsement": {
+    "scope": "An endorsement transfers or otherwise affects rights in a negotiable instrument according to its form and wording. It differs from assigning an ordinary invoice receivable.",
+    "records": "Check the original, chain of endorsements, restrictions and delivery; identify which signatories may face recourse.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "environmental-compliance": {
+    "scope": "Environmental duties follow the activity, site, capacity and emissions, rather than simply the company's industry label. An environmental-impact decision and an operating permit may be separate approvals.",
+    "records": "Prepare the process description, site plan, emissions and waste inventory; identify applicable assessments and permit conditions before construction or operation.",
+    "sources": [
+      {
+        "label": "Environment Law No. 2872",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2872.pdf"
+      }
+    ]
+  },
+  "exclusive-dealing": {
+    "scope": "Exclusivity can restrict suppliers, buyers or territories in different ways. Duration, market position and the actual restriction matter when assessing competition-law compatibility.",
+    "records": "Review purchasing obligations, non-compete terms, resale controls and termination effects; do not assume an exclusivity clause is valid merely because both sides signed.",
+    "sources": [
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "exigibility": {
+    "scope": "Exigibility means that a claim is due and can be demanded. It is different from default, which may require a demand or another statutory trigger.",
+    "records": "Check the maturity clause, conditions precedent, performance and any acceleration notice before claiming interest or starting enforcement.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "expropriation": {
+    "scope": "Expropriation is a public-law acquisition process with notice, valuation and challenge procedures. It is not an ordinary negotiated property sale.",
+    "records": "Review the administrative act, ownership, valuation evidence and service dates immediately; objections to the act and compensation issues may follow different routes.",
+    "sources": [
+      {
+        "label": "Expropriation Law No. 2942",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+      },
+      {
+        "label": "TKGM: foreign acquisition rules and the 2012 change",
+        "url": "https://www.tkgm.gov.tr/sites/default/files/users/user56/Mevzuat/K%C4%B0TAP/Ta%C5%9F%C4%B1nmaz%20Hukukunda%20Yabanc%C4%B1lara%20%C4%B0li%C5%9Fkin%20Mevzuat%2024.12.2021.pdf"
+      }
+    ],
+    "propertyNote": "For foreign natural persons, Law No. 6302 removed the former reciprocity condition in 2012. Nationality eligibility, area and location restrictions still require review. Foreign legal entities and Turkish companies with foreign investment have distinct acquisition rules under Land Registry Law Articles 35 and 36."
+  },
+  "factoring": {
+    "scope": "Factoring concerns the transfer and financing or collection of qualifying receivables. Recourse allocation and debtor defences can materially affect the seller's exposure.",
+    "records": "Check the factor's authorisation, underlying invoices, delivery evidence, assignment notice, fees and recourse conditions.",
+    "sources": [
+      {
+        "label": "Financial Leasing and Factoring Law No. 6361",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6361.pdf"
+      }
+    ]
+  },
+  "force-majeure": {
+    "scope": "A disruption is not automatically force majeure. The event, causation, foreseeability, contractual allocation and whether performance is impossible or merely harder must be assessed.",
+    "records": "Keep contemporaneous evidence, mitigation steps and notices; distinguish impossibility from hardship and from a temporary payment problem.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "foreign-investment": {
+    "scope": "Foreign investment may use a Turkish entity, branch or acquisition, but registration is separate from sector permission. Equal-treatment principles do not remove activity-specific restrictions.",
+    "records": "Identify the investor, ownership, activity and reporting route; prepare authority, capital and transaction records before committing funds.",
+    "sources": [
+      {
+        "label": "Foreign Direct Investment Law No. 4875",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4875.pdf"
+      }
+    ]
+  },
+  "franchise-agreement": {
+    "scope": "A franchise combines brand or know-how access with an operating model and ongoing obligations. IP permission, competition restrictions and termination are separate legal questions.",
+    "records": "Define territory, fees, standards, support, audit rights and post-termination use; verify the franchisor's rights to the licensed brand.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "guarantee-agreement": {
+    "scope": "A guarantee may differ from accessory suretyship, and classification depends on the actual undertaking. Calling a promise a guarantee does not avoid mandatory protection or form rules.",
+    "records": "Review the guarantor, amount, duration, demand conditions and any personal-security formalities before signature or enforcement.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "hardship-clause": {
+    "scope": "Hardship addresses an exceptional change that makes performance disproportionately burdensome; it is different from impossibility or ordinary commercial risk. Contractual adaptation and a statutory court claim require separate assessment.",
+    "records": "Record the original assumptions, changed circumstances and effect on performance; follow notice and negotiation provisions without assuming performance can stop unilaterally.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "holding-company": {
+    "scope": "A holding structure coordinates investments but does not generally erase each subsidiary's separate legal personality. Control, group duties and guarantees require their own analysis.",
+    "records": "Review the ownership chain, board powers, intra-group transactions and financial support; distinguish shareholder influence from direct contractual liability.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "in-kind-capital": {
+    "scope": "A contribution in kind must qualify for the chosen company type and satisfy valuation and transfer requirements. A promised asset is not equivalent to cash already paid in.",
+    "records": "Verify title, encumbrances, transferability, the valuation process and registry steps before recording the capital contribution as completed.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "independent-audit": {
+    "scope": "Whether independent audit is mandatory depends on the company's category and the current scope criteria. An internal accounting review is not a substitute for a required independent audit.",
+    "records": "Check the applicable period, size and sector criteria, appoint an eligible auditor and retain engagement and reporting records.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "insolvency": {
+    "scope": "Cash-flow difficulty, balance-sheet over-indebtedness and a bankruptcy order are different conditions. They may require different management responses and proceedings.",
+    "records": "Review current liabilities, realisable assets, guarantees, financial statements and payment forecasts; preserve board decisions and obtain advice before mandatory filing duties arise.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      },
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "intellectual-property-rights": {
+    "scope": "Identify the right before choosing protection: patents, trademarks and designs follow a different framework from copyright and trade secrets. Foreign registration alone may not protect every right in Türkiye.",
+    "records": "Map ownership, assignments, licences, territory and evidence of creation or use; choose registration and enforcement steps for the particular right.",
+    "sources": [
+      {
+        "label": "Industrial Property Code No. 6769",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf"
+      },
+      {
+        "label": "Intellectual and Artistic Works Law No. 5846",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf"
+      }
+    ]
+  },
+  "internal-audit": {
+    "scope": "Internal audit evaluates controls within the business; it differs from statutory independent financial audit. Scope and reporting lines should support oversight without concealing conflicts.",
+    "records": "Keep the risk-based plan, findings, management responses and remediation evidence; escalate unresolved issues to the appropriate corporate body.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "inventory": {
+    "scope": "An inventory records assets and liabilities for accounting purposes. A list of warehouse stock alone may not meet the company's wider recordkeeping duties.",
+    "records": "Reconcile quantities, title, valuation and third-party custody with accounting records; document stock counts and discrepancies.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "investment-incentives": {
+    "scope": "Incentives depend on the project, activity, location and current programme, not solely on foreign ownership. Eligibility and an issued incentive certificate are different stages.",
+    "records": "Prepare the investment budget, capacity, machinery and site information; verify application timing and conditions before incurring expenditure assumed to qualify.",
+    "sources": [
+      {
+        "label": "Investment Office: investment-incentive framework",
+        "url": "https://www.invest.gov.tr/en/investmentguide/pages/incentives-guide.aspx"
+      }
+    ]
+  },
+  "invoice": {
+    "scope": "An invoice records a commercial claim but does not alone prove every disputed delivery or acceptance. Objection and evidence issues must be considered alongside the underlying contract.",
+    "records": "Keep the invoice, order, delivery and acceptance records, correspondence and ledger; distinguish invoicing requirements from proof of a debt.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "joint-and-several-liability": {
+    "scope": "Joint and several liability can allow a creditor to seek the debt from more than one liable person, subject to the legal basis. Internal contribution between debtors is a separate issue.",
+    "records": "Identify the statute or agreement creating liability, payment history and available defences; preserve records for a later contribution claim.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "joint-venture": {
+    "scope": "A joint venture may be contractual or organised through a company. The label does not determine legal personality, partner liability or who may bind the venture.",
+    "records": "Define contributions, governance, profit sharing, exit and customer liability; align project contracts and any incorporated entity's articles.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "know-how-agreement": {
+    "scope": "Know-how licensing should identify the information, its secrecy and the permitted use. It is different from transferring ownership of a patent or allowing unlimited access to a business's methods.",
+    "records": "Document delivery, access controls, sublicensing, improvements and return or deletion; preserve evidence of what information was supplied.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "kvkk-compliance": {
+    "scope": "Compliance starts with actual processing purposes, roles and legal bases. A privacy notice, consent form or VERBIS entry alone does not establish compliance with all KVKK duties.",
+    "records": "Map personal data, retention, recipients, security and overseas access; assess registration exemptions and data-subject and breach-response procedures separately.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "labor-law": {
+    "scope": "Determine whether the worker and activity fall within Labour Law No. 4857 or a special regime. Rules on hours, leave, pay and termination require distinct analysis.",
+    "records": "Review the employment relationship, workplace, service history, payroll and policies; collective agreements and foreign-worker duties may add obligations.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "lease-termination": {
+    "scope": "For roofed commercial premises, a landlord cannot generally end the lease solely because a fixed term expired. Statutory grounds such as need, default or specified extension-period rules have distinct conditions; the tenant's notice route is different.",
+    "records": "Review the original lease and extensions, rent history, notices and service dates. Assess any mandatory mediation before proceedings; do not assume one notice period fits every ground.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ],
+    "answer": "Termination of a roofed commercial lease depends on the party and legal ground. A landlord cannot generally terminate solely because a fixed term ends; statutory need, default and extension-period routes have separate conditions. Check notices, service dates and mandatory mediation before proceedings."
+  },
+  "legal-representation": {
+    "scope": "An engagement letter and a procedural power of attorney serve different purposes. Particular litigation steps may require expressly granted special authority.",
+    "records": "Identify the client and authorised corporate signatory, agree scope and costs, and check form, authentication and special powers before proceedings.",
+    "sources": [
+      {
+        "label": "Attorneyship Law No. 1136",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1136.pdf"
+      },
+      {
+        "label": "Code of Civil Procedure No. 6100",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6100.pdf"
+      }
+    ]
+  },
+  "letter-of-intent": {
+    "scope": "An LOI can contain binding provisions even if the contemplated deal remains non-binding. Exclusivity, confidentiality, costs and governing-law clauses need their own assessment.",
+    "records": "State which clauses bind, the expiry and conditions for the final transaction; do not treat the document's title as deciding its legal effect.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "liaison-office": {
+    "scope": "A liaison office requires the applicable permission and is restricted from commercial activity. It is different from a branch conducting business for the foreign parent.",
+    "records": "Document the proposed non-commercial functions, foreign funding and parent authority; review reporting and renewal conditions before hiring or signing customer contracts.",
+    "sources": [
+      {
+        "label": "Foreign Direct Investment Law No. 4875",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4875.pdf"
+      }
+    ]
+  },
+  "licensing-agreement": {
+    "scope": "A licence grants defined rights of use without necessarily transferring ownership. The licensed right, territory, exclusivity and formal requirements affect the licence's reach.",
+    "records": "Verify ownership and registration, scope, sublicensing, royalties and termination; record any registry step required for third-party effects.",
+    "sources": [
+      {
+        "label": "Industrial Property Code No. 6769",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "lifting-of-objection": {
+    "scope": "Lifting an objection is an enforcement-court route with specific documentary requirements. It should not be confused with a full merits action to annul the objection.",
+    "records": "Review the original qualifying instrument, objection and service dates before selecting this remedy; ordinary invoices may not satisfy every evidential route.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "litigation-turkey": {
+    "scope": "Jurisdiction, court type and mandatory pre-action steps must be identified before filing. An English-language contract does not itself select a competent Turkish court.",
+    "records": "Prepare the contract, evidence, party details, power of attorney and notice chronology; assess mediation, fees, security and any urgent interim request separately.",
+    "sources": [
+      {
+        "label": "Code of Civil Procedure No. 6100",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6100.pdf"
+      }
+    ]
+  },
+  "loan-agreement": {
+    "scope": "A loan agreement should distinguish principal, interest, maturity and security. Corporate borrowing authority and cross-border payment or tax issues are separate from the debt promise.",
+    "records": "Record disbursement, repayment schedule, default and acceleration provisions; check guarantees and security perfection before funding.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "loan-for-use-agreement": {
+    "scope": "A loan for use gives temporary use with an obligation to return the same item. It differs from a consumption loan, where equivalent goods or money are returned.",
+    "records": "Describe the item, permitted use, maintenance, insurance and return date; retain handover and condition records.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "loan-of-consumption": {
+    "scope": "A consumption loan transfers money or fungible goods with an obligation to return an equivalent amount or quantity. It is different from custody or lending a specific item for use.",
+    "records": "Record the amount, disbursement, interest if applicable, maturity and repayment evidence; identify any security or guarantor separately.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "mediation": {
+    "scope": "Mediation can be voluntary or a mandatory pre-action step for an identified class of dispute. A mediator does not impose a court judgment on the parties.",
+    "records": "Check the dispute category and exclusions, prepare the claim and authority to settle, and retain the final minutes needed for any subsequent proceedings.",
+    "sources": [
+      {
+        "label": "Mediation Law No. 6325",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6325.pdf"
+      }
+    ]
+  },
+  "merchant": {
+    "scope": "Merchant status follows the statutory criteria, not merely a company's description of itself. It can affect commercial duties, notices, books and standards of care.",
+    "records": "Check whether the party operates a commercial enterprise and review the particular duty at issue; consumers and merchants may have different protections.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "mergers-acquisitions": {
+    "scope": "Distinguish a share purchase, asset purchase and statutory merger before planning completion. Competition clearance, sector consents and corporate approvals may follow different routes.",
+    "records": "Prepare ownership, contracts, liabilities, employees, permits and security diligence, then map the conditions that must be satisfied before closing.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "minimum-wage": {
+    "scope": "The applicable minimum wage is tied to the period and legal framework; gross pay, net pay and employer cost are different figures. A historical amount should not be used for a later payroll period.",
+    "records": "Check the current determination and payroll components, including deductions and contribution obligations, before calculating the amount payable.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "mortgage": {
+    "scope": "A mortgage is security over real estate and requires the applicable land-registry formalities. A promise in a loan agreement alone does not establish a registered mortgage.",
+    "records": "Review title, rank, secured amount, prior encumbrances and enforcement terms; confirm the registered security matches the financing documents.",
+    "sources": [
+      {
+        "label": "Turkish Civil Code No. 4721",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4721.pdf"
+      },
+      {
+        "label": "Land Registry Law No. 2644",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2644.pdf"
+      },
+      {
+        "label": "TKGM: foreign acquisition rules and the 2012 change",
+        "url": "https://www.tkgm.gov.tr/sites/default/files/users/user56/Mevzuat/K%C4%B0TAP/Ta%C5%9F%C4%B1nmaz%20Hukukunda%20Yabanc%C4%B1lara%20%C4%B0li%C5%9Fkin%20Mevzuat%2024.12.2021.pdf"
+      }
+    ],
+    "propertyNote": "For foreign natural persons, Law No. 6302 removed the former reciprocity condition in 2012. Nationality eligibility, area and location restrictions still require review. Foreign legal entities and Turkish companies with foreign investment have distinct acquisition rules under Land Registry Law Articles 35 and 36."
+  },
+  "mutual-rescission": {
+    "scope": "A mutual termination agreement differs from unilateral dismissal or resignation. For employment, the employee's informed consent, actual circumstances and agreed benefit require careful assessment.",
+    "records": "Record negotiations, sums due, payment and releases; do not use the agreement's label alone to determine severance or unemployment eligibility.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "negative-declaratory-action": {
+    "scope": "This action asks the court to determine that an alleged debt does not exist. Filing does not automatically stop enforcement or remove the need for a separate interim application.",
+    "records": "Review the enforcement stage, payment status, debt instrument and evidence; distinguish this route from restitution after payment.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "negotiable-instruments": {
+    "scope": "A negotiable instrument's formal rights and transfer rules differ from an ordinary contractual receivable. The original document and the signatory's position can be decisive.",
+    "records": "Identify the instrument, maturity, endorsement chain, presentment and any protest before selecting the enforcement route.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "netting": {
+    "scope": "Contractual netting may combine multiple obligations under agreed settlement rules. It is not necessarily the same as statutory set-off or a regulated close-out mechanism.",
+    "records": "Identify eligible debts, currencies, valuation and insolvency treatment; do not assume a clause eliminates all enforcement or insolvency risk.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "new-york-convention": {
+    "scope": "The convention supports recognition and enforcement of qualifying foreign arbitral awards, subject to its scope, reservations and refusal grounds. It does not guarantee enforcement of every award.",
+    "records": "Keep the award, arbitration agreement, authentication and translation evidence; assess finality, service, jurisdiction and likely assets in Türkiye.",
+    "sources": [
+      {
+        "label": "UNCITRAL: New York Convention text and status",
+        "url": "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards"
+      }
+    ]
+  },
+  "non-compete": {
+    "scope": "A restriction must be assessed in its context: employment, an agency relationship or a business sale can follow different rules. Duration and geographic and activity limits matter.",
+    "records": "Identify the protected interest, affected role and scope; review mandatory limits and competition-law effects before relying on a broad ban.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "notarization": {
+    "scope": "Notarial certification may authenticate a signature or create a formal instrument, depending on the act. It does not by itself confirm every legal or commercial statement in the document.",
+    "records": "Ask the receiving authority which notarial form is required; check signatory authority, original documents and any apostille or translation requirement separately.",
+    "sources": [
+      {
+        "label": "Notary Law No. 1512",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1512.pdf"
+      }
+    ]
+  },
+  "notice-warning": {
+    "scope": "A notice should identify the legal purpose, alleged breach, demand and any cure period. A demand for payment, termination and preservation of rights are not interchangeable.",
+    "records": "Use the legally appropriate delivery method and retain proof of receipt; check special rules for notices between merchants and for the particular contract.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "option": {
+    "scope": "An option creates an agreed right to complete a transaction under defined conditions. It differs from an obligation on both parties to buy and sell immediately.",
+    "records": "Record the asset, price mechanism, exercise date and notice process; complete any mandatory transfer formalities after exercise.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "origin-rules": {
+    "scope": "Origin is not simply the country from which goods were shipped. Preferential origin and non-preferential origin follow different rules, and an A.TR movement certificate does not itself prove origin.",
+    "records": "Keep production, supplier and shipping evidence, and select the document required by the actual trade arrangement and product classification.",
+    "sources": [
+      {
+        "label": "Law No. 4458 No. 4458",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4458.pdf"
+      }
+    ]
+  },
+  "outsourcing": {
+    "scope": "Outsourcing can raise separate employment, commercial and data-processing questions. Calling staff contractors does not settle whether a principal-employer or employment relationship exists.",
+    "records": "Review work supervision, service scope, staffing, subcontractors and data access; allocate records, security and exit obligations explicitly.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      },
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "overtime-pay": {
+    "scope": "Overtime assessment depends on actual hours, the applicable working-time regime and contractual limits. A salary clause does not automatically waive all additional payment rights.",
+    "records": "Keep reliable attendance and approval records, identify weekly totals and distinguish overtime from work beyond an agreed shorter normal week.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "parent-company": {
+    "scope": "A parent and subsidiary ordinarily remain separate legal persons. Ownership alone does not make the parent the debtor under every subsidiary contract.",
+    "records": "Review guarantees, direct undertakings, group-control conduct and the contracting entity; preserve the actual ownership and decision-making records.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "patent-protection": {
+    "scope": "Patentability, ownership and infringement are separate questions. Protection depends on the claimed invention and territorial coverage, not simply a foreign patent or a product's similarity.",
+    "records": "Review claims, filing and priority dates, inventorship and licence rights; conduct a separate freedom-to-operate assessment before launch.",
+    "sources": [
+      {
+        "label": "Industrial Property Code No. 6769",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf"
+      }
+    ]
+  },
+  "penalty-clauses": {
+    "scope": "A contractual penalty fixes an agreed consequence for a specified breach. Its relationship to performance and damages, and any reduction rule, require legal assessment.",
+    "records": "Define the trigger, calculation, cap and whether performance or additional damages remain available; preserve evidence of the actual breach.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "permits-licenses": {
+    "scope": "Sector authorisation concerns the regulated activity or product, rather than only opening a business premises. Incorporation does not itself authorise medicines, payment services, broadcasting or other regulated operations.",
+    "records": "Identify the activity, operator, site and product; map the competent sector regulator, authorisation category and prerequisites before signing a launch or distribution timetable.",
+    "sources": [
+      {
+        "label": "Investment Office: starting a business and permits",
+        "url": "https://www.invest.gov.tr/en/investmentguide/pages/establishing-a-business.aspx"
+      }
+    ],
+    "title": "Sector Authorisations and Regulatory Licences",
+    "question": "How do sector-specific authorisations differ from an operating licence in Turkey?",
+    "answer": "A sector authorisation permits a regulated activity or product under the competent regulator’s rules. It is separate from incorporation and a workplace operating licence. Identify the operator, activity and product before mapping the approval, technical evidence and ongoing obligations."
+  },
+  "personal-data": {
+    "scope": "Information is personal data if it relates to an identified or identifiable natural person. Corporate contact details can qualify when they identify an employee, while genuinely anonymous data requires a different assessment.",
+    "records": "Map identifiers, indirect identification and access; assign a lawful processing purpose, retention rule and appropriate disclosure for the actual data use.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "piercing-the-corporate-veil": {
+    "scope": "Separate legal personality is the starting point. Disregarding it is an exceptional, fact-dependent issue; unpaid company debt or common ownership alone should not be described as sufficient.",
+    "records": "Preserve evidence of asset mixing, misuse, control and the specific claim. Consider guarantees and statutory liability routes separately.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "pledge": {
+    "scope": "A pledge provides security rather than ownership, and the perfection route depends on the asset. Possession, register entries or other required acts may be needed.",
+    "records": "Identify the asset, owner, secured obligation, existing rights and enforcement mechanism before treating the creditor as secured.",
+    "sources": [
+      {
+        "label": "Turkish Civil Code No. 4721",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4721.pdf"
+      },
+      {
+        "label": "Movable Pledge in Commercial Transactions Law No. 6750",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6750.pdf"
+      }
+    ]
+  },
+  "power-of-attorney": {
+    "scope": "The power of attorney should match the intended acts and any special litigation authority. Corporate signing authority, notarisation and permission for the attorney to act are separate matters.",
+    "records": "Prepare the scope before signature, obtain corporate authority evidence, and confirm authentication and Turkish translation requirements with the receiving office.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Code of Civil Procedure No. 6100",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6100.pdf"
+      }
+    ]
+  },
+  "pre-emption-right": {
+    "scope": "A shareholder's pre-emption right in a capital increase differs from a contractual right to buy existing shares. Restriction or exclusion must satisfy the applicable corporate rules.",
+    "records": "Review the issue decision, allocation, subscription period and proposed exclusion grounds before calculating ownership dilution.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "preliminary-attachment": {
+    "scope": "Preliminary attachment secures a monetary claim through an interim court decision where statutory conditions are met. It is different from a final recovery order and may require a bond.",
+    "records": "Prepare debt and risk evidence, identify assets and review implementation and follow-up deadlines immediately after any order.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "preliminary-injunction": {
+    "scope": "An injunction addresses a risk to the disputed right under the procedural conditions for interim protection. It is different from an attachment securing a money claim.",
+    "records": "Identify the right, urgency and requested measure; prepare evidence, assess any bond and comply with implementation and merits-action requirements.",
+    "sources": [
+      {
+        "label": "Code of Civil Procedure No. 6100",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6100.pdf"
+      }
+    ]
+  },
+  "presentation": {
+    "scope": "Presentment is a formal step involving a negotiable instrument and can affect recourse rights. Informal requests for payment are not always equivalent to statutory presentment.",
+    "records": "Review the instrument type, original, place, date and bank or debtor response; calendar the relevant presentment and protest requirements.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "product-liability": {
+    "scope": "Product safety obligations and civil liability for damage require assessment of the product, defect and responsible operator. B2B supply terms do not remove every mandatory safety duty.",
+    "records": "Preserve technical documentation, batch records, warnings, incident evidence and recall steps; distinguish contract remedies from third-party damage claims.",
+    "sources": [
+      {
+        "label": "Product Safety and Technical Regulations Law No. 7223",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.7223.pdf"
+      }
+    ]
+  },
+  "progress-payment": {
+    "scope": "A progress payment relates to an agreed stage or certified quantity of work. It is different from final acceptance and may remain subject to measurement or adjustment.",
+    "records": "Keep the contract, work records, certificate, deductions and reservations; define approval deadlines and treatment of disputed work.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "project-finance": {
+    "scope": "Project finance depends on the project's revenue, contracts and risk allocation as well as lending terms. A financing commitment is not proof that permits or security are complete.",
+    "records": "Map sponsor support, cash flows, offtake, construction risk, security and direct agreements; identify conditions precedent to each drawdown.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "promissory-note": {
+    "scope": "A promissory note contains an undertaking to pay and has mandatory formal requirements. It is distinct from a cheque and from an ordinary signed invoice.",
+    "records": "Preserve the original, maturity, signature authority and endorsement chain; assess recourse and the appropriate enforcement procedure.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "property-transfer": {
+    "scope": "Ownership transfer normally requires the prescribed formal instrument and land-registry registration. A private promise or deposit does not by itself put title in the buyer's name.",
+    "records": "Review title, mortgages, restrictions, zoning and signatory authority; confirm the payment and registration sequence before completion.",
+    "sources": [
+      {
+        "label": "Turkish Civil Code No. 4721",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4721.pdf"
+      },
+      {
+        "label": "Land Registry Law No. 2644",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2644.pdf"
+      },
+      {
+        "label": "TKGM: foreign acquisition rules and the 2012 change",
+        "url": "https://www.tkgm.gov.tr/sites/default/files/users/user56/Mevzuat/K%C4%B0TAP/Ta%C5%9F%C4%B1nmaz%20Hukukunda%20Yabanc%C4%B1lara%20%C4%B0li%C5%9Fkin%20Mevzuat%2024.12.2021.pdf"
+      }
+    ],
+    "propertyNote": "For foreign natural persons, Law No. 6302 removed the former reciprocity condition in 2012. Nationality eligibility, area and location restrictions still require review. Foreign legal entities and Turkish companies with foreign investment have distinct acquisition rules under Land Registry Law Articles 35 and 36."
+  },
+  "protest": {
+    "scope": "A protest formally records circumstances such as non-acceptance or non-payment of a negotiable instrument. Its need and timing depend on the instrument and any valid waiver.",
+    "records": "Keep the original, presentment record and notarial protest; assess recourse consequences promptly rather than waiting for informal negotiations.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "put-option": {
+    "scope": "A put option gives an agreed right to sell on specified terms. It does not ensure a buyer has the funds or remove mandatory transfer requirements.",
+    "records": "Define the exercise event, valuation, notice, completion and security for payment; review company-law restrictions on the proposed buyer or share transfer.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "rd-incentives": {
+    "scope": "R&D benefits depend on the qualifying project or centre, expenditure and current statutory conditions. Ordinary software or engineering spending is not automatically eligible.",
+    "records": "Keep project approval, personnel time, cost allocation and technical output records; separate incentive qualification from ordinary expense deduction.",
+    "sources": [
+      {
+        "label": "R&D and Design Activities Law No. 5746",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5746.pdf"
+      }
+    ]
+  },
+  "reconciliation": {
+    "scope": "Tax settlement is a procedural route whose scope depends on the assessment, penalty and current legislation. It is distinct from correcting an accounting balance or negotiating a private debt.",
+    "records": "Review notification dates, eligible items and the consequences for litigation rights before submitting an application or accepting terms.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "registered-shares": {
+    "scope": "Registered shares identify a holder, but transfer and company recognition depend on the share type, payment status and applicable restrictions. A share ledger entry is not a universal substitute for all transfer steps.",
+    "records": "Check certificates, endorsements or transfer documents, articles and required approvals before treating the buyer as fully recognised.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "registration-to-the-bankruptcy-estate": {
+    "scope": "A creditor must present its claim within the estate procedure and support the amount and basis. Filing a claim does not guarantee admission, priority or payment.",
+    "records": "Keep the debt instrument, interest calculation, security and estate notice; check claim-review decisions and objection deadlines.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "registration": {
+    "scope": "A registry entry and its publication have separate functions. Some events need registration for their legal effect, while others raise publicity or third-party reliance questions.",
+    "records": "Identify the specific registrable event and required documents; retain the application, registered text and Gazette announcement.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "related-party": {
+    "scope": "A related-party relationship can raise corporate-approval and tax-pricing issues independently. Group membership does not permit unsupported charges or remove conflict-management duties.",
+    "records": "Keep relationship details, agreements, pricing support, benefit evidence and approvals; separate commercial rationale from tax documentation.",
+    "sources": [
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      },
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "release-agreement": {
+    "scope": "A release must identify the obligations or claims it resolves. Employment releases have specific statutory conditions and should not be treated like a general commercial waiver.",
+    "records": "Review scope, consideration, dates, payment evidence and mandatory form or protection rules before relying on the signature alone.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "rent-adjustment": {
+    "scope": "For roofed commercial premises, renewal rent is assessed under Code of Obligations Article 344. The statutory approach distinguishes ordinary renewals, longer-running leases and foreign-currency arrangements; a landlord's demand alone does not set the lawful rent.",
+    "records": "Review the commencement and renewal dates, currency, existing increase clause, applicable index and comparable evidence. Assess notice, filing timing and mandatory mediation for the proposed claim.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ],
+    "answer": "Roofed commercial-lease renewal rent is assessed under Code of Obligations Article 344. The method depends on the lease duration, currency and renewal circumstances. Review the increase clause, applicable index, comparable evidence, notice and claim timing; a demand alone does not establish the new rent."
+  },
+  "residency-permit": {
+    "scope": "A residence permit and a work permit serve different purposes. Permission to reside does not by itself authorise every employment or commercial activity.",
+    "records": "Identify the residence category, supporting purpose, lawful stay and expiry date; check application, address and insurance requirements for that category.",
+    "sources": [
+      {
+        "label": "Foreigners and International Protection Law No. 6458",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6458.pdf"
+      }
+    ]
+  },
+  "revenue-sharing-construction-agreement": {
+    "scope": "Revenue sharing allocates the income from a development between parties; it should not be confused with a land-share-for-construction exchange. Title, sales authority and risk allocation remain important.",
+    "records": "Define gross and net revenue, permitted deductions, accounting, sales approval, guarantees and project failure remedies; verify the required land and construction formalities.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Land Registry Law No. 2644",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2644.pdf"
+      },
+      {
+        "label": "TKGM: foreign acquisition rules and the 2012 change",
+        "url": "https://www.tkgm.gov.tr/sites/default/files/users/user56/Mevzuat/K%C4%B0TAP/Ta%C5%9F%C4%B1nmaz%20Hukukunda%20Yabanc%C4%B1lara%20%C4%B0li%C5%9Fkin%20Mevzuat%2024.12.2021.pdf"
+      }
+    ],
+    "propertyNote": "For foreign natural persons, Law No. 6302 removed the former reciprocity condition in 2012. Nationality eligibility, area and location restrictions still require review. Foreign legal entities and Turkish companies with foreign investment have distinct acquisition rules under Land Registry Law Articles 35 and 36."
+  },
+  "right-of-first-offer": {
+    "scope": "A right of first offer requires an agreed offer process before a sale to others. It differs from a right to match a third-party offer already received.",
+    "records": "Specify notice, price proposals, response deadlines and the conditions for a later third-party sale; align the clause with transfer restrictions.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "right-of-first-refusal": {
+    "scope": "A right of first refusal normally allows its holder to respond to a proposed third-party transaction under agreed conditions. Its exact effect depends on the instrument and asset.",
+    "records": "Define what triggers notice, the disclosed terms, response deadline and completion; distinguish contractual rights from statutory pre-emption.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "right-of-recourse": {
+    "scope": "Recourse allows a payer to seek reimbursement from another liable person under an identified legal basis. It does not automatically arise for every voluntary payment of another's debt.",
+    "records": "Keep the original obligation, proof of payment and allocation agreement; assess notices, defences and the applicable limitation period.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "sales-contract": {
+    "scope": "A sales contract should identify goods, price, delivery and acceptance. Transfer of risk, ownership and the duty to inspect are separate questions.",
+    "records": "Keep the specifications, order confirmations, delivery and defect notices; align remedies, warranty and payment security with the actual supply route.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "sell-out-right": {
+    "scope": "A sell-out right can arise under a specific corporate or capital-markets framework and should not be assumed for every minority shareholder. It differs from a negotiated put option.",
+    "records": "Identify the company status, ownership event, eligible holder and current procedural conditions before relying on a compulsory purchase remedy.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Capital Markets Law No. 6362",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6362.pdf"
+      }
+    ]
+  },
+  "sensitive-personal-data": {
+    "scope": "Sensitive data is subject to the specific Article 6 framework, including the amended processing grounds and additional safeguards. Ordinary personal-data consent wording does not resolve every sensitive-data use.",
+    "records": "Identify the category, purpose, lawful ground, access and retention, then assess security and overseas transfers separately.",
+    "sources": [
+      {
+        "label": "Personal Data Protection Law No. 6698",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+      }
+    ]
+  },
+  "service-agreement": {
+    "scope": "A service arrangement should describe deliverables and responsibilities; actual working conditions can raise an employment relationship despite a supplier label.",
+    "records": "Define scope, acceptance, fees, dependencies, subcontracting and exit; assess personal-data access and IP ownership where relevant.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "service-level-agreement": {
+    "scope": "An SLA measures service performance but should distinguish targets from binding commitments. Service credits, termination and damages need an explicit relationship.",
+    "records": "Define the metric, measurement period, exclusions, reporting, cure and escalation; retain logs showing how any claimed failure was measured.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "set-off": {
+    "scope": "Statutory set-off has conditions relating to reciprocal obligations and their enforceability. A disputed amount or a contractual no-set-off clause requires separate assessment.",
+    "records": "Identify both debts, parties, currencies, maturity and the declaration of set-off; distinguish it from an agreed account reconciliation.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "share-ledger": {
+    "scope": "The share ledger records the company's recognised shareholders and specified rights. It is not a public trade-registry record or a replacement for every transfer formality.",
+    "records": "Check entries against transfer documents, approvals and share certificates; retain the supporting basis for changes rather than updating ownership informally.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "share-purchase": {
+    "scope": "A share sale changes ownership of the entity while its contracts, debts and licences ordinarily remain with it. Transfer formalities differ between limited companies and joint-stock shares.",
+    "records": "Review title, restrictions, approvals, price adjustments, warranties and closing evidence; assess merger clearance and sector consents separately.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "shareholders-agreement": {
+    "scope": "A shareholders' agreement creates contractual obligations among its parties. It does not override mandatory corporate rules or automatically bind the company or future buyers.",
+    "records": "Align reserved matters, funding, transfer rights, exit and dispute clauses with the articles and corporate procedures; document accession for new shareholders.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "signature-circular": {
+    "scope": "A signature circular evidences identified signatures and representation information but does not establish unlimited authority for every transaction. Current registry powers and special approvals must still be checked.",
+    "records": "Verify the signatory, appointment, mode of signature and any transaction-specific decision before accepting a commitment.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "singular-succession": {
+    "scope": "Singular succession transfers an identified right or asset, rather than the whole legal position automatically. Each asset may have its own transfer and consent requirements.",
+    "records": "Prepare a schedule of rights, liabilities and formalities; distinguish the transaction from statutory merger or inheritance succession.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "social-security": {
+    "scope": "Social-security obligations depend on the worker's status and the applicable coverage rules. A payroll contract or foreign insurance policy does not alone settle Turkish coverage.",
+    "records": "Review employment dates, registration, contribution records and any applicable bilateral certificate; keep evidence supporting the selected coverage route.",
+    "sources": [
+      {
+        "label": "Social Insurance and General Health Insurance Law No. 5510",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5510.pdf"
+      }
+    ]
+  },
+  "software-development-agreement": {
+    "scope": "Software development combines delivery obligations with copyright and access questions. Payment for development does not by itself resolve all rights in code, libraries and future modifications.",
+    "records": "Specify deliverables, acceptance, written rights grants, third-party components, source access, maintenance and security; preserve version and approval records.",
+    "sources": [
+      {
+        "label": "Intellectual and Artistic Works Law No. 5846",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "source-code": {
+    "scope": "Access to source code and ownership of copyright are separate rights. A software licence may not permit modification, redistribution or disclosure of the code.",
+    "records": "Review the written rights grant, third-party licences, repository access and escrow triggers; control credentials and maintain version records.",
+    "sources": [
+      {
+        "label": "Intellectual and Artistic Works Law No. 5846",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.5846.pdf"
+      }
+    ]
+  },
+  "special-irregularity": {
+    "scope": "A special-irregularity penalty concerns specified procedural or documentation failures and differs from a tax-loss penalty. The legal basis and assessment date affect the applicable amount and challenge route.",
+    "records": "Keep the penalty notice, alleged act, supporting records and service date; check current amounts and any reduction or remedy conditions.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "spin-off": {
+    "scope": "A statutory demerger allocates assets and liabilities through a corporate procedure. It is different from an informal business-line transfer or an ordinary sale of assets.",
+    "records": "Review the plan, allocation schedule, reports, approvals, creditor protection and registry steps; assess employee and licence consequences separately.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "squeeze-out-right": {
+    "scope": "Compulsory acquisition of a minority position requires an identified statutory route and its conditions. A majority shareholder's wish to buy is not enough by itself.",
+    "records": "Check company status, ownership threshold, triggering conduct or transaction, valuation and procedural rights before seeking a forced transfer.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Capital Markets Law No. 6362",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6362.pdf"
+      }
+    ]
+  },
+  "subcontractor-agreement": {
+    "scope": "Subcontracting allocates part of performance but may leave the main contractor responsible to its customer. Employment and site-safety responsibilities require separate analysis.",
+    "records": "Define scope, flow-down obligations, acceptance, payment, personnel and insurance; ensure the customer contract permits the proposed subcontracting.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      }
+    ]
+  },
+  "subsidiary": {
+    "scope": "A Turkish subsidiary is a separate legal entity rather than a branch of its foreign parent. Its representation, tax and corporate records must be maintained locally.",
+    "records": "Identify ownership, management, capital and intra-group arrangements; review parent guarantees and sector permissions separately from incorporation.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "supply-agreement": {
+    "scope": "A supply agreement should govern recurring orders, specifications and changes rather than merely name a product. Forecasts, minimum commitments and accepted orders can have different legal effects.",
+    "records": "Define quality evidence, inspection, delivery, price changes, payment security and cancellation; retain each order and acceptance record.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "surety": {
+    "scope": "Suretyship is accessory personal security with mandatory form and protective requirements. Personal and corporate sureties, and undertakings labelled guarantees, require careful classification.",
+    "records": "Review the maximum amount, date, signature, required handwritten terms and any spouse-consent rule or exception before relying on the undertaking.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "syndicated-loan": {
+    "scope": "A syndicated loan coordinates several lenders through common documentation, but voting, agency and security rights depend on the agreed structure. Participation does not automatically create identical enforcement powers.",
+    "records": "Review commitments, transfer rights, majority decisions, agent authority and security allocation; preserve drawdown and amendment records.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "table-of-ranks": {
+    "scope": "A ranking table allocates admitted claims under the applicable enforcement or insolvency process. Admission of a debt and its priority are different questions.",
+    "records": "Compare the claim, security and rank with the published or served decision, and assess the specific objection route and deadline promptly.",
+    "sources": [
+      {
+        "label": "Enforcement and Bankruptcy Law No. 2004",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.2004.pdf"
+      }
+    ]
+  },
+  "tag-along-right": {
+    "scope": "A tag-along clause permits an eligible holder to join another shareholder's sale on agreed terms. It is not the same as a statutory minority exit right.",
+    "records": "Define covered sellers, trigger, price, participation amount, notice and completion; align the clause with mandatory share-transfer rules.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "tariff-classification": {
+    "scope": "Classification follows the goods' objective characteristics and the applicable tariff rules. A supplier's suggested code or product name is not sufficient evidence on its own.",
+    "records": "Keep composition, function, drawings and technical specifications; assess duties, trade measures and product-control obligations after choosing the code.",
+    "sources": [
+      {
+        "label": "Law No. 4458 No. 4458",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4458.pdf"
+      }
+    ]
+  },
+  "tax-loss": {
+    "scope": "A tax-loss assessment concerns tax not accrued or accrued late under the statutory framework. It differs from a business loss and from a procedural irregularity penalty.",
+    "records": "Review the assessment, alleged omission, period and service date; calculate any challenge or correction deadline against the actual notice.",
+    "sources": [
+      {
+        "label": "Tax Procedure Law No. 213",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+      }
+    ]
+  },
+  "tax-residency": {
+    "scope": "Residence affects the scope of Turkish taxation and must be assessed for the actual individual or entity. Registration, nationality and a bank account do not alone settle every residence question.",
+    "records": "Review residence facts, management and treaty tie-breaker conditions where relevant; obtain the certificate required for the particular relief claim.",
+    "sources": [
+      {
+        "label": "Income Tax Law No. 193",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.193.pdf"
+      },
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      }
+    ]
+  },
+  "technology-development-zones": {
+    "scope": "A technology-zone location does not make all revenue or employees eligible for incentives. Qualification depends on the approved activity and the applicable statutory conditions.",
+    "records": "Keep project approvals, income allocation, personnel records and expenditure evidence; separate qualifying project work from other commercial operations.",
+    "sources": [
+      {
+        "label": "Technology Development Zones Law No. 4691",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4691.pdf"
+      }
+    ]
+  },
+  "termination-employment": {
+    "scope": "Dismissal, resignation, justified immediate termination and mutual agreement have different consequences. An SGK code reports the stated ground but does not finally determine entitlement.",
+    "records": "Review service, the written notice, reason, evidence and payroll; assess severance, notice, unused leave and unemployment eligibility separately.",
+    "sources": [
+      {
+        "label": "Labour Law No. 4857",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+      },
+      {
+        "label": "Law No. 1475: Article 14 on severance",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1475.pdf"
+      }
+    ]
+  },
+  "trade-finance": {
+    "scope": "Letters of credit, documentary collections and bank guarantees allocate different payment risks. A document-based bank obligation is distinct from the buyer's rights over defective goods.",
+    "records": "Align shipping and invoice documents with the instrument, expiry and presentation conditions; plan separately for non-delivery or quality disputes.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "trade-registry": {
+    "scope": "The trade registry records legally relevant company and enterprise information. A search result may not establish the full ownership history, insolvency status or authority for a particular deal.",
+    "records": "Obtain the current entry and supporting Gazette history, and compare representation powers with the proposed signatory and transaction.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "trade-secrets": {
+    "scope": "Trade-secret protection concerns confidential business information and its misuse; it is not a registered industrial-property right. Whether information is actually kept secret matters.",
+    "records": "Identify the information, authorised access, contractual restrictions and protective measures; preserve evidence of disclosure or unauthorised use.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      },
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "trademark-registration": {
+    "scope": "Trademark protection depends on the sign, relevant goods or services and territorial coverage. A company name or overseas registration does not replace the Turkish trademark assessment.",
+    "records": "Search earlier rights, select appropriate classes and monitor office and opposition deadlines; retain evidence of use and licence ownership.",
+    "sources": [
+      {
+        "label": "Industrial Property Code No. 6769",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf"
+      }
+    ]
+  },
+  "transfer-of-commercial-enterprise": {
+    "scope": "An enterprise transfer may follow rules beyond an item-by-item asset sale, including form, registration and liability consequences. The transfer description and business continuity matter.",
+    "records": "Schedule assets, debts, employees, contracts and permits; review the required instrument and registry steps before completion.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "transfer-pricing": {
+    "scope": "Related-party pricing should be assessed against the arm's-length framework for the actual transaction. A group policy or an invoice label does not itself demonstrate compliant pricing.",
+    "records": "Keep agreements, functions and risks, comparables, calculations and the required period-specific documentation for goods, services, finance or royalties.",
+    "sources": [
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      }
+    ]
+  },
+  "trustee-receiver": {
+    "scope": "A trustee or receiver acts under the particular appointment and legal route. The title alone does not establish authority to sell assets, vote shares or replace all managers.",
+    "records": "Obtain the appointment order and scope, verify powers and reporting duties, and check which decisions still require court or corporate approval.",
+    "sources": [
+      {
+        "label": "Code of Civil Procedure No. 6100",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6100.pdf"
+      },
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "turkish-investment-lawyer": {
+    "scope": "The legal work should follow the investment route: formation, acquisition, financing or regulated operation. One incorporation filing does not resolve all commercial and regulatory risks.",
+    "records": "Prepare the investor structure, activity, location, funding and target documents so the review can identify approvals, diligence and closing conditions.",
+    "sources": [
+      {
+        "label": "Foreign Direct Investment Law No. 4875",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4875.pdf"
+      },
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "turquoise-card": {
+    "scope": "A Turquoise Card is a particular foreign-work and residence framework with its own eligibility and assessment. It should not be described as an ordinary permit available to every investor.",
+    "records": "Check the current category and evidence requirements, proposed activity and family implications before relying on this route for a hiring or relocation plan.",
+    "sources": [
+      {
+        "label": "International Labour Force Law No. 6735",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6735.pdf"
+      }
+    ]
+  },
+  "unfair-competition": {
+    "scope": "Unfair competition addresses specified conduct affecting honest commercial dealings, such as misleading claims or misuse of protected information. It is different from merger control or a dominance investigation.",
+    "records": "Preserve the advertisement, product presentation, communications and damage evidence; identify the conduct and remedy rather than alleging all aggressive competition is unlawful.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "universal-succession": {
+    "scope": "Universal succession transfers a legal position under a recognised statutory route, such as certain corporate restructurings. It is different from assigning one asset or contract.",
+    "records": "Identify the legal event, allocation and registry evidence; check any special employee, licence or creditor protections that still apply.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "unjust-enrichment": {
+    "scope": "Unjust enrichment concerns a benefit obtained without a valid legal basis, subject to its own conditions and defences. It is not a substitute for every failed contractual damages claim.",
+    "records": "Trace the payment or benefit, absence of legal basis and recipient's position; review restitution scope and the applicable limitation rules.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      }
+    ]
+  },
+  "utility-models": {
+    "scope": "A utility model is a distinct industrial-property route with its own eligibility and exclusions. It is not an automatic shortcut for every invention that fails patent requirements.",
+    "records": "Review the technical subject, novelty, ownership and filing dates; compare the eligible protection route before public disclosure.",
+    "sources": [
+      {
+        "label": "Industrial Property Code No. 6769",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf"
+      }
+    ]
+  },
+  "vat-turkey": {
+    "scope": "VAT treatment depends on the transaction, place, applicable rate and any exemption. A business's corporate-tax treatment does not determine its VAT liability.",
+    "records": "Review invoices, supply and payment facts, import or export evidence and input-tax records; verify the transaction category and period before using a rate.",
+    "sources": [
+      {
+        "label": "Value Added Tax Law No. 3065",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.3065.pdf"
+      }
+    ]
+  },
+  "vertical-agreements": {
+    "scope": "Vertical agreements connect businesses at different supply-chain levels. Resale-price restrictions, territory, exclusivity and online-selling terms require competition-law analysis.",
+    "records": "Review the actual restrictions, parties' positions and applicable exemption conditions; avoid treating a standard distribution form as automatically compliant.",
+    "sources": [
+      {
+        "label": "Competition Law No. 4054",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4054.pdf"
+      }
+    ]
+  },
+  "voting-rights": {
+    "scope": "Voting rights follow the company type, share or interest structure and applicable restrictions. A private veto agreement does not necessarily change the corporate voting rule.",
+    "records": "Check the articles, meeting agenda, attendance, conflicts and required majority; preserve the minutes supporting any resolution.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "warranty": {
+    "scope": "Contractual warranty, statutory defect remedies and a consumer guarantee are different protections. Scope depends on the buyer, goods and applicable legal regime.",
+    "records": "Record specifications, delivery, inspection, defect notices and repairs; check deadlines and any valid limitation rather than assuming the warranty document is the only remedy.",
+    "sources": [
+      {
+        "label": "Turkish Code of Obligations No. 6098",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+      },
+      {
+        "label": "Consumer Protection Law No. 6502",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6502.pdf"
+      }
+    ]
+  },
+  "waybill": {
+    "scope": "A waybill records carriage and shipment information but is not always a negotiable document controlling ownership or release. Its function depends on the transport mode and wording.",
+    "records": "Check consignor, consignee, quantity, reservations and delivery evidence against the sales order and carrier terms.",
+    "sources": [
+      {
+        "label": "Turkish Commercial Code No. 6102",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf"
+      }
+    ]
+  },
+  "withholding-tax": {
+    "scope": "Withholding is determined by the payment category, recipient status and domestic rule before applying any treaty relief. Dividend withholding and corporate tax on profits are separate taxes.",
+    "records": "For covered dividends to nonresident corporate recipients, the domestic rate is 15% from 22 December 2024 under Decision No. 9286. Check residence, beneficial ownership and the actual treaty conditions before using a reduced rate; interest, royalties and services require their own classification.",
+    "sources": [
+      {
+        "label": "Corporate Tax Law No. 5520",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.5520.pdf"
+      },
+      {
+        "label": "Income Tax Law No. 193",
+        "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.193.pdf"
+      },
+      {
+        "label": "GİB: dividend withholding decision, paragraph 12",
+        "url": "https://gib.gov.tr/mevzuat/kanun/435/bkk/1379"
+      }
+    ],
+    "answer": "For dividends covered by the domestic rule for nonresident corporate recipients, withholding is 15% from 22 December 2024 under Decision No. 9286. A lower treaty rate depends on the recipient and applicable treaty conditions. Royalties, interest and service payments have separate classifications and rates."
+  }
+}

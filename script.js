@@ -652,7 +652,7 @@ function injectEEATSignals(articleEl, slug) {
             sourcesSection.className = 'sources-box';
             sourcesSection.innerHTML = `
                 <h3>Sources & Authorities</h3>
-                <p class="sources-note">Primary sources and official institutions referenced for accuracy and transparency.</p>
+                <p class="sources-note">Statutory framework and official guidance relevant to this topic.</p>
                 <ul class="sources-list">
                     ${sources.map(s => `
                         <li>
@@ -705,6 +705,8 @@ function injectEEATSignals(articleEl, slug) {
 }
 
 const RELATED_ARTICLES_INDEX = {
+    'real-estate-commercial-lease-services-turkey': { title: 'Commercial Lease Support in Türkiye', category: 'Real Estate & Leases', description: 'Lease review, notices, rent and dispute options for commercial premises.' },
+
     'establishing-limited-liability-company-turkey': {
         title: 'Establishing a Limited Liability Company (LLC) in Turkey',
         category: 'Company Formation',
@@ -741,9 +743,9 @@ const RELATED_ARTICLES_INDEX = {
         description: 'Overview of incentives, eligibility, and practical compliance considerations.'
     },
     'kvkk-compliance-checklist': {
-        title: 'KVKK Compliance Checklist',
+        title: 'Hotel KVKK Compliance Checklist',
         category: 'Data Privacy (KVKK)',
-        description: 'A practical plan to reduce privacy risk and improve your KVKK compliance posture.'
+        description: 'Hotel steps for the identity-copying restriction and guest-data handling.'
     },
     'data-controller-representative-kvkk-turkey': {
         title: 'Data Controller Representative (KVKK) in Turkey',
@@ -817,7 +819,8 @@ function pickRelatedArticles(currentSlug, maxCount) {
         { match: /(kvkk|privacy|data|gdpr|controller|representative)/, slugs: ['kvkk-compliance-checklist', 'data-controller-representative-kvkk-turkey', 'no-more-id-photocopies-at-hotels-turkey-aligns-with-eu'] },
         { match: /(arbit|dispute|enforce|attachment|litigat)/, slugs: ['enforcing-foreign-arbitral-awards-turkey', 'strategic-asset-protection-in-turkiye-securing-your-claims-before-international-arbitration', 'key-legal-risks-in-cross-border-trade-and-how-to-mitigate-them'] },
         { match: /(merger|acquis|due diligence|m&a)/, slugs: ['mergers-acquisitions-legal-due-diligence-turkey', 'most-important-contracts-for-the-business-have', 'corporate-tax-vat-withholding-turkey'] },
-        { match: /(employment|hiring|termination|hr)/, slugs: ['employment-law-hiring-terminating-turkey', 'most-important-contracts-for-the-business-have', 'kvkk-compliance-checklist'] },
+        { match: /(lease|rent-adjustment)/, slugs: ['real-estate-commercial-lease-services-turkey', 'commercial-contract-services-turkey', 'dispute-resolution-in-turkey'] },
+        { match: /(employment|hiring|termination-employment|hr)/, slugs: ['employment-law-hiring-terminating-turkey', 'most-important-contracts-for-the-business-have', 'kvkk-compliance-checklist'] },
         { match: /(contract|agreement|power of attorney|poa)/, slugs: ['most-important-contracts-for-the-business-have', 'drafting-valid-power-of-attorney-turkey', 'kvkk-compliance-checklist'] },
         { match: /(tax|vat|withholding|incentive)/, slugs: ['corporate-tax-vat-withholding-turkey', 'investment-incentives-turkiye-2026-guide', 'establishing-limited-liability-company-turkey'] },
         { match: /(trademark|ip|brand)/, slugs: ['trademark-registration-turkey', 'most-important-contracts-for-the-business-have', 'how-to-enter-turkish-market'] }
@@ -851,73 +854,35 @@ function pickRelatedArticles(currentSlug, maxCount) {
     return unique;
 }
 
-const AUTHORITATIVE_SOURCES = {
-    general: [
-        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' },
-        { label: 'Official Gazette (Resmî Gazete)', url: 'https://www.resmigazete.gov.tr' },
-        { label: 'Republic of Türkiye Ministry of Trade', url: 'https://www.trade.gov.tr' }
+const PAGE_AUTHORITIES = {
+    "employment-law-hiring-terminating-turkey": [
+        {
+            "label": "Labour Law No. 4857",
+            "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf"
+        }
     ],
-    company: [
-        { label: 'Turkish Commercial Code (Law No. 6102) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf' },
-        { label: 'Foreign Direct Investment Law (Law No. 4875) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4875.pdf' },
-        { label: 'Republic of Türkiye Ministry of Trade', url: 'https://www.trade.gov.tr' },
-        { label: 'Investment Office of the Presidency of the Republic of Türkiye', url: 'https://www.invest.gov.tr' }
+    "most-important-contracts-for-the-business-have": [
+        {
+            "label": "Turkish Code of Obligations No. 6098",
+            "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+        }
     ],
-    contracts: [
-        { label: 'Turkish Code of Obligations (Law No. 6098) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf' },
-        { label: 'Turkish Commercial Code (Law No. 6102) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6102.pdf' },
-        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' }
+    "contract-law-turkey": [
+        {
+            "label": "Turkish Code of Obligations No. 6098",
+            "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6098.pdf"
+        }
     ],
-    kvkk: [
-        { label: 'Law on the Protection of Personal Data (KVKK, Law No. 6698) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf' },
-        { label: 'Personal Data Protection Authority (KVKK)', url: 'https://www.kvkk.gov.tr' },
-        { label: 'Official Gazette (Resmî Gazete)', url: 'https://www.resmigazete.gov.tr' }
-    ],
-    tax: [
-        { label: 'Revenue Administration (GİB)', url: 'https://www.gib.gov.tr' },
-        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' },
-        { label: 'Central Bank of the Republic of Türkiye (CBRT)', url: 'https://www.tcmb.gov.tr' }
-    ],
-    customsTrade: [
-        { label: 'Turkish Customs Law (Law No. 4458) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4458.pdf' },
-        { label: 'Republic of Türkiye Ministry of Trade', url: 'https://www.trade.gov.tr' },
-        { label: 'Official Gazette (Resmî Gazete)', url: 'https://www.resmigazete.gov.tr' }
-    ],
-    employment: [
-        { label: 'Turkish Labour Law (Law No. 4857) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.4857.pdf' },
-        { label: 'Mevzuat Bilgi Sistemi (Official Legislation Portal)', url: 'https://www.mevzuat.gov.tr' }
-    ],
-    ip: [
-        { label: 'Industrial Property Code (Law No. 6769) – Mevzuat PDF', url: 'https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6769.pdf' },
-        { label: 'Turkish Patent and Trademark Office (TÜRKPATENT)', url: 'https://www.turkpatent.gov.tr' }
+    "kvkk-compliance-checklist": [
+        {
+            "label": "KVKK: Law No. 6698",
+            "url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6698.pdf"
+        }
     ]
 };
 
 function getAuthoritativeSources(slug) {
-    const keywordMeta = document.querySelector('meta[name="keywords"]')?.content || '';
-    const haystack = `${slug} ${keywordMeta}`.toLowerCase();
-
-    const matchers = [
-        { re: /(kvkk|privacy|data|gdpr|verbi̇s|verbis|controller|representative)/, key: 'kvkk' },
-        { re: /(customs|import|export|trade|wto|fta|origin|valuation|penalt)/, key: 'customsTrade' },
-        { re: /(llc|limited|joint|stock|liaison|branch|incorpor|company formation|market entry)/, key: 'company' },
-        { re: /(tax|vat|withholding)/, key: 'tax' },
-        { re: /(employment|hiring|termination|hr|worker|labour|labor)/, key: 'employment' },
-        { re: /(trademark|ip|brand|industrial property)/, key: 'ip' },
-        { re: /(contract|agreement|power of attorney|poa|obligation)/, key: 'contracts' }
-    ];
-
-    const bucketKey = matchers.find(m => m.re.test(haystack))?.key || 'general';
-    const bucket = AUTHORITATIVE_SOURCES[bucketKey] || AUTHORITATIVE_SOURCES.general;
-
-    // Always include general sources as tail (dedup by URL)
-    const combined = [...bucket, ...AUTHORITATIVE_SOURCES.general];
-    const seen = new Set();
-    return combined.filter(item => {
-        if (seen.has(item.url)) return false;
-        seen.add(item.url);
-        return true;
-    }).slice(0, 8);
+    return PAGE_AUTHORITIES[slug] || [];
 }
 
 /* =========================================
@@ -1465,7 +1430,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 2. Vertical Timeline Logic
     const timelineHeaders = document.querySelectorAll('.timeline-header');
-    
+
     if (timelineHeaders.length > 0) {
         timelineHeaders.forEach(header => {
             header.addEventListener('click', () => {
@@ -1550,13 +1515,13 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mainNav = document.querySelector('.main-nav');
-    
+
     if (mobileMenuToggle && mainNav) {
         mobileMenuToggle.addEventListener('click', () => {
             mobileMenuToggle.classList.toggle('active');
             mainNav.classList.toggle('active');
         });
-        
+
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileMenuToggle.contains(e.target) && !mainNav.contains(e.target)) {
