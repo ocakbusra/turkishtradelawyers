@@ -802,7 +802,7 @@ const glossaryData = [
         term: "Withholding Tax",
         trTerm: "Stopaj Vergisi",
         question: "What withholding taxes apply to payments made from Turkey?",
-        excerpt: "Withholding applies to dividends (10%), royalties (20%), interest (0-10%), and service fees (15-20%). Double tax treaties may reduce rates.",
+        excerpt: "For dividends covered by the domestic rule for nonresident corporate recipients, withholding is 15% from 22 December 2024 under Decision No. 9286. A lower treaty rate depends on the recipient and applicable treaty conditions. Royalties, interest and service payments have separate classifications and rates.",
         tags: ["tax-law", "international-trade"],
         relatedTerms: ["corporate-tax", "repatriation-profits", "double-tax-treaty"]
     },
@@ -902,7 +902,7 @@ const glossaryData = [
         term: "Cross-Border Data Transfer",
         trTerm: "Yurtdışına Veri Aktarımı",
         question: "What rules govern cross-border personal data transfers from Turkey?",
-        excerpt: "March 2024 amendments to KVKK introduced a tiered system: transfers based on Adequacy Decision, Appropriate Safeguards (including Standard Contracts), or occasional exceptional circumstances.",
+        excerpt: "Cross-border transfers require a KVKK Article 9 route: an applicable adequacy decision, a qualifying appropriate safeguard, or a narrowly applicable exceptional ground. A KVKK standard contract must use the correct party-role combination and be notified to the Authority within five business days after signing.",
         tags: ["data-protection", "international-trade"],
         relatedTerms: ["kvkk-compliance", "data-controller", "gdpr-kvkk-comparison"]
     },
@@ -974,7 +974,7 @@ const glossaryData = [
         term: "Commercial Lease Termination",
         trTerm: "Ticari Kira Sözleşmesinin Feshi",
         question: "How can a commercial lease be terminated in Turkey?",
-        excerpt: "Landlords can terminate for specific grounds like non-payment or personal use. Proper notice is required. Courts may grant tenants extended periods to vacate.",
+        excerpt: "Termination of a roofed commercial lease depends on the party and legal ground. A landlord cannot generally terminate solely because a fixed term ends; statutory need, default and extension-period routes have separate conditions. Check notices, service dates and mandatory mediation before proceedings.",
         tags: ["real-estate", "contract-law"],
         relatedTerms: ["commercial-lease", "rent-adjustment", "eviction"]
     },
@@ -1016,10 +1016,10 @@ const glossaryData = [
     },
     {
         id: "permits-licenses",
-        term: "Business Permits and Licenses",
+        term: "Sector Authorisations and Regulatory Licences",
         trTerm: "İş Yeri Açma ve Çalışma Ruhsatları",
-        question: "What permits and licenses are required to operate a business in Turkey?",
-        excerpt: "Requirements vary by sector. Common permits include trade registry, activity license, environmental permits, and sector-specific authorizations.",
+        question: "How do sector-specific authorisations differ from an operating licence in Turkey?",
+        excerpt: "A sector authorisation permits a regulated activity or product under the competent regulator’s rules. It is separate from incorporation and a workplace operating licence. Identify the operator, activity and product before mapping the approval, technical evidence and ongoing obligations.",
         tags: ["commercial-law", "company-law"],
         relatedTerms: ["company-formation", "environmental-compliance", "regulated-industries"]
     },
@@ -1055,7 +1055,7 @@ const glossaryData = [
         term: "Rent Adjustment",
         trTerm: "Kira Bedelinin Uyarlanması",
         question: "How is commercial rent adjusted in Turkey?",
-        excerpt: "Rent adjustments follow contractual terms, capped by the Consumer Price Index (CPI/TÜFE) 12-month average. Courts can determine fair rent after five years of tenancy.",
+        excerpt: "Roofed commercial-lease renewal rent is assessed under Code of Obligations Article 344. The method depends on the lease duration, currency and renewal circumstances. Review the increase clause, applicable index, comparable evidence, notice and claim timing; a demand alone does not establish the new rent.",
         tags: ["real-estate", "contract-law"],
         relatedTerms: ["commercial-lease", "lease-termination", "inflation-indexation"]
     },

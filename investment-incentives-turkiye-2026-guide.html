@@ -510,14 +510,7 @@
                 <a class="related-card" href="corporate-tax-vat-withholding-turkey.html"><span class="related-category">Tax Advisory</span><h4>Corporate Tax, VAT &amp; Withholding in Türkiye</h4><p>Understand the main Turkish tax obligations affecting companies and investors.</p></a>
                 <a class="related-card" href="services/trademark-lawyer-turkey.html"><span class="related-category">Trademark &amp; Brand Protection</span><h4>Trademark Legal Services in Türkiye</h4><p>Protect brands during market entry, expansion and commercial growth.</p></a>
             </div></section>
-            <section class="sources-box" aria-labelledby="sources-title"><h3 id="sources-title">Sources &amp; Authorities</h3><p class="sources-note">Primary sources and official institutions referenced for accuracy and transparency.</p><ul class="sources-list">
-                <li><a href="https://www.resmigazete.gov.tr/" target="_blank" rel="noopener noreferrer">Official Gazette (Resmî Gazete)</a></li>
-                <li><a href="https://www.sanayi.gov.tr/" target="_blank" rel="noopener noreferrer">Ministry of Industry and Technology of the Republic of Türkiye</a></li>
-                <li><a href="https://www.mevzuat.gov.tr/" target="_blank" rel="noopener noreferrer">Mevzuat Bilgi Sistemi (Official Legislation Portal)</a></li>
-                <li><a href="https://www.invest.gov.tr/en/investmentguide/pages/incentives.aspx" target="_blank" rel="noopener noreferrer">Invest in Türkiye – Investment Incentives</a></li>
-                <li><a href="https://www.turkishtradelawyers.com/turkiye-corporate-tax-changes-2026-communique-26.html" target="_blank" rel="noopener noreferrer">Türkiye Corporate Tax Changes 2026 – Related Guide</a></li>
-                <li><a href="https://www.turkishtradelawyers.com/contact.html" target="_blank" rel="noopener noreferrer">Turkish Trade Lawyers – Investment Support</a></li>
-            </ul></section>
+            <section class="sources-box"><h3>Sources &amp; Authorities</h3><p class="sources-note">Relevant statutory framework and official guidance. Applicable requirements depend on the activity, documents and current rules.</p><ul class="sources-list"><li><a href="https://www.yatirimadestek.gov.tr/pdf/assets/upload/dosyalar/karar-yatirim_tesvik_uygulamalari.pdf" target="_blank" rel="noopener noreferrer">Decision No. 9903: investment incentive framework</a></li><li><a href="https://www.sanayi.gov.tr/assets/pdf/mevzuat/YatirimlardaDevletYardimlariHakkindaKararinUygulanmasinaIliskinTeblig2025.pdf" target="_blank" rel="noopener noreferrer">Ministry of Industry: implementing communiqué, 2025</a></li><li><a href="https://www.invest.gov.tr/en/investmentguide/pages/incentives-guide.aspx" target="_blank" rel="noopener noreferrer">Investment Office: investment incentives</a></li></ul></section>
         </div>
     </main>
 
@@ -576,7 +569,7 @@
                     e.preventDefault();
                     const email = document.getElementById('lmEmail').value;
                     const submitBtn = form.querySelector('.lm-submit-btn');
-                    
+
                     if(email) {
                         const originalText = submitBtn.innerText;
                         submitBtn.innerText = 'Processing...';
@@ -597,14 +590,14 @@
                             modal.style.display = 'none';
                             submitBtn.innerText = originalText;
                             submitBtn.disabled = false;
-                            
+
                             const link = document.createElement('a');
                             link.href = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
                             link.download = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
-                            
+
                             form.reset();
                         })
                         .catch(error => {
@@ -612,14 +605,14 @@
                             modal.style.display = 'none';
                             submitBtn.innerText = originalText;
                             submitBtn.disabled = false;
-                            
+
                             const link = document.createElement('a');
                             link.href = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
                             link.download = 'TTL-Investment-Incentives-Exemptions-Guide-2026.pdf';
                             document.body.appendChild(link);
                             link.click();
                             document.body.removeChild(link);
-                            
+
                             form.reset();
                         });
                     }
