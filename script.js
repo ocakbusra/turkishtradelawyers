@@ -5,6 +5,7 @@ const GOOGLE_ADS_TAG_ID = 'AW-18437766591';
 const CLARITY_PROJECT_ID = window.TTL_CLARITY_ID || 'vv2a5uwdk0';
 let analyticsInitialized = false;
 let clarityInitialized = false;
+let engagementTrackingInitialized = false;
 
 function getCookieConsent() {
     try {
@@ -58,8 +59,76 @@ function enableAnalytics() {
             window.gtag('config', GOOGLE_ADS_TAG_ID);
         }
         analyticsInitialized = true;
+        initEngagementTracking();
     }
 }
+
+function initEngagementTracking() {
+    if (engagementTrackingInitialized || !analyticsInitialized) return;
+    engagementTrackingInitialized = true;
+
+    const checkpointInterval = 15000;
+    let timer = null;
+    let activeSince = null;
+    let pendingActiveTime = 0;
+    const isForeground = () => document.visibilityState === 'visible' && document.hasFocus();
+
+    const checkpoint = reason => {
+        if (activeSince !== null) {
+            const now = performance.now();
+            pendingActiveTime += Math.max(0, now - activeSince);
+            activeSince = now;
+        }
+        if (pendingActiveTime < 1000) return;
+
+        // The Google tag attaches its own incremental engagement_time_msec.
+        // Do not manufacture durations, page views, key events or user_engagement.
+        window.gtag('event', 'engagement_checkpoint', {
+            send_to: ANALYTICS_MEASUREMENT_ID,
+            checkpoint_reason: reason
+        });
+        pendingActiveTime = 0;
+    };
+
+    const pause = reason => {
+        checkpoint(reason);
+        activeSince = null;
+        if (timer !== null) window.clearTimeout(timer);
+        timer = null;
+    };
+
+    const schedule = () => {
+        timer = window.setTimeout(() => {
+            timer = null;
+            if (!isForeground()) {
+                pause('background');
+                return;
+            }
+            checkpoint('interval');
+            schedule();
+        }, checkpointInterval);
+    };
+
+    const resume = () => {
+        if (activeSince !== null || !isForeground()) return;
+        activeSince = performance.now();
+        schedule();
+    };
+
+    document.addEventListener('visibilitychange', () => {
+        if (isForeground()) resume();
+        else pause('hidden');
+    });
+    window.addEventListener('blur', () => pause('focus_lost'));
+    window.addEventListener('focus', resume);
+    window.addEventListener('pagehide', () => pause('page_exit'));
+    window.addEventListener('pageshow', resume);
+    resume();
+}
+
+// Start the existing tag as soon as this deferred shared script executes.
+// Waiting for all images, chat widgets and browser idle time loses short visits.
+enableAnalytics();
 
 function enableClarity() {
     if (clarityInitialized || !CLARITY_PROJECT_ID) return;
