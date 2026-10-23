@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Footer Injection
 document.addEventListener('DOMContentLoaded', () => {
-    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const scriptEl = document.querySelector('script[src*="script.js"]');
     const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
     const footerContent = `
         <div class="container footer-container">
@@ -653,7 +653,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const related = pickRelatedArticles(slug, 6);
     if (related.length === 0) return;
 
-    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const scriptEl = document.querySelector('script[src*="script.js"]');
     const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
 
     const section = document.createElement('section');
@@ -698,7 +698,7 @@ function injectEEATSignals(articleEl, slug) {
     const insertBeforeEl = articleEl.querySelector('.related-articles') || null;
     const articleWideFollowups = document.querySelector('.advertising-article-followups');
 
-    const scriptEl = document.querySelector('script[src$="script.js"]');
+    const scriptEl = document.querySelector('script[src*="script.js"]');
     const basePath = scriptEl?.getAttribute('src')?.replace(/script\.js(?:\?.*)?$/, '') || '';
 
     if (!hasDisclaimer) {
@@ -1600,3 +1600,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// TTL language-selector loader
+(() => {
+    if (document.querySelector('script[data-ttl-language-selector]')) return;
+    const selectorScript = document.createElement('script');
+    selectorScript.src = '/language-selector.js?v=20261023';
+    selectorScript.setAttribute('data-ttl-language-selector', 'true');
+    document.head.appendChild(selectorScript);
+})();

@@ -1,0 +1,37 @@
+html[lang="zh-CN"] :is(body, button, input, textarea, select, h1, h2, h3, h4, h5, h6) {
+    font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+html[lang="zh-CN"] .ttl-language-switch {
+    color: var(--navy);
+}
+
+html[lang="zh-CN"] #entityChecklistModal .lm-submit-btn {
+    background: var(--navy);
+}
+
+html[lang="zh-CN"] #entityChecklistModal .lm-submit-btn:hover {
+    background: var(--navy-dark);
+}
+
+html[lang="zh-CN"] :is(.form-submit-btn, .sidebar-form-submit, .btn-primary, .cta-btn, .cta-button, .ai-action-download-trigger) {
+    background: var(--navy);
+}
+
+html[lang="zh-CN"] :is(.form-submit-btn, .sidebar-form-submit, .btn-primary, .cta-btn, .cta-button, .ai-action-download-trigger):hover,
+html[lang="zh-CN"] .nav-menu li:last-child .nav-link:hover {
+    background: var(--navy-dark);
+}
+
+@media (max-width: 768px) {
+    html[lang="zh-CN"] .supply-chain-section {
+        overflow-x: clip;
+    }
+
+    html[lang="zh-CN"]:has(link[rel="canonical"][href$="/zh/glossary/incoterms.html"]) .compliance-table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+    }
+}

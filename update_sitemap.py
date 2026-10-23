@@ -13,6 +13,8 @@ EXCLUDE_DIRS = {".git", "components", "assets", "images", "scratch"}
 # XML namespace handling
 ET.register_namespace('', "http://www.sitemaps.org/schemas/sitemap/0.9")
 NAMESPACE = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+XHTML_NAMESPACE = "http://www.w3.org/1999/xhtml"
+ET.register_namespace("xhtml", XHTML_NAMESPACE)
 
 
 class HeadPolicyParser(HTMLParser):
@@ -65,11 +67,13 @@ def get_html_files():
         for file in files:
             if file.endswith(".html"):
                 full_path = os.path.join(root, file)
-                rel_path = os.path.relpath(full_path, ROOT_DIR)
+                rel_path = os.path.relpath(full_path, ROOT_DIR).replace("\\", "/")
                 if rel_path.startswith("./"):
                     rel_path = rel_path[2:]
                 
-                if rel_path == "index.html":
+                if rel_path == "zh/index.html":
+                    url_path = "zh/"
+                elif rel_path == "index.html":
                     url_path = ""
                 else:
                     url_path = rel_path
@@ -129,6 +133,15 @@ def update_sitemap():
         
         loc = ET.SubElement(url_elem, "loc")
         loc.text = final_url
+        # Reciprocal language links only for indexable, self-canonical pairs.
+        english_path = path[3:] if path.startswith("zh/") else path
+        chinese_path = "zh/" + english_path
+        if english_path in actual_files and chinese_path in actual_files:
+            for language, alternate_path in [("en", english_path), ("zh-CN", chinese_path)]:
+                ET.SubElement(url_elem, "{" + XHTML_NAMESPACE + "}link", {
+                    "rel": "alternate", "hreflang": language,
+                    "href": BASE_URL + "/" + alternate_path,
+                })
         
         # Use existing metadata if available, else defaults
         meta = existing_metadata.get(path, {})
