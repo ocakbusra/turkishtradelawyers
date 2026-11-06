@@ -1,0 +1,11 @@
+
+.investment-guide .investment-figure { margin: 28px 0; }
+.investment-guide .investment-figure img { display:block; width:100%; height:auto; border-radius:8px; }
+.investment-guide .investment-figure figcaption { font-size:.8rem; line-height:1.5; color:var(--text-gray); margin-top:8px; }
+.investment-guide .investment-summary { background:var(--light-gray); border:1px solid var(--border-gray); border-left:4px solid var(--primary-blue); border-radius:8px; padding:20px 24px; margin:8px 0 32px; }
+.investment-guide .investment-summary p { margin:0; }
+.investment-guide .article-cta { background:var(--light-gray); border:1px solid var(--border-gray); }
+.investment-guide .article-cta h3 { color:var(--navy); }
+.investment-guide .article-cta p { color:var(--text-gray); }
+.investment-guide .article-cta .cta-btn, .investment-guide .sidebar-form-submit { background:var(--navy); }
+.investment-guide .article-cta .cta-btn:hover, .investment-guide .sidebar-form-submit:hover { background:var(--navy-dark); }
