@@ -691,7 +691,7 @@
                             headers: { Accept: 'application/json' }
                         });
                         if (!response.ok) throw new Error("下载资料申请提交失败");
-                        trackLeadMagnet('generate_lead', { form_id: 'entity-checklist-lead-magnet' });
+                        trackLeadMagnet('checklist_signup', { form_id: 'entity-checklist-lead-magnet' });
                     } catch (error) {
                         trackLeadMagnet('lead_magnet_submit_error', { form_id: 'entity-checklist-lead-magnet' });
                     } finally {

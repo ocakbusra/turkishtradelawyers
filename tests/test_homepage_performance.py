@@ -54,13 +54,20 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertEqual(preload.get("fetchpriority"), "high")
 
     def test_navigation_logo_has_intrinsic_dimensions_and_small_source(self):
+        for prefix in ("", "zh/"):
+            with self.subTest(language=prefix or "en"):
+                parser = HomepageImageParser()
+                parser.feed((ROOT / prefix / "index.html").read_text(encoding="utf-8"))
+                self._assert_navigation_logo(parser)
+
+    def _assert_navigation_logo(self, parser):
         logo = next(
-            image for image in self.parser.images
+            image for image in parser.images
             if "logo-icon" in image.get("class", "").split()
         )
 
         self.assertEqual((logo.get("width"), logo.get("height")), ("487", "513"))
-        self.assertIn("logo-128.webp", self._srcset_paths(logo["srcset"]))
+        self.assertIn("logo-128.webp", [path.lstrip("/") for path in self._srcset_paths(logo["srcset"])])
         self.assertTrue((ROOT / "logo-128.webp").is_file())
 
     def test_inter_fallback_tracks_brand_font_metrics(self):
@@ -70,7 +77,12 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
 
     def test_homepage_inter_family_uses_metric_matched_local_faces_without_font_download(self):
-        html = (ROOT / "index.html").read_text(encoding="utf-8")
+        for prefix in ("", "zh/"):
+            with self.subTest(language=prefix or "en"):
+                html = (ROOT / prefix / "index.html").read_text(encoding="utf-8")
+                self._assert_local_homepage_fonts(html)
+
+    def _assert_local_homepage_fonts(self, html):
         font_preloads = re.findall(r'<link rel="preload"[^>]*as="font"[^>]*>', html)
         font_stylesheet = re.search(
             r'<style media="\(min-width: 769px\)">(.*?)</style>', html, re.S

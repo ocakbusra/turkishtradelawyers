@@ -31,7 +31,7 @@
             location.assign(base + location.search + location.hash);
         });
         item.append(select);
-        if (list) list.insertBefore(item, list.lastElementChild);
+        if (list) list.append(item);
         else document.body.append(item);
         const stylesheet = document.createElement('link');
         stylesheet.rel = 'stylesheet'; stylesheet.href = '/language-selector.css';

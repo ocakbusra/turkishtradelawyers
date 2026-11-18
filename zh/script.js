@@ -1236,6 +1236,7 @@ function initConversionForms() {
         const formId = form.dataset.formId || form.id || 'conversion-form';
         const status = form.querySelector('.form-status');
         let started = false;
+        let submitting = false;
 
         const trackStart = () => {
             if (started) return;
@@ -1248,6 +1249,8 @@ function initConversionForms() {
         form.addEventListener('submit', async event => {
             if (event.defaultPrevented || !form.action.includes('formspree.io')) return;
             event.preventDefault();
+            if (submitting) return;
+            submitting = true;
 
             let sourceInput = form.querySelector('[name="source_page"]');
             if (!sourceInput) {
@@ -1290,6 +1293,7 @@ function initConversionForms() {
                 }
                 trackConversionEvent('form_submit_error', { form_id: formId });
             } finally {
+                submitting = false;
                 if (submitButton) submitButton.disabled = false;
             }
         });

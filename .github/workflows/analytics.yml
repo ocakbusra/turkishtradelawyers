@@ -1,16 +1,32 @@
-name: Verify analytics collection
+name: Verify website and analytics
 
 on:
   pull_request:
     paths:
       - script.js
-      - tests/test_analytics_engagement.js
+      - zh/script.js
+      - '**/*.html'
+      - '**/*.css'
+      - language-selector.js
+      - tests/**
+      - build.py
+      - seo_indexation_review.py
+      - seo-indexation-policy.json
+      - submit_indexnow.py
       - .github/workflows/analytics.yml
   push:
     branches: [main]
     paths:
       - script.js
-      - tests/test_analytics_engagement.js
+      - zh/script.js
+      - '**/*.html'
+      - '**/*.css'
+      - language-selector.js
+      - tests/**
+      - build.py
+      - seo_indexation_review.py
+      - seo-indexation-policy.json
+      - submit_indexnow.py
       - .github/workflows/analytics.yml
 
 permissions:
@@ -24,5 +40,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - run: node --check script.js
-      - run: node --test tests/test_analytics_engagement.js
+      - run: node --check zh/script.js
+      - run: node --check language-selector.js
+      - run: node --test tests/test_analytics_engagement.js tests/test_conversion_forms.js
+      - run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - run: python3 seo_indexation_review.py audit
+      - run: python3 build.py --check
