@@ -1,0 +1,65 @@
+/* Small content-fit adjustments for the September and October Monitor issues. */
+.monitor-new .snapshot-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    column-gap: 12px;
+    row-gap: 3px;
+}
+
+.monitor-new .snapshot-value {
+    overflow-wrap: anywhere;
+}
+
+.monitor-new .monitor-calendar-more {
+    margin-top: 4px;
+}
+
+.monitor-new .monitor-calendar-more summary {
+    cursor: pointer;
+    padding: 9px 10px;
+    border-radius: 8px;
+    background: var(--light-gray, #F5F7FA);
+    color: var(--navy, #1E3A8A);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.monitor-new .monitor-calendar-more summary:focus-visible {
+    outline: 2px solid var(--navy, #1E3A8A);
+    outline-offset: 2px;
+}
+
+.monitor-new .monitor-calendar-more[open] summary {
+    margin-bottom: 8px;
+}
+
+/* The shared heading rule must not turn emphasis inside an insight into blocks. */
+.monitor-new .monitor-articles .ttl-insight strong:not(:first-child) {
+    display: inline;
+    margin: 0;
+    color: inherit;
+    font-size: inherit;
+    letter-spacing: normal;
+}
+
+/* Distribute each issue's three snapshot rows across the calendar height. */
+@media (min-width: 901px) {
+    .monitor-new .monitor-tools .economic-widget {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .monitor-new .monitor-tools .snapshot-item {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid var(--border-gray, #E4E7EC);
+    }
+
+    .monitor-new .monitor-tools .snapshot-item:last-child {
+        border-bottom: 0;
+    }
+}
