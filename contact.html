@@ -164,7 +164,7 @@
                     <!-- Right Side - Contact Form -->
                     <div class="contact-right">
                         <form class="contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
-                            id="consultation-form">
+                            id="consultation-form" data-conversion-form data-form-id="contact-consultation">
                             <div class="form-group">
                                 <label for="full-name">Full Name</label>
                                 <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
@@ -219,6 +219,7 @@
                                 Submit Request
                                 <i class="fas fa-arrow-right"></i>
                             </button>
+                            <p class="form-status" role="status" aria-live="polite"></p>
                         </form>
                     </div>
                 </div>
@@ -336,7 +337,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20261113-lead-counting"></script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

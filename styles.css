@@ -262,7 +262,8 @@ a {
 }
 
 /* Contact button - special styling */
-.nav-menu li:last-child .nav-link {
+.nav-menu li:last-child .nav-link,
+.nav-menu li:has(+ .ttl-language-selector) .nav-link {
     background: var(--navy);
     color: #ffffff;
     font-weight: 600;
@@ -272,11 +273,13 @@ a {
     transition: all 0.3s ease;
 }
 
-.nav-menu li:last-child .nav-link::after {
+.nav-menu li:last-child .nav-link::after,
+.nav-menu li:has(+ .ttl-language-selector) .nav-link::after {
     display: none;
 }
 
-.nav-menu li:last-child .nav-link:hover {
+.nav-menu li:last-child .nav-link:hover,
+.nav-menu li:has(+ .ttl-language-selector) .nav-link:hover {
     background: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
@@ -2781,7 +2784,8 @@ iframe[title="chat widget"] {
         border-radius: 12px;
     }
 
-    .nav-menu li:last-child .nav-link {
+    .nav-menu li:last-child .nav-link,
+    .nav-menu li:has(+ .ttl-language-selector) .nav-link {
         margin-top: 12px;
         border-radius: 12px;
     }

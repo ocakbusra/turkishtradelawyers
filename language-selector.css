@@ -7,15 +7,15 @@
 .ttl-language-selector select.ttl-language-switch {
     box-sizing: border-box;
     max-width: 100%;
-    width: 112px;
-    min-height: 40px;
-    padding: 8px;
+    width: 88px;
+    min-height: 32px;
+    padding: 5px 6px;
     border: 1px solid var(--border-gray, #E4E7EC);
     border-radius: 6px;
     background: var(--white, #FFFFFF);
     color: var(--navy, #1E3A8A);
     font: inherit;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.25;
     cursor: pointer;
 }

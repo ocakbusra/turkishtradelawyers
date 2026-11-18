@@ -41,11 +41,24 @@
     </script>
 
     <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://embed.tawk.to">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style media="(min-width: 769px)">
+        @font-face {
+            font-family: 'Inter';
+            src: local('Arial');
+            font-style: normal;
+            font-weight: 400 600;
+            size-adjust: 107%;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: local('Arial Bold');
+            font-style: normal;
+            font-weight: 700 900;
+            size-adjust: 103%;
+        }
+    </style>
     <link rel="preload" as="image" href="/hero-office-bosphorus.webp"
         imagesrcset="/hero-office-bosphorus-480.webp 480w, /hero-office-bosphorus-640.webp 640w, /hero-office-bosphorus-768.webp 768w, /hero-office-bosphorus.webp 1024w"
         imagesizes="(max-width: 1024px) calc(100vw - 40px), 600px" media="(min-width: 1025px)" fetchpriority="high">
@@ -387,7 +400,8 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="/zh/#home" class="nav-logo">
-                <img src="/logo.webp" alt="Turkish Trade Lawyers 标志" class="logo-icon">
+                <img src="/logo.webp" srcset="/logo-128.webp 128w, /logo.webp 487w" sizes="46px"
+                    width="487" height="513" alt="Turkish Trade Lawyers 标志" class="logo-icon">
                 <span class="logo-text">
                     <span class="logo-main">Turkish Trade Lawyers</span>
                     <span class="logo-tagline">卓越土耳其法律服务</span>
@@ -791,7 +805,7 @@
                 <!-- Right Side - Contact Form -->
                 <div class="contact-right">
                     <form class="contact-form" action="https://formspree.io/f/mnneobaw" method="POST"
-                        id="consultation-form">
+                        id="consultation-form" data-conversion-form data-form-id="homepage-consultation-zh">
                         <div class="form-group">
                             <label for="full-name">姓名</label>
                             <input type="text" id="full-name" name="full-name" placeholder="John Doe" required>
@@ -847,6 +861,7 @@
                             提交请求
                             <i class="fas fa-arrow-right"></i>
                         </button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
@@ -1396,7 +1411,7 @@
     </a>
 
 
-    <script defer src="/zh/script.js"></script>
+    <script defer src="/zh/script.js?v=20261113-lead-counting"></script>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">

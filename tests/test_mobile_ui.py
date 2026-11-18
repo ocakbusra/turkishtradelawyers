@@ -25,10 +25,15 @@ class ConversionFormParser(HTMLParser):
         self.form_stack = []
         self.missing_status_forms = []
         self.forms_checked = 0
+        self.untracked_consultations = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == "form":
+            if attrs.get("id") == "consultation-form" and (
+                "data-conversion-form" not in attrs or not attrs.get("data-form-id")
+            ):
+                self.untracked_consultations.append(attrs.get("id"))
             self.form_stack.append(
                 {"id": attrs.get("data-form-id", attrs.get("id", "unnamed")), "has_status": False}
                 if "data-conversion-form" in attrs
@@ -67,14 +72,17 @@ class MobileUiTests(unittest.TestCase):
     def test_every_conversion_form_has_an_accessible_status_region(self):
         checked = 0
         missing = []
+        untracked = []
         for path in ROOT.rglob("*.html"):
             parser = ConversionFormParser()
             parser.feed(path.read_text(encoding="utf-8"))
             checked += parser.forms_checked
             missing.extend(f"{path.relative_to(ROOT)}: {form_id}" for form_id in parser.missing_status_forms)
+            untracked.extend(f"{path.relative_to(ROOT)}: {form_id}" for form_id in parser.untracked_consultations)
 
         self.assertGreaterEqual(checked, 60)
         self.assertEqual(missing, [])
+        self.assertEqual(untracked, [], "Consultation forms must report confirmed submissions")
 
     def test_country_comparison_tables_are_keyboard_scroll_regions(self):
         for relative_path in (*COUNTRY_TABLE_PAGES, "industrial-design-lawyer-turkey.html"):
