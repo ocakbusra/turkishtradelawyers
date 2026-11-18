@@ -76,31 +76,22 @@ class HomepagePerformanceTests(unittest.TestCase):
         self.assertIn("size-adjust: 103%", self.styles)
         self.assertIn("'Inter', 'Inter Fallback'", self.styles)
 
-    def test_homepage_inter_family_uses_metric_matched_local_faces_without_font_download(self):
+    def test_homepage_loads_the_brand_inter_font(self):
         for prefix in ("", "zh/"):
             with self.subTest(language=prefix or "en"):
                 html = (ROOT / prefix / "index.html").read_text(encoding="utf-8")
-                self._assert_local_homepage_fonts(html)
+                self._assert_brand_homepage_fonts(html)
 
-    def _assert_local_homepage_fonts(self, html):
+    def _assert_brand_homepage_fonts(self, html):
         font_preloads = re.findall(r'<link rel="preload"[^>]*as="font"[^>]*>', html)
-        font_stylesheet = re.search(
-            r'<style media="\(min-width: 769px\)">(.*?)</style>', html, re.S
-        )
 
         self.assertEqual(len(font_preloads), 2)
         self.assertFalse(any("inter-" in tag for tag in font_preloads))
-        self.assertIsNotNone(font_stylesheet)
-        self.assertIn("font-weight: 400 600", font_stylesheet.group(1))
-        self.assertIn("font-weight: 700 900", font_stylesheet.group(1))
-        self.assertIn("src: local('Arial')", font_stylesheet.group(1))
-        self.assertIn("src: local('Arial Bold')", font_stylesheet.group(1))
-        self.assertIn("size-adjust: 107%", font_stylesheet.group(1))
-        self.assertIn("size-adjust: 103%", font_stylesheet.group(1))
-        self.assertNotIn("fonts.googleapis.com/css2?family=Inter", html)
-        self.assertNotIn("fonts.gstatic.com", html)
-        self.assertFalse((ROOT / "fonts/inter-latin.woff2").exists())
-        self.assertFalse((ROOT / "fonts/inter-latin-ext.woff2").exists())
+        self.assertIn('<link rel="preconnect" href="https://fonts.googleapis.com">', html)
+        self.assertIn('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', html)
+        self.assertIn('href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"', html)
+        self.assertNotIn("src: local('Arial');", html)
+        self.assertNotIn("src: local('Arial Bold');", html)
 
     def test_homepage_font_awesome_uses_local_subsets_for_every_referenced_icon(self):
         html = (ROOT / "index.html").read_text(encoding="utf-8")
