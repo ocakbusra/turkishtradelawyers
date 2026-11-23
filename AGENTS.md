@@ -68,6 +68,15 @@ New guide pages must preserve this structure and interaction pattern:
    related articles, and source links. Do not create a materially different
    page shell or sidebar design without explicit approval.
 
+### Guide publication dates
+
+Guide cards and the publication-date row of every linked guide/article must show
+the calendar date only. Never append a clock time or timezone label (for example,
+"at 12:33 TRT") to a publication date. Use a date-only `YYYY-MM-DD` value in the
+visible date's `<time datetime>` attribute. This rule concerns publication
+metadata; retain exact times in article text when they are material to a legal
+deadline or other substantive guidance.
+
 ### Guide post-CTA structure (non-negotiable)
 
 For every new guide, the structure after the article CTA must follow this exact
