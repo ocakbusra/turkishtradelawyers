@@ -81,7 +81,8 @@ class NavigationTests(unittest.TestCase):
             base_url = urljoin(document_url, parser.base_href) if parser.base_href else document_url
 
             with self.subTest(page=path.relative_to(ROOT).as_posix()):
-                self.assertEqual(parser.language, language)
+                expected_page_language = "tr" if relative == "bilgi-bankasi.html" else language
+                self.assertEqual(parser.language, expected_page_language)
                 self.assertEqual([label for label, _ in parser.menu_links], MENU_LABELS[language])
                 for (label, href), target in zip(parser.menu_links, MENU_TARGETS):
                     self.assertTrue(href, f"{label} is missing an href")
