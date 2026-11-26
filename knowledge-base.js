@@ -2,7 +2,7 @@
     const page = document.querySelector('.kb-page');
     if (!page) return;
 
-    for (const link of page.querySelectorAll('.kb-skip-link, .kb-hero-actions a[href="#videolar"]')) {
+    for (const link of page.querySelectorAll('.kb-skip-link, .kb-hero-actions a[href="#videos"]')) {
         link.addEventListener('click', () => {
             page.querySelector(link.hash).focus({ preventScroll: true });
         });
@@ -41,8 +41,9 @@
             if (!hide && card.element.hidden) firstRevealed ??= card.element;
             card.element.hidden = hide;
         }
-        const order = activeFilter === 'all' && terms.length === 0 ? ' · En yeniden eskiye' : '';
-        count.textContent = `${matches} video${order}`;
+        const order = activeFilter === 'all' && terms.length === 0 ? ' · Newest first' : '';
+        const label = matches === 1 ? 'video' : 'videos';
+        count.textContent = `${matches} ${label}${order}`;
         empty.hidden = matches > 0;
         more.hidden = matches <= visibleLimit;
         return firstRevealed;

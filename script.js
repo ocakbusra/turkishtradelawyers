@@ -477,7 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <a href="${basePath}guides.html">Guides Hub</a>
-                    <a href="${basePath}bilgi-bankasi.html" lang="tr">Bilgi Bankası</a>
+                    <a href="${basePath}knowledge-base.html">Knowledge Base</a>
                     <a href="${basePath}glossary.html">Legal Glossary</a>
                     <a href="${basePath}monitor.html">Turkish Trade Monitor</a>
                     <a href="${basePath}regions.html">Countries</a>
@@ -1608,8 +1608,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // TTL language-selector loader
 (() => {
-    const language = document.documentElement.lang.toLowerCase().split('-')[0];
-    if (language === 'tr') return;
     if (document.querySelector('script[data-ttl-language-selector]')) return;
     const selectorScript = document.createElement('script');
     selectorScript.src = '/language-selector.js?v=20261023';
