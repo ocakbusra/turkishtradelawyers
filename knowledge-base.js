@@ -87,48 +87,4 @@
     filters.hidden = false;
     updateLibrary();
 
-    const dialog = page.querySelector('#kb-player');
-    if (typeof dialog.showModal !== 'function') return;
-
-    const embed = page.querySelector('#kb-embed');
-    const playerTitle = page.querySelector('#kb-player-title');
-    const playerSummary = page.querySelector('#kb-player-summary');
-    const playerLink = page.querySelector('#kb-youtube-link');
-    const original = page.querySelector('#kb-original');
-    let opener;
-
-    page.querySelector('main').addEventListener('click', event => {
-        const link = event.target.closest('a[data-video]');
-        if (!link || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-
-        const video = link.dataset.video;
-        const card = document.getElementById('short-' + video);
-        if (!card || !/^[\w-]{11}$/.test(video)) return;
-
-        event.preventDefault();
-        opener = link;
-        playerTitle.textContent = card.querySelector('h3').textContent;
-        playerSummary.textContent = card.querySelector('.kb-summary').textContent;
-        playerLink.href = link.href;
-        original.textContent = card.querySelector('.kb-original').content.textContent.trim();
-        original.parentElement.open = false;
-
-        const frame = document.createElement('iframe');
-        frame.title = playerTitle.textContent;
-        frame.src = `https://www.youtube-nocookie.com/embed/${video}?autoplay=1&rel=0`;
-        frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-        frame.allowFullscreen = true;
-        frame.referrerPolicy = 'strict-origin-when-cross-origin';
-        embed.replaceChildren(frame);
-        dialog.showModal();
-    });
-
-    dialog.addEventListener('click', event => {
-        if (event.target === dialog) dialog.close();
-    });
-
-    dialog.addEventListener('close', () => {
-        embed.replaceChildren();
-        opener?.focus();
-    });
 })();
