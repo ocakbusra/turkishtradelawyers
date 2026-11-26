@@ -1,0 +1,123 @@
+.watch-page {
+    --watch-width: 1080px;
+}
+
+.watch-page .breadcrumb-nav {
+    max-width: var(--watch-width);
+}
+
+.watch-main {
+    max-width: var(--watch-width);
+    padding-block: clamp(22px, 3vw, 44px) clamp(45px, 7vw, 96px);
+    scroll-margin-top: 72px;
+}
+
+.watch-header {
+    max-width: 46rem;
+    margin-bottom: clamp(18px, 2.8vw, 32px);
+}
+
+.watch-header h1 {
+    color: var(--kb-ink);
+    font-family: Manrope, Inter, sans-serif;
+    font-size: clamp(1.65rem, 4.2vw, 3.15rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.045em;
+    overflow-wrap: anywhere;
+}
+
+.watch-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(20px, 3.5vw, 48px);
+}
+
+.watch-stage {
+    display: grid;
+    justify-items: center;
+    padding: clamp(12px, 2vw, 22px);
+    border: 1px solid #152753;
+    border-radius: 20px;
+    background:
+        radial-gradient(ellipse at 50% 0%, #253f79, transparent 75%),
+        #111c34;
+}
+
+.watch-stage iframe {
+    display: block;
+    width: min(100%, 294px);
+    height: auto;
+    aspect-ratio: 9 / 16;
+    border: 0;
+    border-radius: 11px;
+    background: #0b1223;
+    box-shadow: 0 0 0 1px #ffffff30, 0 14px 36px #080f2455;
+}
+
+.watch-description {
+    min-width: 0;
+    padding: clamp(17px, 2.3vw, 30px);
+    border: 1px solid var(--kb-line);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.watch-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px 12px;
+    margin-bottom: 14px;
+    color: var(--kb-text);
+    font-size: .79rem;
+    line-height: 1.4;
+}
+
+.watch-description h2 {
+    color: var(--kb-ink);
+    font-size: 1.3rem;
+}
+
+.watch-summary {
+    margin-top: 8px;
+    color: var(--kb-text);
+    line-height: 1.65;
+}
+
+.watch-back {
+    margin-top: 14px;
+    justify-content: flex-start;
+}
+
+.watch-original {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--kb-line);
+    color: var(--kb-text);
+    font-size: .875rem;
+}
+
+.watch-original summary {
+    width: fit-content;
+    color: var(--navy);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.watch-original p {
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 720px) {
+    .watch-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .watch-stage {
+        padding: 11px;
+    }
+}
